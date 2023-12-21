@@ -1,0 +1,83 @@
+main {
+    margin-top: 80px;
+}
+
+/*기본 section 설정*/
+section#guideMain {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 123.72%, rgba(245, 247, 250, 0.5) 123.72%);
+}
+
+#guideMain .contentsWrap {
+    height: 430px;
+}
+
+.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni {
+    position: relative;
+    top: -5%;
+    opacity: 0;
+}
+
+/*artcle*/
+#guideMain .contentsWrap article.info {
+    position: relative;
+    width: 50%;
+    word-break: keep-all;
+}
+
+#guideMain .contentsWrap .title {
+    line-height: 120%;
+}
+
+#guideMain .contentsWrap .paragraph span {
+    color: #2187ec;
+    font-weight: 500;
+}
+
+/*video 설정*/
+#guideMain .contentsWrap div.img {
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#guideMain .contentsWrap img {
+    width: 100%;
+}
+
+#update .contentsWrap, #press .contentsWrap {
+    margin: 0 auto;
+    justify-content: space-between;
+}
+
+#update .contentsWrap .updateInfo {
+    margin-right: 24px;
+}
+
+#update .contentsWrap .updateInfo:last-child {
+    margin-right: 0;
+}
+
+#update img {
+    width: 100%;
+}
+.date{
+    font-size: 0.875rem;
+}
+
+.tag{
+    background: #4285f4;
+    font-size: 0.8125rem;
+    color: #fff;
+    font-weight: bold;
+    padding: 3px 10px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+

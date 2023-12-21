@@ -1,0 +1,99 @@
+$(function () {
+    let gal = $(".gallery li"); //이미지
+    let info = $(".infoGal li") // 안내문구
+    let btn = $(".btn_set li"); //인디케이터 버튼
+    let section = $(".detailsSection");
+    let galNow = $(".gallery li.active");
+    let sectionNow = $(".infoGal li.active")
+    let current = sectionNow.index(); //이미지의 현재 번째
+
+    sectionNow.css({
+        "top": "-50%",
+        "opacity": 0
+    }).animate({
+        "top": 0,
+        "opacity": 1
+    }, 500);
+
+    btn.click(function () {
+        let tg = $(this);
+        let i = tg.index();
+
+        if (current == i) return false;
+
+        gal.css({
+            "z-index": 1
+        });
+        sectionNow.stop().css({
+            "top": 0,
+            "opacity": 0.5
+        }).animate({
+            "top": "100%",
+            "opacity": 0
+        }, 500, "easeOutExpo");
+        galNow.css({
+            "opacity": 1
+        })
+        move(i);
+        section.removeClass("active");
+        section.eq(i).addClass("active");
+
+        function move(i) {
+            let currentImg = gal.eq(current);
+            let nextImg = gal.eq(i);
+            let currentInfo = info.eq(current);
+            let nextInfo = info.eq(i);
+
+            currentImg.css({
+                "z-index": 2
+            });
+
+            nextImg.css({
+                "opacity": 0,
+                "z-index": 3
+            }).animate({"opacity": 1});
+            gal.removeClass("active");
+            nextImg.addClass("active");
+
+            if (current < i) {
+                currentInfo.stop().css({
+                    "top": 0,
+                    "opacity": 0.5
+                }).animate({
+                    "top": "100%",
+                    "opacity": 0
+                }, 500, "easeOutExpo")
+                nextInfo.stop().css({
+                    "top": "-100%",
+                    "opacity": 0
+                }).animate({
+                    "top": 0,
+                    "opacity": 1
+                }, 500, "easeOutExpo")
+            } else {
+                currentInfo.stop().css({
+                    "top": 0,
+                    "opacity": 0.5
+                }).animate({
+                    "top": "-100%",
+                    "opacity": 0
+                }, 500, "easeOutExpo")
+                nextInfo.stop().css({
+                    "top": "100%",
+                    "opacity": 0
+                }).animate({
+                    "top": 0,
+                    "opacity": 1
+                }, 500, "easeOutExpo")
+            }
+            info.removeClass("active");
+            nextInfo.addClass("active");
+            current = i;
+        }
+    })
+
+    $("i, .btn_set li").click(function () {
+        btn.removeClass("active");
+        btn.eq(current).addClass("active");
+    })
+})

@@ -1,0 +1,61 @@
+@media screen and (max-width: 600px) {
+    main{
+        margin-top: 64px;
+    }
+    #detailsCarousel {
+        height: 216px;
+    }
+    #myCarousel .gallery li:nth-of-type(1) .galleryBgImg{
+        background: url("../../img/banner_omnitasking_icon_360.png") top right / auto 100% no-repeat;
+    }
+
+    #myCarousel .gallery li:nth-of-type(2) .galleryBgImg{
+        background: url("../../img/banner_security_icon_360.png") top right / auto 100% no-repeat;
+    }
+
+    #myCarousel .gallery li:nth-of-type(3) .galleryBgImg{
+        background: url("../../img/banner_customizing_icon_360.png") top right / auto 100% no-repeat;
+    }
+    #myCarousel .btn_set {
+        padding: 10px 0;
+    }
+    #myCarousel .btn_set li {
+        padding: 7px 15px;
+    }
+    #myCarousel .infoGal .title{
+        font-size: 1.5rem;
+    }
+
+    #myCarousel .infoGal .paragraph{
+        margin-top: 6px;
+        max-width: 200px;
+        padding-right: 0;
+    }
+    #myCarousel .paragraph.shorten{
+        display: block;
+    }
+    #myCarousel .paragraph.long{
+        display: none;
+    }
+    section.detailsSection>.detailWrap>section{
+        padding: 50px 0 60px;
+    }
+    section.detailsSection video{
+        margin-top: 20px;
+        min-width: unset;
+    }
+
+    section.detailsSection .info-Wrap{
+        padding-left: unset;
+    }
+    section.detailsSection .iconsBox{
+        display: none;
+    }
+    section.detailsSection .title{
+        font-size: 1.25rem;
+    }
+    section.detailsSection .subtitle{
+        font-size: 0.875rem;
+        margin-top: 16px;
+    }
+}

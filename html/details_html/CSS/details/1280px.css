@@ -1,0 +1,17 @@
+@media screen and (max-width: 1280px) {
+    section.detailsSection article .detailContentsWrap{
+        margin-right: 40px;
+    }
+    section.detailsSection>.detailWrap>section:nth-of-type(2n) article .detailContentsWrap{
+        margin-right: 0;
+        margin-left: 40px;
+    }
+    section.detailsSection video{
+        flex: 1 1 auto;
+        max-width: 620px;
+        min-width: 480px;
+        -webkit-border-radius: 18px;
+        -moz-border-radius: 18px;
+        border-radius: 18px;
+    }
+}

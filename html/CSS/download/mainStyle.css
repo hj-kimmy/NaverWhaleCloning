@@ -1,0 +1,176 @@
+main {
+    margin-top: 80px;
+    background-color: #f7f9fb;
+}
+
+/*기본 section 설정*/
+section#downloadMain{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+#downloadMain .contentsWrap{
+    height: 540px;
+}
+
+.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni{
+    position: relative;
+    top: -5%;
+    opacity: 0;
+}
+
+/*artcle*/
+#downloadMain .contentsWrap article.info{
+    position: relative;
+    width: 50%;
+    word-break: keep-all;
+}
+#downloadMain .contentsWrap .title{
+    line-height: 120%;
+}
+#downloadMain .contentsWrap .paragraph span{
+    color: #2187ec;
+    font-weight: 500;
+}
+
+/*video 설정*/
+#downloadMain .contentsWrap div.img{
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#downloadMain .contentsWrap img{
+    width: 100%;
+}
+
+/*button 설정*/
+#downloadMain .contentsWrap .buttonWrap{
+    display: flex;
+}
+
+#downloadMain button, #whaleDownload button{
+    font-size: 0.95rem;
+    padding: 10px 15px;
+    margin-top: 40px;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: white;
+    cursor: pointer;
+}
+#whaleDownload button{
+    margin-top: unset;
+    font-size: 0.825rem;
+}
+
+#downloadMain button:hover, #whaleDownload button:hover {
+    background-color: #E5E4E3;
+}
+
+/*1번섹션 개별 설정*/
+
+#downloadMain .contentsWrap button:nth-of-type(1){
+    background-color: #40c3a7;
+    color: white;
+    font-weight: bold;
+    border: none;
+    display: flex;
+    align-items: center;
+    margin-right: 8px;
+}
+#downloadMain .contentsWrap button:nth-of-type(1):hover{
+    background-color: #3bb49a;
+}
+
+#downloadMain .contentsWrap button .whaleLogo {
+    width: 28px;
+    height: 28px;
+    background: url(../../img/whale_white.svg) center / contain no-repeat;
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    top: 2px;
+}
+
+section#whaleDownload{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 80px 0 120px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#whaleDownload .title{
+    font-size: 2.25rem;
+}
+#whaleDownload .paragraph {
+    font-size: 0.875rem;
+}
+
+.downloadOS{
+    width: 100%;
+    margin-top: 32px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.downloadOS li{
+    width: 49.05665%;
+    /*max-width: 624px;*/
+    padding: 32px 36px;
+    background: #fff;
+    box-shadow: 0 0 20px lightgray;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+}
+.downloadOS li:nth-of-type(2n-1){
+    margin-right: 1.8867%;
+}
+.downloadOS li:nth-of-type(1), .downloadOS li:nth-of-type(2){
+    margin-bottom: 1.8515%;
+}
+.downloadOS li .icon{
+    width: 84px;
+    height: 84px;
+}
+.downloadOS li>div{
+    display: flex;
+}
+.downloadOS li div div{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.downloadOS li div:nth-of-type(2){
+    margin-left: 24px;
+}
+
+.downloadOS li h3{
+    font-size: 1.625rem;
+}
+.downloadOS li button{
+    justify-self: end;
+}
+
+.macOS{
+    background:  white url("../../img/ic_mac_84.png") center / contain no-repeat;
+}
+.linux{
+    background: white  url("../../img/ic_linux_84.png") center / contain no-repeat;
+}
+.android{
+    background:  white url("../../img/ic_android_84.png") center / contain no-repeat;
+}
+.ios{
+    background:  white url("../../img/ic_ios_84.png") center / contain no-repeat;
+}
