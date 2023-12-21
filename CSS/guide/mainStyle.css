@@ -10,9 +10,6 @@ section#guideMain {
     justify-content: center;
     position: relative;
     background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 123.72%, rgba(245, 247, 250, 0.5) 123.72%);
-}
-
-#guideMain .contentsWrap {
     height: 430px;
 }
 
@@ -27,27 +24,44 @@ section#guideMain {
     position: relative;
     width: 50%;
     word-break: keep-all;
+    z-index: 1;
 }
 
 #guideMain .contentsWrap .title {
     line-height: 120%;
 }
 
-#guideMain .contentsWrap .paragraph span {
-    color: #2187ec;
-    font-weight: 500;
+#guideMain .contentsWrap .paragraph{
+    width: 55%;
+}
+#guideMain .contentsWrap .paragraph.short{
+    display: none;
 }
 
 /*video 설정*/
 #guideMain .contentsWrap div.img {
-    position: relative;
+    height: 430px;
+    align-self: end;
     width: 50%;
     display: flex;
     align-items: center;
+    flex: 0 0 auto;
+    position: relative;
 }
 
-#guideMain .contentsWrap img {
-    width: 100%;
+#guideMain .contentsWrap picture {
+    text-align: right;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#guideMain picture img{
+    height: 100%;
+}
+
+#update{
+    padding: 80px 0 120px;
 }
 
 #update .contentsWrap, #press .contentsWrap {
@@ -66,6 +80,42 @@ section#guideMain {
 #update img {
     width: 100%;
 }
+
+section button{
+    font-size: 0.8125rem;
+    padding: 10px 15px;
+    border: 1px solid #e5e5e5;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: white;
+    cursor: pointer;
+}
+#press{
+    padding-bottom: 120px;
+}
+#update .contentsWrap, #press ul{
+    margin-top: 24px;
+}
+#press ul, #press ul li{
+    width: 100%;
+}
+#press .paragraph {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#press .contentsWrap ul li{
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#press .contentsWrap ul li:last-of-type{
+    border-bottom: none;
+}
+
+
 .date{
     font-size: 0.875rem;
 }
@@ -79,5 +129,6 @@ section#guideMain {
     -webkit-border-radius: 100px;
     -moz-border-radius: 100px;
     border-radius: 100px;
+    margin-right: 10px;
 }
 

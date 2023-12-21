@@ -1,3 +1,33 @@
 @media screen and (max-width: 960px) {
+    section#guideMain{
+        height: 360px;
+    }
 
+    #guideMain .contentsWrap div.img {
+        height: 300px;
+        right: -32px;
+    }
+    #guideMain .contentsWrap .paragraph{
+        width: 100%;
+    }
+
+    #update .contentsWrap{
+        flex-wrap: wrap;
+    }
+
+    #update .contentsWrap .updateInfo {
+        margin-bottom: 24px;
+        margin-right: unset;
+        width: 100%;
+    }
+
+    #update .paragraph, #press .paragraph{
+        font-size: 1.125rem;
+    }
+    #update{
+        padding: 80px 0 56px;
+    }
+    #press{
+        padding-bottom: 80px;
+    }
 }

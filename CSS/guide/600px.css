@@ -1,5 +1,26 @@
 @media screen and (max-width: 600px) {
-    main{
+    main {
         margin-top: 64px;
+    }
+
+    section#guideMain {
+        height: 216px;
+    }
+
+    #guideMain .contentsWrap div.img {
+        height: 160px;
+        right: -20px;
+    }
+
+    #guideMain .contentsWrap .paragraph.long {
+        display: none;
+    }
+
+    #guideMain .contentsWrap .paragraph.short {
+        display: block;
+    }
+
+    #update .paragraph, #press .paragraph {
+        font-size: 1rem;
     }
 }
