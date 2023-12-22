@@ -13,12 +13,12 @@ $(function () {
     $("#accordion").accordion({
         heightStyle: "content",
         animate: 200,
-        header: "div>h3"
+        header: "div>h4"
     });
 
     play(1);
-    let accordionContent = $("#accordion>div");
-    let accordionGallery = $("section#secure .gallery img");
+    let accordionContent = $("#accordion .contents-accordion");
+    let accordionGallery = $("section#secure .contents-gallery img");
     let isPaused = false;
 
     function play(current) {
