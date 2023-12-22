@@ -1,200 +1,105 @@
 /******************************
-    - Main Style
-*******************************/
-main{
-    padding-top: 90px;
-}
-
-/******************************
     - section1#feature Style
 *******************************/
 /*기본 section 설정*/
-section#feature{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
-}
 #feature .contentsWrap{
     height: 740px;
 }
-
-.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni{
-    position: relative;
-    top: -5%;
-    opacity: 0;
-}
-
 #feature .contentsWrap:nth-of-type(2n-1){
     padding-right: 0;
 }
 #feature .contentsWrap:nth-of-type(2n){
     padding-left: 0;
+    flex-direction: row-reverse;
 }
 
 /*artcle*/
-#feature .contentsWrap article.info{
-    position: relative;
+#feature .contentsWrap article.contents-info-btn{
     width: 50%;
-    word-break: keep-all;
 }
-#feature .contentsWrap:nth-of-type(2n-1) article.info{
+#feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn{
     padding-right: 60px;
 }
-
-#feature .contentsWrap:nth-of-type(2n) article.info{
+#feature .contentsWrap:nth-of-type(2n) article.contents-info-btn{
     padding-left: 60px;
 }
 
 /*video 설정*/
-#feature .contentsWrap div.video{
-    position: relative;
+#feature .contentsWrap div.contents-video{
     width: 50%;
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-#feature .contentsWrap video{
+#feature .contentsWrap div.contents-video video{
     width: 100%;
-    position: relative;
-}
-
-/*button 설정*/
-#feature .contentsWrap button{
-    font-size: 0.95rem;
-    padding: 12px 15px;
-    margin-top: 40px;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    background-color: transparent;
-    cursor: pointer;
-}
-#feature .contentsWrap button.active{
-    animation: fadeInUp 1s 0.6s forwards ease-out;
-}
-
-#feature .contentsWrap button:hover {
-    background-color: #E5E4E3;
-}
-
-/*1번섹션 개별 설정*/
-#feature .contentsWrap:nth-of-type(1) .subTitle{
-    font-size: 3.5em;
-}
-#feature .contentsWrap:nth-of-type(1) div.video{
-    position: relative;
-}
-#feature .contentsWrap:nth-of-type(1) button{
-    background-color: #40c3a7;
-    color: white;
-    font-weight: bold;
-    font-size: 1.025rem;
-    border: none;
-    padding: 15px 20px;
-    display: flex;
-    align-items: center;
-}
-#feature .contentsWrap:nth-of-type(1) button:hover{
-    background-color: #40c3a7;
-}
-
-#feature .contentsWrap:nth-of-type(1) button .whaleLogo {
-    width: 28px;
-    height: 28px;
-    background: url(../../img/whale_white.svg) center / contain no-repeat;
-    display: inline-block;
-    position: relative;
-    left: -2px;
-    top: 2px;
-}
-#feature .contentsWrap:nth-of-type(1) video, section.contents:nth-of-type(2) video{
-    position: relative;
 }
 
 /******************************
     - section2#secure Style
 *******************************/
 section#secure{
-    width: 100%;
     height: 1126px;
     background-color: #f2effd;
     padding: 150px 0;
     margin-top: 120px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 #secure #accordion{
     margin-right: 60px;
-    margin-top: 70px;
     padding-bottom: 20px;
     flex: 1 1 0;
     max-width: 498px;
 }
-
-#secure #accordion>div{
-    position: relative;
+#secure #accordion .contents-accordion{
+    padding: 25px 30px 25px 40px;
+    color: black;
+    border-top: 1px solid lightgray;
+    background: transparent;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    transition: color 0.7s;
+    overflow: hidden;
+}
+#secure #accordion .contents-accordion.active{
     padding: 40px 30px 40px 40px;
     color: #fff;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-    transition: color 0.7s;
-    overflow: hidden;
 }
-#secure #accordion>div:nth-of-type(1){
+#secure #accordion .contents-accordion.active:nth-of-type(1){
     background: rgb(125,115,253);
     background: linear-gradient(120deg, rgba(125,115,253,1) 0%, rgba(111,67,233,1) 100%);
 }
-
-#secure #accordion>div:nth-of-type(2){
+#secure #accordion .contents-accordion.active:nth-of-type(2){
     background: rgb(115,131,252);
     background: linear-gradient(120deg, rgba(115,131,252,1) 0%, rgba(57,88,247,1) 100%);
 }
-#secure #accordion>div:nth-of-type(3){
+#secure #accordion .contents-accordion.active:nth-of-type(3){
     background: rgb(102,199,157);
     background: linear-gradient(120deg, rgba(102,199,157,1) 0%, rgba(64,163,155,1) 100%);
 }
-#secure #accordion>div:nth-of-type(4){
+#secure #accordion .contents-accordion.active:nth-of-type(4){
     background: rgb(248,171,0);
     background: linear-gradient(120deg, rgba(248,171,0,1) 0%, rgba(241,148,0,1) 100%);
 }
 
-#secure #accordion>div>h3{
-    font-size: 1.625rem;
-}
-
-#secure #accordion>div>.paragraph{
-    color: #fff;
-    width: 95%;
-}
-#secure #accordion>div>p>span{
+#secure #accordion .contents-accordion.active p{
     opacity: 0.8;
 }
-
-#secure #accordion>div:not(.active){
-    padding: 25px 30px 25px 40px;
-    color: black;
-    border-top: 1px solid lightgray;
-    background: none;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-}
-#secure #accordion>div.active+div{
+#secure #accordion .contents-accordion.active+.contents-accordion{
     border-top: none;
 }
-#secure #accordion>div.active>ul{
+
+#secure #accordion .contents-accordion.active>ul{
     position: absolute;
     right: 30px;
     top: 40px;
 }
-#secure #accordion>div.active>ul>li{
+#secure #accordion .contents-accordion.active>ul>li{
     width: 5px;
     height: 5px;
     -webkit-border-radius: 50%;
@@ -204,26 +109,23 @@ section#secure{
     margin-bottom: 10px;
     opacity: 0.5;
 }
-#secure #accordion>div.active:nth-of-type(1)>ul>li:nth-of-type(1), #secure #accordion>div.active:nth-of-type(2)>ul>li:nth-of-type(2), #secure #accordion>div.active:nth-of-type(3)>ul>li:nth-of-type(3), #secure #accordion>div.active:nth-of-type(4)>ul>li:nth-of-type(4){
+#secure #accordion .contents-accordion.active:nth-of-type(1)>ul>li:nth-of-type(1), #secure #accordion.contents-accordion.active:nth-of-type(2)>ul>li:nth-of-type(2), #secure #accordion .contents-accordion.active:nth-of-type(3)>ul>li:nth-of-type(3), #secure #accordion .contents-accordion.active:nth-of-type(4)>ul>li:nth-of-type(4){
     opacity: 1;
 }
 
-section#secure .gallery{
-    padding-top: 60px;
+section#secure .contents-gallery{
     width: 800px;
-    height: 700px;
 }
 
-section#secure .gallery img{
+section#secure .contents-gallery img{
     width: 100%;
     display: none;
 }
-section#secure .gallery img.active{
+section#secure .contents-gallery img.active{
     display: block;
 }
-#secure #accordion>div>p>img{
+#secure #accordion .contents-accordion .contents-thumbnail{
     display: none;
-    position: relative;
     width: 350px;
     left: 50%;
     margin-top: -40px;
@@ -484,13 +386,6 @@ section#adBanner{
     background-color: #040d39;
 }
 
-#adBanner .noPaddingWrap h2{
-    word-break: keep-all;
-    font-size: 1.875em;
-    font-weight: 700;
-    line-height: 150%;
-    color: #fff;
-}
 #adBanner .noPaddingWrap p{
     margin-top: 8px;
     font-size: 1rem;

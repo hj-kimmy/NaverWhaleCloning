@@ -1,26 +1,14 @@
 @media screen and (max-width: 600px) {
-    main{
-        padding-top: 130px;
-    }
     /******************************
     - section1#feature Style
     *******************************/
-    #feature .contentsWrap:nth-of-type(2n-1),#feature .contentsWrap:nth-of-type(2n){
+    #feature .contentsWrap:nth-of-type(2n-1), #feature .contentsWrap:nth-of-type(2n){
         padding: 0 20px;
     }
 
-    #feature .contentsWrap:nth-of-type(2n-1) article.info, #feature .contentsWrap:nth-of-type(2n) article.info {
+    #feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn, #feature .contentsWrap:nth-of-type(2n) article.contents-info-btn {
         padding: 0;
     }
-
-    #feature .contentsWrap button {
-        margin-top: 30px;
-    }
-
-    #feature .contentsWrap:nth-of-type(1) button {
-        padding: 10px 15px;
-    }
-
     /******************************
     - section2#secure Style
      *******************************/

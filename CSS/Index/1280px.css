@@ -2,20 +2,14 @@
     /******************************
     - section1#feature Style
     *******************************/
-
     #feature .contentsWrap{
         height: 560px;
     }
-
     /******************************
       - section2#secure Style
      *******************************/
     section#secure{
         padding: 120px 0;
-    }
-
-    #secure .secureWrap{
-        padding: 0 36px;
     }
     #secure #accordion{
         min-width: 338px;

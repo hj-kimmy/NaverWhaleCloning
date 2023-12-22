@@ -26,9 +26,8 @@
     #mainFeature .contentsWrap ul{
        flex-wrap: wrap;
     }
-    #mainFeature h3.title{
+    #mainFeature h2{
         margin-bottom: 24px;
-        font-size: 1.875rem;
     }
     #mainFeature .contentsWrap ul li{
         width: 100%;
