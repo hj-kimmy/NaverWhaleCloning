@@ -100,11 +100,8 @@ $(function () {
                 .fromTo(aniOrder5Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
                 .fromTo(aniOrder6, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
                 .fromTo(aniOrder6Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-
         })
     })
-
-    let theme1 = document.querySelector(".theme1");
 
     /*stop*/
     ScrollTrigger.create({

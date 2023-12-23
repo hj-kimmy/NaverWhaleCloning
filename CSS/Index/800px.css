@@ -8,7 +8,6 @@
     #adBanner .cellphone{
         width: 380px;
         height: 260px;
-        background: url("../../img/banner_beta_download_phone_600.png") bottom right / contain no-repeat;
     }
     /******************************
    - section5#adBanner Style
@@ -16,11 +15,18 @@
     section#adBanner{
         height: 420px;
     }
-    #adBanner .noPaddingWrap{
-        padding: 50px 32px;
+    section#adBanner .contentsWrap{
+        width: 100%;
+        flex-direction: column;
+        justify-content: start;
     }
-    #adBanner .wordWrap{
-        width: calc(100% - 150px);
+    #adBanner .contents-info-btn{
+        padding-top: 40px;
+    }
+    #adBanner .cellphone {
+        align-self: end;
+        position: absolute;
+        bottom: 0;
     }
 
 }

@@ -37,6 +37,7 @@ html, body {
     width: 100%;
     height: 100%;
 }
+
 #wrap {
     width: 100%;
     height: 100%;
@@ -75,7 +76,8 @@ h1.important {
 h2 {
     font-size: 2.5rem;
 }
-h2.important{
+
+h2.important {
     font-size: 1.875rem;
 }
 
@@ -96,10 +98,14 @@ p {
     font-size: 1.125rem;
     margin-top: 12px;
 }
-button{
+p.small{
+    font-size: 1rem;
+}
+
+button {
     font-size: 0.9375rem;
     padding: 12px 15px;
-/*    margin-top: 40px;*/
+    /*    margin-top: 40px;*/
     border: 1px solid var(--lightgray);
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -108,7 +114,7 @@ button{
     cursor: pointer;
 }
 
-button.whale-Button{
+button.whale-Button {
     font-size: 1.025rem;
     border: none;
     background-color: #40c3a7;
@@ -117,11 +123,13 @@ button.whale-Button{
     display: flex;
     align-items: center;
 }
-button.small{
+
+button.small {
     padding: 6px 15px;
     font-size: 0.8125rem;
 }
-button.whale-Button .whaleLogo{
+
+button.whale-Button .whaleLogo {
     width: 28px;
     height: 28px;
     display: inline-block;
@@ -129,20 +137,26 @@ button.whale-Button .whaleLogo{
     left: -2px;
     top: 2px;
 }
-button.whale-Button.small .whaleLogo{
+
+button.whale-Button.small .whaleLogo {
     width: 24px;
     height: 24px;
 }
 
-.whaleLogo-white{
+.whaleLogo-white {
     background: url(../img/whale_white.svg) center / contain no-repeat;
 }
 
-button:hover{
+button:hover {
     background-color: var(--lightgray);
 }
-button.whale-Button:hover{
+
+button.whale-Button:hover {
     background-color: #05AF96;
+}
+
+br.br-600 {
+    display: none;
 }
 
 /******************************
@@ -152,13 +166,16 @@ button.whale-Button:hover{
 .c-whale-blue {
     color: var(--blue);
 }
+
 .c-whale-gray {
     color: var(--gray);
 }
-.c-whale-white{
+
+.c-whale-white {
     color: white;
 }
-.bg-whale-blue{
+
+.bg-whale-blue {
     background-color: var(--blue);
 }
 
@@ -166,11 +183,16 @@ button.whale-Button:hover{
     font-size: 0.875rem;
 }
 
+.shadow {
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
 /******************************
     - layout Style
 *******************************/
-
-section{
+section {
     width: 100%;
     position: relative;
 }
@@ -197,11 +219,12 @@ section{
 /******************************
     - animation start point
 *******************************/
-.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni{
+.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni {
     position: relative;
     top: -5%;
     opacity: 0;
 }
+
 /******************************
     - cardList style
 *******************************/
@@ -218,25 +241,27 @@ section{
     box-shadow: 0 0 20px lightgray;
     display: flex;
     align-items: center;
+    justify-content: space-between;
     -webkit-border-radius: 40px;
     -moz-border-radius: 20px;
     border-radius: 20px;
 }
+
 .contents-cardList li:nth-of-type(2n-1) {
     margin-right: 24px;
 }
+
 .contents-cardList li:nth-of-type(1), .contents-cardList li:nth-of-type(2) {
     margin-bottom: 24px;
 }
+
 .contents-cardList li .icon {
     width: 84px;
     height: 84px;
 }
-.contents-cardList li div:nth-of-type(2) {
-    margin-left: 24px;
-}
 
 .contents-cardList li div:nth-of-type(2) {
+    flex: 1 1 auto;
     margin-left: 24px;
 }
 
@@ -257,15 +282,17 @@ section{
         font-size: 2.875rem;
     }
 
-    .contents-cardList li{
+    .contents-cardList li {
         width: 100%;
         max-width: none;
         margin-bottom: 24px;
     }
-    .contents-cardList li:nth-of-type(1), .contents-cardList li:nth-of-type(2){
+
+    .contents-cardList li:nth-of-type(1), .contents-cardList li:nth-of-type(2) {
         margin-bottom: 24px;
     }
-    .contents-cardList li:nth-of-type(2n-1){
+
+    .contents-cardList li:nth-of-type(2n-1) {
         margin-right: 0;
     }
 }
@@ -285,6 +312,11 @@ section{
 
     p {
         font-size: 1rem;
+    }
+}
+@media screen and (max-width: 800px){
+    h2.important{
+        font-size: 1.5rem;
     }
 }
 
@@ -316,20 +348,27 @@ section{
         font-size: 1.225rem;
     }
 
-    p {
+    p, p.small {
         margin-top: 6px;
         font-size: 0.875rem;
     }
 
-    .contents-cardList li{
+
+    .contents-cardList li {
         padding: 20px;
     }
-    .contents-cardList li .icon{
+
+    .contents-cardList li .icon {
         width: 64px;
         height: 64px;
     }
-    .contents-cardList li div:nth-of-type(2){
+
+    .contents-cardList li div:nth-of-type(2) {
         margin-left: 12px;
+    }
+
+    br.br-600 {
+        display: block;
     }
 
 }

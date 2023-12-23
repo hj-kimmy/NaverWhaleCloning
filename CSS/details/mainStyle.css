@@ -66,7 +66,7 @@ main {
 
 #myCarousel .btn_set li {
     padding: 10px 15px;
-    margin: 0 5px;
+    margin-right: 5px;
     list-style: none;
     -webkit-border-radius: 50px;
     -moz-border-radius: 50px;
@@ -75,6 +75,10 @@ main {
     font-size: 0.9375rem;
     color: rgba(255,255,255,0.7);
     font-weight: bold;
+}
+
+#myCarousel .btn_set li:last-of-type{
+    margin-right: 0;
 }
 
 #myCarousel .btn_set li.active {

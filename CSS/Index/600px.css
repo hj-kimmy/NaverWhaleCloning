@@ -3,7 +3,7 @@
     - section1#feature Style
     *******************************/
     #feature .contentsWrap:nth-of-type(2n-1), #feature .contentsWrap:nth-of-type(2n){
-        padding: 0 20px;
+        padding: 60px 30px 0 20px;
     }
 
     #feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn, #feature .contentsWrap:nth-of-type(2n) article.contents-info-btn {
@@ -18,12 +18,8 @@
     /******************************
     - section2#secure Style
      *******************************/
-    section#secure {
-        padding: 80px 0 60px 0;
-        height: 835px;
-    }
 
-    #secure .secureWrap, #secure .titleWrap {
+    #secure .titleWrap {
         padding: 0 20px;
     }
 
@@ -54,61 +50,47 @@
     /******************************
     - section3#environment Style
 *******************************/
-    #environment .fixWrap{
-        padding-top: 0px;
-        justify-content: center;
+    #environment #animation-sticky-Pin .titleWrap{
+        height: calc(25% + 80px);
     }
 
     #environment .titles-change{
         height: 1.875rem;
     }
+    #environment .contentsWrap:nth-of-type(2){
+        margin-top: 50px;
+    }
+
 
     /******************************
     - section4#appService Style
     *******************************/
-    section#appService > div.contents {
-        padding: 80px 20px 70px 20px;
+    section#appService {
+        padding: 80px 0 46px;
     }
 
-    section#appService .whaleApps {
+    section#appService .contents-whaleApps {
         width: 320px;
         height: 73.328px;
     }
-    section#appService .titleWrap .title{
-        width: 360px;
-        margin: 0 auto;
+    section#appService .titleWrap {
+        margin: 32px auto;
     }
 
-    .whaleApps li {
+    .contents-whaleApps  li{
         width: 53.33px;
         height: 53.33px;
     }
 
-
-
     /******************************
  - section5#adBanner Style
  *******************************/
-    #adBanner .wordWrap{
-        width: 100%;
-    }
-
-    #adBanner .noPaddingWrap{
-        padding: 40px 20px 0;
-    }
-
-    #adBanner .noPaddingWrap {
-        background: url("../../img/banner_beta_download_wave_360.png") bottom center / contain no-repeat;
+    section#adBanner .contentsWrap{
+        padding-left: 20px;
     }
 
     #adBanner .cellphone {
         width: 280px;
         height: 220px;
-    }
-    #adBanner .noPaddingWrap h2{
-        font-size: 1.5em;
-    }
-    #adBanner .noPaddingWrap p{
-        font-size: 0.875rem;
     }
 }

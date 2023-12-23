@@ -27,6 +27,11 @@
 #feature .contentsWrap:nth-of-type(2n) article.contents-info-btn {
     padding-left: 60px;
 }
+/* p 설정*/
+#feature .contentsWrap article.contents-info-btn p{
+    margin-top: 20px;
+}
+
 /*button 설정*/
 #feature .contentsWrap article.contents-info-btn button{
     margin-top: 40px;
@@ -49,16 +54,19 @@
 *******************************/
 /*기본 section 설정*/
 section#secure {
-    height: 1126px;
     background-color: #f2effd;
     padding: 150px 0;
     margin-top: 120px;
+}
+section#secure .titleWrap{
+    margin-bottom: 70px;
 }
 
 /*accordian-Carousel 설정*/
 #secure #accordion {
     margin-right: 60px;
     padding-bottom: 20px;
+    align-self: start;
     flex: 1 1 0;
     max-width: 498px;
 }
@@ -66,7 +74,7 @@ section#secure {
 #secure #accordion .contents-accordion {
     padding: 25px 30px 25px 40px;
     color: black;
-    border-top: 1px solid lightgray;
+    border-top: 1px solid rgba(0,0,0,0.1);
     background: transparent;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
@@ -145,6 +153,7 @@ section#secure .contents-gallery {
 }
 
 section#secure .contents-gallery img {
+    margin-top: -10px;
     width: 100%;
     display: none;
 }
@@ -163,17 +172,29 @@ section#environment {
 #environment #animation-sticky-Pin {
     position: sticky;
     width: 100%;
-    padding-top: 180px;
     height: 100vh;
     top: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+#environment #animation-sticky-Pin .titleWrap{
+    flex: 0 0 auto;
+    height: calc(25% + 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: end;
+}
+
+#environment .contentsWrap:nth-of-type(2){
+    margin-top: 60px;
+}
 
 #environment .titles-change {
     height: 3.125rem;
     overflow: hidden;
+    margin-top: 15px;
 }
 
 #environment .titles-change li h1 {
@@ -186,6 +207,7 @@ section#environment {
 
 #environment .paragraphs-change {
     position: relative;
+    margin-top: 10px;
 }
 
 #environment .paragraphs-change li {
@@ -316,7 +338,6 @@ section#appService .contents-whaleApps {
 .contents-whaleApps li {
     width: 100px;
     height: 100px;
-    box-shadow: 0 0 20px lightgray;
     -webkit-background-size: 70%;
     background-size: 70%;
     -webkit-border-radius: 40%;
@@ -324,7 +345,7 @@ section#appService .contents-whaleApps {
     border-radius: 40%;
 }
 
-.whaleApps li:nth-of-type(2n) {
+.contents-whaleApps li:nth-of-type(2n) {
     align-self: end;
 }
 
@@ -348,41 +369,30 @@ section#appService .contents-whaleApps {
     - section5#adBanner Style
 *******************************/
 section#adBanner {
-    width: 100%;
     height: 340px;
     display: flex;
     justify-content: center;
     background-color: #040d39;
 }
 
-#adBanner .noPaddingWrap p {
-    margin-top: 8px;
-    font-size: 1rem;
-    line-height: 150%;
-    font-weight: 400;
-    color: #fff;
-    opacity: 0.7;
-    margin-bottom: 24px;
-}
-
-#adBanner .noPaddingWrap {
-    padding: 80px 50px;
-    position: relative;
-    width: 100%;
-    max-width: 1440px;
-    height: 100%;
+#adBanner .contentsWrap {
+    padding-left: 50px;
+    padding-right: 0;
     background: url("../../img/banner_beta_download_wave_1440.png") bottom center / contain no-repeat;
+    justify-content: space-between;
 }
-
-#adBanner .wordWrap {
-    width: calc(100% - 500px);
+#adBanner .contents-info-btn button{
+    margin-top: 24px;
 }
 
 #adBanner .cellphone {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 500px;
+    flex: 0 0 auto;
     height: 100%;
-    background: url("../../img/banner_beta_download_phone_1440.png") 0 0 / contain no-repeat;
+    display: flex;
+    justify-content: end;
+}
+
+#adBanner .cellphone img{
+    text-align: right;
+    height: 100%;
 }

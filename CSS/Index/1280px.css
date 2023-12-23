@@ -18,8 +18,8 @@
     #environment .titles-change{
         height: 2.875rem;
     }
-
-    #adBanner .noPaddingWrap{
-        padding: 80px 36px;
+    #adBanner .contentsWrap {
+        padding-left: 32px;
     }
+
 }

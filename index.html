@@ -283,8 +283,8 @@
                     <div class="c-whale-gray aniOrder3">
                         <p>
                             4개의 옵션으로 원하는 영역만 깔끔하게 캡처하고 간단히 편집해 보세요. 단축키를 사용하면 더욱 빠른 캡처가 가능합니다.
-                            <button>자세히 보기</button>
                         </p>
+                        <button>자세히 보기</button>
                     </div>
 
                 </article>
@@ -298,7 +298,7 @@
         <section id="secure" class="trigger-fadeinOn">
             <div class="titleWrap">
                 <h3 class="c-whale-blue aniOrder1">내 정보는 안전하게</h3>
-                <h1 class="aniOrder2">최신 기술이 적용된 강력한 보안</h1>
+                <h1 class="aniOrder2">최신 기술이 적용된 <br class="br-600">강력한 보안</h1>
                 <p class="c-whale-gray aniOrder3">네이버 웨일은 끊임없는 업데이트로 빈틈없는 보안 환경을 제공합니다. 안심하고 오늘의 할 일에만 집중하세요.</p>
             </div>
             <div class="contentsWrap">
@@ -410,41 +410,41 @@
         </section>
         <section id="appService" class="trigger-fadeinOn">
             <ul class="contents-whaleApps aniOrder1">
-                <li class="webtoon"></li>
-                <li class="stock"></li>
-                <li class="audioBook"></li>
-                <li class="music"></li>
-                <li class="mail"></li>
+                <li class="webtoon shadow"></li>
+                <li class="stock shadow"></li>
+                <li class="audioBook shadow"></li>
+                <li class="music shadow"></li>
+                <li class="mail shadow"></li>
             </ul>
             <div class="contentsWrap titleWrap">
                 <h3 class="c-whale-blue aniOrder2">브라우저를 더 유용하게</h3>
-                <h1 class="aniOrder3">확장앱으로 외부 서비스를 내 맘대로</h1>
+                <h1 class="aniOrder3">확장앱으로 외부 서비스를 <br class="br-600"> 내 맘대로</h1>
                 <p class="c-whale-gray aniOrder4">웨일 스토어에서 마음에 드는 확장앱을 설치하고 브라우저에 수많은 기능과 서비스를 더해보세요.</p>
             </div>
             <div class="contentsWrap trigger-fadeinOn">
                 <ul class="contents-cardList aniOrder1">
-                    <li>
+                    <li class="shadow">
                         <div class="icon webtoon "></div>
                         <div>
                             <h4>네이버 웹툰</h4>
                             <p class="c-whale-gray">웹툰 보기 딱 좋은 사이즈로 사이드바에서 틈틈이 즐겨 보세요.</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="shadow">
                         <div class="icon music"></div>
                         <div>
                             <h4>뮤직 플레이어</h4>
                             <p class="c-whale-gray">바이브, 벅스, 지니, 유튜브 뮤직플레이어가 사이드바에 쏙 들어옵니다.</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="shadow">
                         <div class="icon stock"></div>
                         <div>
                             <h4>네이버 증권</h4>
                             <p class="c-whale-gray">최근에 검색한 종목과 관심종목의 시세를 한 눈에 확인할 수 있습니다.</p>
                         </div>
                     </li>
-                    <li>
+                    <li class="shadow">
                         <div class="icon audioBook"></div>
                         <div>
                             <h4>오디오클립</h4>
@@ -455,11 +455,11 @@
             </div>
         </section>
         <section id="adBanner" class="trigger-fadeinOn">
-            <div class="noPaddingWrap">
-                <div class="wordWrap">
-                    <h2 class="important c-whale-white aniOrder1">모바일 웨일 브라우저도 만나보세요.</h2>
+            <div class="contentsWrap c-whale-white">
+                <div class="contents-info-btn">
+                    <h2 class="important aniOrder1">모바일 웨일 브라우저도 만나보세요.</h2>
                     <div class="aniOrder2">
-                        <p>
+                        <p class="small c-whale-gray">
                             PC 브라우저의 북마크 및 비밀번호를 동기화하고, 다양한 모바일 전용 기능을 사용할 수 있습니다.
                         </p>
                     <button class="whale-Button small">
@@ -468,7 +468,13 @@
                     </button>
                     </div>
                 </div>
-                <div class="cellphone"></div>
+                <div class="cellphone">
+                    <picture>
+                        <source srcset="img/banner_beta_download_phone_360.png" media="(max-width : 600px)">
+                        <source srcset="img/banner_beta_download_phone_600.png" media="(max-width : 800px)">
+                        <img src="img/banner_beta_download_phone_1440.png" alt="">
+                    </picture>
+                </div>
             </div>
 
         </section>
