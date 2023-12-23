@@ -40,27 +40,41 @@
     section#secure .contents-gallery{
         display: none;
     }
+    /*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
+    #secure #accordion .contents-accordion .contents-thumbnail{
+        display: block;
+        position: relative;
+        width: 350px;
+        left: 50%;
+        margin-top: -40px;
+        margin-left: -175px;
+        bottom: -73px;
+    }
     #secure #accordion{
         max-width: 100%;
         margin-right: 0;
     }
-    #secure #accordion .contents-accordion .active{
+    #secure #accordion .contents-accordion.active{
         padding-bottom: 0;
     }
 
-    #secure #accordion>div>p>img{
+    #secure #accordion .contents-accordion .contents-thumbnail{
         display: block;
         opacity: 0;
     }
-    #secure #accordion>div.active>p>img{
-        display: block;
+    #secure #accordion .contents-accordion.active .contents-thumbnail{
         opacity: 1;
     }
-    #secure #accordion>div.active>ul>li{
+    #secure #accordion .contents-accordion.active>ul>li{
         width: 6px;
         height: 6px;
         margin-bottom: 7px;
     }
+
+    #environment .titles-change{
+        height: 2.5rem;
+    }
+
     /******************************
     - section4#appService Style
     *******************************/

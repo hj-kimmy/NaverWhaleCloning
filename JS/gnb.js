@@ -5,9 +5,8 @@ $(function () {
 
     /* 미디어 쿼리 */
     let subMenuBox = $(".subMenuBox");
-
     subMenuBox.hide();
-    mobileSub.hide();
+
 
     /* 끄기 버튼 외 다른 공간 클릭했을 때 창 닫힘*/
     let appBox = $("#go");

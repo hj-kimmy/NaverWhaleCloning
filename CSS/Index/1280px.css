@@ -15,6 +15,10 @@
         min-width: 338px;
     }
 
+    #environment .titles-change{
+        height: 2.875rem;
+    }
+
     #adBanner .noPaddingWrap{
         padding: 80px 36px;
     }

@@ -2,57 +2,68 @@
     - section1#feature Style
 *******************************/
 /*기본 section 설정*/
-#feature .contentsWrap{
+#feature .contentsWrap {
     height: 740px;
 }
-#feature .contentsWrap:nth-of-type(2n-1){
+
+#feature .contentsWrap:nth-of-type(2n-1) {
     padding-right: 0;
 }
-#feature .contentsWrap:nth-of-type(2n){
+
+#feature .contentsWrap:nth-of-type(2n) {
     padding-left: 0;
     flex-direction: row-reverse;
 }
 
 /*artcle*/
-#feature .contentsWrap article.contents-info-btn{
+#feature .contentsWrap article.contents-info-btn {
     width: 50%;
 }
-#feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn{
+
+#feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn {
     padding-right: 60px;
 }
-#feature .contentsWrap:nth-of-type(2n) article.contents-info-btn{
+
+#feature .contentsWrap:nth-of-type(2n) article.contents-info-btn {
     padding-left: 60px;
+}
+/*button 설정*/
+#feature .contentsWrap article.contents-info-btn button{
+    margin-top: 40px;
 }
 
 /*video 설정*/
-#feature .contentsWrap div.contents-video{
+#feature .contentsWrap div.contents-video {
     width: 50%;
     display: flex;
     align-items: center;
     flex-grow: 1;
 }
 
-#feature .contentsWrap div.contents-video video{
+#feature .contentsWrap div.contents-video video {
     width: 100%;
 }
 
 /******************************
     - section2#secure Style
 *******************************/
-section#secure{
+/*기본 section 설정*/
+section#secure {
     height: 1126px;
     background-color: #f2effd;
     padding: 150px 0;
     margin-top: 120px;
 }
 
-#secure #accordion{
+/*accordian-Carousel 설정*/
+#secure #accordion {
     margin-right: 60px;
     padding-bottom: 20px;
     flex: 1 1 0;
     max-width: 498px;
 }
-#secure #accordion .contents-accordion{
+
+#secure #accordion .contents-accordion {
     padding: 25px 30px 25px 40px;
     color: black;
     border-top: 1px solid lightgray;
@@ -63,43 +74,52 @@ section#secure{
     transition: color 0.7s;
     overflow: hidden;
 }
-#secure #accordion .contents-accordion.active{
+
+/*accordian-Carousel-active 설정*/
+#secure #accordion .contents-accordion.active {
     padding: 40px 30px 40px 40px;
     color: #fff;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
     border-radius: 20px;
-}
-#secure #accordion .contents-accordion.active:nth-of-type(1){
-    background: rgb(125,115,253);
-    background: linear-gradient(120deg, rgba(125,115,253,1) 0%, rgba(111,67,233,1) 100%);
-}
-#secure #accordion .contents-accordion.active:nth-of-type(2){
-    background: rgb(115,131,252);
-    background: linear-gradient(120deg, rgba(115,131,252,1) 0%, rgba(57,88,247,1) 100%);
-}
-#secure #accordion .contents-accordion.active:nth-of-type(3){
-    background: rgb(102,199,157);
-    background: linear-gradient(120deg, rgba(102,199,157,1) 0%, rgba(64,163,155,1) 100%);
-}
-#secure #accordion .contents-accordion.active:nth-of-type(4){
-    background: rgb(248,171,0);
-    background: linear-gradient(120deg, rgba(248,171,0,1) 0%, rgba(241,148,0,1) 100%);
+    position: relative;
 }
 
-#secure #accordion .contents-accordion.active p{
+#secure #accordion .contents-accordion.active:nth-of-type(1) {
+    background: rgb(125, 115, 253);
+    background: linear-gradient(120deg, rgba(125, 115, 253, 1) 0%, rgba(111, 67, 233, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(2) {
+    background: rgb(115, 131, 252);
+    background: linear-gradient(120deg, rgba(115, 131, 252, 1) 0%, rgba(57, 88, 247, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(3) {
+    background: rgb(102, 199, 157);
+    background: linear-gradient(120deg, rgba(102, 199, 157, 1) 0%, rgba(64, 163, 155, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(4) {
+    background: rgb(248, 171, 0);
+    background: linear-gradient(120deg, rgba(248, 171, 0, 1) 0%, rgba(241, 148, 0, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active p > span {
     opacity: 0.8;
 }
-#secure #accordion .contents-accordion.active+.contents-accordion{
+
+#secure #accordion .contents-accordion.active + .contents-accordion {
     border-top: none;
 }
 
-#secure #accordion .contents-accordion.active>ul{
+#secure #accordion .contents-accordion.active > ul {
     position: absolute;
     right: 30px;
     top: 40px;
 }
-#secure #accordion .contents-accordion.active>ul>li{
+
+#secure #accordion .contents-accordion.active > ul > li {
     width: 5px;
     height: 5px;
     -webkit-border-radius: 50%;
@@ -109,40 +129,38 @@ section#secure{
     margin-bottom: 10px;
     opacity: 0.5;
 }
-#secure #accordion .contents-accordion.active:nth-of-type(1)>ul>li:nth-of-type(1), #secure #accordion.contents-accordion.active:nth-of-type(2)>ul>li:nth-of-type(2), #secure #accordion .contents-accordion.active:nth-of-type(3)>ul>li:nth-of-type(3), #secure #accordion .contents-accordion.active:nth-of-type(4)>ul>li:nth-of-type(4){
+
+#secure #accordion .contents-accordion.active:nth-of-type(1) > ul > li:nth-of-type(1), #secure #accordion .contents-accordion.active:nth-of-type(2) > ul > li:nth-of-type(2), #secure #accordion .contents-accordion.active:nth-of-type(3) > ul > li:nth-of-type(3), #secure #accordion .contents-accordion.active:nth-of-type(4) > ul > li:nth-of-type(4) {
     opacity: 1;
 }
 
-section#secure .contents-gallery{
+/*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
+#secure #accordion .contents-accordion .contents-thumbnail {
+    display: none;
+}
+
+/*accordian-Carousel에 따른 gallery 변경*/
+section#secure .contents-gallery {
     width: 800px;
 }
 
-section#secure .contents-gallery img{
+section#secure .contents-gallery img {
     width: 100%;
     display: none;
 }
-section#secure .contents-gallery img.active{
+
+section#secure .contents-gallery img.active {
     display: block;
-}
-#secure #accordion .contents-accordion .contents-thumbnail{
-    display: none;
-    width: 350px;
-    left: 50%;
-    margin-top: -40px;
-    margin-left: -175px;
-    bottom: -73px;
 }
 
 /******************************
     - section3#environment Style
 *******************************/
-section#environment{
-    width: 100%;
+
+section#environment {
     height: 900vh;
-    position: relative;
-    z-index: -1;
 }
-#environment .fixWrap{
+#environment #animation-sticky-Pin {
     position: sticky;
     width: 100%;
     padding-top: 180px;
@@ -153,87 +171,75 @@ section#environment{
     align-items: center;
 }
 
-#environment .titleWrap{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: end;
-    margin-bottom: 40px;
-}
-#environment .subTitles{
-    height: 4.5rem;
+#environment .titles-change {
+    height: 3.125rem;
     overflow: hidden;
 }
-#environment .subTitles .title{
-    line-height: 100%;
+
+#environment .titles-change li h1 {
+    line-height: 99%;
 }
-#environment .subTitle2,#environment .subTitle3{
+
+#environment .titles-change li:nth-of-type(n+2) {
     opacity: 0;
 }
-#environment .subTitle3{
-    color: white;
-}
-#environment .contentsWrap{
-    display: flex;
-    justify-content: center;
-}
-#environment .paragraph{
+
+#environment .paragraphs-change {
     position: relative;
 }
-#environment .paragraph li:nth-of-type(3){
-    opacity: 0;
-}
-#environment .paragraph li:nth-of-type(1), #environment .paragraph li:nth-of-type(3){
+
+#environment .paragraphs-change li {
     top: 0;
     width: 100%;
     position: absolute;
 }
-#environment .paragraph li:nth-of-type(2){
-    position: relative;
+
+#environment .paragraphs-change li:nth-of-type(n+2) {
     opacity: 0;
-    width: 100%;
 }
 
-
-#environment .animation{
-    /*border: 1px solid #000;*/
+#environment .contents-animation {
     width: 100%;
     max-width: 1066px;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
-#environment div.background{
+
+#environment .contents-animation .background {
     position: relative;
     width: 100%;
     padding-top: 2%;
     transform-origin: top center;
 }
-#environment img{
+
+#environment .contents-animation img {
     width: 100%;
     position: relative;
 }
-#environment img.pos-absolute{
+
+#environment .contents-animation img.pos-absolute {
     position: absolute;
     top: 0;
     left: 0;
 }
 
-#environment div.ui{
+#environment .contents-animation .ui {
     position: absolute;
     top: 17.5%;
     left: 6.2%;
     width: 87.80%;
 }
 
-#environment div.theme{
+#environment .contents-animation .theme {
     position: absolute;
     left: 0;
     bottom: 0;
     width: 95.41%;
 }
 
-#environment div.menuTheme{
+#environment .contents-animation .menuTheme {
     position: absolute;
     top: 12%;
     right: 3.4%;
@@ -245,15 +251,17 @@ section#environment{
     transform-origin: top center;
 }
 
-.upNav{
+#environment .contents-animation .upNav {
     position: absolute;
     top: 0;
     width: 100%;
 }
-.upNav img, .menuTheme .icon2, .ui-dark, .navThemeDark{
+
+.contents-animation .upNav img, .menuTheme .icon2, .ui-dark, .navThemeDark {
     opacity: 0;
 }
-.menuTheme .icon1{
+
+.contents-animation .menuTheme .icon1 {
     opacity: 0;
     transform: scale(0.5);
     -webkit-transform-origin: center;
@@ -263,53 +271,49 @@ section#environment{
     transform-origin: center;
 }
 
-#triggerEnv0{
-    position: absolute;
-    top: 0;
-    height: 750vh;
-}
-#environment .cursor{
+#environment .contents-animation .cursor {
     position: absolute;
     opacity: 0;
     top: 35%;
     left: 63%;
     width: 4%;
 }
-.icons{
+
+#environment .contents-animation .icons {
     width: 59%;
     position: absolute;
     top: 2%;
     right: 30%;
 }
 
+#triggerEnv0 {
+    position: absolute;
+    top: 0;
+    height: 750vh;
+}
+
 /******************************
     - section4#appService Style
 *******************************/
-section#appService{
-    width: 100%;
+section#appService {
     background-color: #f7f9fb;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
     padding: 150px 0;
-
+    z-index: 1;
 }
 
-section#appService>div.contentsWrap:nth-of-type(1){
+section#appService .titleWrap {
+    margin: 60px auto 70px;
 }
 
-section#appService .titleWrap{
-    margin: 60px 0 70px 0;
-}
-
-section#appService .whaleApps{
+section#appService .contents-whaleApps {
     width: 664px;
     height: 130px;
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
 }
-.whaleApps li{
+
+.contents-whaleApps li {
     width: 100px;
     height: 100px;
     box-shadow: 0 0 20px lightgray;
@@ -318,67 +322,32 @@ section#appService .whaleApps{
     -webkit-border-radius: 40%;
     -moz-border-radius: 40%;
     border-radius: 40%;
-    /*border: 1px solid #000;*/
 }
-.whaleApps li:nth-of-type(2n){
+
+.whaleApps li:nth-of-type(2n) {
     align-self: end;
 }
 
-.whaleAppsInfo{
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
+.webtoon {
+    background: white url("../../img/webtoon_128x128.png") center / contain no-repeat;
 }
-
-.whaleAppsInfo li{
-    width: 49.05665%;
-    /*max-width: 624px;*/
-    padding: 32px 36px;
-    background: #fff;
-    box-shadow: 0 0 20px lightgray;
-    display: flex;
-    align-items: center;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 20px;
-    border-radius: 20px;
+.stock {
+    background: white url("../../img/real128.png") center / contain no-repeat;
 }
-.whaleAppsInfo li:nth-of-type(2n-1){
-    margin-right: 1.8867%;
+.audioBook {
+    background: white url("../../img/Extendapp_audioclip.png") center / contain no-repeat;
 }
-.whaleAppsInfo li:nth-of-type(1), .whaleAppsInfo li:nth-of-type(2){
-    margin-bottom: 1.8515%;
+.music {
+    background: white url("../../img/Extendapp_music.png") center / contain no-repeat;
 }
-.whaleAppsInfo li .icon{
-    width: 84px;
-    height: 84px;
-}
-.whaleAppsInfo li div:nth-of-type(2){
-    margin-left: 24px;
-}
-.whaleAppsInfo li h3{
-    font-size: 1.625rem;
-}
-
-.webtoon{
-    background:  white url("../../img/webtoon_128x128.png") center / contain no-repeat;
-}
-.stock{
-    background: white  url("../../img/real128.png") center / contain no-repeat;
-}
-.audioBook{
-    background:  white url("../../img/Extendapp_audioclip.png") center / contain no-repeat;
-}
-.music{
-    background:  white url("../../img/Extendapp_music.png") center / contain no-repeat;
-}
-.mail{
-    background:  white url("../../img/naver_mail_128.png") center / contain no-repeat;
+.mail {
+    background: white url("../../img/naver_mail_128.png") center / contain no-repeat;
 }
 
 /******************************
     - section5#adBanner Style
 *******************************/
-section#adBanner{
+section#adBanner {
     width: 100%;
     height: 340px;
     display: flex;
@@ -386,7 +355,7 @@ section#adBanner{
     background-color: #040d39;
 }
 
-#adBanner .noPaddingWrap p{
+#adBanner .noPaddingWrap p {
     margin-top: 8px;
     font-size: 1rem;
     line-height: 150%;
@@ -396,30 +365,7 @@ section#adBanner{
     margin-bottom: 24px;
 }
 
-#adBanner button{
-    background-color: #40c3a7;
-    color: white;
-    font-weight: bold;
-    border: none;
-    padding: 7px 15px;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    display: flex;
-    align-items: center;
-}
-
-#adBanner .whaleLogo{
-    width: 24px;
-    height: 24px;
-    background: url(../../img/whale_white.svg) center / contain no-repeat;
-    display: inline-block;
-    position: relative;
-    left: -2px;
-    top: 2px;
-}
-
-#adBanner .noPaddingWrap{
+#adBanner .noPaddingWrap {
     padding: 80px 50px;
     position: relative;
     width: 100%;
@@ -428,11 +374,11 @@ section#adBanner{
     background: url("../../img/banner_beta_download_wave_1440.png") bottom center / contain no-repeat;
 }
 
-#adBanner .wordWrap{
+#adBanner .wordWrap {
     width: calc(100% - 500px);
 }
 
-#adBanner .cellphone{
+#adBanner .cellphone {
     position: absolute;
     bottom: 0;
     right: 0;

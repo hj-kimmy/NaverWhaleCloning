@@ -65,33 +65,43 @@ $(function () {
         y: 50, opacity: 0
     }
 
-    const trigger = gsap.utils.toArray('.triggerContent');
-    const subtitle = document.querySelectorAll('.subtitleAni');
-    const title = document.querySelectorAll('.titleAni');
-    const paragraph = document.querySelectorAll('.paragraphAni');
-    const button = document.querySelectorAll('.buttonAni');
-    const video = document.querySelectorAll('.videoAni');
+    const trigger = gsap.utils.toArray('.trigger-fadeinOn');
+    const container = document.querySelectorAll('.trigger-fadeinOn');
 
     trigger.forEach((text, i) => {
+        let aniOrder1 = container[i].querySelector('.aniOrder1');
+        let aniOrder2 = container[i].querySelector('.aniOrder2');
+        let aniOrder3 = container[i].querySelector('.aniOrder3');
+        let aniOrder4 = container[i].querySelector('.aniOrder4');
+        let aniOrder5 = container[i].querySelector('.aniOrder5');
+        let aniOrder6 = container[i].querySelector('.aniOrder6');
+
+        let aniOrder1Same = container[i].querySelector('.aniOrder1Same');
+        let aniOrder2Same = container[i].querySelector('.aniOrder2Same');
+        let aniOrder3Same = container[i].querySelector('.aniOrder3Same');
+        let aniOrder4Same = container[i].querySelector('.aniOrder4Same');
+        let aniOrder5Same = container[i].querySelector('.aniOrder5Same');
+        let aniOrder6Same = container[i].querySelector('.aniOrder6Same');
+
         ScrollTrigger.create({
             trigger: text,
             start: "0% 90%",
             animation: gsap
                 .timeline()
-                .fromTo(subtitle[i], startDefault, {y: 0, opacity: 1, duration: 1})
-                .fromTo(video[i], startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(title[i], startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(paragraph[i], startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(button[i], startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder1, startDefault, {y: 0, opacity: 1, duration: 1})
+                .fromTo(aniOrder1Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder2, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+                .fromTo(aniOrder2Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder3, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+                .fromTo(aniOrder3Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder4, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+                .fromTo(aniOrder4Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder5, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+                .fromTo(aniOrder5Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+                .fromTo(aniOrder6, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+                .fromTo(aniOrder6Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+
         })
-    })
-    ScrollTrigger.create({
-        trigger: ".secureWrap",
-        start: "0% 100%",
-        animation: gsap
-            .timeline()
-            .fromTo("#accordion", startDefault, {y: 0, opacity: 1, duration: 1})
-            .fromTo(".gallery", startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
     })
 
     let theme1 = document.querySelector(".theme1");
@@ -109,10 +119,10 @@ $(function () {
             .to(".theme3", {opacity: 0, duration: 1}, "+=0.5")
             .fromTo(".menuTheme", {opacity: 0, scale: 0.5}, {opacity: 1, scale: 1, duration: 1})
             .to("#environment", {backgroundColor: '#e7c0b5'}, "+=2")
-            .to(".subTitle1", {yPercent : -100, opacity:0, duration:0.2},"<")
-            .to(".subTitle2",{opacity:1, yPercent:-100, duration:0.2},"<")
-            .to(".parLi1",{opacity:0,duration:0},"<")
-            .to(".parLi2",{opacity:1,duration:0},"<")
+            .to(".title-change-1", {yPercent : -100, opacity:0, duration:0.2},"<")
+            .to(".title-change-2",{opacity:1, yPercent:-100, duration:0.2},"<")
+            .to(".paragraph-change-1",{opacity:0,duration:0},"<")
+            .to(".paragraph-change-2",{opacity:1,duration:0},"<")
             .to(".upNavTheme1",  {opacity: 1}, "<")
             .to("#environment", {backgroundColor: '#d6d28c'}, "+=2")
             .to(".upNavTheme2", {opacity: 1}, "<")
@@ -129,10 +139,10 @@ $(function () {
             .to(".icon2", {opacity: 0, duration: 2}, "<")
             .to(".cursor", {opacity: 0, duration: 2}, "<")
             .to(".navThemeDark", {opacity: 1, duration: 2})
-            .to(".subTitle2", {yPercent : -100, opacity:0, duration:0.2},"<")
-            .to(".subTitle3",{opacity:1, yPercent:-200, duration:0.2},"<")
-            .to(".parLi2",{opacity:0,duration:0},"<")
-            .to(".parLi3",{opacity:1,duration:0},"<")
+            .to(".title-change-2", {yPercent : -100, opacity:0, duration:0.2},"<")
+            .to(".title-change-3",{opacity:1, yPercent:-200, duration:0.2},"<")
+            .to(".paragraph-change-2",{opacity:0,duration:0},"<")
+            .to(".paragraph-change-3",{opacity:1,duration:0},"<")
             .to(".upNavTheme3", {opacity: 0, duration: 2}, "<")
             .to(".upNavTheme2", {opacity: 0, duration: 2}, "<")
             .to(".upNavTheme1", {opacity: 0, duration: 2}, "<")

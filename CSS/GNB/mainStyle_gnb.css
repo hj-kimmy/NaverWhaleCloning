@@ -391,7 +391,7 @@ li.active .check{
     position: fixed;
     z-index: 99999999;
     background-color: white;
-
+    display: none;
 }
 #mobile-go ul{
     display: flex;
