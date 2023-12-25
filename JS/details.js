@@ -1,10 +1,10 @@
 $(function () {
-    let gal = $(".gallery li"); //이미지
-    let info = $(".infoGal li") // 안내문구
-    let btn = $(".btn_set li"); //인디케이터 버튼
-    let section = $(".detailsSection");
-    let galNow = $(".gallery li.active");
-    let sectionNow = $(".infoGal li.active")
+    let gal = $(".contents-gallery li"); //이미지
+    let info = $("#myCarousel .contents-info .contents-info li") // 안내문구
+    let btn = $(".contents-btn li"); //인디케이터 버튼
+    let section = $(".section-details");
+    let galNow = $(".contents-gallery li.active");
+    let sectionNow = $("#myCarousel .contents-info .contents-info li.active")
     let current = sectionNow.index(); //이미지의 현재 번째
 
     sectionNow.css({
@@ -92,7 +92,7 @@ $(function () {
         }
     })
 
-    $("i, .btn_set li").click(function () {
+    $("i, .contents-btn li").click(function () {
         btn.removeClass("active");
         btn.eq(current).addClass("active");
     })

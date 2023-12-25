@@ -1,17 +1,13 @@
 @media screen and (max-width: 1280px) {
-    section.detailsSection article .detailContentsWrap{
+    section.section-details article.contentsWrap>div{
         margin-right: 40px;
     }
-    section.detailsSection>.detailWrap>section:nth-of-type(2n) article .detailContentsWrap{
-        margin-right: 0;
+    section.section-details>.contents-info>section:nth-of-type(2n) article.contentsWrap>div{
         margin-left: 40px;
     }
-    section.detailsSection video{
+    section.section-details video{
         flex: 1 1 auto;
         max-width: 620px;
         min-width: 480px;
-        -webkit-border-radius: 18px;
-        -moz-border-radius: 18px;
-        border-radius: 18px;
     }
 }

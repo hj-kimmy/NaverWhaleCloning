@@ -1,45 +1,31 @@
-main {
-    margin-top: 80px;
+button.small{
+    padding: 10px 15px;
 }
 
 /*기본 section 설정*/
 section#guideMain {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    position: relative;
     background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 123.72%, rgba(245, 247, 250, 0.5) 123.72%);
     height: 430px;
 }
 
-.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni {
-    position: relative;
-    top: -5%;
-    opacity: 0;
+#guideMain .contentsWrap{
+    height: 100%;
 }
 
 /*artcle*/
-#guideMain .contentsWrap article.info {
+#guideMain .contentsWrap .contents-info {
     position: relative;
     width: 50%;
     word-break: keep-all;
     z-index: 1;
 }
 
-#guideMain .contentsWrap .title {
-    line-height: 120%;
-}
-
-#guideMain .contentsWrap .paragraph{
+#guideMain .contents-info p{
     width: 55%;
-}
-#guideMain .contentsWrap .paragraph.short{
-    display: none;
 }
 
 /*video 설정*/
-#guideMain .contentsWrap div.img {
+#guideMain .contentsWrap .contents-img {
     height: 430px;
     align-self: end;
     width: 50%;
@@ -49,7 +35,7 @@ section#guideMain {
     position: relative;
 }
 
-#guideMain .contentsWrap picture {
+#guideMain .contents-img picture {
     text-align: right;
     height: 100%;
     position: absolute;
@@ -61,46 +47,42 @@ section#guideMain {
 }
 
 #update{
-    padding: 80px 0 120px;
+    padding: 56px 0 96px;
 }
-
 #update .contentsWrap, #press .contentsWrap {
-    margin: 0 auto;
     justify-content: space-between;
+    margin-top: 24px;
 }
 
-#update .contentsWrap .updateInfo {
+#update .contentsWrap .contents-card {
     margin-right: 24px;
+    position: relative;
 }
 
-#update .contentsWrap .updateInfo:last-child {
+#update .contentsWrap .contents-card:last-child {
     margin-right: 0;
+}
+
+#update .tag{
+    background: rgba(256,256,256,0.7);
+    color: #000;
+    top: 15px;
+    left: 15px;
+    mix-blend-mode: screen;
+    position: absolute;
 }
 
 #update img {
     width: 100%;
 }
 
-section button{
-    font-size: 0.8125rem;
-    padding: 10px 15px;
-    border: 1px solid #e5e5e5;
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
-    border-radius: 7px;
-    background-color: white;
-    cursor: pointer;
-}
 #press{
     padding-bottom: 120px;
-}
-#update .contentsWrap, #press ul{
-    margin-top: 24px;
 }
 #press ul, #press ul li{
     width: 100%;
 }
-#press .paragraph {
+#press p {
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -108,22 +90,17 @@ section button{
 
 #press .contentsWrap ul li{
     padding: 20px 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid var(--lightgray);
 }
 
 #press .contentsWrap ul li:last-of-type{
     border-bottom: none;
 }
 
-.tag{
-    background: #4285f4;
-    font-size: 0.8125rem;
+#press .tag{
+    background: var(--blue);
     color: #fff;
     font-weight: bold;
-    padding: 3px 10px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    border-radius: 100px;
     margin-right: 10px;
 }
 

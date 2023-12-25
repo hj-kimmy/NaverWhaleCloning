@@ -101,11 +101,20 @@ p {
 p.small{
     font-size: 1rem;
 }
+p.big{
+    font-size: 1.25rem;
+}
+p.short{
+    display: none;
+}
 
 button {
     font-size: 0.9375rem;
     padding: 12px 15px;
-    /*    margin-top: 40px;*/
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: 1px solid var(--lightgray);
     -webkit-border-radius: 7px;
     -moz-border-radius: 7px;
@@ -129,13 +138,14 @@ button.small {
     font-size: 0.8125rem;
 }
 
-button.whale-Button .whaleLogo {
+.whaleLogo {
     width: 28px;
     height: 28px;
     display: inline-block;
     position: relative;
     left: -2px;
     top: 2px;
+    margin-right: 5px;
 }
 
 button.whale-Button.small .whaleLogo {
@@ -143,8 +153,15 @@ button.whale-Button.small .whaleLogo {
     height: 24px;
 }
 
+.whaleLogo-black{
+    background: url(../img/whale_black.svg) center / contain no-repeat;
+}
+
 .whaleLogo-white {
     background: url(../img/whale_white.svg) center / contain no-repeat;
+}
+.whaleLogo-color{
+    background: url(../img/whale_color.svg) center / contain no-repeat;
 }
 
 button:hover {
@@ -157,6 +174,14 @@ button.whale-Button:hover {
 
 br.br-600 {
     display: none;
+}
+.tag{
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
 }
 
 /******************************
@@ -181,6 +206,7 @@ br.br-600 {
 
 .date {
     font-size: 0.875rem;
+    color: var(--gray);
 }
 
 .shadow {
@@ -310,7 +336,7 @@ section {
         font-size: 1.25rem;
     }
 
-    p {
+    p, p.big {
         font-size: 1rem;
     }
 }
@@ -348,9 +374,15 @@ section {
         font-size: 1.225rem;
     }
 
-    p, p.small {
+    p, p.small, p.big {
         margin-top: 6px;
         font-size: 0.875rem;
+    }
+    p.long{
+        display: none;
+    }
+    p.short{
+        display: block;
     }
 
 

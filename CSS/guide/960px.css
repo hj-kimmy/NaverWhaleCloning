@@ -3,11 +3,12 @@
         height: 360px;
     }
 
-    #guideMain .contentsWrap div.img {
+    #guideMain .contentsWrap .contents-img {
         height: 300px;
         right: -32px;
+        align-self: end;
     }
-    #guideMain .contentsWrap .paragraph{
+    #guideMain .contents-info p{
         width: 100%;
     }
 
@@ -15,17 +16,17 @@
         flex-wrap: wrap;
     }
 
-    #update .contentsWrap .updateInfo {
+    #update .contentsWrap .contents-card {
         margin-bottom: 24px;
         margin-right: unset;
         width: 100%;
     }
 
-    #update .paragraph, #press .paragraph{
+    #update p, #press p{
         font-size: 1.125rem;
     }
     #update{
-        padding: 80px 0 56px;
+        padding: 56px 0 32px;
     }
     #press{
         padding-bottom: 80px;

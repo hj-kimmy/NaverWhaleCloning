@@ -3,13 +3,9 @@ $(function () {
     let mobileSub = $("#mobile-subMenu");
     let cover = $(".cover");
 
-    /* 미디어 쿼리 */
-    let subMenuBox = $(".subMenuBox");
-    subMenuBox.hide();
-
 
     /* 끄기 버튼 외 다른 공간 클릭했을 때 창 닫힘*/
-    let appBox = $("#go");
+    let appBox = $("#gnb-appMenu");
     $(document).mouseup(function (e) {
         if (appBox.has(e.target).length === 0) {
             e.stopPropagation();
@@ -38,7 +34,7 @@ $(function () {
         }
     });
     /* 앱 메뉴 버튼 클릭 */
-    let appsBtn = $("#go img[alt='바로가기']");
+    let appsBtn = $("#gnb-appMenu img[alt='바로가기']");
     appsBtn.click(function (){
         $(this).next().fadeToggle();
     })
@@ -46,9 +42,9 @@ $(function () {
     $(window).scroll(function () {
         let scroll = $(window).scrollTop();
         if (scroll >= 40) {
-            $("header").addClass("move");
+            $("header").addClass("shadow");
         } else {
-            $("header").removeClass("move");
+            $("header").removeClass("shadow");
         }
     })
 

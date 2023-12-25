@@ -61,12 +61,14 @@ section#secure {
 section#secure .titleWrap{
     margin-bottom: 70px;
 }
+section#secure .contentsWrap{
+    align-items: start;
+}
 
 /*accordian-Carousel 설정*/
 #secure #accordion {
     margin-right: 60px;
     padding-bottom: 20px;
-    align-self: start;
     flex: 1 1 0;
     max-width: 498px;
 }
@@ -153,7 +155,7 @@ section#secure .contents-gallery {
 }
 
 section#secure .contents-gallery img {
-    margin-top: -10px;
+    margin-top: -1%;
     width: 100%;
     display: none;
 }
@@ -380,6 +382,9 @@ section#adBanner {
     padding-right: 0;
     background: url("../../img/banner_beta_download_wave_1440.png") bottom center / contain no-repeat;
     justify-content: space-between;
+}
+#adBanner .contents-info-btn p{
+    opacity: 0.7;
 }
 #adBanner .contents-info-btn button{
     margin-top: 24px;

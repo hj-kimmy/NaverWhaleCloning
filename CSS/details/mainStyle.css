@@ -1,70 +1,64 @@
-main {
-    margin-top: 80px;
-}
-
 #detailsCarousel {
-    width: 100%;
     height: 430px;
-    position: relative;
 }
 #myCarousel{
     display: flex;
     justify-content: center;
     position: relative;
 }
-#myCarousel,#myCarousel .gallery,#myCarousel .gallery li{
+#myCarousel, #myCarousel .contents-gallery, #myCarousel .contents-gallery li{
     height: 100%;
     width: 100%;
 }
-#myCarousel .gallery{
+#myCarousel .contents-gallery{
     position: relative;
 }
-#myCarousel .gallery li{
+#myCarousel .contents-gallery li{
     position: absolute;
     display: flex;
     justify-content: center;
     opacity: 0;
 }
-#myCarousel .gallery li.active{
+#myCarousel .contents-gallery li.active{
     opacity: 1;
 }
 
-#myCarousel .gallery li:nth-of-type(1) {
+#myCarousel .contents-gallery li:nth-of-type(1) {
     background: rgb(85, 200, 158);
     background: linear-gradient(135deg, rgba(85, 200, 158, 1) 0%, rgba(36, 162, 155, 1) 100%);
 }
-#myCarousel .gallery li:nth-of-type(1) .galleryBgImg{
+#myCarousel .contents-gallery li:nth-of-type(1) .contents-bgImg{
     background: url("../../img/banner_omnitasking_icon_1440.png") top right / auto 100% no-repeat;
 }
 
-#myCarousel .gallery li:nth-of-type(2) {
+#myCarousel .contents-gallery li:nth-of-type(2) {
     background: rgb(112, 132, 249);
     background: linear-gradient(135deg, rgba(112, 132, 249, 1) 0%, rgba(40, 84, 243, 1) 100%);
 }
-#myCarousel .gallery li:nth-of-type(2) .galleryBgImg{
+#myCarousel .contents-gallery li:nth-of-type(2) .contents-bgImg{
     background: url("../../img/banner_security_icon_1440.png") top right / auto 100% no-repeat;
 }
 
-#myCarousel .gallery li:nth-of-type(3) {
+#myCarousel .contents-gallery li:nth-of-type(3) {
     background: rgb(124, 116, 250);
     background: linear-gradient(135deg, rgba(124, 116, 250, 1) 0%, rgba(110, 63, 228, 1) 100%);
 }
-#myCarousel .gallery li:nth-of-type(3) .galleryBgImg{
+#myCarousel .contents-gallery li:nth-of-type(3) .contents-bgImg{
     background: url("../../img/banner_customizing_icon_1440.png") top right / auto 100% no-repeat;
 }
-#myCarousel .gallery .galleryBgImg{
+#myCarousel .contents-gallery .contents-bgImg{
     width: 100%;
     height: 100%;
 }
 
-#myCarousel .btn_set {
+#myCarousel .contents-btn {
     padding: 20px 0;
     display: flex;
     justify-content: space-between;
     z-index: 4;
 }
 
-#myCarousel .btn_set li {
+#myCarousel .contents-btn li {
     padding: 10px 15px;
     margin-right: 5px;
     list-style: none;
@@ -77,29 +71,28 @@ main {
     font-weight: bold;
 }
 
-#myCarousel .btn_set li:last-of-type{
+#myCarousel .contents-btn li:last-of-type{
     margin-right: 0;
 }
 
-#myCarousel .btn_set li.active {
+#myCarousel .contents-btn li.active {
     color: rgba(255,255,255,0.9);
     background-color: rgba(0,0,0,0.4);
 }
 
-#myCarousel .btn-wrap{
+#myCarousel .contents-btns{
     position: absolute;
     top: 0;
 }
 
-
-#myCarousel .info-Wrap{
+#myCarousel .contents-info{
     position: absolute;
     height: 100%;
     top: 0;
     align-items: center;
 }
 
-#myCarousel .infoGal{
+#myCarousel .contents-info .contents-info{
     width: 100%;
     height: 40%;
     margin-top: 20px;
@@ -107,96 +100,84 @@ main {
     position: relative;
     overflow: hidden;
 }
-#myCarousel .infoGal li{
+#myCarousel .contents-info .contents-info li{
     position: absolute;
     width: 100%;
     color: #fff;
     top: 100%;
 }
-#myCarousel .infoGal li.active{
+#myCarousel .contents-info .contents-info li.active{
     top: 0;
 }
 
-#myCarousel .infoGal .paragraph{
+#myCarousel .contents-info .contents-info p{
     width: 100%;
     max-width: 450px;
-    color: rgba(255,255,255,0.7);
+    color: rgba(256,256,256,0.7);
 }
 
-#myCarousel .paragraph.shorten{
-    display: none;
-}
-
-section.detailsSection .iconsBox{
+section.section-details .contents-icon{
     flex: 0 0 auto;
     width: 84px;
     height: 84px;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     border-radius: 50%;
-    border: 1px solid #e5e5e5;
+    border: 1px solid var(--lightgray);
     background: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-section.detailsSection{
-    width: 100%;
-    border-bottom: 1px solid #e5e5e5;
+section.section-details .contents-icon img{
+    display: block;
+    width: 36px;
+}
+section.section-details{
     display: none;
 }
-section.detailsSection.active{
+section.section-details.active{
     display: block;
 }
 
-section.detailsSection>.detailWrap>section{
+section.section-details>.contents-info>section{
     width: 100%;
     padding: 140px 0;
     display: flex;
     justify-content: center;
 }
-section.detailsSection article{
+section.section-details article{
     width: 100%;
     display: flex;
 }
-section.detailsSection .title{
-    font-size: 2.5rem;
+section.section-details h2{
     margin-top: 24px;
-    word-break: keep-all;
 }
-section.detailsSection .subtitle{
-    font-size: 1.125rem;
+section.section-details .contents-info .contents-info p.c-whale-blue{
     margin-top: 48px;
-}
-section.detailsSection .info-Wrap{
-    width: 100%;
+    font-weight: bold;
 }
 
-section.detailsSection video{
+section.section-details video{
     flex: 0 0 auto;
     width: 620px;
     -webkit-border-radius: 18px;
     -moz-border-radius: 18px;
     border-radius: 18px;
 }
-section.detailsSection article .detailContentsWrap{
+section.section-details article.contentsWrap>div{
     width: 100%;
     height: 100%;
     margin-right: 90px;
     flex: 1 1 auto;
 }
-section.detailsSection>.detailWrap>section:nth-of-type(2n){
+section.section-details>.contents-info>section:nth-of-type(2n){
     background-color: #f7f9fb;
 }
-section.detailsSection>.detailWrap>section:nth-of-type(2n) article{
+section.section-details>.contents-info>section:nth-of-type(2n) article{
     flex-direction: row-reverse;
-    background-color: #f7f9fb;
 }
-section.detailsSection>.detailWrap>section:nth-of-type(2n) article .detailContentsWrap{
+section.section-details>.contents-info>section:nth-of-type(2n) article.contentsWrap>div{
     margin-right: 0;
     margin-left: 90px;
-}
-section.detailsSection .iconsBox img{
-    display: block;
-    width: 36px;
 }

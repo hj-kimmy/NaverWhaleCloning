@@ -6,10 +6,6 @@
     #subBtn{
         justify-content: end;
     }
-    #subBtn > button {
-        width: auto;
-        padding: 0 12px;
-    }
 
     #subBtn > button > .whaleLogo{
         display: none;

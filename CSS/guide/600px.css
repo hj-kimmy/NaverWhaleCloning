@@ -1,26 +1,23 @@
 @media screen and (max-width: 600px) {
-    main {
-        margin-top: 64px;
-    }
-
     section#guideMain {
         height: 216px;
     }
 
-    #guideMain .contentsWrap div.img {
+    #guideMain .contentsWrap .contents-img {
         height: 160px;
         right: -20px;
     }
-
-    #guideMain .contentsWrap .paragraph.long {
-        display: none;
+    #update{
+        padding: 36px 0 6px;
+    }
+    #press{
+        padding-bottom: 80px;
+    }
+    #press .contentsWrap:last-child{
+        margin-top: 4px;
     }
 
-    #guideMain .contentsWrap .paragraph.short {
-        display: block;
-    }
-
-    #update .paragraph, #press .paragraph {
+    #update p, #press p {
         font-size: 1rem;
     }
 }

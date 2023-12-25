@@ -12,11 +12,8 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-    <!-- Main style sheet-->
+    <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/mainStyle.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/960px.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/600px.css">
 
     <!-- GNB style sheet -->
     <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
@@ -24,6 +21,12 @@
     <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
     <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
     <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+
+    <!-- Main style sheet-->
+    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/mainStyle.css">
+    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/960px.css">
+    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/600px.css">
+
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -50,25 +53,25 @@
             <ul id="main-menu">
                 <li id="home"><a href="index.html" class="check">홈</a>
                 </li>
-                <li class="page active">
-                    <div class="depth2-li">
+                <li class="active">
+                    <div class="menu-sub-2">
                         <a href="whyWhale_BrandStory.html" class="check">Whale을 사용해야하는 이유</a>
                         <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
                     </div>
-                    <div class="depth2-li-wrap">
-                        <ul class="subMenuBox">
+                    <div class="subMenuBoxWrap">
+                        <ul class="subMenuBox hide">
                             <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
-                            <li><a href="details_html/details_Omnitasking.html">주요 기능</a></li>
+                            <li><a href="details_Omnitasking.html">주요 기능</a></li>
                         </ul>
                     </div>
                 </li>
-                <li class="page">
-                    <div class="depth2-li">
+                <li>
+                    <div class="menu-sub-2">
                         <a href="guide.html" class="check">가이드</a>
                         <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
                     </div>
-                    <div class="depth2-li-wrap">
-                        <ul class="subMenuBox">
+                    <div class="subMenuBoxWrap">
+                        <ul class="subMenuBox hide">
                             <li><a href="guide.html">What's new</a></li>
                             <li>이용 가이드</li>
                             <li>마이 액티비티</li>
@@ -81,25 +84,31 @@
                 <li>웨일북</li>
             </ul>
             <div id="subBtn">
-                <button class="main-downloadBtn" onclick = "location.href = 'download.html'">
-                    <div class="whaleLogo"></div>
+                <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
+                    <div class="whaleLogo whaleLogo-black"></div>
                     다운로드
                 </button>
-                <div id="go">
+                <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
-                    <ul class="subMenuBox">
-                        <h4>웨일 서비스</h4>
-                        <li><img src="img/ic_whale.png" alt="">마이 액티비티</li>
-                        <li><img src="img/ic_whale_store.png" alt="">웨일 스토어</li>
-                        <li><img src="img/ic_help.png" alt="">웨일 헬프센터</li>
-                        <li><img src="img/ic_whale_lab.png" alt="">웨일 연구소</li>
-                        <li><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</li>
-                        <li><img src="img/ic_whaleon.png" alt="">웨일온</li>
-                        <li><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</li>
-                        <li><img src="img/ic_whale_class.png" alt="">웨일 클래스</li>
-                        <li><img src="img/ic_whalespace.png" alt="">웨일 스페이스</li>
-                        <li><img src="img/ic_whalebook.png" alt="">웨일북</li>
-                        <li><img src="img/ic_whale.png" alt="">버그바운티</li>
+                    <ul class="subMenuBox hide">
+                        <li>
+                            <strong>웨일 서비스</strong>
+                        </li>
+                        <li>
+                            <ul class="appMenu-Apps">
+                                <li><img src="img/ic_whale.png" alt="">마이 액티비티</li>
+                                <li><img src="img/ic_whale_store.png" alt="">웨일 스토어</li>
+                                <li><img src="img/ic_help.png" alt="">웨일 헬프센터</li>
+                                <li><img src="img/ic_whale_lab.png" alt="">웨일 연구소</li>
+                                <li><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</li>
+                                <li><img src="img/ic_whaleon.png" alt="">웨일온</li>
+                                <li><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</li>
+                                <li><img src="img/ic_whale_class.png" alt="">웨일 클래스</li>
+                                <li><img src="img/ic_whalespace.png" alt="">웨일 스페이스</li>
+                                <li><img src="img/ic_whalebook.png" alt="">웨일북</li>
+                                <li><img src="img/ic_whale.png" alt="">버그바운티</li>
+                            </ul>
+                        </li>
                     </ul>
                 </div>
                 <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
@@ -114,7 +123,7 @@
                     <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
                     <span class="mobile-menu-btn"><img src="img/apps.svg" alt="바로가기" title="바로가기"></span>
                 </div>
-                <li class="active" id="mobile-home">
+                <li id="mobile-home">
                     <a href="index.html">홈
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a>
@@ -127,7 +136,7 @@
                 <li>
                     <ul>
                         <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
-                        <li><a href="details_html/details_Omnitasking.html">주요 기능</a></li>
+                        <li><a href="details_Omnitasking.html">주요 기능</a></li>
                     </ul>
                 </li>
                 <hr>
@@ -143,35 +152,27 @@
                     </ul>
                 </li>
                 <hr>
-                <li>
-                    <a href="">스토어
-                        <span class="material-symbols-outlined arrow">chevron_right</span>
-                    </a>
+                <li>스토어
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
                 </li>
-                <li>
-                    <a href="">연구소
-                        <span class="material-symbols-outlined arrow">chevron_right</span>
-                    </a>
+                <li>연구소
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
                 </li>
-                <li>
-                    <a href="">웨일 스페이스
-                        <span class="material-symbols-outlined arrow">chevron_right</span>
-                    </a>
+                <li>웨일 스페이스
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
                 </li>
-                <li>
-                    <a href="">웨일북
-                        <span class="material-symbols-outlined arrow">chevron_right</span>
-                    </a>
+                <li>웨일북
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
                 </li>
             </ul>
-            <button class="downloadBtn" onclick = "location.href = 'download.html'">
-                <span class="whaleLogo"></span>
+            <button class="downloadBtn" onclick="location.href = 'download.html'">
+                <span class="whaleLogo whaleLogo-color"></span>
                 다운로드
             </button>
         </nav>
 
         <div id="mobile-subMenu">
-            <div id="mobile-go">
+            <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
                     <span class="material-symbols-outlined BackBtn">chevron_left</span>
                     바로가기
@@ -194,71 +195,73 @@
         </div>
     </header>
     <main>
-        <section id="story">
-            <div class="sectionFirstBg triggerContent">
-                <div class="sectionFirstBgImg"></div>
+        <section id="story" class="trigger-fadeinOn">
+            <div class="bgWrap">
+                <div class="contents-bgImg"></div>
             </div>
-            <div class="sectionContentsWrap">
-                <div class="titleWrap">
-                    <p class="subtitle subtitleAni">
+            <div>
+                <div class="titleWrap c-whale-white">
+                    <h3 class="aniOrder1">
                         웨일이 추구하는 서비스 가치
-                    </p>
-                    <h1 class="titleAni">사용자가 1순위인 브라우저</h1>
+                    </h3>
+                    <h1 class="aniOrder2">사용자가 1순위인 브라우저</h1>
                 </div>
                 <div class="contentsWrap">
-                    <div class="videoWrap paragraphAni">
+                    <div class="contents-video aniOrder3">
                         <video muted autoplay controls loop>
                             <source src="img/Brandstory.mp4">
                         </video>
                     </div>
                 </div>
-                <div>
-                    <p class="bigParagraph buttonAni">
-                        쉽고 빠른 탐색, 모든 기기를 연결하는 동기화, 위조사이트 차단까지!<br>
-                        빠르고 스마트한 네이버 웨일 브라우저를 만나보세요!
+                <div class="titleWrap">
+                    <p class="big aniOrder4 c-whale-gray">
+                        쉽고 빠른 탐색, 모든 기기를 연결하는 동기화, <br class="br-600">위조사이트 차단까지!<br>
+                        빠르고 스마트한 네이버 웨일 브라우저를 <br class="br-600">만나보세요!
                     </p>
                 </div>
             </div>
         </section>
-        <section id="mainFeature" class="triggerContent">
-            <h2 class=" contentsWrap subtitleAni">주요 기능</h2>
+        <section id="mainFeature" class="trigger-fadeinOn">
+            <h2 class=" contentsWrap aniOrder1">주요 기능</h2>
             <div class="contentsWrap">
-                <ul class="titleAni">
+                <ul class="aniOrder2">
                     <li>
-                        <a href="details_html/details_Omnitasking.html">
+                        <a href="details_Omnitasking.html">
                             <img src="img/img_card_omnitasking_820.png" alt="">
-                            <div class="featureInfo">
-                                <h4 class="contentTitle"> 옴니태스킹</h4>
-                                <p class="paragraph">여러가지 작업들도 한 번에 효율적으로!</p>
+                            <div class="contents-card">
+                                <h4> 옴니태스킹</h4>
+                                <p class="c-whale-gray">여러가지 작업들도 한 번에 효율적으로!</p>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="details_html/details_security.html">
+                        <a href="details_security.html">
                             <img src="img/img_card_security_820.png" alt="">
-                            <div class="featureInfo">
-                                <h4 class="contentTitle">강력한 보안</h4>
-                                <p class="paragraph">최신 기술로 개인정보는 안전하게!</p>
+                            <div class="contents-card">
+                                <h4>강력한 보안</h4>
+                                <p class="c-whale-gray">최신 기술로 개인정보는 안전하게!</p>
                             </div>
                         </a>
                     </li>
                     <li>
-                        <a href="details_html/details_customizing.html">
+                        <a href="details_customizing.html">
                             <img src="img/img_card_customizing_820.png" alt="">
-                            <div class="featureInfo">
-                                <h4 class="contentTitle">커스터마이징</h4>
-                                <p class="paragraph">브라우저를 나만의 느낌으로!</p>
+                            <div class="contents-card">
+                                <h4>커스터마이징</h4>
+                                <p class="c-whale-gray">브라우저를 나만의 느낌으로!</p>
                             </div>
                         </a>
                     </li>
                 </ul>
             </div>
         </section>
-        <section id="snsNews" class="triggerContent">
-            <p class="bigParagraph titleAni">
-                네이버 웨일의 다양한 소식을 확인하세요
-            </p>
-            <ul class="paragraphAni">
+        <section id="snsNews" class="trigger-fadeinOn">
+            <div class="titleWrap">
+                <p class="big aniOrder1 c-whale-gray">
+                    네이버 웨일의 다양한 소식을 확인하세요
+                </p>
+            </div>
+            <ul class="aniOrder2">
                 <li><a href=""><img src="img/ic_blog_36.png" alt=""></a></li>
                 <li><a href=""><img src="img/ic_navertv_36.png" alt=""></a></li>
                 <li><a href=""><img src="img/ic_instagram_36.png" alt=""></a></li>
@@ -285,8 +288,8 @@
                     <li><img src="img/youtube.png" alt=""></li>
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
-                <button class="button">
-                    <span class="whaleLogo"></span>
+                <button class="small">
+                    <span class="whaleLogo whaleLogo-color"></span>
                     베타 다운로드
                 </button>
             </div>

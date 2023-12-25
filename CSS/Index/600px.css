@@ -22,29 +22,23 @@
     #secure .titleWrap {
         padding: 0 20px;
     }
-
-    #secure #accordion > div > h3 {
-        font-size: 1.225rem;
-        margin-bottom: 0;
-    }
-
-    #secure #accordion > div {
-        padding: 30px 30px 30px 25px;
-    }
-
-    #secure #accordion > div:not(.active) {
+    #secure #accordion .contents-accordion {
         padding: 16px 30px 16px 25px;
     }
+    #secure #accordion .contents-accordion.active {
+        padding: 30px 30px 0px 25px;
+    }
 
-    #secure #accordion > div.active > ul {
+    #secure #accordion .contents-accordion.active > ul {
         right: 20px;
     }
 
-    #secure #accordion > div > p > img {
+    #secure #accordion .contents-accordion.active p>img {
         width: 220px;
         left: 50%;
         margin-top: -25px;
         margin-left: -110px;
+        position: relative;
         bottom: -45px;
     }
     /******************************
