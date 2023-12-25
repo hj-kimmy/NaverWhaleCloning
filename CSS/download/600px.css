@@ -1,27 +1,17 @@
 @media screen and (max-width: 600px) {
-    main{
-        margin-top: 64px;
-    }
-    #downloadMain .contentsWrap div.img{
+    #downloadMain .contentsWrap .contents-btns{
         margin-top: 30px;
     }
+    #downloadMain .contentsWrap .contents-img{
+        margin-top: 50px;
+    }
     #downloadMain .contentsWrap img{
-        width: 100%;
         max-height: 202px;
     }
-    #downloadMain button{
-        margin-top: 28px;
-    }
-
     section#downloadMain > div.contents {
         padding: 80px 20px 70px 20px;
     }
-
     section#whaleDownload{
         padding: 60px 0 46px;
-
-    }
-    #whaleDownload .title{
-        font-size: 1.625rem;
     }
 }

@@ -76,6 +76,9 @@ h1.important {
 h2 {
     font-size: 2.5rem;
 }
+h2.sub{
+    font-size: 2.25rem;
+}
 
 h2.important {
     font-size: 1.875rem;
@@ -100,6 +103,9 @@ p {
 }
 p.small{
     font-size: 1rem;
+}
+p.smallest{
+    font-size: 0.875rem;
 }
 p.big{
     font-size: 1.25rem;
@@ -264,13 +270,15 @@ section {
     width: calc(50% - 12px);
     padding: 32px 36px;
     background: #fff;
-    box-shadow: 0 0 20px lightgray;
     display: flex;
     align-items: center;
     justify-content: space-between;
     -webkit-border-radius: 40px;
     -moz-border-radius: 20px;
     border-radius: 20px;
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
 
 .contents-cardList li:nth-of-type(2n-1) {
@@ -284,6 +292,9 @@ section {
 .contents-cardList li .icon {
     width: 84px;
     height: 84px;
+}
+.contents-cardList li p {
+    margin-top: 6px;
 }
 
 .contents-cardList li div:nth-of-type(2) {
@@ -362,19 +373,24 @@ section {
         font-size: 1.875rem;
     }
 
+    h2.sub{
+        font-size: 1.625rem;
+    }
+
     h2, h2.important {
         font-size: 1.5rem;
     }
+
 
     h3 {
         font-size: 1rem;
     }
 
     h4 {
-        font-size: 1.225rem;
+        font-size: 1.125rem;
     }
 
-    p, p.small, p.big {
+    p, p.small, p.big, p.smallest {
         margin-top: 6px;
         font-size: 0.875rem;
     }

@@ -1,5 +1,4 @@
 main {
-    margin-top: 80px;
     background-color: #f7f9fb;
 }
 
@@ -10,22 +9,21 @@ main {
 }
 
 /*artcle*/
-#downloadMain .contentsWrap article.info{
+#downloadMain .contentsWrap .contents-info-btn{
     position: relative;
     width: 50%;
-    word-break: keep-all;
 }
 
-#downloadMain .contentsWrap .title{
+#downloadMain .contentsWrap h1{
     line-height: 120%;
 }
-#downloadMain .contentsWrap .paragraph span{
+#downloadMain .contentsWrap p span{
     color: #2187ec;
     font-weight: 500;
 }
 
 /*video 설정*/
-#downloadMain .contentsWrap div.img{
+#downloadMain .contentsWrap .contents-img{
     position: relative;
     width: 50%;
     display: flex;
@@ -37,20 +35,23 @@ main {
 }
 
 /*button 설정*/
-#downloadMain .contentsWrap .buttonWrap{
+#downloadMain .contentsWrap .contents-btns{
+    margin-top: 40px;
     display: flex;
+}
+#downloadMain .contentsWrap .contents-btns button:last-child{
+    margin-left: 10px;
+    background: #fff;
 }
 
 section#whaleDownload{
     padding: 80px 0 120px;
-    border-bottom: 1px solid #e5e5e5;
 }
-
-#whaleDownload .title{
-    font-size: 2.25rem;
+#whaleDownload .contentsWrap:last-child{
+    margin-top: 30px;
 }
-#whaleDownload .paragraph {
-    font-size: 0.875rem;
+#whaleDownload button.small{
+    padding: 12px;
 }
 
 .macOS{

@@ -1,7 +1,3 @@
-button.small{
-    padding: 10px 15px;
-}
-
 /*기본 section 설정*/
 section#guideMain {
     background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0) 123.72%, rgba(245, 247, 250, 0.5) 123.72%);
@@ -52,6 +48,9 @@ section#guideMain {
 #update .contentsWrap, #press .contentsWrap {
     justify-content: space-between;
     margin-top: 24px;
+}
+#update button.small, #press button.small{
+    padding: 10px 15px;
 }
 
 #update .contentsWrap .contents-card {
