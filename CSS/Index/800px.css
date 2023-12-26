@@ -19,13 +19,14 @@
         width: 100%;
         flex-direction: column;
         justify-content: start;
+        position: relative;
     }
     #adBanner .contents-info-btn{
         padding-top: 40px;
     }
     #adBanner .cellphone {
-        align-self: end;
         position: absolute;
+        right: 0;
         bottom: 0;
     }
 

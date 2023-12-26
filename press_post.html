@@ -12,7 +12,6 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
@@ -24,9 +23,10 @@
     <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/guide/mainStyle.css">
-    <link rel="stylesheet" href="CSS/guide/960px.css">
-    <link rel="stylesheet" href="CSS/guide/600px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/mainStyle.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/960px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/740px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/600px.css">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -36,7 +36,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 </head>
 <body>
@@ -52,7 +51,7 @@
                 </a>
             </h1>
             <ul id="main-menu">
-                <li id="home"><a href="index.html" class="check">홈</a>
+                <li class="active" id="home"><a href="index.html" class="check">홈</a>
                 </li>
                 <li>
                     <div class="menu-sub-2">
@@ -66,7 +65,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
+                <li>
                     <div class="menu-sub-2">
                         <a href="guide.html" class="check">가이드</a>
                         <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
@@ -195,112 +194,58 @@
             </div>
         </div>
     </header>
+
     <main>
-        <section id="guideMain">
+        <section id="guideHeader">
             <section class="contentsWrap trigger-fadeinOn">
                 <article class="contents-info">
-                    <h1 class="aniOrder1">What's New</h1>
+                    <h1 class="aniOrder1">보도자료</h1>
                     <div class="aniOrder2 c-whale-gray">
-                        <p class="long">
-                            네이버 웨일의 최신 업데이트와 보도 자료 소식을 빠르게 전해드립니다.
-                        </p>
-                        <p class="short">
-                            최신 업데이트와 소식을 전해 드립니다.
+                        <p>
+                            네이버 웨일의 주요 소식을
+                            <br class="br-960">빠르게 전해드립니다.
                         </p>
                     </div>
                 </article>
                 <div class="contents-img">
                     <picture>
                         <source srcset="img/img_press_260.png" media="(max-width : 600px)">
-                        <source srcset="img/img_press_470.png" media="(max-width : 960px)">
-                        <img src="img/img_press_680.png" alt="">
+                        <img src="img/img_press_470.png" alt="">
                     </picture>
                 </div>
             </section>
         </section>
-        <section id="update">
+        <section id="guidePost" class="press">
             <div class="contentsWrap">
-                <h2>
-                    업데이트
-                </h2>
-                <button class="small" onclick="location.href = 'update_List.html'">더 보기</button>
-            </div>
-            <div class="contentsWrap">
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Desktop</span>
-                        <img src="img/img_notice_desktop_820.png" alt="">
-                        <div>
-                            <p>
-                                v3.23.214.10 업데이트 안내
-                            </p>
-                            <span class="date">2023. 10. 31</span></div>
-                    </a>
+                <div class="contents-post-title">
+                    <p class="small"><span><strong>네이버式 에듀테크, 대학가로 스며든다…‘웨일 스페이스’ 확장</strong></span><span class="date">2023.12.26</span></p>
+                    <div>
+                        <span class="material-symbols-outlined">format_size</span>
+                        <span class="material-symbols-outlined">link</span>
+                    </div>
                 </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">iOS</span>
-                        <img src="img/img_notice_ios_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.1.0 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 28</span></div>
-                    </a>
-                </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Android</span>
-                        <img src="img/img_notice_android_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.2.2.2 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 22</span></div>
-                    </a>
+                <div class="contents-post">
+                    <p>네이버가 만든 에듀테크 플랫폼이 대학에도 스며든다.</p>
+                    <br>
+                    <p>네이버클라우드는 서강대학교 로욜라국제대학·엔에스데블와 업무협약(MOU)을 체결했다고 8일 밝혔다. 협업 내용은 ‘로욜라국제대학의 교육 프로그램 및 평가 시스템 고도화를 위한 교육 플랫폼 구축’을 골자로 한다. 서강대 로욜라국제대학은 오는 2024년 신설되는 단과대학이다. 외국인 유학생·재외국민 학생들에게 한국학·국제학을 융합해 교육하기 위해 마련된다.</p>
+                    <br>
+                    <p>Focus 1. 새 탭 메모</p>
+                    <br>
+                    <p>네이버클라우드는 에듀테크 플랫폼 ‘웨일 스페이스’를 활용해 로욜라국제대학에 미래형 교육 환경이 조성될 수 있도록 지원한다. 웨일 계정을 보유한 이용자는 ▲학부별∙강의별로 맞춤형 브라우저 환경을 구성해 일괄 적용 ▲학생들의 학적·학습 현황 등을 통합 관리할 수 있다.</p>
+                    <br>
+                    <p> 네이버클라우드는 또 로욜라국제대학·엔에스데블과 함께 인공지능(AI)을 활용한 학습 평가 시스템을 구축하기 위해 협력하기로 했다. 팀네이버의 AI 기술력과 엔에스데블의 UBT∙AI 감독관 기술력으로 웨일 스페이스에 쌓인 데이터를 분석해 ▲문항 출제 및 평가 과정을 자동화하고 ▲학생들의 학습 수준에 따라 맞춤형 교육 프로그램 등을 마련할 계획이다. 로욜라국제대학 전용 한국어 평가 시스템을 구축, 향후 학생들이 한국어 교육 전문가로 성장할 수 있도록 지원한다.</p>
                 </div>
             </div>
-        </section>
-        <section id="press">
             <div class="contentsWrap">
-                <h2>
-                    보도자료
-                </h2>
-                <button class="small" onclick="location.href = 'press_List.html'">더 보기</button>
-            </div>
-            <div class="contentsWrap">
-                <ul>
+                <ul class="contents-post-nav">
                     <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버式 에듀테크, 대학가로 스며든다... '웨일 스페이스' 확장</p>
-                        </a>
+                        <span>이전</span><span>웨일, 에듀테크 기술력으로 몽골 교육 디지털 전환 이끈다</span><span class="date">2023.12.27</span>
                     </li>
                     <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>웨일, 에듀테크 기술력으로 몽골 교육 디지털 전환 이끈다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버클라우드-전라북도교육청 MOU 체결... 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>웨일 브라우저에서 환경 보호 실천해보세요! 네이버, 한국중앙자원봉사센터와 디지털 탄소 저감 캠페인 '그린웨일'진행한다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버클라우드 웨일, 미래형 교육 위한 교류의 장 'NWEC 2023' 개최... "함께 성장하는 에듀테크 생태계 조성할 것"</p>
-                        </a>
+                        <span>다음</span><span>네이버클라우드-전라북도교육청 MOU 체결… 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</span><span class="date">2023.12.27</span>
                     </li>
                 </ul>
+                <button onclick="location.href = 'press_List.html'">목록</button>
             </div>
         </section>
     </main>
@@ -331,5 +276,6 @@
 </div>
 <script src="JS/gnb.js"></script>
 <script src="JS/mainJavaScript.js"></script>
+<script src="JS/guide.js"></script>
 </body>
 </html>

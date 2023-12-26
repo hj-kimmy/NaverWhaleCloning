@@ -5,6 +5,7 @@
     --blue: #2187ec;
     --gray: #777777;
     --lightgray: #e5e5e5;
+    --green: #03cf5d;
 }
 
 * {
@@ -349,6 +350,9 @@ section {
 
     p, p.big {
         font-size: 1rem;
+    }
+    br.br-960{
+        display: none;
     }
 }
 @media screen and (max-width: 800px){

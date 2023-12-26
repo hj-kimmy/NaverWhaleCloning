@@ -1,10 +1,15 @@
 /*기본 section 설정*/
-.contentsWrap{
+.contentsWrap {
     max-width: 1000px;
 }
-section#guideHeader{
+
+section#guideHeader {
     background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0.5) 100%);
     height: 300px;
+}
+
+#guideHeader .contentsWrap {
+    height: 100%;
 }
 
 #guideHeader .contentsWrap .contents-info {
@@ -32,65 +37,233 @@ section#guideHeader{
     top: 0;
     right: 0;
 }
-#guideHeader picture img{
+
+#guideHeader picture img {
     height: 100%;
 }
 
-#guideHeader .contents-info p{
+#guideHeader .contents-info p {
     width: 100%;
 }
-section#guideList{
-    margin :  30px 0 60px;
+
+section#guideList {
+    margin: 30px 0 60px;
 }
-#guideList #tabs{
+
+#guideList #tabs {
     width: 100%;
-    margin-top: 30px;
+    margin: 30px 0;
+
 }
-#guideList ul.contents-btns{
+
+#guideList ul.contents-btns {
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     font-size: 16px;
-    width: 245px;
     padding: 15px 0;
     font-weight: bold;
 }
-#guideList ul.contents-btns .ui-tabs-active a{
+
+#guideList ul.contents-btns li {
+    margin-right: 20px;
+}
+
+#guideList ul.contents-btns .ui-tabs-active a {
     color: #000;
     position: relative;
 }
-#guideList ul.contents-btns .ui-tabs-active a:after{
-    content : "";
+
+#guideList ul.contents-btns .ui-tabs-active a:after {
+    content: "";
     position: absolute;
     width: 100%;
     height: 100%;
     top: 13px;
     left: 0;
-    border-bottom: 2px solid #03cf5d;
+    border-bottom: 2px solid var(--green);
 }
 
-#guideList .contents-tabs ul li{
+#guideList .contents-tabs ul.contents-tab-layer {
+    display: none;
+}
+
+#guideList .contents-tabs ul.contents-tab-layer.active {
+    display: block;
+}
+
+#guideList .contents-tabs ul li {
+    display: flex;
     border-top: 1px solid var(--lightgray);
     align-items: center;
     padding: 0 5px;
     cursor: pointer;
 }
-#guideList .contents-tabs ul li:last-child{
+
+#guideList .contents-tabs ul li:last-child {
     border-bottom: 1px solid var(--lightgray);
 }
-#guideList .contents-tabs ul li:hover{
-    background: rgba(0, 0, 0, 0.02);
+
+#guideList .contents-tabs ul li:hover {
+    background: #f9fafb;
 }
-#guideList .contents-tabs ul li:hover p{
+
+#guideList .contents-tabs ul li:hover p {
     font-weight: bold;
 }
 
-#guideList p{
+#guideList p {
     display: flex;
     justify-content: space-between;
-    align-items : center;
+    align-items: center;
     margin-top: 0;
     padding: 10px 0;
+    width: 100%;
 }
 
+#guideList > .contents-btns {
+    display: flex;
+    justify-content: center;
+}
 
+#guideList > .contents-btns > ul {
+    display: flex;
+    font-size: 14px;
+}
 
+#guideList > .contents-btns > ul li {
+    width: 26px;
+    height: 26px;
+    margin-left: 8px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#guideList > .contents-btns > ul li:first-child {
+    margin-left: 0;
+}
+
+#guideList > .contents-btns > ul li.active {
+    color: var(--green);
+    font-weight: bold;
+}
+
+#guideList > .contents-btns > ul li.active::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 80%;
+    height: 80%;
+    border: 2px solid var(--green);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#guideList p span:first-child {
+    display: block;
+    margin-right: 40px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#guideList .contents-btns .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 20px;
+}
+
+section#guidePost{
+    margin-bottom: 60px;
+}
+
+#guidePost div.contentsWrap {
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#guidePost div.contentsWrap > div {
+    width: 100%;
+}
+
+#guidePost .contents-post-title {
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--lightgray);
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+}
+
+#guidePost .contents-post-title>div{
+    display: flex;
+    align-items: end;
+}
+
+#guidePost .contents-post-title .material-symbols-outlined{
+    height: 20px;
+    width: 20px;
+    font-variation-settings: 'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+#guidePost .contents-post-title .material-symbols-outlined:last-child{
+    display: block;
+    transform: rotateZ(-45deg);
+    margin-left: 10px;
+}
+
+#guidePost .contents-post-title p span {
+    display: block;
+    width: 100%;
+}
+
+#guidePost .contents-post{
+    margin: 70px 0;
+}
+
+#guidePost .contents-post-nav{
+    width: 100%;
+    border-top: 1px solid var(--lightgray);
+}
+#guidePost .contents-post-nav li{
+    border-bottom: 1px solid var(--lightgray);
+    font-size: 14px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+#guidePost .contents-post-nav li:hover{
+    background: #f9fafb;
+}
+
+#guidePost .contents-post-nav li span{
+    flex: 0 0 auto;
+}
+#guidePost .contents-post-nav li span:nth-of-type(1){
+    margin-right: 10px;
+    font-weight: bold;
+}
+#guidePost .contents-post-nav li span:nth-of-type(2){
+    width: 90%;
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+#guidePost .contentsWrap:nth-of-type(2) button{
+    margin: 40px auto 0;
+    width: 96px;
+}

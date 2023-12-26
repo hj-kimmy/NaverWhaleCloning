@@ -1,0 +1,39 @@
+@media screen and (max-width: 740px) {
+    #guideList p{
+        flex-wrap: wrap;
+    }
+    #guideList p span{
+        display: block;
+        width: 100%;
+    }
+    #guideList p span:first-child{
+        margin-bottom: 10px;
+    }
+    #guidePost .contents-post-title p span{
+        font-size: 1rem;
+    }
+    #guidePost .contents-post-title p span:last-child{
+        margin-top: 8px;
+    }
+
+    #guidePost .contents-post-nav li{
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+    #guidePost .contents-post p{
+        font-size: 1.125rem;
+    }
+    #guidePost .contents-post.size-up p{
+        font-size: 1.25rem;
+    }
+
+    #guidePost .contents-post-nav li span:last-child{
+        margin-top: 8px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    #guidePost .contents-post-title .material-symbols-outlined:first-child{
+        display: block;
+    }
+}

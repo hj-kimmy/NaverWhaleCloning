@@ -12,7 +12,6 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
-
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
@@ -24,9 +23,10 @@
     <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/guide/mainStyle.css">
-    <link rel="stylesheet" href="CSS/guide/960px.css">
-    <link rel="stylesheet" href="CSS/guide/600px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/mainStyle.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/960px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/740px.css">
+    <link rel="stylesheet" href="CSS/guide/guide_detailPage/600px.css">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -36,7 +36,6 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
 </head>
 <body>
@@ -52,7 +51,7 @@
                 </a>
             </h1>
             <ul id="main-menu">
-                <li id="home"><a href="index.html" class="check">홈</a>
+                <li class="active" id="home"><a href="index.html" class="check">홈</a>
                 </li>
                 <li>
                     <div class="menu-sub-2">
@@ -66,7 +65,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
+                <li>
                     <div class="menu-sub-2">
                         <a href="guide.html" class="check">가이드</a>
                         <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
@@ -195,112 +194,60 @@
             </div>
         </div>
     </header>
+
     <main>
-        <section id="guideMain">
+        <section id="guideHeader">
             <section class="contentsWrap trigger-fadeinOn">
                 <article class="contents-info">
-                    <h1 class="aniOrder1">What's New</h1>
+                    <h1 class="aniOrder1">업데이트</h1>
                     <div class="aniOrder2 c-whale-gray">
-                        <p class="long">
-                            네이버 웨일의 최신 업데이트와 보도 자료 소식을 빠르게 전해드립니다.
-                        </p>
-                        <p class="short">
-                            최신 업데이트와 소식을 전해 드립니다.
+                        <p>
+                            네이버 웨일의 최신 업데이트
+                            <br class="br-960">소식을 빠르게 전해드립니다.
                         </p>
                     </div>
                 </article>
                 <div class="contents-img">
                     <picture>
-                        <source srcset="img/img_press_260.png" media="(max-width : 600px)">
-                        <source srcset="img/img_press_470.png" media="(max-width : 960px)">
-                        <img src="img/img_press_680.png" alt="">
+                        <source srcset="img/img_update_260.png" media="(max-width : 600px)">
+                        <img src="img/img_update_470.png" alt="">
                     </picture>
                 </div>
             </section>
         </section>
-        <section id="update">
+        <section id="guidePost" class="update">
             <div class="contentsWrap">
-                <h2>
-                    업데이트
-                </h2>
-                <button class="small" onclick="location.href = 'update_List.html'">더 보기</button>
-            </div>
-            <div class="contentsWrap">
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Desktop</span>
-                        <img src="img/img_notice_desktop_820.png" alt="">
-                        <div>
-                            <p>
-                                v3.23.214.10 업데이트 안내
-                            </p>
-                            <span class="date">2023. 10. 31</span></div>
-                    </a>
+                <div class="contents-post-title">
+                    <p class="small"><span><strong>v3.21.192.18 업데이트 안내</strong></span><span class="date">2023.12.26</span></p>
+                    <div>
+                        <span class="material-symbols-outlined">format_size</span>
+                        <span class="material-symbols-outlined">link</span>
+                    </div>
                 </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">iOS</span>
-                        <img src="img/img_notice_ios_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.1.0 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 28</span></div>
-                    </a>
-                </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Android</span>
-                        <img src="img/img_notice_android_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.2.2.2 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 22</span></div>
-                    </a>
+                <div class="contents-post">
+                    <p>안녕하세요, 웨일 팀입니다.</p>
+                    <br>
+                    <p>데스크톱 웨일 브라우저가 크로미움 118 버전을 탑재한 v.3.23.214.17 버전으로 업데이트되었습니다.</p>
+                    <br>
+                    <p>Focus 1. 새 탭 메모</p>
+                    <br>
+                    <p>새 탭의 위젯으로 메모가 추가되었습니다. 새 탭 하단에서 메모 미니 위젯을 열고 + 버튼을 눌러보세요. 새 탭에 추가된 스티커 메모는 자유롭게 이동하거나 사이즈를 조정할 수
+                        있고 여러 개를 동시에 띄울 수도 있습니다.</p>
+                    <br>
+                    <p> 메모는 스크랩북에도 동일하게 저장됩니다. 새 탭에서 메모를 추가한 뒤 스크랩북의 '새 탭 메모' 분류를 확인해보세요. 스크랩북에서도 메모를 자유롭게 편집하거나 삭제할 수
+                        있고, 변경 사항은 새 탭에 실시간으로 반영됩니다.</p>
                 </div>
             </div>
-        </section>
-        <section id="press">
             <div class="contentsWrap">
-                <h2>
-                    보도자료
-                </h2>
-                <button class="small" onclick="location.href = 'press_List.html'">더 보기</button>
-            </div>
-            <div class="contentsWrap">
-                <ul>
+                <ul class="contents-post-nav">
                     <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버式 에듀테크, 대학가로 스며든다... '웨일 스페이스' 확장</p>
-                        </a>
+                        <span>이전</span><span>v3.21.192.18</span><span class="date">2023.12.27</span>
                     </li>
                     <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>웨일, 에듀테크 기술력으로 몽골 교육 디지털 전환 이끈다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버클라우드-전라북도교육청 MOU 체결... 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>웨일 브라우저에서 환경 보호 실천해보세요! 네이버, 한국중앙자원봉사센터와 디지털 탄소 저감 캠페인 '그린웨일'진행한다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p>네이버클라우드 웨일, 미래형 교육 위한 교류의 장 'NWEC 2023' 개최... "함께 성장하는 에듀테크 생태계 조성할 것"</p>
-                        </a>
+                        <span>다음</span><span>v3.21.192.12</span><span class="date">2023.12.27</span>
                     </li>
                 </ul>
+                <button onclick="location.href = 'update_List.html'">목록</button>
             </div>
         </section>
     </main>
@@ -331,5 +278,6 @@
 </div>
 <script src="JS/gnb.js"></script>
 <script src="JS/mainJavaScript.js"></script>
+<script src="JS/guide.js"></script>
 </body>
 </html>

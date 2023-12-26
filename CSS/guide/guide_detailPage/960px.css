@@ -1,0 +1,5 @@
+@media screen and (max-width: 960px) {
+    section#guideHeader{
+             height: 360px;
+    }
+}
