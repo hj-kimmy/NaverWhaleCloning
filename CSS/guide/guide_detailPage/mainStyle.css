@@ -1,0 +1,96 @@
+/*기본 section 설정*/
+.contentsWrap{
+    max-width: 1000px;
+}
+section#guideHeader{
+    background: linear-gradient(rgb(245, 247, 250) 0%, rgba(245, 247, 250, 0.5) 100%);
+    height: 300px;
+}
+
+#guideHeader .contentsWrap .contents-info {
+    position: relative;
+    width: 50%;
+    word-break: keep-all;
+    z-index: 1;
+}
+
+#guideHeader .contentsWrap .contents-img {
+    height: 300px;
+    right: -32px;
+    align-self: end;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+    position: relative;
+}
+
+#guideHeader .contents-img picture {
+    text-align: right;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#guideHeader picture img{
+    height: 100%;
+}
+
+#guideHeader .contents-info p{
+    width: 100%;
+}
+section#guideList{
+    margin :  30px 0 60px;
+}
+#guideList #tabs{
+    width: 100%;
+    margin-top: 30px;
+}
+#guideList ul.contents-btns{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    width: 245px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+#guideList ul.contents-btns .ui-tabs-active a{
+    color: #000;
+    position: relative;
+}
+#guideList ul.contents-btns .ui-tabs-active a:after{
+    content : "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 13px;
+    left: 0;
+    border-bottom: 2px solid #03cf5d;
+}
+
+#guideList .contents-tabs ul li{
+    border-top: 1px solid var(--lightgray);
+    align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
+#guideList .contents-tabs ul li:last-child{
+    border-bottom: 1px solid var(--lightgray);
+}
+#guideList .contents-tabs ul li:hover{
+    background: rgba(0, 0, 0, 0.02);
+}
+#guideList .contents-tabs ul li:hover p{
+    font-weight: bold;
+}
+
+#guideList p{
+    display: flex;
+    justify-content: space-between;
+    align-items : center;
+    margin-top: 0;
+    padding: 10px 0;
+}
+
+
+
