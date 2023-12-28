@@ -19,7 +19,7 @@ header {
     max-width: 1440px;
     height: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: start;
     align-items: center;
     padding: 21px 84px;
     position: relative;
@@ -54,12 +54,13 @@ header {
 
 /*Main-Menu-Bar style*/
 #main-menu {
-    width: 828px;
+    max-width: 828px;
     display: flex;
     justify-content: start;
     align-items: start;
     margin-right: 60px;
     position: relative;
+    flex: 1 1 auto;
 }
 
 /*1330 이하 화면 Main-Menu-Bar-nav*/
@@ -181,7 +182,6 @@ li.active .check{
 
 /* 우측 추가 버튼 */
 #subBtn {
-    width: 160px;
     display: flex;
     justify-content: start;
     align-items: center;

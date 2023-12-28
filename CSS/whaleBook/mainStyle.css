@@ -1,0 +1,24 @@
+/******************************
+    - section1#feature Style
+*******************************/
+/*기본 section 설정*/
+section#checkDevice, section#wacomPen, section#whaleOS, section#smartStudy{
+    height: 900px;
+}
+section#checkDevice{
+    background: url("../../img/Whalebook_bg1_1013.jpg") center / 100% no-repeat;
+}
+
+section#wacomPen{
+
+}
+section#whaleOS{
+    background: url("../../img/Whalebook_bg3_1013.jpg") center/ 100% no-repeat;
+}
+section#smartStudy{
+
+}
+section#whaleWithSchool{
+    height: 836px;
+    background: url("../../img/Whalebook_bg6_1013.jpg") center/ 100% no-repeat;
+}
