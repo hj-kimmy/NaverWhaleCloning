@@ -7,7 +7,7 @@ $(function () {
     let whaleVideo = setTimeout(function () {
         whaleShow.hide();
         whaleLoop.show();
-    }, 1600)
+    }, 1800)
 
 
     $("#accordion").accordion({
