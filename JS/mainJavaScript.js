@@ -1,9 +1,8 @@
 $(function () {
+
     if(getBrowser()=='Safari'){
-        let webm = document.querySelectorAll(".webM");
-        webm.forEach((T,i)=> {
-            webm[i].style.display="none";
-        })
+        $("video.hevcVideo").show();
+        $("video.webmVideo").hide();
     }
 
     /* 1번 섹션 고래 비디오 재생*/
