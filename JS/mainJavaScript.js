@@ -1,4 +1,11 @@
 $(function () {
+    if(getBrowser()=='Safari'){
+        let webm = document.querySelectorAll(".webM");
+        webm.forEach((T,i)=> {
+            webm[i].style.display="none";
+        })
+    }
+
     /* 1번 섹션 고래 비디오 재생*/
     let whaleShow = $(".whale_show");
     let whaleLoop = $(".whale_loop");
@@ -149,3 +156,25 @@ $(function () {
     })
 })
 
+function getBrowser() {
+    const browsers = [
+        'Chrome', 'Opera',
+        'WebTV', 'Whale',
+        'Beonex', 'Chimera',
+        'NetPositive', 'Phoenix',
+        'Firefox', 'Safari',
+        'SkipStone', 'Netscape', 'Mozilla',
+    ];
+
+    const userAgent = window.navigator.userAgent.toLowerCase();
+
+    if (userAgent.includes("edg")) {
+        return "Edge";
+    }
+
+    if (userAgent.includes("trident") || userAgent.includes("msie")) {
+        return "Internet Explorer";
+    }
+
+    return browsers.find((browser) => userAgent.includes(browser.toLowerCase())) || 'Other';
+}
