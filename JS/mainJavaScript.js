@@ -6,13 +6,22 @@ $(function () {
     }
 
     /* 1번 섹션 고래 비디오 재생*/
-    let whaleShow = $(".whale_show");
-    let whaleLoop = $(".whale_loop");
+    let whaleShowWebm = $(".whale_show.webmVideo");
+    let whaleShowHevc = $(".whale_show.hevcVideo");
 
-    whaleLoop.hide();
+    let whaleLoopWebm = $(".whale_loop.webmVideo");
+    let whaleLoopHevc = $(".whale_loop.hevcVideo");
+
+    whaleLoopWebm.hide();
+    whaleLoopHevc.hide();
     let whaleVideo = setTimeout(function () {
-        whaleShow.hide();
-        whaleLoop.show();
+        if(getBrowser()=='Safari'){
+            whaleShowHevc.hide();
+            whaleLoopHevc.show();}
+        else{
+            whaleShowWebm.hide();
+            whaleLoopWebm.show();
+        }
     }, 1800)
 
 
