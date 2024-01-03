@@ -33,6 +33,9 @@ header {
     display: flex;
     align-items: end;
 }
+#gnb h1.whaleBook{
+    width: 180px;
+}
 
 #gnb h1 > a {
     display: flex;
@@ -46,6 +49,12 @@ header {
     margin-right: 5px;
 }
 
+#whaleBook{
+    background: url("../../img/1-service_logo.svg") no-repeat;
+    width: 100%;
+    height: 38px;
+}
+
 #whale {
     background: url("../../img/whaleType.svg") no-repeat;
     width: 50%;
@@ -54,12 +63,15 @@ header {
 
 /*Main-Menu-Bar style*/
 #main-menu {
+    padding-top: 8px;
+    align-self: start;
+    position: relative;
+    top: 0;
     max-width: 828px;
     display: flex;
     justify-content: start;
     align-items: start;
     margin-right: 60px;
-    position: relative;
     flex: 1 1 auto;
 }
 
@@ -71,7 +83,6 @@ header {
 #main-menu > li {
     margin-right: 38px;
     cursor: pointer;
-    position: relative;
 }
 
 #main-menu > li:last-child {
@@ -85,21 +96,13 @@ li.active .check{
 #main-menu > li:nth-of-type(2), #main-menu > li:nth-of-type(3) {
     display: flex;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
 }
 
-/*2depth menu 효과를 위한 div 부여*/
-#main-menu .menu-sub-2 {
-    display: flex;
-    align-items: center;
-}
-
 #main-menu .subMenuBoxWrap {
-    left: 50%;
-    transform: translateX(-50%);
     position: absolute;
-    border: 1px solid red;
-    top: 20px;
+    top: 30px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -110,6 +113,13 @@ li.active .check{
 }
 
 /*2depth menu 토글버튼*/
+.menu-sub-2>a{
+    display: flex;
+    align-items: start;
+    height: unset;
+    width: unset;
+}
+
 #main-menu > li .material-symbols-outlined {
     font-size: 25px;
     width: 20px;
@@ -143,6 +153,7 @@ li.active .check{
 
 /*2depth menubox*/
 .subMenuBox {
+    width: 100%;
     padding: 20px 0;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -154,18 +165,10 @@ li.active .check{
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
 }
 
-/*#main-menu > li:nth-of-type(2) ul {*/
-/*    width: 115%;*/
-/*}*/
-
-/*#main-menu > li:nth-of-type(3) ul {*/
-/*    width: 200%;*/
-/*}*/
-
 /*2depth menubox 세부*/
 #main-menu .subMenuBox li {
     height: 35px;
-    padding-left: 15px;
+    padding: 0 15px;
     position: relative;
     font-size: 14px;
 }

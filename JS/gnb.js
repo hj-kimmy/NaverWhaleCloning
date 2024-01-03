@@ -2,6 +2,18 @@ $(function () {
     let mobileGnb = $("#mobileGnb");
     let mobileSub = $("#mobile-subMenu");
     let cover = $(".cover");
+    //
+    //
+    // let listName = $(".menu-sub-2");
+    // let submenuBox = listName.next();
+    //
+    //
+    // let listW = listName.width();
+    // let subW = submenuBox.width();
+    //
+    // if(listW>=subW){
+    //     submenuBox.width(listW);
+    // }
 
 
     /* 끄기 버튼 외 다른 공간 클릭했을 때 창 닫힘*/
@@ -27,12 +39,18 @@ $(function () {
     /* 메뉴 호버 */
     menu.on({
         "mouseenter": function () {
-            $(this).find(".subMenuBox").stop().fadeIn("200");
+            let sub = $(this).find(".subMenuBox");
+            sub.stop().fadeIn("200");
+            if($(this).width()>=sub.width()){
+                sub.width($(this).width())
+            }
         },
         "mouseleave": function () {
-            $(this).find(".subMenuBox").stop().hide();
+            let sub = $(this).find(".subMenuBox");
+            sub.stop().hide();
         }
     });
+
     /* 앱 메뉴 버튼 클릭 */
     let appsBtn = $("#gnb-appMenu img[alt='바로가기']");
     appsBtn.click(function (){

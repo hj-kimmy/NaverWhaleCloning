@@ -1,13 +1,15 @@
 @media screen and (max-width: 1320px) {
     #gnb {
         padding: 21px 32px;
+        justify-content: space-between;
     }
-    #main-menu{
+
+    #main-menu {
         display: none;
     }
 
-    #subBtn {
-        width: 188px;
+    #subBtn > button:not(.main-downloadBtn) {
+        display: none;
     }
 
     #subBtn > #menuBtn {
@@ -22,13 +24,14 @@
     /******************************
     - footer Style
     *******************************/
-    .footerWrap{
+    .footerWrap {
         padding: 21px 32px;
         display: flex;
         flex-direction: column;
         align-items: stretch;
     }
-    .footerMenu2{
+
+    .footerMenu2 {
         padding-top: 20px;
         width: 100%;
         display: flex;
