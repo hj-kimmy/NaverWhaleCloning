@@ -102,7 +102,7 @@ li.active .check{
 
 #main-menu .subMenuBoxWrap {
     position: absolute;
-    top: 30px;
+    top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -154,7 +154,7 @@ li.active .check{
 /*2depth menubox*/
 .subMenuBox {
     width: 100%;
-    padding: 20px 0;
+    padding: 12px 0;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
@@ -203,19 +203,21 @@ li.active .check{
     cursor: pointer;
 }
 #gnb-appMenu .subMenuBox{
+    font-size: 0.875rem;
+    padding: 20px 0;
     right: 0;
     width: 362px;
     position: absolute;
 }
 #gnb-appMenu .subMenuBox>li {
     width: 100%;
-    font-size: 0.9375rem;
     padding: 3.5px 0 3.5px 20px;
 }
 #gnb-appMenu .subMenuBox>li:first-child{
     margin-bottom: 8px;
 }
 #gnb-appMenu .subMenuBox .appMenu-Apps{
+    font-size: 0.8125rem;
     width: 100%;
     display: flex;
     flex-flow: row wrap;
@@ -228,6 +230,11 @@ li.active .check{
     align-items: center;
     margin-bottom: 8px;
 }
+#gnb-appMenu .subMenuBox .appMenu-Apps li a{
+    display: flex;
+    align-items: center;
+}
+
 #gnb-appMenu .subMenuBox .appMenu-Apps li:last-child{
     margin-bottom: 0;
 }

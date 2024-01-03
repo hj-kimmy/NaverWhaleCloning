@@ -1,5 +1,7 @@
 $(function () {
 
+    AOS.init();
+
     if(getBrowser()=='Safari'){
         $("video.hevcVideo").show();
         $("video.webmVideo").hide();
@@ -76,47 +78,48 @@ $(function () {
 $(function () {
     gsap.registerPlugin(ScrollTrigger);
 
-    var startDefault = {
-        y: 50, opacity: 0
-    }
+    // var startDefault = {
+    //     y: 50, opacity: 0
+    // }
+    //
+    // const trigger = gsap.utils.toArray('.trigger-fadeinOn');
+    // const container = document.querySelectorAll('.trigger-fadeinOn');
+    //
+    // trigger.forEach((text, i) => {
+    //     let aniOrder1 = container[i].querySelector('.aniOrder1');
+    //     let aniOrder2 = container[i].querySelector('.aniOrder2');
+    //     let aniOrder3 = container[i].querySelector('.aniOrder3');
+    //     let aniOrder4 = container[i].querySelector('.aniOrder4');
+    //     let aniOrder5 = container[i].querySelector('.aniOrder5');
+    //     let aniOrder6 = container[i].querySelector('.aniOrder6');
+    //
+    //     let aniOrder1Same = container[i].querySelector('.aniOrder1Same');
+    //     let aniOrder2Same = container[i].querySelector('.aniOrder2Same');
+    //     let aniOrder3Same = container[i].querySelector('.aniOrder3Same');
+    //     let aniOrder4Same = container[i].querySelector('.aniOrder4Same');
+    //     let aniOrder5Same = container[i].querySelector('.aniOrder5Same');
+    //     let aniOrder6Same = container[i].querySelector('.aniOrder6Same');
+    //
+    //     ScrollTrigger.create({
+    //         trigger: text,
+    //         start: "0% 90%",
+    //         animation: gsap
+    //             .timeline()
+    //             .fromTo(aniOrder1, startDefault, {y: 0, opacity: 1, duration: 1})
+    //             .fromTo(aniOrder1Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //             .fromTo(aniOrder2, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+    //             .fromTo(aniOrder2Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //             .fromTo(aniOrder3, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+    //             .fromTo(aniOrder3Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //             .fromTo(aniOrder4, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+    //             .fromTo(aniOrder4Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //             .fromTo(aniOrder5, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+    //             .fromTo(aniOrder5Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //             .fromTo(aniOrder6, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
+    //             .fromTo(aniOrder6Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
+    //     })
+    // })
 
-    const trigger = gsap.utils.toArray('.trigger-fadeinOn');
-    const container = document.querySelectorAll('.trigger-fadeinOn');
-
-    trigger.forEach((text, i) => {
-        let aniOrder1 = container[i].querySelector('.aniOrder1');
-        let aniOrder2 = container[i].querySelector('.aniOrder2');
-        let aniOrder3 = container[i].querySelector('.aniOrder3');
-        let aniOrder4 = container[i].querySelector('.aniOrder4');
-        let aniOrder5 = container[i].querySelector('.aniOrder5');
-        let aniOrder6 = container[i].querySelector('.aniOrder6');
-
-        let aniOrder1Same = container[i].querySelector('.aniOrder1Same');
-        let aniOrder2Same = container[i].querySelector('.aniOrder2Same');
-        let aniOrder3Same = container[i].querySelector('.aniOrder3Same');
-        let aniOrder4Same = container[i].querySelector('.aniOrder4Same');
-        let aniOrder5Same = container[i].querySelector('.aniOrder5Same');
-        let aniOrder6Same = container[i].querySelector('.aniOrder6Same');
-
-        ScrollTrigger.create({
-            trigger: text,
-            start: "0% 90%",
-            animation: gsap
-                .timeline()
-                .fromTo(aniOrder1, startDefault, {y: 0, opacity: 1, duration: 1})
-                .fromTo(aniOrder1Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(aniOrder2, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(aniOrder2Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(aniOrder3, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(aniOrder3Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(aniOrder4, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(aniOrder4Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(aniOrder5, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(aniOrder5Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-                .fromTo(aniOrder6, startDefault, {y: 0, opacity: 1, duration: 1}, "-=0.8")
-                .fromTo(aniOrder6Same, startDefault, {y: 0, opacity: 1, duration: 1}, "<")
-        })
-    })
 
     /*stop*/
     ScrollTrigger.create({

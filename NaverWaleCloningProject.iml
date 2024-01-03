@@ -15,5 +15,6 @@
     <orderEntry type="library" name="animate.css" level="application" />
     <orderEntry type="library" name="@fancyapps/ui" level="application" />
     <orderEntry type="library" name="jquery-easing" level="application" />
+    <orderEntry type="library" name="aos" level="application" />
   </component>
 </module>

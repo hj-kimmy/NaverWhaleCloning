@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="file://$PROJECT_DIR$" libraries="{71b3a58e31, @fancyapps/ui, animate.css, gsap, jquery-3.7.1, jquery-easing, jquery-ui, scroll-timeline}" />
+    <file url="file://$PROJECT_DIR$" libraries="{aos}" />
   </component>
 </project>

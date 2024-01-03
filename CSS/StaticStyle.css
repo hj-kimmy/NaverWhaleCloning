@@ -1,3 +1,62 @@
+/*bootStrap*/
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-responsive-21by9::before {
+    padding-top: 42.857143%;
+}
+
+.embed-responsive-16by9::before {
+    padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+    padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+    padding-top: 100%;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+.position-relative {
+    position: relative !important;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
 /******************************
     - reset Style
 *******************************/
@@ -59,6 +118,8 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 150%;
 }
 
+
+
 h1, h2, h3, h4, h5, h6 {
     font-weight: 700;
 }
@@ -94,6 +155,10 @@ h3 {
 /* h4 : WebPage contents title ~ mostly li contents */
 h4 {
     font-size: 1.625rem;
+}
+
+h5{
+    font-size: 1.125rem;
 }
 
 /* P : WebPage contents paragraph-default */
@@ -136,13 +201,38 @@ button.whale-Button {
     background-color: #40c3a7;
     color: white;
     font-weight: bold;
-    display: flex;
-    align-items: center;
 }
 
 button.small {
     padding: 6px 15px;
     font-size: 0.8125rem;
+}
+
+button.blueButton{
+    text-align: center;
+    padding: 14px 28px 14px 20px;
+    border: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #1f30aa;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.underline{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.underline:after{
+    content : "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--gray);
 }
 
 .whaleLogo {
@@ -178,10 +268,18 @@ button:hover {
 button.whale-Button:hover {
     background-color: #05AF96;
 }
+br.br-1280{
+    display: none;
+}
+
+br.br-770 {
+    display: none;
+}
 
 br.br-600 {
     display: none;
 }
+
 .tag{
     font-size: 0.8125rem;
     font-weight: bold;
@@ -320,6 +418,17 @@ section {
         font-size: 2.875rem;
     }
 
+    h2.earlySmall{
+        font-size: 1.875rem;
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+
+    br.br-1280{
+        display: block;
+    }
+
     .contents-cardList li {
         width: 100%;
         max-width: none;
@@ -361,6 +470,24 @@ section {
     }
 }
 
+@media screen and (max-width: 770px){
+    button.blueButton{
+        padding: 12px 20px 12px 12px;
+        font-size: 1rem;
+    }
+    h2.earlySmall2, h2.earlySmall{
+        font-size: 1.5rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+    br.br-770{
+        display: block;
+    }
+}
+
 @media screen and (max-width: 600px) {
     /******************************
     - Main Style
@@ -381,7 +508,7 @@ section {
         font-size: 1.625rem;
     }
 
-    h2, h2.important {
+    h2, h2.important, h2.earlySmall {
         font-size: 1.5rem;
     }
 

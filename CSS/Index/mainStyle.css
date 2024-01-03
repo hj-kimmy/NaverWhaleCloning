@@ -6,6 +6,10 @@
     height: 740px;
 }
 
+.hevcVideo{
+    display: none;
+}
+
 #feature .contentsWrap:nth-of-type(2n-1) {
     padding-right: 0;
 }

@@ -12,6 +12,7 @@
             rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
@@ -41,11 +42,8 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <style>
-        .hevcVideo{
-            display: none;
-        }
-    </style>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
 </head>
 <body>
 <div id="wrap">
@@ -213,11 +211,11 @@
     <main>
         <!-- 특장점 section -->
         <section id="feature">
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature1">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">나만의 스마트한 브라우저</h3>
-                    <h1 class="important aniOrder2">네이버 웨일로 일상을 바꿔보세요.</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature1">나만의 스마트한 브라우저</h3>
+                    <h1 class="important" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature1" >네이버 웨일로 일상을 바꿔보세요.</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature1" >
                         <p>
                             더 가볍게, 더 편하게, 내 일상에 딱 맞는 브라우저가 여기 있습니다. 새로운 인터넷으로 하루를 열어보세요. 작지만 큰 변화가 시작됩니다.
                         </p>
@@ -226,9 +224,8 @@
                             웨일 다운로드
                         </button>
                     </div>
-
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-anchor="#feature1" >
                     <video class="whale_loop hevcVideo" autoplay
                            muted loop playsinline>
                         <source src="img/main_loop.mov" type="video/mp4">
@@ -247,11 +244,11 @@
                     </video>
                 </div>
             </section>
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature2">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">오늘 할 일도 빠르게</h3>
-                    <h1 class="aniOrder2"> 시간 걱정 없는 화상회의 웨일온</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature2" >오늘 할 일도 빠르게</h3>
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature2" > 시간 걱정 없는 화상회의 웨일온</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature2" >
                         <p>
                             별도 애플리케이션 설치 없이 네이버 웨일만 있으면 바로 사용할 수 있는 온라인 화상회의 서비스입니다. PC와 모바일 어디서나 시간 제한 없이 편리하게 회의에
                             참여하세요.
@@ -259,7 +256,7 @@
                         <button>자세히 보기</button>
                     </div>
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature2" >
                     <video playsinline autoplay muted class="hevcVideo">
                         <source src="img/main_whaleon.mov" type='video/mp4' class="hevcVideo">
                     </video>
@@ -268,31 +265,31 @@
                     </video>
                 </div>
             </section>
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature3">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">오늘 할 일도 빠르게</h3>
-                    <h1 class="aniOrder2">가볍게 열고 닫는 사이드바</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature3" >오늘 할 일도 빠르게</h3>
+                    <h1 class="aniOrder2" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature3" >가볍게 열고 닫는 사이드바</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature3" >
                         <p>
                             사이드바에는 나에게 필요한 다양한 서비스가 있습니다. 메인 화면을 방해하지 않으면서 그때그때 필요한 서비스를 가볍게 열어보세요
                         </p>
                         <button>자세히 보기</button>
                     </div>
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature3" >
                     <video playsinline autoplay muted class="hevcVideo">
                         <source src="img/main_sidebar.mov" type='video/mp4' class="hevcVideo">
                     </video>
                     <video playsinline autoplay muted class="webmVideo">
-                    <source src="img/main_sidebar.webm" type="video/webm">
+                        <source src="img/main_sidebar.webm" type="video/webm">
                     </video>
                 </div>
             </section>
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature4">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">오늘 할 일도 빠르게</h3>
-                    <h1 class="aniOrder2">두 개의 탭을 하나로 듀얼 탭</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature4" >오늘 할 일도 빠르게</h3>
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature4" >두 개의 탭을 하나로 듀얼 탭</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature4" >
                         <p>
                             여러 탭을 왔다 갔다 헤메느라 시간을 낭비하지 마세요. 듀얼 탭에서는 왼쪽에서 클릭한 링크를 오른쪽으로 열 수 있습니다.
                         </p>
@@ -300,40 +297,40 @@
                     </div>
 
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature4" >
                     <video playsinline autoplay muted class="hevcVideo">
                         <source src="img/main_dualtab.mov" type='video/mp4' class="hevcVideo">
                     </video>
                     <video playsinline autoplay muted class="webmVideo">
-                    <source src="img/main_dualtab.webm" type="video/webm">
+                        <source src="img/main_dualtab.webm" type="video/webm">
                     </video>
                 </div>
             </section>
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature5">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">오늘 할 일도 빠르게</h3>
-                    <h1 class="aniOrder2">궁금한 건 드래그하고 퀵서치</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature5" >오늘 할 일도 빠르게</h3>
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature5" >궁금한 건 드래그하고 퀵서치</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature5" >
                         <p>
                             웹 페이지를 읽다가 궁금하거나 번역이 필요한 내용은 드래그하고 퀵서치로 확인해보세요. 퀵서치는 맥락에 맞는 단어를 검색하고 문장도 번역해줍니다.
                         </p>
                         <button>자세히 보기</button>
                     </div>
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature5" >
                     <video playsinline autoplay muted class="hevcVideo">
-                    <source src="img/main_quicksearch.mov" type='video/mp4'>
+                        <source src="img/main_quicksearch.mov" type='video/mp4'>
                     </video>
                     <video playsinline autoplay muted class="webmVideo">
                         <source src="img/main_quicksearch.webm" type="video/webm">
                     </video>
                 </div>
             </section>
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap" id="feature6">
                 <article class="contents-info-btn">
-                    <h3 class="c-whale-blue aniOrder1">오늘 할 일도 빠르게</h3>
-                    <h1 class="aniOrder2">깔끔한 캡처와 간단한 편집</h1>
-                    <div class="c-whale-gray aniOrder3">
+                    <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature6" >오늘 할 일도 빠르게</h3>
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#feature6" >깔끔한 캡처와 간단한 편집</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#feature6" >
                         <p>
                             4개의 옵션으로 원하는 영역만 깔끔하게 캡처하고 간단히 편집해 보세요. 단축키를 사용하면 더욱 빠른 캡처가 가능합니다.
                         </p>
@@ -341,7 +338,7 @@
                     </div>
 
                 </article>
-                <div class="contents-video aniOrder1Same">
+                <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature6" >
                     <video playsinline autoplay muted class="hevcVideo">
                         <source src="img/main_capture.mov" type='video/mp4'>
                     </video>
@@ -353,14 +350,14 @@
         </section>
 
         <!-- 보안장점 section -->
-        <section id="secure" class="trigger-fadeinOn">
+        <section id="secure">
             <div class="titleWrap">
-                <h3 class="c-whale-blue aniOrder1">내 정보는 안전하게</h3>
-                <h1 class="aniOrder2">최신 기술이 적용된 <br class="br-600">강력한 보안</h1>
-                <p class="c-whale-gray aniOrder3">네이버 웨일은 끊임없는 업데이트로 빈틈없는 보안 환경을 제공합니다. 안심하고 오늘의 할 일에만 집중하세요.</p>
+                <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#secure" >내 정보는 안전하게</h3>
+                <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#secure" >최신 기술이 적용된 <br class="br-600">강력한 보안</h1>
+                <p class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#secure" >네이버 웨일은 끊임없는 업데이트로 빈틈없는 보안 환경을 제공합니다. 안심하고 오늘의 할 일에만 집중하세요.</p>
             </div>
             <div class="contentsWrap">
-                <div id="accordion" class="aniOrder4">
+                <div id="accordion" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="900" data-aos-anchor="#secure" >
                     <div class="contents-accordion active">
                         <h4>세이프 브라우징</h4>
                         <p><span>헷갈리는 위조 사이트로 인한 걱정은 이제 그만, 네이버 웨일이 미리 판단하여 알려줍니다.</span>
@@ -407,7 +404,7 @@
 
                     </div>
                 </div>
-                <div class="contents-gallery aniOrder5">
+                <div class="contents-gallery" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="1000" data-aos-anchor="#secure" >
                     <img class="active" src="img/img_safe_browsing.png" alt="">
                     <img src="img/img_malware_blocking.png" alt="">
                     <img src="img/img_clean_web.png" alt="">
@@ -438,7 +435,7 @@
                                 <img src="img/animation2_01.png" alt="" class="ui-white">
                                 <img src="img/animation3_0.png" alt="" class="pos-absolute ui-dark">
                                 <div class="theme">
-                                    <img src="img/animation2_0.png" alt="" class="">
+                                    <img src="img/animation2_0.png" alt="">
                                     <img src="img/animation1_3.png" alt="" class="pos-absolute theme3">
                                     <img src="img/animation1_2.png" alt="" class="pos-absolute theme2">
                                     <img src="img/animation1_1.png" alt="" class="pos-absolute theme1 ">
@@ -466,8 +463,8 @@
             </div>
             <div id="triggerEnv0"></div>
         </section>
-        <section id="appService" class="trigger-fadeinOn">
-            <ul class="contents-whaleApps aniOrder1">
+        <section id="appService">
+            <ul class="contents-whaleApps" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService" >
                 <li class="webtoon shadow"></li>
                 <li class="stock shadow"></li>
                 <li class="audioBook shadow"></li>
@@ -475,34 +472,34 @@
                 <li class="mail shadow"></li>
             </ul>
             <div class="contentsWrap titleWrap">
-                <h3 class="c-whale-blue aniOrder2">브라우저를 더 유용하게</h3>
-                <h1 class="aniOrder3">확장앱으로 외부 서비스를 <br class="br-600"> 내 맘대로</h1>
-                <p class="c-whale-gray aniOrder4">웨일 스토어에서 마음에 드는 확장앱을 설치하고 브라우저에 수많은 기능과 서비스를 더해보세요.</p>
+                <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService" >브라우저를 더 유용하게</h3>
+                <h1 class="aniOrder3" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="300" data-aos-anchor="#appService" >확장앱으로 외부 서비스를 <br class="br-600"> 내 맘대로</h1>
+                <p class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#appService">웨일 스토어에서 마음에 드는 확장앱을 설치하고 브라우저에 수많은 기능과 서비스를 더해보세요.</p>
             </div>
-            <div class="contentsWrap trigger-fadeinOn">
-                <ul class="contents-cardList aniOrder1">
-                    <li class="shadow">
+            <div class="contentsWrap">
+                <ul class="contents-cardList">
+                    <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" >
                         <div class="icon webtoon "></div>
                         <div>
                             <h4>네이버 웹툰</h4>
                             <p class="c-whale-gray">웹툰 보기 딱 좋은 사이즈로 사이드바에서 틈틈이 즐겨 보세요.</p>
                         </div>
                     </li>
-                    <li class="shadow">
+                    <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" >
                         <div class="icon music"></div>
                         <div>
                             <h4>뮤직 플레이어</h4>
                             <p class="c-whale-gray">바이브, 벅스, 지니, 유튜브 뮤직플레이어가 사이드바에 쏙 들어옵니다.</p>
                         </div>
                     </li>
-                    <li class="shadow">
+                    <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" >
                         <div class="icon stock"></div>
                         <div>
                             <h4>네이버 증권</h4>
                             <p class="c-whale-gray">최근에 검색한 종목과 관심종목의 시세를 한 눈에 확인할 수 있습니다.</p>
                         </div>
                     </li>
-                    <li class="shadow">
+                    <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" >
                         <div class="icon audioBook"></div>
                         <div>
                             <h4>오디오클립</h4>
@@ -512,11 +509,11 @@
                 </ul>
             </div>
         </section>
-        <section id="adBanner" class="trigger-fadeinOn">
+        <section id="adBanner">
             <div class="contentsWrap c-whale-white">
                 <div class="contents-info-btn">
-                    <h2 class="important aniOrder1">모바일 웨일 브라우저도 만나보세요.</h2>
-                    <div class="aniOrder2">
+                    <h2 class="important" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" data-aos-anchor="#adBanner">모바일 웨일 브라우저도 만나보세요.</h2>
+                    <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true" data-aos-delay="300" data-aos-anchor="#adBanner">
                         <p class="small">
                             PC 브라우저의 북마크 및 비밀번호를 동기화하고, 다양한 모바일 전용 기능을 사용할 수 있습니다.
                         </p>
@@ -564,5 +561,6 @@
 </div>
 <script src="JS/gnb.js"></script>
 <script src="JS/mainJavaScript.js"></script>
+
 </body>
 </html>
