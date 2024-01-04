@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- static style sheet-->
+    <link rel="stylesheet" href="CSS/StaticStyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- GNB style sheet -->
+    <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+
+    <!-- Main style sheet-->
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/mainStyle.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/1440px.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/1320px.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/1280px.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/960px.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/800px.css">
+    <link rel="stylesheet" href="CSS/whaleHelpCenter/600px.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body id="whaleHelpCenter">
+<div id="wrap">
+    <!-- header -->
+    <header>
+        <!-- gnb_default -->
+        <nav id="gnb">
+            <h1 id="main-logo">
+                <a href="index.html">
+                    <div id="whaleHelpCenterLogo"></div>
+                </a>
+            </h1>
+            <div id="subBtn">
+                <div id="gnb-appMenu">
+                    <img src="img/apps_white.svg" alt="바로가기" title="바로가기">
+                    <ul class="subMenuBox hide">
+                        <li>
+                            <strong>웨일 서비스</strong>
+                        </li>
+                        <li>
+                            <ul class="appMenu-Apps">
+                                <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                                <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
+                                <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
+                                <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
+                                <li><a href=""><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
+                                <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
+                                <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
+                                <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
+                                <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                                <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                                <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </nav>
+
+        <!-- gnb_mobile -->
+        <div class="cover"></div>
+        <nav id="mobileGnb">
+            <ul id="mobile-menu">
+                <div class="mobile-menu-nav">
+                    <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
+                    <span class="mobile-menu-btn"><img src="img/apps.svg" alt="바로가기" title="바로가기"></span>
+                </div>
+                <li id="mobile-home">
+                    <a href="index.html">홈
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="whyWhale_BrandStory.html">Whale을 사용해야하는 이유
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
+                        <li><a href="details_Omnitasking.html">주요 기능</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li>
+                    <a href="guide.html">가이드
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a></li>
+                <li>
+                    <ul>
+                        <li><a href="guide.html">What's new</a></li>
+                        <li><a href="whalehelp.html">이용 가이드</a></li>
+                        <li><a href="">마이 액티비티</a></li>
+                    </ul>
+                </li>
+                <hr>
+                <li><a href="">스토어
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="">연구소
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="">웨일 스페이스
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="whaleBook_Index.html">웨일북
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+            </ul>
+            <button class="downloadBtn" onclick="location.href = 'download.html'">
+                <span class="whaleLogo whaleLogo-color"></span>
+                다운로드
+            </button>
+        </nav>
+
+        <div id="mobile-subMenu">
+            <div id="mobile-gnb-appMenu">
+                <div class="mobile-menu-nav">
+                    <span class="material-symbols-outlined BackBtn">chevron_left</span>
+                    바로가기
+                </div>
+                <h4>웨일 서비스</h4>
+                <ul>
+                    <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                    <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
+                    <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
+                    <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
+                    <li><a href=""><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
+                    <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
+                    <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
+                    <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
+                    <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                    <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                    <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="helpSearch">
+            <div class="contentsWrap titleWrap c-whale-white">
+                <h1>무엇을 도와드릴까요?</h1>
+            </div>
+            <div class="contentsWrap">
+                <form action="">
+                    <img src="img/search_2.svg" alt="">
+                    <input type="search" placeholder="궁금한 점을 검색해보세요">
+                </form>
+            </div>
+            <div class="contentsWrap">
+                <ul class="contents-tabButton c-whale-white">
+                    <li class="active" data-help="desktop_help">데스크톱</li>
+                    <li data-help="mobile_help">모바일</li>
+                    <li data-help="whaleOn_help">웨일온</li>
+                    <li data-help="whaleSpace_help">웨일 스페이스</li>
+                    <li data-help="whaleClass_help">웨일 클래스</li>
+                    <li data-help="whaleBook_help">웨일북</li>
+                </ul>
+            </div>
+        </section>
+        <section id="questions">
+            <div class="contentsWrap small">
+                <h2 class="sub">자주 묻는 질문</h2>
+            </div>
+            <div class="contentsWrap small">
+                <div class="contents-tabList">
+                    <ul class="contents-tabs active" id="desktop_help">
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">데스크톱 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                    </ul>
+                    <ul class="contents-tabs" id="mobile_help">
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                        <li><a href="">모바일 브라우저 사용할 때 궁금한 점이 있어요.</a></li>
+                    </ul>
+                    <ul class="contents-tabs" id="whaleOn_help">
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일온에 대해 궁금해요.</a></li>
+                    </ul>
+                    <ul class="contents-tabs" id="whaleSpace_help">
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 스페이스에 대해 궁금해요.</a></li>
+                    </ul>
+                    <ul class="contents-tabs" id="whaleClass_help">
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일 클래스에 대해 궁금해요.</a></li>
+                    </ul>
+                    <ul class="contents-tabs" id="whaleBook_help">
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                        <li><a href="">웨일북에 대해 궁금해요.</a></li>
+                    </ul>
+                </div>
+            </div>
+
+        </section>
+        <section id="tutorial">
+            <div class="contentsWrap small">
+                <h2 class="sub">웨일 브라우저가 제공하는 기능별 사용법은<br> 이곳에서 확인하세요!</h2>
+            </div>
+            <div class="contentsWrap small">
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_whaleos-1.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>스킨</h5>
+                        <p class="small">브라우저의 창과 탭을 나만의 컬러로 꾸며 보세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_dualtab.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>듀얼 탭</h5>
+                        <p class="small">양쪽 화면에서 동시에 작업하고 빠르게 탐색합니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/menu_ic_mobilewindow.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>모바일창</h5>
+                        <p class="small">PC에서 모바일 페이지를 확인할 수 있습니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_sidebar.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>사이드바</h5>
+                        <p class="small">유용한 도구와 서비스를 언제든 바로바로 꺼내보세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/sidebar_ic_scrapbook_large-1.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>스크랩북</h5>
+                        <p class="small">다시 볼 콘텐츠는 스크랩북에 쉽게 담고 관리하세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_quicksearch.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>퀵서치</h5>
+                        <p class="small">궁금한 내용은 그 자리에서 빠르게 검색하세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/btn_ic_24x24icon-20x20-1.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>캡처</h5>
+                        <p class="small">궁금한 내용은 그 자리에서 빠르게 검색하세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/sidebar_ic_papago_large.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>번역</h5>
+                        <p class="small">외국어 사이트나 콘텐츠도 문제 없이 즐기세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_newtab.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>새 탭</h5>
+                        <p class="small">나만의 위젯과 테마로 브라우저를 시작하세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_app.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>웨일 스토어</h5>
+                        <p class="small">확장앱을 설치하고 기능과 서비스를 더해 보세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_controls.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>광고 차단</h5>
+                        <p class="small">브라우저 사용에 방해가 되는 광고를 차단합니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/ic_darkmode-1.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>다크 모드</h5>
+                        <p class="small">브라우저의 인터페이스와 페이지를 어둡게 만듭니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_searchwindow.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>주소창</h5>
+                        <p class="small">주소창 기능을 활용하여 빠르게 검색하고 이동하세요</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/ic_gesture.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>마우스 제스처</h5>
+                        <p class="small">클릭 대신 쓱 그리면 브라우징이 훨씬 빨라집니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_features.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>기타</h5>
+                        <p class="small">웨일의 다른 유용한 기능들을 소개합니다.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_usertip.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>사용 팁</h5>
+                        <p class="small">웨일을 더 효율적으로 사용해 보세요.</p>
+                    </div>
+                </div>
+                <div class="contents-box">
+                    <div class="contents-img"><img src="img/icon_alert.svg" alt=""></div>
+                    <div class="contents-info">
+                        <h5>문제 해결</h5>
+                        <p class="small">브라우저에 문제가 발생했다면 확인해주세요.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <section id="goTolab">
+            <div class="contentsWrap">
+                <div class="contents-info-btn">
+                    <h2 class="sub">아직 웨일이 더 궁금하신가요?</h2>
+                    <p class="small">웨일 연구소에서 모두와 함께 의견을 나눠보세요.</p>
+                    <button>웨일 연구소 참여하기</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerWrap">
+            <ul class="footerMenu">
+                <li>이용약관</li>
+                <li><b>개인정보 처리방침</b></li>
+                <li>버그 바운티</li>
+                <li>고객센터</li>
+                <li>&copy; NAVER Corp.</li>
+            </ul>
+            <div class="footerMenu2">
+                <ul class="snsIcons">
+                    <li><img src="img/blog.png" alt=""></li>
+                    <li><img src="img/facebook.png" alt=""></li>
+                    <li><img src="img/youtube.png" alt=""></li>
+                    <li><img src="img/instagram.png" alt=""></li>
+                </ul>
+                <button class="small">
+                    <span class="whaleLogo whaleLogo-black"></span>
+                    다운로드
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="JS/gnb.js"></script>
+<script src="JS/whalehelp.js"></script>
+
+</body>
+</html>

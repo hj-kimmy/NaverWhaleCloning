@@ -1,0 +1,154 @@
+/******************************
+    - section1#feature Style
+*******************************/
+/*기본 section 설정*/
+section#helpSearch{
+    height: 380px;
+    padding: 60px 0 91px;
+    background: #3f5bf3
+}
+
+section#helpSearch form{
+    margin: 36px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 52px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+section#helpSearch form input{
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+section#helpSearch form input::placeholder{
+    color: var(--lightgray);
+}
+
+section#helpSearch form input:focus{
+    border: none;
+    outline: none;
+}
+#helpSearch .contents-tabButton{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+#helpSearch .contents-tabButton li{
+    padding: 10px 20px;
+    margin-right: 5px;
+    list-style: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: bold;
+
+}
+
+#helpSearch .contents-tabButton li.active{
+    color: #3f5bf3;
+    background: #fff;
+}
+#helpSearch .contents-tabButton li:last-child{
+    margin-right: 0;
+}
+
+section#questions, section#tutorial{
+    padding: 150px 0;
+}
+
+section#questions .contents-tabList{
+    margin-top: 20px;
+    width: 100%;
+}
+
+
+section#questions .contents-tabList ul.contents-tabs{
+    display: none;
+    width: 100%;
+}
+section#questions .contents-tabList ul.contents-tabs.active{
+    display: block;
+}
+
+section#questions .contents-tabList ul.contents-tabs li{
+    width: 100%;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+section#questions .contents-tabList ul.contents-tabs li a{
+    padding: 22px 30px 22px 0;
+}
+
+section#tutorial{
+    background-color: #eff2fd;
+}
+#tutorial .contentsWrap:nth-of-type(2){
+    flex-wrap: wrap;
+}
+
+#tutorial .contents-box{
+    width: calc((100% - 48px)/ 3);
+    height: 144px;
+    background-color: #fff;
+    margin-right: 24px;
+    margin-top: 24px;
+    display: flex;
+}
+
+.contents-box .contents-img img{
+    width: 41px;
+}
+
+.contents-box .contents-img{
+    height: 100%;
+    width: 100%;
+    max-width: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.contents-box .contents-info{
+    height: 100%;
+    padding-right: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.contents-box .contents-info p.small{
+    margin-top: 6px;
+}
+
+#tutorial .contents-box:nth-of-type(3n){
+    margin-right: 0;
+}
+
+section#goTolab{
+    padding: 100px 0;
+}
+
+#goTolab .contents-info-btn{
+    margin: 0 auto;
+    text-align: center;
+}
+
+#goTolab .contents-info-btn button{
+    width: 280px;
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: bold;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    background-color: var(--blue);
+}
+
+

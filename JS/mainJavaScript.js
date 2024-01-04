@@ -74,6 +74,24 @@ $(function () {
     })
 })
 
+let xBtn = $("main .xBtn");
+let cover = xBtn.closest(".cover");
+let downloadmodal = $("#adBanner .cover")
+let modalWindow = $("#adBanner .contents-modal")
+xBtn.click(function () {
+    $(this).closest(".cover").hide();
+})
+function downloadModal() {
+    downloadmodal.fadeIn();
+    modalWindow.css({
+        "top" : "50px",
+        "opacity" : 0
+    }).animate({
+        "top" : 0,
+        "opacity" : 1
+    },500)
+}
+
 
 $(function () {
     gsap.registerPlugin(ScrollTrigger);

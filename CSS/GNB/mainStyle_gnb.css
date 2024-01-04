@@ -9,9 +9,13 @@ header {
     justify-content: center;
     align-items: center;
     position: fixed;
-    z-index: 99999999;
+    z-index: 999;
     background: white;
     transition: all 0.2s;
+}
+
+#whaleHelpCenter header{
+    background: #3f5bf3
 }
 
 #gnb {
@@ -23,6 +27,12 @@ header {
     align-items: center;
     padding: 21px 84px;
     position: relative;
+}
+
+#whaleHelpCenter #gnb{
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
 }
 
 /*Main logo*/
@@ -53,6 +63,12 @@ header {
     background: url("../../img/1-service_logo.svg") no-repeat;
     width: 100%;
     height: 38px;
+}
+
+#whaleHelpCenterLogo{
+    background: url("../../img/logo.svg") no-repeat;
+    width: 100%;
+    height: 80px;
 }
 
 #whale {
@@ -202,6 +218,7 @@ li.active .check{
     width: 18.5px;
     cursor: pointer;
 }
+
 #gnb-appMenu .subMenuBox{
     font-size: 0.875rem;
     padding: 20px 0;
@@ -250,6 +267,10 @@ li.active .check{
     cursor: pointer;
 }
 
+#whaleHelpCenter #subBtn > #menuBtn{
+    color: white;
+}
+
 .hide {
     display: none;
 }
@@ -257,7 +278,7 @@ li.active .check{
 /******************************
     - mobile-gnb Style
 *******************************/
-.cover {
+header .cover {
     position: fixed;
     z-index: 999;
     top: 0;

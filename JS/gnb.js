@@ -1,7 +1,7 @@
 $(function () {
     let mobileGnb = $("#mobileGnb");
     let mobileSub = $("#mobile-subMenu");
-    let cover = $(".cover");
+    let cover = $("header .cover");
     //
     //
     // let listName = $(".menu-sub-2");

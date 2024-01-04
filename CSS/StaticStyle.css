@@ -89,6 +89,10 @@ a {
 body, input, textarea, select, button, table {
     font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
 }
+body#whaleHelpCenter, #whaleHelpCenter input, #whaleHelpCenter select, #whaleHelpCenter button, #whaleHelpCenter table{
+    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+
+}
 
 /******************************
     - wrap Style
@@ -150,6 +154,9 @@ h2.important {
 h3 {
     font-size: 1.5rem;
     margin-bottom: 10px;
+}
+h3.small{
+    font-size: 1.4375rem;
 }
 
 /* h4 : WebPage contents title ~ mostly li contents */
@@ -341,6 +348,9 @@ section {
     padding: 0 84px;
     margin: 0 auto;
 }
+.contentsWrap.small {
+    padding: 0 210px;
+}
 
 .titleWrap {
     display: block;
@@ -417,6 +427,9 @@ section {
     h1, h1.important {
         font-size: 2.875rem;
     }
+    .contentsWrap.small{
+        padding: 0 32px;
+    }
 
     h2.earlySmall{
         font-size: 1.875rem;
@@ -453,7 +466,7 @@ section {
         font-size: 1.875rem;
     }
 
-    h3 {
+    h3{
         font-size: 1.25rem;
     }
 
@@ -496,7 +509,7 @@ section {
         margin-top: 64px;
     }
 
-    .contentsWrap {
+    .contentsWrap, .contentsWrap.small {
         padding: 0 20px;
     }
 
@@ -513,7 +526,7 @@ section {
     }
 
 
-    h3 {
+    h3{
         font-size: 1rem;
     }
 
