@@ -41,13 +41,14 @@
     /*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
     #secure #accordion .contents-accordion .contents-thumbnail{
         display: block;
-        position: relative;
         width: 350px;
-        left: 50%;
-        margin-top: -40px;
-        margin-left: -175px;
+        margin: 0 auto;
         bottom: -73px;
     }
+    section#secure .contentsWrap{
+        min-height: 730px;
+    }
+
     #secure #accordion{
         max-width: 100%;
         margin-right: 0;
@@ -56,13 +57,6 @@
         padding-bottom: 0;
     }
 
-    #secure #accordion .contents-accordion .contents-thumbnail{
-        display: block;
-        opacity: 0;
-    }
-    #secure #accordion .contents-accordion.active .contents-thumbnail{
-        opacity: 1;
-    }
     #secure #accordion .contents-accordion.active>ul>li{
         width: 6px;
         height: 6px;

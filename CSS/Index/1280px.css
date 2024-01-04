@@ -11,8 +11,12 @@
     section#secure{
         padding: 120px 0;
     }
+    section#secure .contentsWrap{
+        min-height: 550px;
+    }
     #secure #accordion{
         min-width: 338px;
+
     }
 
     #environment .titles-change{

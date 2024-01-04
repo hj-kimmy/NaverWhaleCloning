@@ -34,6 +34,7 @@
         right: 0;
         bottom: 0;
         width: 380px;
+        background: url("../../img/banner_beta_download_phone_600.png") top right/contain no-repeat;
     }
 
 }

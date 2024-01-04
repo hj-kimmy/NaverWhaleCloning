@@ -21,9 +21,13 @@
         margin-left: 20px;
     }
 
-    /******************************
-    - footer Style
-    *******************************/
+    #whaleHelpCenter #subBtn > #menuBtn{
+        display: none;
+    }
+
+        /******************************
+        - footer Style
+        *******************************/
     .footerWrap {
         padding: 21px 32px;
         display: flex;

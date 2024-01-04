@@ -11,7 +11,6 @@ header {
     position: fixed;
     z-index: 999;
     background: white;
-    transition: all 0.2s;
 }
 
 #whaleHelpCenter header{
@@ -36,7 +35,7 @@ header {
 }
 
 /*Main logo*/
-#gnb h1 {
+#gnb h1, #whaleHelpCenter .mobileGnb_nav h1 {
     width: 165px;
     margin-right: 60px;
     position: relative;
@@ -70,6 +69,13 @@ header {
     width: 100%;
     height: 80px;
 }
+
+#whaleHelpCenterLogo_color{
+    background: url("../../img/logo_green.svg") no-repeat;
+    width: 100%;
+    height: 80px;
+}
+
 
 #whale {
     background: url("../../img/whaleType.svg") no-repeat;
@@ -295,13 +301,35 @@ header .cover {
     z-index: 999;
     margin: 0;
     top: 0;
-    right: -1px;
+    right: 0;
     width: 315px;
     height: 100vh;
     justify-content: start;
     align-items: start;
     background-color: white;
     display: none;
+}
+
+#whaleHelpCenter #mobileGnb{
+    width: 100%;
+}
+
+#whaleHelpCenter .mobileGnb_nav {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+#whaleHelpCenter #mobileGnb .contents-tabButton li{
+    padding: 19px 15px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--lightgray);
 }
 
 #mobile-menu .mobile-menu-nav {

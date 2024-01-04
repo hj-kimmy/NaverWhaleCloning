@@ -75,6 +75,7 @@ section#secure .contentsWrap{
     padding-bottom: 20px;
     flex: 1 1 0;
     max-width: 498px;
+    align-self: stretch;
 }
 
 #secure #accordion .contents-accordion {
@@ -150,6 +151,7 @@ section#secure .contentsWrap{
 
 /*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
 #secure #accordion .contents-accordion .contents-thumbnail {
+    position: relative;
     display: none;
 }
 
@@ -400,11 +402,11 @@ section#adBanner {
     width: 500px;
     display: flex;
     justify-content: end;
+    background: url("../../img/banner_beta_download_phone_1440.png") top right /contain no-repeat;
 }
 
 #adBanner .cellphone img{
-    text-align: right;
-    height: 100%;
+    width: 100%;
 }
 
 #adBanner .cover {

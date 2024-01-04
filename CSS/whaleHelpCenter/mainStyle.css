@@ -3,8 +3,8 @@
 *******************************/
 /*기본 section 설정*/
 section#helpSearch{
-    height: 380px;
-    padding: 60px 0 91px;
+    height: 460px;
+    padding: 140px 0 91px;
     background: #3f5bf3
 }
 
@@ -50,7 +50,6 @@ section#helpSearch form input:focus{
     cursor: pointer;
     font-size: 0.9375rem;
     font-weight: bold;
-
 }
 
 #helpSearch .contents-tabButton li.active{
@@ -85,14 +84,23 @@ section#questions .contents-tabList ul.contents-tabs li{
 }
 
 section#questions .contents-tabList ul.contents-tabs li a{
-    padding: 22px 30px 22px 0;
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+}
+section#questions .contents-tabList ul.contents-tabs li a span:nth-of-type(2){
+    color: var(--lightgray);
 }
 
 section#tutorial{
     background-color: #eff2fd;
 }
-#tutorial .contentsWrap:nth-of-type(2){
+#tutorial .contents-boxes{
     flex-wrap: wrap;
+    display: none;
+}
+#tutorial .contents-boxes.active{
+    display: flex;
 }
 
 #tutorial .contents-box{
@@ -102,6 +110,8 @@ section#tutorial{
     margin-right: 24px;
     margin-top: 24px;
     display: flex;
+    cursor: pointer;
+    align-items: center;
 }
 
 .contents-box .contents-img img{
@@ -109,7 +119,6 @@ section#tutorial{
 }
 
 .contents-box .contents-img{
-    height: 100%;
     width: 100%;
     max-width: 111px;
     display: flex;
@@ -117,7 +126,6 @@ section#tutorial{
     align-items: center;
 }
 .contents-box .contents-info{
-    height: 100%;
     padding-right: 38px;
     display: flex;
     flex-direction: column;

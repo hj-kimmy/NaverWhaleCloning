@@ -114,6 +114,10 @@ main {
     margin-top: 80px;
 }
 
+#whaleHelpCenter main{
+    margin-top: 0;
+}
+
 /******************************
     - tag Style (theme)
 *******************************/
@@ -164,9 +168,10 @@ h4 {
     font-size: 1.625rem;
 }
 
-h5{
+h5, h5.boxtitle{
     font-size: 1.125rem;
 }
+
 
 /* P : WebPage contents paragraph-default */
 p {
@@ -184,6 +189,9 @@ p.big{
     font-size: 1.25rem;
 }
 p.short{
+    display: none;
+}
+p.short_960{
     display: none;
 }
 
@@ -252,6 +260,10 @@ button.blueButton{
     margin-right: 5px;
 }
 
+.xBtn{
+    cursor: pointer;
+}
+
 button.whale-Button.small .whaleLogo {
     width: 24px;
     height: 24px;
@@ -284,6 +296,9 @@ br.br-770 {
 }
 
 br.br-600 {
+    display: none;
+}
+br.br-960d{
     display: none;
 }
 
@@ -458,12 +473,19 @@ section {
 }
 
 @media screen and (max-width: 960px) {
+
     h1, h1.important {
         font-size: 2.5rem;
+    }
+    h1.help_title{
+        font-size: 1.875rem;
     }
 
     h2 {
         font-size: 1.875rem;
+    }
+    h2.sub.early{
+        font-size: 1.625rem;
     }
 
     h3{
@@ -473,8 +495,22 @@ section {
     p, p.big {
         font-size: 1rem;
     }
+
+    p.long_960{
+        display: none;
+    }
+    p.short_960{
+        display: block;
+    }
+
     br.br-960{
         display: none;
+    }
+    br.br-960d{
+        display: block;
+    }
+    .contentsWrap.small{
+        padding: 0 20px;
     }
 }
 @media screen and (max-width: 800px){
@@ -509,7 +545,7 @@ section {
         margin-top: 64px;
     }
 
-    .contentsWrap, .contentsWrap.small {
+    .contentsWrap {
         padding: 0 20px;
     }
 
@@ -533,7 +569,9 @@ section {
     h4 {
         font-size: 1.125rem;
     }
-
+    h5.boxtitle{
+        font-size: 1.025rem;
+    }
     p, p.small, p.big, p.smallest {
         margin-top: 6px;
         font-size: 0.875rem;
