@@ -1,0 +1,604 @@
+/*bootStrap*/
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+
+.embed-responsive::before {
+    display: block;
+    content: "";
+}
+
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object,
+.embed-responsive video {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+.embed-responsive-21by9::before {
+    padding-top: 42.857143%;
+}
+
+.embed-responsive-16by9::before {
+    padding-top: 56.25%;
+}
+
+.embed-responsive-4by3::before {
+    padding-top: 75%;
+}
+
+.embed-responsive-1by1::before {
+    padding-top: 100%;
+}
+
+.position-absolute {
+    position: absolute !important;
+}
+.position-relative {
+    position: relative !important;
+}
+
+.font-weight-normal {
+    font-weight: 400 !important;
+}
+
+.font-weight-bold {
+    font-weight: 700 !important;
+}
+
+/******************************
+    - reset Style
+*******************************/
+:root {
+    --blue: #2187ec;
+    --gray: #777777;
+    --lightgray: #e5e5e5;
+    --green: #03cf5d;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid blue;*/
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #000;
+}
+
+body, input, textarea, select, button, table {
+    font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+body#whaleHelpCenter, #whaleHelpCenter input, #whaleHelpCenter select, #whaleHelpCenter button, #whaleHelpCenter table{
+    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+
+}
+
+/******************************
+    - wrap Style
+*******************************/
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+/******************************
+    - Main Style
+*******************************/
+main {
+    margin-top: 80px;
+}
+
+#whaleHelpCenter main{
+    margin-top: 0;
+}
+
+/******************************
+    - tag Style (theme)
+*******************************/
+h1, h2, h3, h4, h5, h6, p {
+    word-break: keep-all;
+    line-height: 150%;
+}
+
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* h1 : pange MainSection title */
+h1 {
+    font-size: 3.125rem;
+}
+
+/* h1 : WebPage -important- MainSection title */
+h1.important {
+    font-size: 3.5em;
+}
+
+/* h2 : WebPage SubSection title */
+h2 {
+    font-size: 2.5rem;
+}
+h2.sub{
+    font-size: 2.25rem;
+}
+
+h2.important {
+    font-size: 1.875rem;
+}
+
+/* h3 : WebPage title~sub description title */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+h3.small{
+    font-size: 1.4375rem;
+}
+
+/* h4 : WebPage contents title ~ mostly li contents */
+h4 {
+    font-size: 1.625rem;
+}
+
+h5, h5.boxtitle{
+    font-size: 1.125rem;
+}
+
+
+/* P : WebPage contents paragraph-default */
+p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin-top: 12px;
+}
+p.small{
+    font-size: 1rem;
+}
+p.smallest{
+    font-size: 0.875rem;
+}
+p.big{
+    font-size: 1.25rem;
+}
+p.short{
+    display: none;
+}
+p.short_960{
+    display: none;
+}
+
+button {
+    font-size: 0.9375rem;
+    padding: 12px 15px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--lightgray);
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+button.whale-Button {
+    font-size: 1.025rem;
+    border: none;
+    background-color: #40c3a7;
+    color: white;
+    font-weight: bold;
+}
+
+button.small {
+    padding: 6px 15px;
+    font-size: 0.8125rem;
+}
+
+button.blueButton{
+    text-align: center;
+    padding: 14px 28px 14px 20px;
+    border: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    background-color: #1f30aa;
+    color: white;
+    font-size: 1.125rem;
+}
+
+.underline{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.underline:after{
+    content : "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--gray);
+}
+
+.whaleLogo {
+    width: 28px;
+    height: 28px;
+    display: inline-block;
+    position: relative;
+    left: -2px;
+    top: 2px;
+    margin-right: 5px;
+}
+
+.xBtn{
+    cursor: pointer;
+}
+
+button.whale-Button.small .whaleLogo {
+    width: 24px;
+    height: 24px;
+}
+
+.whaleLogo-black{
+    background: url(../img/whale_black.svg) center / contain no-repeat;
+}
+
+.whaleLogo-white {
+    background: url(../img/whale_white.svg) center / contain no-repeat;
+}
+.whaleLogo-color{
+    background: url(../img/whale_color.svg) center / contain no-repeat;
+}
+
+button:hover {
+    background-color: var(--lightgray);
+}
+
+button.whale-Button:hover {
+    background-color: #05AF96;
+}
+br.br-1280{
+    display: none;
+}
+
+br.br-770 {
+    display: none;
+}
+
+br.br-600 {
+    display: none;
+}
+br.br-960d{
+    display: none;
+}
+
+.tag{
+    font-size: 0.8125rem;
+    font-weight: bold;
+    padding: 3px 10px;
+    -webkit-border-radius: 100px;
+    -moz-border-radius: 100px;
+    border-radius: 100px;
+}
+
+/******************************
+    - color Style (theme)
+*******************************/
+/* whale theme color blue => --blue: #2187ec */
+.c-whale-blue {
+    color: var(--blue);
+}
+
+.c-whale-gray {
+    color: var(--gray);
+}
+
+.c-whale-white {
+    color: white;
+}
+
+.bg-whale-blue {
+    background-color: var(--blue);
+}
+
+.date {
+    font-size: 0.875rem;
+    color: var(--gray);
+}
+
+.shadow {
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
+/******************************
+    - layout Style
+*******************************/
+section {
+    width: 100%;
+    position: relative;
+}
+
+.contentTitle {
+    font-size: 1.625rem;
+}
+
+.contentsWrap {
+    width: 100%;
+    max-width: 1440px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 84px;
+    margin: 0 auto;
+}
+.contentsWrap.small {
+    padding: 0 210px;
+}
+
+.titleWrap {
+    display: block;
+    text-align: center;
+}
+
+/******************************
+    - animation start point
+*******************************/
+.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni {
+    position: relative;
+    top: -5%;
+    opacity: 0;
+}
+
+/******************************
+    - cardList style
+*******************************/
+.contents-cardList {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.contents-cardList li {
+    width: calc(50% - 12px);
+    padding: 32px 36px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 20px;
+    border-radius: 20px;
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+}
+
+.contents-cardList li:nth-of-type(2n-1) {
+    margin-right: 24px;
+}
+
+.contents-cardList li:nth-of-type(1), .contents-cardList li:nth-of-type(2) {
+    margin-bottom: 24px;
+}
+
+.contents-cardList li .icon {
+    width: 84px;
+    height: 84px;
+}
+.contents-cardList li p {
+    margin-top: 6px;
+}
+
+.contents-cardList li div:nth-of-type(2) {
+    flex: 1 1 auto;
+    margin-left: 24px;
+}
+
+@media screen and (max-width: 1440px) {
+    .contentsWrap {
+        padding: 0 36px;
+    }
+}
+
+@media screen and (max-width: 1320px) {
+    .contentsWrap {
+        padding: 0 32px;
+    }
+}
+
+@media screen and (max-width: 1280px) {
+    h1, h1.important {
+        font-size: 2.875rem;
+    }
+    .contentsWrap.small{
+        padding: 0 32px;
+    }
+
+    h2.earlySmall{
+        font-size: 1.875rem;
+    }
+    h5{
+        font-size: 1.5rem;
+    }
+
+    br.br-1280{
+        display: block;
+    }
+
+    .contents-cardList li {
+        width: 100%;
+        max-width: none;
+        margin-bottom: 24px;
+    }
+
+    .contents-cardList li:nth-of-type(1), .contents-cardList li:nth-of-type(2) {
+        margin-bottom: 24px;
+    }
+
+    .contents-cardList li:nth-of-type(2n-1) {
+        margin-right: 0;
+    }
+}
+
+@media screen and (max-width: 960px) {
+
+    h1, h1.important {
+        font-size: 2.5rem;
+    }
+    h1.help_title{
+        font-size: 1.875rem;
+    }
+
+    h2 {
+        font-size: 1.875rem;
+    }
+    h2.sub.early{
+        font-size: 1.625rem;
+    }
+
+    h3{
+        font-size: 1.25rem;
+    }
+
+    p, p.big {
+        font-size: 1rem;
+    }
+
+    p.long_960{
+        display: none;
+    }
+    p.short_960{
+        display: block;
+    }
+
+    br.br-960{
+        display: none;
+    }
+    br.br-960d{
+        display: block;
+    }
+    .contentsWrap.small{
+        padding: 0 20px;
+    }
+}
+@media screen and (max-width: 800px){
+    h2.important{
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and (max-width: 770px){
+    button.blueButton{
+        padding: 12px 20px 12px 12px;
+        font-size: 1rem;
+    }
+    h2.earlySmall2, h2.earlySmall{
+        font-size: 1.5rem;
+    }
+
+    h5{
+        font-size: 1rem;
+    }
+
+    br.br-770{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    /******************************
+    - Main Style
+    *******************************/
+    main {
+        margin-top: 64px;
+    }
+
+    .contentsWrap {
+        padding: 0 20px;
+    }
+
+    h1, h1.important {
+        font-size: 1.875rem;
+    }
+
+    h2.sub{
+        font-size: 1.625rem;
+    }
+
+    h2, h2.important, h2.earlySmall {
+        font-size: 1.5rem;
+    }
+
+
+    h3{
+        font-size: 1rem;
+    }
+
+    h4 {
+        font-size: 1.125rem;
+    }
+    h5.boxtitle{
+        font-size: 1.025rem;
+    }
+    p, p.small, p.big, p.smallest {
+        margin-top: 6px;
+        font-size: 0.875rem;
+    }
+    p.long{
+        display: none;
+    }
+    p.short{
+        display: block;
+    }
+
+
+    .contents-cardList li {
+        padding: 20px;
+    }
+
+    .contents-cardList li .icon {
+        width: 64px;
+        height: 64px;
+    }
+
+    .contents-cardList li div:nth-of-type(2) {
+        margin-left: 12px;
+    }
+
+    br.br-600 {
+        display: block;
+    }
+
+}

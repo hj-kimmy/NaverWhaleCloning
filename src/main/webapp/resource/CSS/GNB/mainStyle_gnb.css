@@ -1,0 +1,497 @@
+/******************************
+    - gnb Style
+*******************************/
+header {
+    top: 0;
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 999;
+    background: white;
+}
+
+#whaleHelpCenter header{
+    background: #3f5bf3
+}
+
+#gnb {
+    width: 100%;
+    max-width: 1440px;
+    height: 100%;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 21px 84px;
+    position: relative;
+}
+
+#whaleHelpCenter #gnb{
+    padding-top: 0;
+    padding-bottom: 0;
+    justify-content: space-between;
+}
+
+/*Main logo*/
+#gnb h1, #whaleHelpCenter .mobileGnb_nav h1 {
+    width: 165px;
+    margin-right: 60px;
+    position: relative;
+    display: flex;
+    align-items: end;
+}
+#gnb h1.whaleBook{
+    width: 180px;
+}
+
+#gnb h1 > a {
+    display: flex;
+    align-items: end;
+}
+
+#naver {
+    background: url("../../img/NAVERLogo.svg") no-repeat;
+    width: 50%;
+    height: 15.5px;
+    margin-right: 5px;
+}
+
+#whaleBook{
+    background: url("../../img/1-service_logo.svg") no-repeat;
+    width: 100%;
+    height: 38px;
+}
+
+#whaleHelpCenterLogo{
+    background: url("../../img/logo.svg") no-repeat;
+    width: 100%;
+    height: 80px;
+}
+
+#whaleHelpCenterLogo_color{
+    background: url("../../img/logo_green.svg") no-repeat;
+    width: 100%;
+    height: 80px;
+}
+
+
+#whale {
+    background: url("../../img/whaleType.svg") no-repeat;
+    width: 50%;
+    height: 20px;
+}
+
+/*Main-Menu-Bar style*/
+#main-menu {
+    padding-top: 8px;
+    align-self: start;
+    position: relative;
+    top: 0;
+    max-width: 828px;
+    display: flex;
+    justify-content: start;
+    align-items: start;
+    margin-right: 60px;
+    flex: 1 1 auto;
+}
+
+/*1330 이하 화면 Main-Menu-Bar-nav*/
+#main-menu .main-menu-nav {
+    display: none;
+}
+
+#main-menu > li {
+    margin-right: 38px;
+    cursor: pointer;
+}
+
+#main-menu > li:last-child {
+    margin-right: 0;
+}
+
+li.active .check{
+    font-weight: bold;
+}
+
+#main-menu > li:nth-of-type(2), #main-menu > li:nth-of-type(3) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#main-menu .subMenuBoxWrap {
+    position: absolute;
+    top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.subMenuBoxWrap a{
+    display: flex;
+    align-items: center;
+}
+
+/*2depth menu 토글버튼*/
+.menu-sub-2>a{
+    display: flex;
+    align-items: start;
+    height: unset;
+    width: unset;
+}
+
+#main-menu > li .material-symbols-outlined {
+    font-size: 25px;
+    width: 20px;
+    height: 20px;
+    font-variation-settings: 'FILL' 0,
+    'wght' 25,
+    'GRAD' 0,
+    'opsz' 24;
+    color: #222222;
+    position: relative;
+}
+
+#main-menu > li:hover .material-symbols-outlined.dropdown {
+    transform-origin: 60% 60%;
+    transform: rotatez(180deg);
+}
+
+#main-menu > li:hover .material-symbols-outlined.dropdown::after {
+    background-color: #E5E4E3;
+    content: "";
+    position: absolute;
+    width: 80%;
+    height: 80%;
+    left: 5px;
+    top: 4px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    z-index: -1;
+}
+
+/*2depth menubox*/
+.subMenuBox {
+    width: 100%;
+    padding: 12px 0;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: white;
+    margin-top: 20px;
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+}
+
+/*2depth menubox 세부*/
+#main-menu .subMenuBox li {
+    height: 35px;
+    padding: 0 15px;
+    position: relative;
+    font-size: 14px;
+}
+
+/*2depth menubox 세부:hover*/
+#main-menu .subMenuBox li:hover {
+    background-color: #E5E4E3;
+}
+
+/* 우측 추가 버튼 */
+#subBtn {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+
+/*다운로드 버튼*/
+#subBtn > button {
+    margin-right: 20px;
+}
+#subBtn > button > .whaleLogo {
+    width: 15.4px;
+    height: 15.4px;
+}
+
+/* 앱박스 */
+#gnb-appMenu {
+    position: relative;
+}
+#gnb-appMenu > img {
+    width: 18.5px;
+    cursor: pointer;
+}
+
+#gnb-appMenu .subMenuBox{
+    font-size: 0.875rem;
+    padding: 20px 0;
+    right: 0;
+    width: 362px;
+    position: absolute;
+}
+#gnb-appMenu .subMenuBox>li {
+    width: 100%;
+    padding: 3.5px 0 3.5px 20px;
+}
+#gnb-appMenu .subMenuBox>li:first-child{
+    margin-bottom: 8px;
+}
+#gnb-appMenu .subMenuBox .appMenu-Apps{
+    font-size: 0.8125rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+#gnb-appMenu .subMenuBox .appMenu-Apps li{
+    width: 50%;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+}
+#gnb-appMenu .subMenuBox .appMenu-Apps li a{
+    display: flex;
+    align-items: center;
+}
+
+#gnb-appMenu .subMenuBox .appMenu-Apps li:last-child{
+    margin-bottom: 0;
+}
+
+#gnb-appMenu .subMenuBox .appMenu-Apps li img {
+    width: 24px;
+    margin-right: 10px;
+}
+
+/*1320px~ 숨김메뉴*/
+#subBtn > #menuBtn {
+    display: none;
+    cursor: pointer;
+}
+
+#whaleHelpCenter #subBtn > #menuBtn{
+    color: white;
+}
+
+.hide {
+    display: none;
+}
+
+/******************************
+    - mobile-gnb Style
+*******************************/
+header .cover {
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    opacity: 0.7;
+    background-color: black;
+    display: none;
+}
+
+#mobileGnb{
+    position: fixed;
+    z-index: 999;
+    margin: 0;
+    top: 0;
+    right: 0;
+    width: 315px;
+    height: 100vh;
+    justify-content: start;
+    align-items: start;
+    background-color: white;
+    display: none;
+}
+
+#whaleHelpCenter #mobileGnb{
+    width: 100%;
+}
+
+#whaleHelpCenter .mobileGnb_nav {
+    width: 100%;
+    height: 64px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    position: relative;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+#whaleHelpCenter #mobileGnb .contents-tabButton li{
+    padding: 19px 15px;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+#mobile-menu .mobile-menu-nav {
+    display: flex;
+    height: 58px;
+    width: 100%;
+    padding: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#mobile-menu>li:nth-of-type(1){
+    margin-top: 10px;
+
+}
+#mobile-menu>li{
+    padding: 0 20px;
+    font-weight: bold;
+}
+
+#mobile-menu li:not(.h-invisible){
+    position: relative;
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#mobile-menu>li>ul>li{
+    font-weight: normal;
+}
+
+#mobile-menu hr{
+    margin: 15px 0;
+    border: none;
+    background-color: #e6e6e6;
+    height: 1px;
+}
+
+#mobile-menu .page{
+    display: block;
+}
+
+.mobile-menu-nav .mobile-menu-btn {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
+    cursor: pointer;
+    width: 18.5px;
+    margin-right: 5px;
+}
+
+#mobileGnb .downloadBtn{
+    width: calc(100% - 40px);
+    left: 20px;
+    bottom: 20px;
+    position: absolute;
+    padding: 10px;
+}
+
+#mobileGnb .downloadBtn > .whaleLogo, footer button>.whaleLogo {
+    width: 18px;
+    height: 18px;
+}
+#mobile-subMenu{
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    align-content: start;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: fixed;
+    z-index: 99999999;
+    background-color: white;
+    display: none;
+}
+#mobile-gnb-appMenu ul{
+    display: flex;
+    flex-wrap: wrap;
+    padding:  5px 20px;
+}
+#mobile-gnb-appMenu h4{
+    padding-left: 20px;
+}
+
+#mobile-gnb-appMenu ul li{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    padding: 7px 0;
+}
+
+#mobile-gnb-appMenu li img {
+    width: 28px;
+    margin-right: 10px;
+}
+
+.mobile-menu-nav .material-symbols-outlined{
+    font-size: 30px;
+    margin-left: -5px;
+    font-variation-settings:
+            'FILL' 0,
+            'wght' 200,
+            'GRAD' 0,
+            'opsz' 24;
+    cursor: pointer;
+}
+
+#mobile-subMenu .mobile-menu-nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-size: 20px;
+    padding: 10px 20px 30px 10px;
+    font-weight: bold;
+}
+
+/******************************
+    - footer Style
+*******************************/
+footer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    border-top: 1px solid var(--lightgray);
+}
+.footerWrap{
+    width: 100%;
+    max-width: 1440px;
+    padding: 21px 84px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.footerMenu{
+    display: flex;
+    font-size: 13px;
+    flex-wrap: wrap;
+}
+.footerMenu li{
+    margin-bottom: 10px;
+}
+
+.footerMenu2{
+    display: flex;
+    align-items: center;
+}
+.snsIcons{
+    display: flex;
+    padding-right: 10px;
+}
+.snsIcons li{
+    margin-right: 20px;
+}
+.snsIcons li img{
+    width: 18px;
+}
+.footerMenu li{
+    margin-right: 20px;
+}

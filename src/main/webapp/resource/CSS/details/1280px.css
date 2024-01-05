@@ -1,0 +1,13 @@
+@media screen and (max-width: 1280px) {
+    section.section-details article.contentsWrap>div{
+        margin-right: 40px;
+    }
+    section.section-details>.contents-info>section:nth-of-type(2n) article.contentsWrap>div{
+        margin-left: 40px;
+    }
+    section.section-details video{
+        flex: 1 1 auto;
+        max-width: 620px;
+        min-width: 480px;
+    }
+}

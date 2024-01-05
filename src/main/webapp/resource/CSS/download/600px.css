@@ -1,0 +1,17 @@
+@media screen and (max-width: 600px) {
+    #downloadMain .contentsWrap .contents-btns{
+        margin-top: 30px;
+    }
+    #downloadMain .contentsWrap .contents-img{
+        margin-top: 50px;
+    }
+    #downloadMain .contentsWrap img{
+        max-height: 202px;
+    }
+    section#downloadMain > div.contents {
+        padding: 80px 20px 70px 20px;
+    }
+    section#whaleDownload{
+        padding: 60px 0 46px;
+    }
+}

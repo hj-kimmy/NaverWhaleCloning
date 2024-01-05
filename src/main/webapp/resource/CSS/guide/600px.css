@@ -1,0 +1,23 @@
+@media screen and (max-width: 600px) {
+    section#guideMain {
+        height: 216px;
+    }
+
+    #guideMain .contentsWrap .contents-img {
+        height: 160px;
+        right: -20px;
+    }
+    #update{
+        padding: 36px 0 6px;
+    }
+    #press{
+        padding-bottom: 80px;
+    }
+    #press .contentsWrap:last-child{
+        margin-top: 4px;
+    }
+
+    #update p, #press p {
+        font-size: 1rem;
+    }
+}

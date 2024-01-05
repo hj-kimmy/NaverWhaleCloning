@@ -1,0 +1,68 @@
+main {
+    background-color: #f7f9fb;
+}
+
+/*기본 section 설정*/
+
+#downloadMain .contentsWrap{
+    height: 540px;
+}
+
+/*artcle*/
+#downloadMain .contentsWrap .contents-info-btn{
+    position: relative;
+    width: 50%;
+}
+
+#downloadMain .contentsWrap h1{
+    line-height: 120%;
+}
+#downloadMain .contentsWrap p span{
+    color: #2187ec;
+    font-weight: 500;
+}
+
+/*video 설정*/
+#downloadMain .contentsWrap .contents-img{
+    position: relative;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+#downloadMain .contentsWrap img{
+    width: 100%;
+}
+
+/*button 설정*/
+#downloadMain .contentsWrap .contents-btns{
+    margin-top: 40px;
+    display: flex;
+}
+#downloadMain .contentsWrap .contents-btns button:last-child{
+    margin-left: 10px;
+    background: #fff;
+}
+
+section#whaleDownload{
+    padding: 80px 0 120px;
+}
+#whaleDownload .contentsWrap:last-child{
+    margin-top: 30px;
+}
+#whaleDownload button.small{
+    padding: 12px;
+}
+
+.macOS{
+    background:  white url("../../img/ic_mac_84.png") center / contain no-repeat;
+}
+.linux{
+    background: white  url("../../img/ic_linux_84.png") center / contain no-repeat;
+}
+.android{
+    background:  white url("../../img/ic_android_84.png") center / contain no-repeat;
+}
+.ios{
+    background:  white url("../../img/ic_ios_84.png") center / contain no-repeat;
+}

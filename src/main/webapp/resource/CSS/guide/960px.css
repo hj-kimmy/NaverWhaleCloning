@@ -1,0 +1,34 @@
+@media screen and (max-width: 960px) {
+    section#guideMain{
+        height: 360px;
+    }
+
+    #guideMain .contentsWrap .contents-img {
+        height: 300px;
+        right: -32px;
+        align-self: end;
+    }
+    #guideMain .contents-info p{
+        width: 100%;
+    }
+
+    #update .contentsWrap{
+        flex-wrap: wrap;
+    }
+
+    #update .contentsWrap .contents-card {
+        margin-bottom: 24px;
+        margin-right: unset;
+        width: 100%;
+    }
+
+    #update p, #press p{
+        font-size: 1.125rem;
+    }
+    #update{
+        padding: 56px 0 32px;
+    }
+    #press{
+        padding-bottom: 80px;
+    }
+}

@@ -1,0 +1,36 @@
+@media screen and (max-width: 600px) {
+    header{
+        height: 64px;
+    }
+    #gnb {
+        padding: 0 20px;
+    }
+    h1 {
+        align-items: center;
+    }
+    #naver {
+        background: url("../../img/square_logo.png") center/contain no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+    }
+    #whale {
+        width: 60px;
+        height: 20px;
+    }
+    #gnb-appMenu, .main-downloadBtn{
+        display: none;
+    }
+
+
+    /******************************
+    - footer Style
+    *******************************/
+    .footerMenu li{
+        margin-right: 12px;
+    }
+
+    .footerWrap{
+        padding: 21px 20px;
+    }
+}

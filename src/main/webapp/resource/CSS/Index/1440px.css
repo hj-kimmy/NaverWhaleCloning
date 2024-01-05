@@ -1,0 +1,26 @@
+@media screen and (max-width: 1440px) {
+    /******************************
+         - section1#feature Style
+    *******************************/
+    #feature .contentsWrap:nth-of-type(2n-1) article.info {
+        padding-right: 40px;
+    }
+
+    #feature .contentsWrap:nth-of-type(2n) article.info {
+        padding-left: 40px;
+    }
+
+    /******************************
+     - section2#secure Style
+    *******************************/
+    #secure .titleWrap {
+        padding: 0 36px;
+    }
+
+    /******************************
+    - section5#adBanner Style
+*******************************/
+    #adBanner>.contentsWrap:nth-of-type(1) {
+        padding-left: 36px;
+    }
+}

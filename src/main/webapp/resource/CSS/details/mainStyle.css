@@ -1,0 +1,183 @@
+#detailsCarousel {
+    height: 430px;
+}
+#myCarousel{
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+#myCarousel, #myCarousel .contents-gallery, #myCarousel .contents-gallery li{
+    height: 100%;
+    width: 100%;
+}
+#myCarousel .contents-gallery{
+    position: relative;
+}
+#myCarousel .contents-gallery li{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    opacity: 0;
+}
+#myCarousel .contents-gallery li.active{
+    opacity: 1;
+}
+
+#myCarousel .contents-gallery li:nth-of-type(1) {
+    background: rgb(85, 200, 158);
+    background: linear-gradient(135deg, rgba(85, 200, 158, 1) 0%, rgba(36, 162, 155, 1) 100%);
+}
+#myCarousel .contents-gallery li:nth-of-type(1) .contents-bgImg{
+    background: url("../../img/banner_omnitasking_icon_1440.png") top right / auto 100% no-repeat;
+}
+
+#myCarousel .contents-gallery li:nth-of-type(2) {
+    background: rgb(112, 132, 249);
+    background: linear-gradient(135deg, rgba(112, 132, 249, 1) 0%, rgba(40, 84, 243, 1) 100%);
+}
+#myCarousel .contents-gallery li:nth-of-type(2) .contents-bgImg{
+    background: url("../../img/banner_security_icon_1440.png") top right / auto 100% no-repeat;
+}
+
+#myCarousel .contents-gallery li:nth-of-type(3) {
+    background: rgb(124, 116, 250);
+    background: linear-gradient(135deg, rgba(124, 116, 250, 1) 0%, rgba(110, 63, 228, 1) 100%);
+}
+#myCarousel .contents-gallery li:nth-of-type(3) .contents-bgImg{
+    background: url("../../img/banner_customizing_icon_1440.png") top right / auto 100% no-repeat;
+}
+#myCarousel .contents-gallery .contents-bgImg{
+    width: 100%;
+    height: 100%;
+}
+
+#myCarousel .contents-btn {
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 4;
+}
+
+#myCarousel .contents-btn li {
+    padding: 10px 15px;
+    margin-right: 5px;
+    list-style: none;
+    -webkit-border-radius: 50px;
+    -moz-border-radius: 50px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    color: rgba(255,255,255,0.7);
+    font-weight: bold;
+}
+
+#myCarousel .contents-btn li:last-of-type{
+    margin-right: 0;
+}
+
+#myCarousel .contents-btn li.active {
+    color: rgba(255,255,255,0.9);
+    background-color: rgba(0,0,0,0.4);
+}
+
+#myCarousel .contents-btns{
+    position: absolute;
+    top: 0;
+}
+
+#myCarousel .contents-info{
+    position: absolute;
+    height: 100%;
+    top: 0;
+    align-items: center;
+}
+
+#myCarousel .contents-info .contents-info{
+    width: 100%;
+    height: 40%;
+    margin-top: 20px;
+    z-index: 4;
+    position: relative;
+    overflow: hidden;
+}
+#myCarousel .contents-info .contents-info li{
+    position: absolute;
+    width: 100%;
+    color: #fff;
+    top: 100%;
+}
+#myCarousel .contents-info .contents-info li.active{
+    top: 0;
+}
+
+#myCarousel .contents-info .contents-info p{
+    width: 100%;
+    max-width: 450px;
+    color: rgba(256,256,256,0.7);
+}
+
+section.section-details .contents-icon{
+    flex: 0 0 auto;
+    width: 84px;
+    height: 84px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    border: 1px solid var(--lightgray);
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+section.section-details .contents-icon img{
+    display: block;
+    width: 36px;
+}
+section.section-details{
+    display: none;
+}
+section.section-details.active{
+    display: block;
+}
+
+section.section-details>.contents-info>section{
+    width: 100%;
+    padding: 140px 0;
+    display: flex;
+    justify-content: center;
+}
+section.section-details article{
+    width: 100%;
+    display: flex;
+}
+section.section-details h2{
+    margin-top: 24px;
+}
+section.section-details .contents-info .contents-info p.c-whale-blue{
+    margin-top: 48px;
+    font-weight: bold;
+}
+
+section.section-details video{
+    flex: 0 0 auto;
+    width: 620px;
+    -webkit-border-radius: 18px;
+    -moz-border-radius: 18px;
+    border-radius: 18px;
+}
+section.section-details article.contentsWrap>div{
+    width: 100%;
+    height: 100%;
+    margin-right: 90px;
+    flex: 1 1 auto;
+}
+section.section-details>.contents-info>section:nth-of-type(2n){
+    background-color: #f7f9fb;
+}
+section.section-details>.contents-info>section:nth-of-type(2n) article{
+    flex-direction: row-reverse;
+}
+section.section-details>.contents-info>section:nth-of-type(2n) article.contentsWrap>div{
+    margin-right: 0;
+    margin-left: 90px;
+}
