@@ -2,8 +2,8 @@ package com.controller;
 
 import com.model.BoardDAO;
 import com.model.BoardDTO;
-import sun.net.httpserver.HttpServerImpl;
 
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -14,6 +14,9 @@ import java.util.List;
 
 public class BoardController extends HttpServlet {
 
+    private static final long serialVersionUID = 1L;
+    public static final int LISTCOUNT = 5;		// 게시판 글이 한 페이지에 표시되는 개수
+
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         doGet(request, response);
@@ -21,10 +24,6 @@ public class BoardController extends HttpServlet {
 
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-//		response.setHeader("Cache-Control", "no-cache");
-//		response.addHeader("Cache-Control", "no-store");
-//		response.setHeader("Pragma", "no-cache");
-//		response.setDateHeader("Expires", 1L);
 
         String RequestURI = request.getRequestURI();
         System.out.println("RequestURI : "+RequestURI);
@@ -39,24 +38,16 @@ public class BoardController extends HttpServlet {
 //		mapping
         if(command.equals("/BoardListAction.do")) {
             requestBoardList(request);	// 게시판 목록 가져오는 사용자 정의 함수
-            RequestDispatcher rd = request.getRequestDispatcher("./board/list.jsp");
-            // 클라이언트로부터 최초에 들어온 요청을 JSP/Servlet 내에서 원하는 자원으로 요청을 넘기는(보내는) 역할을 수행하거나, 특정 자원에 처리를 요청하고 처리 결과를 얻어오는 기능을 수행하는 클래스
-            rd.forward(request, response);
-        }else if(command.equals("/BoardWriteForm.do")) {
-            requestLoginName(request); // 인증된 사용자 명을 가져오는 사용자 정의 함수
-            RequestDispatcher rd = request.getRequestDispatcher("./board/writeForm.jsp");
-            // 클라이언트로부터 최초에 들어온 요청을 JSP/Servlet 내에서 원하는 자원으로 요청을 넘기는(보내는) 역할을 수행하거나, 특정 자원에 처리를 요청하고 처리 결과를 얻어오는 기능을 수행하는 클래스
-            rd.forward(request, response);
-        }else if(command.equals("/BoardWriteAction.do")) {
-            requestBoardWrite(request);
-            RequestDispatcher rd = request.getRequestDispatcher("BoardListAction.do");
+            RequestDispatcher rd = request.getRequestDispatcher("./guide.jsp");
             rd.forward(request, response);
         }
     }
 
+    //	등록된 글 목록을 가져오는 함수
     protected void requestBoardList(HttpServletRequest request) {
-        BoardDAO dao = BoardDAO.getInstacne();
-        List<BoardDTO> boardlist = new ArrayList<BoardDTO>();
+        BoardDAO dao = BoardDAO.getInstance();
+        List<BoardDTO> pressBoardlist = new ArrayList<BoardDTO>();
+        List<BoardDTO> updateBoardlist = new ArrayList<BoardDTO>();
 
         int pageNum = 1;
         int limit = LISTCOUNT;
@@ -70,7 +61,8 @@ public class BoardController extends HttpServlet {
         String text = request.getParameter("text");
         int total_record = dao.getListCount(items, text);
 
-        boardlist = dao.getBoardlist(pageNum, limit, items, text);
+        pressBoardlist = dao.getPressBoardList(pageNum, limit, items, text);
+        updateBoardlist = dao.getUpdateBoardList(pageNum, limit, items, text);
         // 옵션별로 검색한 단어와 관련된 갯수를 리턴해서 total record에 저장
 
         request.setAttribute("pageNum", pageNum);
@@ -88,10 +80,32 @@ public class BoardController extends HttpServlet {
         }// 나머지가 0이 아니면 총 게시판 페이수에 1을 더해 저장한다.
 
         request.setAttribute("total_page", total_page);
-        request.setAttribute("boardlist", boardlist);
+        request.setAttribute("pressBoardlist", pressBoardlist);
+        request.setAttribute("updateBoardlist", updateBoardlist);
 
         request.setAttribute("items", items);
         request.setAttribute("text", text);
+    }
+    public void requestLoginName(HttpServletRequest request) {
+        String id = request.getParameter("id");
+        BoardDAO dao = BoardDAO.getInstance();
 
+        String name = dao.getLoginNameById(id);
+        request.setAttribute("name", name);
+
+    }
+
+    public void requestBoardWrite(HttpServletRequest request) {
+        BoardDAO dao = BoardDAO.getInstance();
+        BoardDTO dto = new BoardDTO();
+
+        dto.setId(request.getParameter("id"));
+        dto.setName(request.getParameter("name"));
+        dto.setSubject(request.getParameter("subject"));
+        dto.setContents(request.getParameter("content"));
+
+        dto.setHit(0);
+        dto.setIp(request.getRemoteAddr());
+        dao.insertBoard(dto);
     }
 }

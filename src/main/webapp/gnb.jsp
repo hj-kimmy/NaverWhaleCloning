@@ -28,13 +28,13 @@
             </li>
             <li>
                 <div class="menu-sub-2">
-                    <a href="guide.html" class="check">가이드
+                    <a href='<c:url value = "/BoardListAction.do?pageNum=1"/>' class="check">가이드
                         <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
                     </a>
                 </div>
                 <div class="subMenuBoxWrap">
                     <ul class="subMenuBox hide">
-                        <li><a href="guide.html">What's new</a></li>
+                        <li><a href='<c:url value="/guide.jsp"/>'>What's new</a></li>
                         <li><a href="whalehelp.html">이용 가이드</a></li>
                         <li><a href="">마이 액티비티</a></li>
                     </ul>
@@ -99,11 +99,11 @@
                 </ul>
             </li>
             <hr>
-            <li>가이드
+            <li onclick="location.href='<c:url value = "/BoardListAction.do?pageNum=1"/>'">가이드
                     <span class="material-symbols-outlined arrow">chevron_right</span></li>
             <li class="h-invisible">
                 <ul>
-                    <li>What's new</li>
+                    <li onclick="location.href='<c:url value = "/BoardListAction.do?pageNum=1"/>'">What's new</li>
                     <li>이용 가이드</li>
                     <li>마이 액티비티</li>
                 </ul>

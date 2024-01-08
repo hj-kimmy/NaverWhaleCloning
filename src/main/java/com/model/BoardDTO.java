@@ -1,9 +1,13 @@
 package com.model;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+
 public class BoardDTO {
     private int num;
     private String id;
     private String name;
+    private String category;
     private String subject;
     private String contents;
     private String regist_day;
@@ -49,6 +53,11 @@ public class BoardDTO {
     public String getIp() {
         return ip;
     }
+
+    public String getCategory() {
+        return category;
+    }
+
     /*Setter*/
 
     public void setNum(int num) {
@@ -71,12 +80,14 @@ public class BoardDTO {
         this.contents = contents;
     }
 
-    public void setRegist_day(String regist_day) {
-        this.regist_day = regist_day;
+    public void setRegist_day(Date regist_day) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy. MM. dd");
+        this.regist_day = simpleDateFormat.format(regist_day);
     }
 
-    public void setUpdate_day(String update_day) {
-        this.update_day = update_day;
+    public void setUpdate_day(Date update_day) {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy. MM. dd");
+        this.update_day = simpleDateFormat.format(update_day);
     }
 
     public void setHit(int hit) {
@@ -85,5 +96,8 @@ public class BoardDTO {
 
     public void setIp(String ip) {
         this.ip = ip;
+    }
+    public void setCategory(String category) {
+        this.category = category;
     }
 }

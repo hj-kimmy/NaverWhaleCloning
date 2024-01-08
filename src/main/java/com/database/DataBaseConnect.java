@@ -8,7 +8,7 @@ public class DataBaseConnect {
         Connection conn = null;
 
         try{
-            String url = "jdbc:oracle:thin@localhost:1521:xe";
+            String url = "jdbc:oracle:thin:@localhost:1521:xe";
             String user = "C##dbexam";
             String password = "m1234";
 
