@@ -3,5 +3,16 @@
  "http://java.sun.com/dtd/web-app_2_3.dtd" >
 
 <web-app>
-  <display-name>Archetype Created Web Application</display-name>
+  <servlet>
+    <servlet-name>BoardController</servlet-name>
+    <servlet-class>com.controller.BoardController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>BoardController</servlet-name>
+    <url-pattern>*.do</url-pattern>
+  </servlet-mapping>
+  <session-config>
+    <tracking-mode>COOKIE</tracking-mode>
+    <session-timeout>600</session-timeout>
+  </session-config>
 </web-app>
