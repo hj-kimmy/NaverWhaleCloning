@@ -1,0 +1,117 @@
+/******************************
+    - section1#feature Style
+*******************************/
+/*기본 section 설정*/
+.contents-movingObject{
+    animation: move 5s ease 0s infinite normal none running ;
+    position: absolute;
+    scale: 0.9;
+}
+
+section#StartWithSpace{
+    height: 760px;
+}
+#StartWithSpace .contents-bgImg{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background: url("../../img/bg_main_banner_1.png") 0 0 no-repeat;
+}
+#StartWithSpace .contents-imgs{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    padding: 0 84px;
+}
+#StartWithSpace .contents-movingObject:nth-of-type(1){
+    top: 10%;
+    left: 10%;
+}
+#StartWithSpace .contents-movingObject:nth-of-type(2){
+    bottom: 15%;
+    left: 25%;
+}
+#StartWithSpace .contents-movingObject:nth-of-type(3){
+    bottom: 12%;
+    right: 20%;
+}
+#StartWithSpace .contents-movingObject:nth-of-type(4){
+    top: 15%;
+    right: 15%;
+}
+
+#StartWithSpace .contentsWrap:nth-of-type(3){
+    height: 100%;
+}
+
+#StartWithSpace h1{
+    width: 100%;
+}
+#StartWithSpace .contents-miniCarousel{
+    bottom: 0;
+    width: 100%;
+    position: absolute;
+    height: 80px;
+    background-color: rgba(256,256,256,0.7);
+}
+#StartWithSpace .contents-miniCarousel .contentsWrap{
+    height: 100%;
+}
+
+#StartWithSpace .contents-miniCarousel ul{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#StartWithSpace .contents-miniCarousel ul li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s;
+}
+#StartWithSpace .contents-miniCarousel ul li.active{
+    opacity: 1;
+}
+#StartWithSpace .contents-miniCarousel ul li p{
+    margin-top: 0;
+}
+#StartWithSpace .contents-btns{
+    position: absolute;
+    right: 0;
+    margin-right: 84px;
+}
+
+#StartWithSpace .contents-btn{
+    display: flex;
+}
+#StartWithSpace .contents-btn li{
+    background: #fff;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+#StartWithSpace .contents-btn li:first-of-type{
+    margin-right: 10px;
+}
+
+@keyframes move {
+    0%{
+        transform: rotate(0deg) translateY(10%);
+    }
+    50%{
+        transform: rotate(10deg) translateY(0);
+    }
+    100%{
+        transform: rotate(0deg) translateY(10%);
+    }
+}

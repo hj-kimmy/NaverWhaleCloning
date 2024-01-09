@@ -114,7 +114,7 @@ main {
     margin-top: 80px;
 }
 
-#whaleHelpCenter main{
+#whaleHelpCenter main, #whaleSpace main{
     margin-top: 0;
 }
 
@@ -140,6 +140,9 @@ h1 {
 /* h1 : WebPage -important- MainSection title */
 h1.important {
     font-size: 3.5em;
+}
+h1.important.big{
+    font-size: 4rem;
 }
 
 /* h2 : WebPage SubSection title */
@@ -363,6 +366,11 @@ section {
     padding: 0 84px;
     margin: 0 auto;
 }
+.contentsWrap.middle {
+    max-width: 1136px;
+    padding: 0;
+}
+
 .contentsWrap.small {
     padding: 0 210px;
 }

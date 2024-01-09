@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link rel="stylesheet"
+          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+    <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!-- static style sheet-->
+    <link rel="stylesheet" href="CSS/StaticStyle.css">
+
+    <!-- GNB style sheet -->
+    <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+
+    <!-- Main style sheet-->
+    <link rel="stylesheet" href="CSS/whaleSpace/mainStyle.css">
+
+    <link rel="stylesheet" href="CSS/whaleSpace/1280px.css">
+
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+            integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+</head>
+<body id="whaleSpace">
+<div id="wrap">
+    <!-- header -->
+    <header>
+        <!-- gnb_default -->
+        <nav id="gnb">
+            <h1 id="main-logo" class="whaleSpace">
+                <a href="whaleSpace.html">
+                    <div id="whaleSpaceLogo"></div>
+                </a>
+            </h1>
+            <ul id="main-menu">
+                <li class="active" id="home"><a href="whaleSpace.html" class="check">홈</a>
+                </li>
+                <li><a href="">웨일 스페이스 살펴보기</a></li>
+                <li><a href="">제휴 서비스</a></li>
+                <li><a href="whaleBook_Index.html">웨일북</a></li>
+                <li><a href="">활용 가이드</a></li>
+                <li><a href="">공지사항</a></li>
+            </ul>
+            <div id="subBtn">
+                <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
+                    로그인
+                </button>
+                <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </nav>
+
+        <!-- gnb_mobile -->
+        <div class="cover"></div>
+        <nav id="mobileGnb">
+            <ul id="mobile-menu">
+                <div class="mobile-menu-nav">
+                    <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
+                    <span class="mobile-menu-btn"><img src="img/apps.svg" alt="바로가기" title="바로가기"></span>
+                </div>
+                <li id="mobile-home">
+                    <a href="index.html">홈
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="whyWhale_BrandStory.html">웨일 스페이스 살펴보기
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="guide.html">제휴 서비스
+                        <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a></li>
+                <li><a href="whaleBook_Index.html">웨일북
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="">활용가이드
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="">공지사항
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+
+            </ul>
+            <button class="downloadBtn" onclick="location.href = 'download.html'">
+                로그인
+            </button>
+        </nav>
+    </header>
+
+    <main style="margin-bottom: 500px;">
+        <section id="StartWithSpace">
+            <div class="contents-bgImg"></div>
+            <div class="contents-imgs">
+                <img src="img/objec_2.png" alt="" class="contents-movingObject">
+                <img src="img/objec_3.png" alt="" class="contents-movingObject">
+                <img src="img/objec_4.png" alt="" class="contents-movingObject">
+                <img src="img/objec_5.png" alt="" class="contents-movingObject">
+            </div>
+            <div class="contentsWrap middle">
+                <div class="contents-info">
+                    <h1 class="important big c-whale-white">
+                        미래 수업의 첫걸음<br>
+                        웨일 스페이스로 시작하세요
+                    </h1>
+                    <p class="c-whale-white">언제 어디서나 빠르고 간편하게 수업을 시작할 수 있도록<br>
+                        통합 계정과 브라우저로 수업에 필요한 도구들을 연결합니다.</p>
+                </div>
+            </div>
+            <div class="contents-miniCarousel">
+                <div class="contentsWrap">
+                    <ul class="contents-info">
+                        <li class="active">
+                            <span class="tag">스페이스 소식</span>
+                            <p>[웨일스페이스] 스마트 에디터 도입 및 다양한 소식을 알려드립니다.</p>
+                        </li>
+                        <li class="">
+                            <span class="tag">스페이스 소식</span>
+                            <p>[웨일클래스] 학습 환경 개선 업데이트 소식을 알려드립니다.</p>
+                        </li>
+                        <li class="">
+                            <span class="tag">웨일북 소식</span>
+                            <p>[웨일 업데이트] [웨일OS 업데이트] 웨일OS v.3.23.110</p>
+                        </li>
+                    </ul>
+
+                    <div class="contents-btns">
+                        <ol class="contents-btn">
+                            <li><span class="material-symbols-outlined">chevron_left</span></li>
+                            <li><span class="material-symbols-outlined">chevron_right</span></li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="footerWrap">
+            <ul class="footerMenu">
+                <li>이용약관</li>
+                <li><b>개인정보 처리방침</b></li>
+                <li>NAVER whale 개인정보 보호를 위한 백서</li>
+                <li>제휴제안</li>
+                <li>고객센터</li>
+                <li>&copy; NAVER Corp.</li>
+            </ul>
+            <div class="footerMenu2">
+                <ul class="snsIcons">
+                    <li><img src="img/blog.png" alt=""></li>
+                    <li><img src="img/facebook.png" alt=""></li>
+                    <li><img src="img/youtube.png" alt=""></li>
+                    <li><img src="img/instagram.png" alt=""></li>
+                </ul>
+                <button class="small">
+                    <span class="whaleLogo whaleLogo-color"></span>
+                    베타 다운로드
+                </button>
+            </div>
+        </div>
+    </footer>
+</div>
+<script src="JS/gnb.js"></script>
+<script src="JS/mainJavaScript.js"></script>
+<script src="JS/space.js"></script>
+
+</body>
+</html>

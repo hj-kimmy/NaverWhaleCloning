@@ -10,11 +10,26 @@ header {
     align-items: center;
     position: fixed;
     z-index: 999;
+    transition: all 0.2s;
+}
+
+header.scrolled {
     background: white;
+    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
 
 #whaleHelpCenter header{
     background: #3f5bf3
+}
+
+#whaleSpace #gnb a, #whaleSpace #gnb button{
+    color: white;
+}
+
+#whaleSpace header.scrolled #gnb a, #whaleSpace header.scrolled #gnb button{
+    color: black;
 }
 
 #gnb {
@@ -42,7 +57,9 @@ header {
     display: flex;
     align-items: end;
 }
-#gnb h1.whaleBook{
+
+
+#gnb h1.whaleBook {
     width: 180px;
 }
 
@@ -74,6 +91,17 @@ header {
     background: url("../../img/logo_green.svg") no-repeat;
     width: 100%;
     height: 80px;
+}
+#whaleSpaceLogo{
+    background: url("../../img/gnb_logo_white.png") center / contain no-repeat;
+    width: 100%;
+    height: 38px;
+}
+
+header.scrolled #whaleSpaceLogo{
+    background: url("../../img/gnb_logo_black.png") center / contain no-repeat;
+    width: 100%;
+    height: 38px;
 }
 
 
