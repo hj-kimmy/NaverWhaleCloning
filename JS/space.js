@@ -27,12 +27,12 @@ $(function () {
         }
     })
 
-    play(0);
-    let isPaused = false;
+    play1(0);
+    let isPaused1 = false;
 
-    function play(current) {
+    function play1(current) {
         go = window.setInterval(function () {
-            if (!isPaused) {
+            if (!isPaused1) {
                 info.removeClass("active");
                 info.eq(current - 1).addClass("active");
 
@@ -54,5 +54,52 @@ $(function () {
             e.preventDefault();
             isPaused = false;
         }
+    })
+
+
+    $("#accordion").accordion({
+        heightStyle: "content",
+        animate: 200,
+        header: "div>h4"
+    });
+
+    play2(1);
+    let accordionContent = $("#accordion .contents-accordion");
+    let accordionGallery = $("section#smartEdu .contents-gallery img");
+    let isPaused2 = false;
+
+    function play2(current) {
+        go = window.setInterval(function () {
+            if (!isPaused2) {
+                $("#accordion").accordion({active: current});
+                accordionContent.removeClass("active");
+                accordionGallery.removeClass("active");
+                accordionContent.eq(current).addClass("active");
+                accordionGallery.eq(current).addClass("active");
+                current++;
+                if (current == 4) current = 0;
+            }
+        }, 3000);
+    }
+
+    $("#accordion").on("mouseenter", function (e) {
+        e.preventDefault();
+        isPaused = true;
+    })
+    $("#accordion").on("mouseleave", function (e) {
+        e.preventDefault();
+        isPaused = false;
+    })
+
+    accordionContent.click(function () {
+        clearInterval(go);
+        let num = $(this).index();
+        accordionContent.removeClass("active");
+        accordionGallery.removeClass("active");
+        accordionContent.eq(num).addClass("active")
+        accordionGallery.eq(num).addClass("active");
+        $("#accordion").accordion({active: num});
+        if (num == 3) num = -1;
+        play(num + 1);
     })
 })
