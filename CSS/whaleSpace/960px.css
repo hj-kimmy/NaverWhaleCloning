@@ -1,42 +1,61 @@
 @media screen and (max-width: 960px) {
-    .contents-movingObject{
+    .contents-movingObject {
         scale: 0.6;
     }
-    section#StartWithSpace{
+
+    section#StartWithSpace {
         height: 650px;
     }
 
-    #StartWithSpace .contents-imgs{
+    #StartWithSpace .contents-imgs {
         padding: 0;
     }
 
-    #StartWithSpace .contents-movingObject:nth-of-type(1){
+    #StartWithSpace .contentsWrap:nth-of-type(3) {
+        justify-content: center;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(1) {
         top: 5%;
         left: -5%;
     }
-    #StartWithSpace .contents-movingObject:nth-of-type(2){
+
+    #StartWithSpace .contents-movingObject:nth-of-type(2) {
         bottom: 17%;
         left: 15%;
     }
-    #StartWithSpace .contents-movingObject:nth-of-type(3){
-        bottom: 10%;
+
+    #StartWithSpace .contents-movingObject:nth-of-type(3) {
+        bottom: 5%;
         right: -5%;
     }
-    #StartWithSpace .contents-movingObject:nth-of-type(4){
+
+    #StartWithSpace .contents-movingObject:nth-of-type(4) {
         top: 15%;
         right: 5%;
     }
 
-    section#smartEdu .contents-gallery{
+    #StartWithSpace .contents-btns {
+        padding: 0 32px;
+        width: 100%;
+        margin-right: unset;
+    }
+
+    section#smartEdu {
+        padding: 110px 0 55px;
+    }
+
+    section#smartEdu .contents-gallery {
         display: none;
     }
 
-    section#smartEdu .contentsWrap:nth-of-type(3)>div{
+    section#smartEdu .contentsWrap:nth-of-type(3) > div {
         padding: 50px 50px 20px;
+        max-width: 600px;
     }
 
     /*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
-    #smartEdu #accordion .contents-accordion .contents-thumbnail{
+    #smartEdu #accordion .contents-accordion .contents-thumbnail {
         display: block;
         width: 436px;
     }
@@ -45,31 +64,64 @@
         text-align: center;
     }
 
-    section#smartEdu .contentsWrap{
-        min-height: 730px;
-    }
-
-    section#smartEdu .contentsWrap:nth-of-type(3){
+    section#smartEdu .contentsWrap:nth-of-type(3) {
         height: 850px;
     }
 
-    #smartEdu #accordion{
+    #smartEdu #accordion {
         max-width: 100%;
         margin-right: 0;
     }
 
-    #smartEdu #accordion .contents-accordion.active h4{
+    #smartEdu #accordion .contents-accordion.active h4 {
         font-size: 1.5rem;
     }
 
-    #smartEdu #accordion .contents-accordion.active{
+    #smartEdu #accordion .contents-accordion.active {
         padding-bottom: 0;
     }
 
-    #smartEdu #accordion .contents-accordion.active>ul>li{
+    #smartEdu #accordion .contents-accordion.active > ul > li {
         width: 6px;
         height: 6px;
         margin-bottom: 7px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(2){
+        left: 40%;
+    }
+
+    section#withTeacher{
+        height: unset;
+        padding: 55px 0 110px 0;
+    }
+
+    #withTeacher .contentsWrap.middle:nth-of-type(2), #spaceUpdate .contentsWrap.middle:nth-of-type(2), #startSpace .contentsWrap.middle:nth-of-type(3){
+        padding: 0;
+        flex-direction: column;
+        margin-top: 60px;
+        justify-content: space-between;
+    }
+    #withTeacher .contentsWrap.middle>.contents-box{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    #withTeacher .contentsWrap.middle>.contents-box:last-of-type{
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    section#spaceUpdate, section#startSpace{
+        padding: 110px 0;
+    }
+
+    #spaceUpdate .contentsWrap.middle .contents-box ,#startSpace .contentsWrap.middle .contents-box{
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+    #spaceUpdate .contentsWrap.middle .contents-box:last-of-type, #startSpace .contentsWrap.middle .contents-box:last-of-type{
+        margin-right: 0;
+        margin-bottom: 0;
     }
 
 }

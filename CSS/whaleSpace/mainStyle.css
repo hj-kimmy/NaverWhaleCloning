@@ -2,13 +2,6 @@
     - section1#feature Style
 *******************************/
 /*기본 section 설정*/
-.contents-movingObject{
-    animation: move 5s ease 0s infinite normal none running ;
-    position: absolute;
-    scale: 0.9;
-    z-index: 3;
-    transition: all 0.2s;
-}
 
 section#StartWithSpace{
     height: 760px;
@@ -61,15 +54,18 @@ section#StartWithSpace{
 }
 
 #StartWithSpace .contents-miniCarousel ul{
-    width: 100%;
+    margin: 0 auto;
+    width: 85%;
     height: 100%;
     text-align: center;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
 
 #StartWithSpace .contents-miniCarousel ul li{
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -80,8 +76,21 @@ section#StartWithSpace{
 #StartWithSpace .contents-miniCarousel ul li.active{
     opacity: 1;
 }
+#StartWithSpace .contents-miniCarousel ul li span.tag{
+    flex: 0 0 auto;
+    padding: 7px 10px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    border-radius: 30px;
+    background-color: #fff;
+    font-size: 0.875rem;
+    font-weight: 400;
+    margin-right: 15px;
+}
 #StartWithSpace .contents-miniCarousel ul li p{
-    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 #StartWithSpace .contents-btns{
     position: absolute;
@@ -91,6 +100,7 @@ section#StartWithSpace{
 
 #StartWithSpace .contents-btn{
     display: flex;
+    justify-content: space-between;
 }
 #StartWithSpace .contents-btn li{
     background: #fff;
@@ -101,33 +111,23 @@ section#StartWithSpace{
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    padding: 3px;
+}
+#StartWithSpace .contents-btn li span{
+    font-size: 18px;
 }
 #StartWithSpace .contents-btn li:first-of-type{
     margin-right: 10px;
 }
 
-@keyframes move {
-    0%{
-        transform: rotate(0deg) translateY(10%);
-    }
-    50%{
-        transform: rotate(10deg) translateY(0);
-    }
-    100%{
-        transform: rotate(0deg) translateY(10%);
-    }
-}
 section#smartEdu{
-}
-
-section#smartEdu .contentsWrap{
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 80px;
+    padding: 160px 0 80px;
 }
 
 section#smartEdu .contentsWrap:nth-of-type(2){
-    padding-top: 160px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 80px;
 }
 
 section#smartEdu .contentsWrap:nth-of-type(3){
@@ -145,6 +145,7 @@ section#smartEdu .contentsWrap:nth-of-type(3)>div{
     display: flex;
     justify-content: center;
     align-items: center;
+    margin: 0 auto;
 }
 
 section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(1){
@@ -172,15 +173,15 @@ section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type
 
 /*accordian-Carousel 설정*/
 #smartEdu #accordion {
-    margin-right: 60px;
+    margin-right: 40px;
     padding-bottom: 20px;
-    flex: 1 1 0;
-    max-width: 498px;
+    flex: 0 0 auto;
+    max-width: 450px;
     align-self: stretch;
 }
 
 #smartEdu #accordion .contents-accordion {
-    padding: 25px 30px 25px 40px;
+    padding: 20px 30px 20px 40px;
     color: black;
     border-top: 1px solid rgba(0,0,0,0.1);
     background: transparent;
@@ -282,7 +283,8 @@ section#withTeacher{
     justify-content: center;
 }
 
-#withTeacher .contentsWrap.middle:nth-of-type(2){
+#withTeacher .contentsWrap.middle:nth-of-type(2), #spaceUpdate .contentsWrap.middle:nth-of-type(2), #startSpace .contentsWrap.middle:nth-of-type(3){
+    padding: 0;
     margin-top: 60px;
     justify-content: space-between;
 }
@@ -293,7 +295,6 @@ section#withTeacher{
     margin-right: 60px;
 }
 
-
 #withTeacher>.contentsWrap>.contents-movingObject:nth-of-type(2){
     bottom: -50px;
     left: -20px;
@@ -301,11 +302,15 @@ section#withTeacher{
 }
 #withTeacher .contentsWrap.middle>.contents-box{
     height: 420px;
+    width: 100%;
     max-width: 362px;
-    flex: 1 1 auto;
     display: flex;
     align-items: end;
     position: relative;
+    margin-right: 25px;
+}
+#withTeacher .contentsWrap.middle>.contents-box:last-of-type{
+    margin-right: 0;
 }
 #withTeacher .contentsWrap.middle .contents-box .contents-img{
     position: absolute;
@@ -364,17 +369,11 @@ section#spaceUpdate .contentsWrap.middle:nth-of-type(1){
     justify-content: center;
 }
 
-#spaceUpdate .contentsWrap.middle:nth-of-type(2){
-    margin-top: 60px;
-    justify-content: space-between;
-}
-
 #spaceUpdate>.contentsWrap>.contents-movingObject:nth-of-type(1){
     top: -50px;
-    right: 0px;
+    right: 0;
     margin-right: 60px;
 }
-
 
 #spaceUpdate>.contentsWrap>.contents-movingObject:nth-of-type(2){
     bottom: -50px;
@@ -383,6 +382,7 @@ section#spaceUpdate .contentsWrap.middle:nth-of-type(1){
 }
 
 section#spaceUpdate .contentsWrap.middle .contents-box{
+    width: 100%;
     max-width: 362px;
     flex: 1 1 auto;
     height: 438px;
@@ -399,7 +399,11 @@ section#spaceUpdate .contentsWrap.middle .contents-box{
     -moz-box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
     box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
     padding-bottom: 50px;
+    margin-right: 25px;
     transition: all 0.3s;
+}
+#spaceUpdate .contentsWrap.middle .contents-box:last-of-type{
+    margin-right: 0;
 }
 
 section#spaceUpdate .contentsWrap.middle .contents-box:hover{
@@ -427,20 +431,15 @@ section#startSpace{
     position: absolute;
     top: 0;
     left: 0;
-    background: url("../../img/bg_main_information.png") center / contain no-repeat;
+    background: url("../../img/bg_main_information.png") center / auto 100% no-repeat;
 }
 
-#startSpace .contentsWrap:nth-of-type(2){
+#startSpace .contentsWrap.middle:nth-of-type(2){
     justify-content: center;
 }
 
-#startSpace .contentsWrap:nth-of-type(3){
-    margin-top: 60px;
-    justify-content: space-between;
-}
-
-
-#startSpace .contentsWrap .contents-box{
+#startSpace .contentsWrap.middle .contents-box{
+    width: 100%;
     max-width: 362px;
     flex: 1 1 auto;
     height: 150px;
@@ -457,6 +456,10 @@ section#startSpace{
     -moz-box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
     box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
     transition: all 0.3s;
+    margin-right: 25px;
+}
+#startSpace .contentsWrap.middle .contents-box:last-of-type{
+    margin-right: 0;
 }
 #startSpace .contentsWrap.middle .contents-box:hover{
     transform: translateY(-10px);
