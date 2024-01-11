@@ -1,44 +1,5 @@
 @media screen and (max-width: 1280px) {
-    section#checkDevice, section#wacomPen, section#whaleOS, section#smartStudy {
-        height: 840px;
-    }
-
-    section#wacomPen, section#whaleOS, section#smartStudy, section#whaleWithSchool {
-        padding-top: 60px;
-    }
-
-    section#checkDevice .contentsWrap {
-        flex-direction: column;
-        justify-content: center;
-
-    }
-
-    section#checkDevice .contents-info-btn {
-        text-align: center;
-    }
-
-    section#checkDevice .whaleBookLogo {
-        width: 300px;
-        padding-bottom: 15px;
-    }
-
-    section#checkDevice .contents-img {
-        padding-top: 70px;
-    }
-
-    section#checkDevice .contents-img img {
-        width: 600px;
-    }
-
-    section#checkDevice .contents-info-btn button {
-        margin: 40px auto 0;
-    }
-
-    section#whaleOS .whaleOSLogo {
-        width: 213px;
-    }
-
-    section#whaleOS .contents-info p {
-        padding: 25px 0;
+    #smartEdu #accordion{
+        min-width: 338px;
     }
 }

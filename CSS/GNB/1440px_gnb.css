@@ -2,6 +2,9 @@
     #gnb {
         padding: 21px 36px;
     }
+    #whaleSpace #gnb {
+        padding: 21px 84px;
+    }
 
     #main-menu > li:nth-of-type(3) ul {
         transform: translateX(-2%);
