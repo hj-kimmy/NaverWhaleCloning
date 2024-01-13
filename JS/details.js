@@ -1,4 +1,7 @@
+
+
 $(function () {
+
     let gal = $(".contents-gallery li"); //이미지
     let info = $("#myCarousel .contents-info .contents-info li") // 안내문구
     let btn = $(".contents-btn li"); //인디케이터 버튼
@@ -97,3 +100,4 @@ $(function () {
         btn.eq(current).addClass("active");
     })
 })
+

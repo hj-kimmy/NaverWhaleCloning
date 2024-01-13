@@ -40,6 +40,7 @@
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/clipboard@2.0.6/dist/clipboard.min.js"></script>
 
 </head>
 <body>
@@ -214,14 +215,14 @@
                     <div data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#downloadMain">
                         <p class="c-whale-gray">
                             네이버 웨일은 윈도우 7 이상의 버전에서 사용 가능하며<br>
-                            다양한 플랫폼을 지원합니다. (오프라인 설치 <span>32 bit</span> / <span>64 bit</span> / <span>ARM</span>)
+                            다양한 플랫폼을 지원합니다. (오프라인 설치 <span><a href="downloadFile/naverWhale_32bit_window.txt" download="naverWhale_32bit_window.txt">32 bit</a></span> / <span><a href="downloadFile/naverWhale_64bit_window.txt" download="naverWhale_64bit_window.txt">64 bit</a></span> / <span><a href="downloadFile/naverWhale_ARM_window.txt" download="naverWhale_ARM_window.txt">ARM</a></span>)
                         </p>
                         <div class="contents-btns">
                             <button class="whale-Button">
                                 <div class="whaleLogo whaleLogo-white"></div>
-                                웨일 다운로드
+                                <a href="downloadFile/naverWhale.txt" download="naverWhale.txt">웨일 다운로드</a>
                             </button>
-                            <button class="button">
+                            <button class="button" onclick="downloadModal()">
                                 링크 공유하기
                             </button>
                         </div>
@@ -251,7 +252,7 @@
                             <h4>macOS</h4>
                             <p class="c-whale-gray">macOS 10.15 이상</p>
                         </div>
-                        <button class="small">다운로드</button>
+                        <button class="small"><a href="downloadFile/naverWhale_mac.txt" download="naverWhale_mac.txt">다운로드</a></button>
                     </li>
                     <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true">
                         <div class="icon linux"></div>
@@ -259,7 +260,7 @@
                             <h4>Linux</h4>
                             <p class="c-whale-gray">Ubuntu 14.04 64bit이상</p>
                         </div>
-                        <button class="small">다운로드</button>
+                        <button class="small"><a href="downloadFile/naverWhale_linux.txt" download="naverWhale_linux.txt">다운로드</a></button>
                     </li>
                     <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true">
                         <div class="icon android"></div>
@@ -278,6 +279,23 @@
                 </ul>
             </div>
         </section>
+
+        <div class="cover">
+            <div class="contentsWrap">
+                <div class="contents-modal">
+                    <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
+                    <div class="contents-info">
+                        <img src="img/img_share_100.png" alt="">
+                        <h3 class="small">링크 공유</h3>
+                        <p class="smallest c-whale-gray">다운로드 링크를 공유해보세요.</p>
+                        <div class="contents-copyBox">
+                            <input type="text" id ="downloadURL"><input type="button" value = "URL 복사" data-clipboard-target="#downloadURL" id = "copyBtn">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </main>
     <footer>
         <div class="footerWrap">
@@ -306,5 +324,6 @@
 </div>
 <script src="JS/gnb.js"></script>
 <script src="JS/mainJavaScript.js"></script>
+<script src="JS/copyURL.js"></script>
 </body>
 </html>

@@ -1,5 +1,4 @@
 $(function () {
-
     AOS.init();
 
     if(getBrowser()=='Safari'){
@@ -76,13 +75,12 @@ $(function () {
 
 let xBtn = $("main .xBtn");
 let cover = xBtn.closest(".cover");
-let downloadmodal = $("#adBanner .cover")
-let modalWindow = $("#adBanner .contents-modal")
+let modalWindow = $(".contents-modal")
 xBtn.click(function () {
     $(this).closest(".cover").hide();
 })
 function downloadModal() {
-    downloadmodal.fadeIn();
+    cover.fadeIn();
     modalWindow.css({
         "top" : "50px",
         "opacity" : 0

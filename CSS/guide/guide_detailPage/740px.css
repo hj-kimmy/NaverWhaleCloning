@@ -1,14 +1,4 @@
 @media screen and (max-width: 740px) {
-    #guideList p{
-        flex-wrap: wrap;
-    }
-    #guideList p span{
-        display: block;
-        width: 100%;
-    }
-    #guideList p span:first-child{
-        margin-bottom: 10px;
-    }
     #guidePost .contents-post-title p span{
         font-size: 1rem;
     }

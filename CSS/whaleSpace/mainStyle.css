@@ -308,6 +308,7 @@ section#withTeacher{
     align-items: end;
     position: relative;
     margin-right: 25px;
+    cursor: pointer;
 }
 #withTeacher .contentsWrap.middle>.contents-box:last-of-type{
     margin-right: 0;
@@ -401,6 +402,7 @@ section#spaceUpdate .contentsWrap.middle .contents-box{
     padding-bottom: 50px;
     margin-right: 25px;
     transition: all 0.3s;
+    cursor: pointer;
 }
 #spaceUpdate .contentsWrap.middle .contents-box:last-of-type{
     margin-right: 0;
@@ -457,6 +459,7 @@ section#startSpace{
     box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
     transition: all 0.3s;
     margin-right: 25px;
+    cursor: pointer;
 }
 #startSpace .contentsWrap.middle .contents-box:last-of-type{
     margin-right: 0;
