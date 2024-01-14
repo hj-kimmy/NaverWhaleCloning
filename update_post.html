@@ -76,19 +76,20 @@
                         <ul class="subMenuBox hide">
                             <li><a href="guide.html">What's new</a></li>
                             <li><a href="whalehelp.html">이용 가이드</a></li>
-                            <li><a href="">마이 액티비티</a></li>
                         </ul>
                     </div>
                 </li>
                 <li><a href="">스토어</a></li>
-                <li><a href="">연구소</a></li>
-                <li><a href="">웨일 스페이스</a></li>
+                <li><a href="whaleSpace.html">웨일 스페이스</a></li>
                 <li><a href="whaleBook_Index.html">웨일북</a></li>
             </ul>
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
                     <div class="whaleLogo whaleLogo-black"></div>
                     다운로드
+                </button>
+                <button class="downloadBtn small" onclick="location.href = 'login.html'">
+                    로그인
                 </button>
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
@@ -106,7 +107,7 @@
                                 <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
                                 <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
                                 <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                                <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                                <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
                                 <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
                                 <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                             </ul>
@@ -150,7 +151,6 @@
                     <ul>
                         <li><a href="guide.html">What's new</a></li>
                         <li><a href="whalehelp.html">이용 가이드</a></li>
-                        <li><a href="">마이 액티비티</a></li>
                     </ul>
                 </li>
                 <hr>
@@ -158,11 +158,7 @@
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
-                <li><a href="">연구소
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </a>
-                </li>
-                <li><a href="">웨일 스페이스
+                <li><a href="whaleSpace.html">웨일 스페이스
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -171,10 +167,15 @@
                 </a>
                 </li>
             </ul>
-            <button class="downloadBtn" onclick="location.href = 'download.html'">
-                <span class="whaleLogo whaleLogo-color"></span>
-                다운로드
-            </button>
+            <div class="downloadBtn">
+                <button class="" onclick="location.href = 'login.html'">
+                    로그인
+                </button>
+                <button class="" onclick="location.href = 'download.html'">
+                    <span class="whaleLogo whaleLogo-color"></span>
+                    다운로드
+                </button>
+            </div>
         </nav>
 
         <div id="mobile-subMenu">
@@ -275,8 +276,8 @@
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
                 <button class="small">
-                    <span class="whaleLogo whaleLogo-color"></span>
-                    베타 다운로드
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span class="whaleLogo whaleLogo-color"></span>
+                        베타 다운로드</a>
                 </button>
             </div>
         </div>

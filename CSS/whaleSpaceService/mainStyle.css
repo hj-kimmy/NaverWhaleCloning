@@ -235,6 +235,7 @@ section#whaleEduCerf .contentsWrap .contents-box{
     border-radius: 50px;
     width: 230px;
     margin-bottom: 12px;
+    border: 1px solid var(--lightgray);
 }
 .searchitems input{
     width: 180px;
@@ -242,6 +243,11 @@ section#whaleEduCerf .contentsWrap .contents-box{
     margin-left: 10px;
     padding-right: 10px;
 }
+
+.searchitems:has(input:focus){
+    border: 1px solid var(--blue);
+}
+
 .searchitems input:focus{
     outline: none;
 }

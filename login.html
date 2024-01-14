@@ -25,9 +25,7 @@
     <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/mainStyle.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/960px.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/600px.css">
+    <link rel="stylesheet" href="CSS/login/mainStyle.css">
 
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
@@ -42,8 +40,7 @@
 
 </head>
 <body>
-<div id="wrap">
-    <!-- header -->
+<div class="wrap">
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -205,80 +202,36 @@
         </div>
     </header>
     <main>
-        <section id="story">
-            <div class="bgWrap">
-                <div class="contents-bgImg"></div>
-            </div>
-            <div>
-                <div class="titleWrap c-whale-white">
-                    <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story">
-                        웨일이 추구하는 서비스 가치
-                    </h3>
-                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="300">사용자가 1순위인 브라우저</h1>
+        <section id="login">
+            <div class="contents-loginBoxWrap">
+                <h1 onclick="location.href='index.html'">
+                </h1>
+                <div class="contents-loginBox shadow">
+                    <p><span></span>ID 로그인</p>
+                    <form action="">
+                        <div class="contents-loginInput">
+                            <p><span></span><input type="text" placeholder="아이디"></p>
+                            <p><span></span><input type="text" placeholder="비밀번호"></p>
+                        </div>
+                        <div class="contents-loginCheck">
+                            <p><span></span><input type="checkbox" id="keepLogin">
+                                <label for="keepLogin" class="c-whale-gray">로그인 상태 유지</label>
+                            </p>
+                        </div>
+                        <input type="button" value="로그인">
+                    </form>
                 </div>
-                <div class="contentsWrap">
-                    <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="600">
-                        <video muted autoplay controls loop playsinline>
-                            <source src="img/Brandstory.mp4">
-                        </video>
-                    </div>
+                <div class="contents-loginFindMenu">
+                    <ul class="c-whale-gray">
+                        <li>비밀번호 찾기</li>
+                        <li>아이디 찾기</li>
+                        <li>회원가입</li>
+                    </ul>
                 </div>
-                <div class="titleWrap">
-                    <p class="big c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="900">
-                        쉽고 빠른 탐색, 모든 기기를 연결하는 동기화, <br class="br-600">위조사이트 차단까지!<br>
-                        빠르고 스마트한 네이버 웨일 브라우저를 <br class="br-600">만나보세요!
-                    </p>
+                <div class="contents-img">
+                    <img src="img/759c010dfa99cbb47a7e_20220405144404082.jpg" alt="">
                 </div>
             </div>
-        </section>
-        <section id="mainFeature">
-            <h2 class=" contentsWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#mainFeature" >주요 기능</h2>
-            <div class="contentsWrap">
-                <ul data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#mainFeature" data-aos-delay="300">
-                    <li>
-                        <a href="details_Omnitasking.html">
-                            <img src="img/img_card_omnitasking_820.png" alt="">
-                            <div class="contents-card">
-                                <h4> 옴니태스킹</h4>
-                                <p class="c-whale-gray">여러가지 작업들도 한 번에 효율적으로!</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="details_Omnitasking.html#se">
-                            <img src="img/img_card_security_820.png" alt="">
-                            <div class="contents-card">
-                                <h4>강력한 보안</h4>
-                                <p class="c-whale-gray">최신 기술로 개인정보는 안전하게!</p>
-                            </div>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="details_customizing.html">
-                            <img src="img/img_card_customizing_820.png" alt="">
-                            <div class="contents-card">
-                                <h4>커스터마이징</h4>
-                                <p class="c-whale-gray">브라우저를 나만의 느낌으로!</p>
-                            </div>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section id="snsNews">
-            <div class="titleWrap">
-                <p class="big c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#snsNews">
-                    네이버 웨일의 다양한 소식을 확인하세요
-                </p>
-            </div>
-            <ul data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#snsNews" data-aos-delay="300">
-                <li><a href=""><img src="img/ic_blog_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_navertv_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_instagram_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_facebook_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_youtube_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_twitter_36.png" alt=""></a></li>
-            </ul>
         </section>
     </main>
     <footer>
@@ -299,7 +252,8 @@
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
                 <button class="small">
-                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span class="whaleLogo whaleLogo-color"></span>
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span
+                            class="whaleLogo whaleLogo-color"></span>
                         베타 다운로드</a>
                 </button>
             </div>

@@ -31,7 +31,6 @@
     <link rel="stylesheet" href="CSS/whaleBook/770px.css">
 
 
-
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
@@ -55,60 +54,34 @@
                 </a>
             </h1>
             <ul id="main-menu">
+                <li class="active">
+                    <a class="check" href="whaleBook_Index.html">홈</a>
+                </li>
                 <li>
                     <div class="menu-sub-2">
-                        <a href="whyWhale_BrandStory.html" class="check">웨일북이란
+                        <a class="check">이용안내
                             <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
                         </a>
 
                     </div>
                     <div class="subMenuBoxWrap">
                         <ul class="subMenuBox hide">
-                            <li><a href="whyWhale_BrandStory.html">핵심 서비스</a></li>
-                            <li><a href="details_Omnitasking.html">웨일 OS 특징</a></li>
-                            <li><a href="details_Omnitasking.html">디바이스 소개</a></li>
+                            <li><a href="whaleSpaceNotice.html">공지사항</a></li>
+                            <li><a href="whaleSpaceWorkShop.html">웨일북 이용교육</a></li>
                         </ul>
                     </div>
                 </li>
                 <li>
-                    <div class="menu-sub-2">
-                        <a href="guide.html" class="check">이용안내
-                            <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
-                        </a>
-
-                    </div>
-                    <div class="subMenuBoxWrap">
-                        <ul class="subMenuBox hide">
-                            <li><a href="guide.html">공지사항</a></li>
-                            <li><a href="">웨일북 이용교육</a></li>
-                            <li><a href="">웨일북 커뮤니티</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li>
-                    <div class="menu-sub-2">
-                        <a href="guide.html" class="check">문의
-                            <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
-                        </a>
-                    </div>
-                    <div class="subMenuBoxWrap">
-                        <ul class="subMenuBox hide">
-                            <li><a href="guide.html">웨일북 체험신청</a></li>
-                            <li><a href="">제휴 제안</a></li>
-                        </ul>
-                    </div>
+                    <a class="check" onclick="downloadModal()">문의</a>
                 </li>
 
             </ul>
             <div id="subBtn">
-                <button class="small" onclick="location.href = 'download.html'">
-                    고객센터
+                <button class="downloadBtn small" onclick="location.href = 'login.html'">
+                    로그인
                 </button>
-                <button class="small" onclick="location.href = 'download.html'">
+                <button class="small" onclick="location.href = 'whalehelp.html'">
                     메뉴얼
-                </button>
-                <button class="small" onclick="location.href = 'download.html'">
-                    도입 상담
                 </button>
                 <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
             </div>
@@ -127,47 +100,33 @@
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a>
                 </li>
+                <hr>
                 <li>
-                    <a href="whyWhale_BrandStory.html">Whale을 사용해야하는 이유
+                    <a>이용안내
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a>
                 </li>
                 <li>
                     <ul>
-                        <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
-                        <li><a href="details_Omnitasking.html">주요 기능</a></li>
+                        <li><a href="whaleSpaceNotice.html">공지사항</a></li>
+                        <li><a href="whaleSpaceWorkShop.html">웨일북 이용교육</a></li>
                     </ul>
                 </li>
                 <hr>
                 <li>
-                    <a href="guide.html">가이드
+                    <a onclick="downloadModal()">문의
                         <span class="material-symbols-outlined arrow">chevron_right</span>
-                    </a></li>
-                <li>
-                    <ul>
-                        <li><a href="guide.html">What's new</a></li>
-                        <li><a href="">이용 가이드</a></li>
-                        <li><a href="">마이 액티비티</a></li>
-                    </ul>
-                </li>
-                <hr>
-                <li>스토어
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </li>
-                <li>연구소
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </li>
-                <li>웨일 스페이스
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </li>
-                <li>웨일북
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                    </a>
                 </li>
             </ul>
-            <button class="downloadBtn" onclick="location.href = 'download.html'">
-                <span class="whaleLogo whaleLogo-color"></span>
-                다운로드
-            </button>
+            <div class="downloadBtn">
+                <button class="" onclick="location.href = 'login.html'">
+                    로그인
+                </button>
+                <button class="" onclick="location.href = 'whalehelp.html'">
+                    매뉴얼
+                </button>
+            </div>
         </nav>
 
         <div id="mobile-subMenu">
@@ -201,9 +160,6 @@
                     <img src="img/whalebook_logo_bk.svg" alt="" class="whaleBookLogo">
                     <h2 class="earlySmall">블렌디드 수업에 최적화된 <br class="br-1280">미래 교육 플랫폼 디바이스</h2>
                     <p>웨일북은 빠르고 안전한 웨일 OS를 기반으로<br>수업에 필수적인 다양한 수업도구와<br>서비스를 제공합니다.</p>
-                    <button class="blueButton"><span class="material-symbols-outlined arrow">chevron_right</span>
-                        <span>디바이스 확인</span>
-                    </button>
                 </div>
                 <div class="contents-img">
                     <img src="img/WhalebookVisual1_221012.png" alt="">
@@ -233,9 +189,6 @@
                     <h5 class="underline">미래형 학습 디바이스를 위한 새로운 OS</h5>
                     <img src="img/whaleos_logo.svg" alt="" class="whaleOSLogo">
                     <p>미래형 블랜디드 교육 플랫폼 디바이스를 위한<br> 웨일 OS를 만나 보세요.</p>
-                    <button class="blueButton"><span class="material-symbols-outlined arrow">chevron_right</span>
-                        <span>웨일 OS 특징 확인</span>
-                    </button>
                 </div>
             </div>
             <div class="contentsWrap">
@@ -249,7 +202,8 @@
             <div class="contentsWrap">
                 <div class="contents-info">
                     <h5 class="underline">더욱 스마트해지는 수업</h5>
-                    <h2 class="earlySmall2 font-weight-normal">학생은 <span class="font-weight-bold">수업</span>에 <br class="br-770"> 선생님은 <span class="font-weight-bold">학생 관리</span>에 집중!</h2>
+                    <h2 class="earlySmall2 font-weight-normal">학생은 <span class="font-weight-bold">수업</span>에 <br
+                            class="br-770"> 선생님은 <span class="font-weight-bold">학생 관리</span>에 집중!</h2>
                     <p>선생님과 학생의 원활한 수업 및 소통을 위해<br> 학교 현장에 필요한 서비스를 충실히 담았습니다.</p>
                 </div>
             </div>
@@ -257,7 +211,9 @@
                 <div class="contents-youtube position-relative">
                     <img src="img/pad_img.png" alt="">
                     <div class="embed-responsive embed-responsive-16by9 position-absolute adVideo">
-                        <iframe id = "player" class="embed-responsive-item" src="https://www.youtube.com/embed/MUqK5D4KFUA?enablejsapi=1&rel=0" allow="autoplay;" allowfullscreen></iframe>
+                        <iframe id="player" class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/MUqK5D4KFUA?enablejsapi=1&rel=0" allow="autoplay;"
+                                allowfullscreen></iframe>
                     </div>
                     <img src="img/Whale_thumbnail_221026.jpg" alt="" class="thumbnail">
                     <span class="material-symbols-outlined playButton">play_circle</span>
@@ -272,19 +228,72 @@
             <div class="contentsWrap">
                 <div class="contents-info">
                     <img src="img/talk_Img.png" alt="">
-                    <button class="blueButton"><span class="material-symbols-outlined arrow">chevron_right</span>
-                        <span>현직 선생님의 사용경험 영상 확인</span>
-                    </button>
                 </div>
                 <div class="contents-img">
 
                     <img src="img/WhalebookVisual5_221013.png" alt="">
                 </div>
-                <button class="blueButton"><span class="material-symbols-outlined arrow">chevron_right</span>
-                    <span>현직 선생님의 사용경험 영상 확인</span>
-                </button>
             </div>
         </section>
+        <div class="cover">
+            <div class="contentsWrap">
+                <div class="contents-modal">
+                    <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
+                    <div class="contents-info">
+                        <h3 class="small">웨일북을 도입하고 싶으신가요?</h3>
+                        <form action="">
+                            <fieldset>
+                                <legend>구분</legend>
+                                <p class="smallest"><input type="radio" name="belong" id="school"> <label for="school">학교</label></p>
+                                <p class="smallest"><input type="radio" name="belong" id="public"> <label for="public">일반(교육청에 소속되지 않은 기관 및 업체)</label></p>
+                            </fieldset>
+                            <fieldset>
+                                <legend>기관명</legend>
+                                <select>
+                                    <option>서울특별시교육청</option>
+                                    <option>부산광역시교육청</option>
+                                    <option>대구광역시교육청</option>
+                                    <option>인천광역시교육청</option>
+                                    <option>광주광역시교육청</option>
+                                    <option>대전광역시교육청</option>
+                                    <option>울산광역시교육청</option>
+                                    <option>세종특별자치시교육청</option>
+                                    <option>경기도교육청</option>
+                                    <option>강원도교육청</option>
+                                    <option>충청북도교육청</option>
+                                    <option>충청남도교육청</option>
+                                    <option>전라북도교육청</option>
+                                    <option>전라남도교육청</option>
+                                    <option>경상북도교육청</option>
+                                    <option>경상남도교육청</option>
+                                    <option>제주특별자치도교육청</option>
+                                    <option>기타</option>
+                                </select>
+                                <p class="smallest"><input type="text" placeholder="기관명을 입력하세요"></p>
+                            </fieldset>
+                            <fieldset>
+                                <legend>기관 대표 메일</legend>
+                                <p class="smallest"><input type="text" placeholder="연락받으실 이메일을 입력하세요"></p>
+                            </fieldset>
+                            <fieldset>
+                                <legend>기관 대표 연락처</legend>
+                                <p class="smallest"><input type="text" placeholder="연락받으실 연락처를 입력하세요(숫자만 기입)"></p>
+                            </fieldset>
+                            <fieldset>
+                                <legend>도입 문의</legend>
+                                <p class="smallest"><input type="text" placeholder="제목"></p>
+                                <p class="smallest"><textarea name="" id="" cols="30" rows="3" placeholder="도입 관련하여 문의 사항을 작성해주세요."></textarea></p>
+                            </fieldset>
+                            <p class="smallest personalInfo"><span class="material-symbols-outlined">info</span>개인정보보호를 위해 문의 내용에는 휴대폰 번호 등 개인정보 입력을 지양하여 주시기 바랍니다.</p>
+                            <p class="buttonSet">
+                                <button>취소</button>
+                                <button>확인</button>
+                            </p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
     </main>
     <footer>
         <div class="footerWrap">
@@ -303,7 +312,7 @@
                     <li><img src="img/youtube.png" alt=""></li>
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
-                <button class="small">
+                <button class="small" onclick="location.href='download.html'">
                     <span class="whaleLogo whaleLogo-black"></span>
                     웨일 다운로드
                 </button>
@@ -314,7 +323,9 @@
 <script src="JS/gnb.js"></script>
 <script src="JS/mainJavaScript.js"></script>
 <script src="JS/youtubePlay.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
 
 </body>
 </html>
