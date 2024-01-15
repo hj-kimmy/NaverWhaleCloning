@@ -34,7 +34,7 @@
     background: url("../../img/m_sp_01_login_008d5216.png") -157px -190px / 300px no-repeat;
 }
 
-input[type="button"]{
+#join input[type="button"]{
     margin-top: 40px;
     width: 100%;
     font-size: 20px;
@@ -48,6 +48,24 @@ input[type="button"]{
     color: #fff;
     cursor: pointer;
 }
+
+#join label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#join ul.inList li:has(input:checked){
+    border: 1px solid #3fc754;
+    background-color: rgba(63, 199, 84, 0.1);
+    color: #3fc754;
+}
+#join ul.inList li:nth-of-type(2){
+    border-width: 1px 0;
+}
+
 .contents-loginBoxWrap .contents-loginBox .contents-loginInput p{
     margin: 0;
     width: 100%;
@@ -156,7 +174,10 @@ input[type="button"]{
 }
 #join fieldset{
     border: none;
-    padding-bottom: 50px;
+}
+#join input, #join label, #join select, #join option, #join span{
+    font-size: 0.9rem;
+    background-color: transparent;
 }
 
 #join fieldset ul{
@@ -189,6 +210,18 @@ input[type="button"]{
     -moz-border-radius: 0 0 15px 15px;
     border-radius: 0 0 15px 15px;
 }
+#join ul:not(.inList)>li.noValid{
+    border-color: red;
+    background-color: rgba(256,0, 0, 0.15);
+    z-index: 2;
+}
+#join li.noValid input{
+    color: red;
+}
+#join li.noValid input::placeholder{
+    color: red;
+}
+
 #join ul li>div{
     display: flex;
     justify-content: space-between;
@@ -196,7 +229,7 @@ input[type="button"]{
     height: 100%;
     padding: 0 12px;
 }
-#join ul li>div>span:nth-of-type(1){
+#join .joinIcons{
     width: 30px;
     height: 30px;
     margin-right: 10px;
@@ -218,9 +251,6 @@ input[type="button"]{
     justify-content: center;
     align-items: center;
 }
-#join input, #join label, #join select, #join option, #join span{
-    font-size: 0.9rem;
-}
 
 #join ul.inList li:first-of-type{
      -webkit-border-radius: 8px 0 0 8px;
@@ -232,6 +262,7 @@ input[type="button"]{
     -moz-border-radius: 0 8px 8px 0;
     border-radius: 0 8px 8px 0;
 }
+
 #join ul.inList li input[type='radio']{
     display: none;
 }
@@ -249,8 +280,22 @@ input::placeholder{
 ul:nth-of-type(1) li:nth-of-type(1) .joinIcons{
     background: url("../../img/m_sp_06_realname_48b1e603.png") -342px -64px / 372px 326px no-repeat;
 }
-fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons{
+ul:nth-of-type(1) li:nth-of-type(1).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -96px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(1){
     background: url("../../img/m_sp_06_realname_48b1e603.png") -310px 0 / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(1) li:nth-of-type(2).noValid .joinIcons:nth-of-type(1){
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -32px / 372px 326px no-repeat;
+}
+#join fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(2){
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -256px -296px / 372px 326px no-repeat;
+    margin-right: 0;
+}
+#join fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(2).noview{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -256px -264px / 372px 326px no-repeat;
+    margin-right: 0;
 }
 fieldset:nth-of-type(1) li:nth-of-type(3) .joinIcons{
     background: url("../../img/m_sp_06_realname_48b1e603.png") -96px -296px / 372px 326px no-repeat;
@@ -258,11 +303,53 @@ fieldset:nth-of-type(1) li:nth-of-type(3) .joinIcons{
 fieldset:nth-of-type(2) li:nth-of-type(2) .joinIcons{
     background: url("../../img/m_sp_06_realname_48b1e603.png") -192px -296px / 372px 326px no-repeat;
 }
+fieldset:nth-of-type(2) li:nth-of-type(2).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -64px -296px / 372px 326px no-repeat;
+}
 fieldset:nth-of-type(2) li:nth-of-type(4) .joinIcons{
-    background: url("../../img/m_sp_06_realname_48b1e603.png") -224px -296px / 372px 326px no-repeat;
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -32px -264px / 372px 326px no-repeat;
 }
 fieldset:nth-of-type(2) li:nth-of-type(5) .joinIcons{
     background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -128px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(5).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -128px -296px / 372px 326px no-repeat;
+}
+#join select{
+    position: absolute;
+    width: 87%;
+    right: 10px;
+    border: none;
+    font-size: 1rem;
+}
+#join select option{
+    font-size: 1rem;
+}
+
+select:focus{
+    outline: none;
+}
+
+#join div:has(select){
+    position: relative;
+}
+#join ul.validationText li{
+    border: none;
+    height: unset;
+    font-size: 0.825rem;
+    list-style: disc;
+    margin-left: 20px;
+}
+#join ul.validationText li>span{
+    font-size: 0.75rem;
+}
+.validationText{
+    height: 60px;
+    padding: 5px 0;
+}
+.validationText li{
+    color: red;
+    display: none;
 }
 
 @media screen and (max-width: 960px) {

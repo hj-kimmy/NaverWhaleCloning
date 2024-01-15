@@ -206,36 +206,43 @@
             <div class="contents-joinBoxWrap">
                 <h1 onclick="location.href='index.html'">
                 </h1>
-                <form action="">
+                <form action="" name ="joinMemberForm">
                     <fieldset>
                         <ul>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="text" placeholder="아이디"><span>@naver.com</span>
+                                    <span class="joinIcons"></span><input type="text" placeholder="아이디" name = "id" id="id"><span class="c-whale-gray">@naver.com</span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="password" placeholder="비밀번호"><span></span>
+                                    <span class="joinIcons"></span><input type="password" placeholder="비밀번호" name="password" id="password"><span class="joinIcons noview"></span>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="email" placeholder="[선택] 비밀번호 분실 시 확인용 이메일">
+                                    <span class="joinIcons"></span><input type="email" placeholder="[선택] 비밀번호 분실 시 확인용 이메일" name="email" id="email">
                                 </div>
                             </li>
                         </ul>
                     </fieldset>
+                    <div>
+                        <ul class="validationText">
+                            <li class="id">아이디 : <span></span></li>
+                            <li class="password">비밀번호 : <span></span></li>
+                            <li class="email">이메일 : <span></span></li>
+                        </ul>
+                    </div>
                     <fieldset>
                         <ul>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="text" placeholder="이름">
+                                    <span class="joinIcons"></span><input type="text" placeholder="이름" name="name" id="name">
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="text" placeholder="생년월일 8자리">
+                                    <span class="joinIcons"></span><input type="text" placeholder="생년월일 8자리" name="birth" id="birth">
                                 </div>
                             </li>
                             <li>
@@ -258,20 +265,26 @@
                             <li>
                                 <div>
                                     <span class="joinIcons"></span>
-                                    <span class="selected">대한민국 +82</span>
                                     <select name="" id="">
-                                        option
                                     </select>
                                 </div>
                             </li>
                             <li>
                                 <div>
-                                    <span class="joinIcons"></span><input type="tel" placeholder="휴대전화번호">
+                                    <span class="joinIcons"></span><input type="text" placeholder="휴대전화번호" name="phone" id="phone" maxlength="16">
                                 </div>
 
                             </li>
                         </ul>
                     </fieldset>
+                    <div>
+                        <ul class="validationText">
+                            <li class="name">이름 : <span></span></li>
+                            <li class="birth">생년월일 : <span></span></li>
+                            <li class="gender">성별 : <span></span></li>
+                            <li class="phone">휴대전화번호 : <span></span></li>
+                        </ul>
+                    </div>
                     <input type="button" value="가입하기">
                 </form>
             </div>
@@ -305,6 +318,6 @@
     </footer>
 </div>
 <script src="JS/gnb.js"></script>
-<script src="JS/mainJavaScript.js"></script>
+<script src="JS/validation.js"></script>
 </body>
 </html>
