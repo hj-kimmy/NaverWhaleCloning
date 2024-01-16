@@ -34,7 +34,7 @@
     background: url("../../img/m_sp_01_login_008d5216.png") -157px -190px / 300px no-repeat;
 }
 
-#join input[type="button"]{
+#login input[type="button"], #join input[type="button"]{
     margin-top: 40px;
     width: 100%;
     font-size: 20px;
