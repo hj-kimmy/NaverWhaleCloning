@@ -3,25 +3,21 @@
   "id":1,
   "firstname" : "태리",
     "lastname" : "김",
-  "age":24,
-  "personalColor":"blue"
+  "age":24
   },
   {"id":2,
      "firstname" : "희애",
     "lastname" : "김",
-  "age":40,
-  "personalColor":"brown",
+  "age":40
   },
   {"id":3,
      "firstname" : "가인",
     "lastname" : "한",
-  "age":30,
-  "personalColor":"pink",
+  "age":30
   },
   {"id":4,
       "firstname" : "혜교",
     "lastname" : "송",
-  "age":35,
-  "personalColor":"purple",
+  "age":35
   }
 ]
