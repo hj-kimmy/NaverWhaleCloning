@@ -1,38 +1,40 @@
 $(function () {
     let itc = $("select").parent();
 
-    $.ajax({
-        url: './json/CountryCodes.json',
-        type: "get",
-        dataType: "json",
-        success: function (result) {
-            result = sortJSON(result, 'country', 'asc');
-            for (var data of result) {
-                if (data.code == "+82") {
-                    $("select").append('<option value=""' + data.code + '" selected>' + data.country + " " + data.code + '</option>');
-                } else {
-                    $("select").append('<option value=""' + data.code + '">' + data.country + " " + data.code + '</option>');
-                }
+   $(window).on("load",function (){
+       $.ajax({
+           url: 'https://raw.githubusercontent.com/hj-kimmy/NaverWhaleCloning/main/CountryCodes.json',
+           type: "get",
+           dataType: "json",
+           success: function (result) {
+               result = sortJSON(result, 'country', 'asc');
+               for (var data of result) {
+                   if (data.code == "+82") {
+                       $("select").append('<option value=""' + data.code + '" selected>' + data.country + " " + data.code + '</option>');
+                   } else {
+                       $("select").append('<option value=""' + data.code + '">' + data.country + " " + data.code + '</option>');
+                   }
 
-            }
-        }
-    })
+               }
+           }
+       })
 
 
-    var sortJSON = function (data, key, type) {
-        if (type == undefined) {
-            type = "asc";
-        }
-        return data.sort(function (a, b) {
-            var x = a[key];
-            var y = b[key];
-            if (type == "desc") {
-                return x > y ? -1 : x < y ? 1 : 0;
-            } else if (type == "asc") {
-                return x < y ? -1 : x > y ? 1 : 0;
-            }
-        });
-    };
+       var sortJSON = function (data, key, type) {
+           if (type == undefined) {
+               type = "asc";
+           }
+           return data.sort(function (a, b) {
+               var x = a[key];
+               var y = b[key];
+               if (type == "desc") {
+                   return x > y ? -1 : x < y ? 1 : 0;
+               } else if (type == "asc") {
+                   return x < y ? -1 : x > y ? 1 : 0;
+               }
+           });
+       };
+   })
 
     var joinForm = document.joinMemberForm;
 
