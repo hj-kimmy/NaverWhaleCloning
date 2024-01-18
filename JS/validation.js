@@ -3,7 +3,7 @@ $(function () {
 
    $(window).on("load",function (){
        $.ajax({
-           url: 'https://raw.githubusercontent.com/hj-kimmy/NaverWhaleCloning/main/CountryCodes.json',
+           url: 'https://raw.githubusercontent.com/hj-kimmy/NaverWhaleCloning/main/json/CountryCodes.json',
            type: "get",
            dataType: "json",
            success: function (result) {
