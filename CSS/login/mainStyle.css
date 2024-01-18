@@ -1,5 +1,5 @@
 #login, #join{
-    padding: 40px 0 80px;
+    padding: 30px 0 80px;
 }
 .contents-loginBoxWrap, .contents-joinBoxWrap{
     width: 100%;
@@ -350,6 +350,10 @@ select:focus{
 .validationText li{
     color: red;
     display: none;
+}
+#join select{
+    z-index: 2;
+    background: #fff;
 }
 
 @media screen and (max-width: 960px) {

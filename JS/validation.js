@@ -3,7 +3,7 @@ $(function () {
 
     $.ajax({
         url: './json/CountryCodes.json',
-        type: "post",
+        type: "get",
         dataType: "json",
         success: function (result) {
             result = sortJSON(result, 'country', 'asc');
