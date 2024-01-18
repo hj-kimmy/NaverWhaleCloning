@@ -57,6 +57,27 @@
     font-weight: 700 !important;
 }
 
+.contents-movingObject{
+    animation: move 5s ease 0s infinite normal none running ;
+    position: absolute;
+    scale: 0.9;
+    z-index: 3;
+    transition: all 0.2s;
+}
+
+@keyframes move {
+    0%{
+        transform: rotate(0deg) translateY(10%);
+    }
+    50%{
+        transform: rotate(10deg) translateY(0);
+    }
+    100%{
+        transform: rotate(0deg) translateY(10%);
+    }
+}
+
+
 /******************************
     - reset Style
 *******************************/
@@ -114,9 +135,10 @@ main {
     margin-top: 80px;
 }
 
-#whaleHelpCenter main{
+#whaleHelpCenter main, #whaleSpace main{
     margin-top: 0;
 }
+
 
 /******************************
     - tag Style (theme)
@@ -140,6 +162,9 @@ h1 {
 /* h1 : WebPage -important- MainSection title */
 h1.important {
     font-size: 3.5em;
+}
+h1.important.big{
+    font-size: 4rem;
 }
 
 /* h2 : WebPage SubSection title */
@@ -194,6 +219,10 @@ p.short{
 p.short_960{
     display: none;
 }
+p.stick{
+    margin-top: 0;
+    font-size: 1.125rem;
+}
 
 button {
     font-size: 0.9375rem;
@@ -210,12 +239,21 @@ button {
     cursor: pointer;
 }
 
+button>a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 button.whale-Button {
     font-size: 1.025rem;
     border: none;
     background-color: #40c3a7;
     color: white;
     font-weight: bold;
+}
+button.whale-Button>a{
+    color: white;
 }
 
 button.small {
@@ -287,6 +325,7 @@ button:hover {
 button.whale-Button:hover {
     background-color: #05AF96;
 }
+
 br.br-1280{
     display: none;
 }
@@ -298,9 +337,11 @@ br.br-770 {
 br.br-600 {
     display: none;
 }
+
 br.br-960d{
     display: none;
 }
+
 
 .tag{
     font-size: 0.8125rem;
@@ -336,6 +377,21 @@ br.br-960d{
     color: var(--gray);
 }
 
+.c-whale-gradient{
+    background: linear-gradient(90deg, rgb(66, 207, 199) 25.78%, rgb(123, 91, 249) 76.75%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-box-decoration-break: clone;
+    clip-path: inset(1px);
+}
+.bg-whale-gradient1{
+    background: linear-gradient(90deg, rgb(66, 207, 199) 25.78%, rgb(123, 91, 249) 76.75%);
+}
+.bg-whale-gradient2{
+    background: linear-gradient(97.06deg, rgb(1, 217, 210) 1.54%, rgb(1, 60, 255) 100%);
+}
+
 .shadow {
     -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
@@ -363,6 +419,11 @@ section {
     padding: 0 84px;
     margin: 0 auto;
 }
+.contentsWrap.middle {
+    max-width: 1136px;
+    padding: 0 5%;
+}
+
 .contentsWrap.small {
     padding: 0 210px;
 }
@@ -425,6 +486,189 @@ section {
     flex: 1 1 auto;
     margin-left: 24px;
 }
+header .cover{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+
+.cover{
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    display: none;
+}
+.cover>.contentsWrap{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-modal{
+    position: relative;
+    z-index: 999999;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background: #fff;
+    -webkit-border-radius: 16px ;
+    -moz-border-radius: 16px ;
+    border-radius: 16px ;
+    overflow: hidden;
+}
+
+.contents-modal .xBtn{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: var(--gray);
+    cursor: pointer;
+}
+
+section#guideList {
+    margin: 30px 0 60px;
+}
+
+#guideList #tabs {
+    width: 100%;
+    margin: 30px 0;
+
+}
+
+#guideList ul.contents-btns {
+    display: flex;
+    justify-content: start;
+    font-size: 16px;
+    padding: 15px 0;
+    font-weight: bold;
+}
+
+#guideList ul.contents-btns li {
+    margin-right: 20px;
+}
+
+#guideList ul.contents-btns .ui-tabs-active a {
+    color: #000;
+    position: relative;
+}
+
+#guideList ul.contents-btns .ui-tabs-active a:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 13px;
+    left: 0;
+    border-bottom: 2px solid var(--green);
+}
+
+#guideList .contents-tabs ul.contents-tab-layer {
+    display: none;
+}
+
+#guideList .contents-tabs ul.contents-tab-layer.active {
+    display: block;
+}
+
+#guideList .contents-tabs ul li {
+    display: flex;
+    border-top: 1px solid var(--lightgray);
+    align-items: center;
+    padding: 0 5px;
+    cursor: pointer;
+}
+
+#guideList .contents-tabs ul li:last-child {
+    border-bottom: 1px solid var(--lightgray);
+}
+
+#guideList .contents-tabs ul li:hover {
+    background: #f9fafb;
+}
+
+#guideList .contents-tabs ul li:hover p {
+    font-weight: bold;
+}
+
+#guideList p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+    padding: 10px 0;
+    width: 100%;
+}
+
+#guideList > .contents-btns {
+    display: flex;
+    justify-content: center;
+}
+
+#guideList > .contents-btns > ul {
+    display: flex;
+    font-size: 14px;
+}
+
+#guideList > .contents-btns > ul li {
+    width: 26px;
+    height: 26px;
+    margin-left: 8px;
+    text-align: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+#guideList > .contents-btns > ul li:first-child {
+    margin-left: 0;
+}
+
+#guideList > .contents-btns > ul li.active {
+    color: var(--green);
+    font-weight: bold;
+}
+
+#guideList > .contents-btns > ul li.active::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 1px;
+    width: 80%;
+    height: 80%;
+    border: 2px solid var(--green);
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+}
+
+#guideList p span:first-child {
+    display: block;
+    margin-right: 40px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+#guideList .contents-btns .material-symbols-outlined {
+    font-variation-settings: 'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 20px;
+}
 
 @media screen and (max-width: 1440px) {
     .contentsWrap {
@@ -439,6 +683,9 @@ section {
 }
 
 @media screen and (max-width: 1280px) {
+    .contents-movingObject {
+        scale: 0.8;
+    }
     h1, h1.important {
         font-size: 2.875rem;
     }
@@ -473,6 +720,13 @@ section {
 }
 
 @media screen and (max-width: 960px) {
+    .contents-movingObject {
+        scale: 0.6;
+    }
+
+    h1.important.big{
+        font-size: 2.875rem;
+    }
 
     h1, h1.important {
         font-size: 2.5rem;
@@ -512,6 +766,9 @@ section {
     .contentsWrap.small{
         padding: 0 20px;
     }
+    .contentsWrap.middle{
+        padding: 0 32px;
+    }
 }
 @media screen and (max-width: 800px){
     h2.important{
@@ -536,20 +793,36 @@ section {
         display: block;
     }
 }
+@media screen and (max-width: 740px) {
+    #guideList p{
+        flex-wrap: wrap;
+    }
+    #guideList p span{
+        display: block;
+        width: 100%;
+    }
+    #guideList p span:first-child{
+        margin-bottom: 10px;
+    }
+}
 
 @media screen and (max-width: 600px) {
     /******************************
     - Main Style
     *******************************/
+
     main {
         margin-top: 64px;
     }
+    .contents-movingObject {
+        scale: 0.4;
+    }
 
-    .contentsWrap {
+    .contentsWrap, .contentsWrap.middle {
         padding: 0 20px;
     }
 
-    h1, h1.important {
+    h1, h1.important, h1.important.big {
         font-size: 1.875rem;
     }
 
@@ -560,7 +833,6 @@ section {
     h2, h2.important, h2.earlySmall {
         font-size: 1.5rem;
     }
-
 
     h3{
         font-size: 1rem;
@@ -576,6 +848,10 @@ section {
         margin-top: 6px;
         font-size: 0.875rem;
     }
+    p.stick{
+        font-size: 1rem;
+    }
+
     p.long{
         display: none;
     }
@@ -599,6 +875,9 @@ section {
 
     br.br-600 {
         display: block;
+    }
+    br.br-600r{
+        display: none;
     }
 
 }

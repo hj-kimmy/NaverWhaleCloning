@@ -18,7 +18,7 @@
         height: 420px;
     }
 
-    section#adBanner .contentsWrap {
+    section#adBanner>.contentsWrap {
         width: 100%;
         flex-direction: column;
         justify-content: start;

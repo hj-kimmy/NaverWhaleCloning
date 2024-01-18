@@ -60,9 +60,9 @@ $(function () {
     $(window).scroll(function () {
         let scroll = $(window).scrollTop();
         if (scroll >= 40) {
-            $("header").addClass("shadow");
+            $("header").addClass("scrolled");
         } else {
-            $("header").removeClass("shadow");
+            $("header").removeClass("scrolled");
         }
     })
 

@@ -18,8 +18,11 @@ main {
     line-height: 120%;
 }
 #downloadMain .contentsWrap p span{
-    color: #2187ec;
     font-weight: 500;
+    display: inline-block;
+}
+#downloadMain .contentsWrap p span a{
+    color: #2187ec;
 }
 
 /*video 설정*/
@@ -65,4 +68,51 @@ section#whaleDownload{
 }
 .ios{
     background:  white url("../../img/ic_ios_84.png") center / contain no-repeat;
+}
+
+.contents-modal{
+    width: 340px;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.contents-modal>.contents-info>img{
+    width: 100px;
+    height: 100px;
+}
+.contents-modal .contents-copyBox{
+    padding: 20px;
+    display: flex;
+    width: 300px;
+}
+
+.contents-modal .contents-copyBox input{
+    height: 40px;
+}
+
+.contents-modal .contents-copyBox input:nth-of-type(1){
+    flex: 1 1 auto;
+    -webkit-border-radius: 10px  0 0 10px;
+    -moz-border-radius: 10px  0 0 10px;
+    border-radius: 10px  0 0 10px;
+    border: 1px solid lightgray;
+    border-right: 0;
+    margin: 0;
+    padding-left: 10px;
+}
+.contents-modal .contents-copyBox input:nth-of-type(1):focus{
+    outline: none;
+}
+
+.contents-modal .contents-copyBox input:nth-of-type(2){
+    flex: 0 0 auto;
+    -webkit-border-radius: 0 10px 10px 0;
+    -moz-border-radius: 0 10px 10px 0;
+    border-radius: 0 10px 10px 0;
+    padding: 0 10px;
+    border: none;
+    margin: 0;
+    background: #40c3a7;
+    color: white;
+    cursor: pointer;
 }

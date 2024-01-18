@@ -2,7 +2,7 @@
     header{
         height: 64px;
     }
-    #gnb {
+    #gnb, #whaleSpace #gnb {
         padding: 0 20px;
     }
     h1 {

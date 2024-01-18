@@ -1,0 +1,93 @@
+@media screen and (max-width: 600px) {
+    .contents-movingObject{
+        scale: 0.4;
+    }
+    section#StartWithSpace{
+        height: 546px;
+    }
+    #StartWithSpace .contentsWrap:nth-of-type(3){
+        width: 100%;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(1){
+        top: 10px;
+        left: -84px;
+    }
+    #StartWithSpace .contents-movingObject:nth-of-type(2){
+        bottom: 100px;
+        left: 100px;
+    }
+    #StartWithSpace .contents-movingObject:nth-of-type(3){
+        bottom: 50px;
+        right: -100px;
+    }
+    #StartWithSpace .contents-movingObject:nth-of-type(4){
+        top: 100px;
+        right: 30px;
+    }
+    #StartWithSpace .contents-miniCarousel ul{
+
+        width: 100%;
+    }
+
+    #StartWithSpace .contents-btns{
+        display: none;
+    }
+
+    section#smartEdu{
+        padding: 100px 0 50px;
+    }
+
+
+    #smartEdu #accordion .contents-accordion {
+        padding: 16px 30px 16px 25px;
+    }
+    #smartEdu #accordion .contents-accordion.active {
+        padding: 30px 30px 0px 25px;
+    }
+
+    #smartEdu #accordion .contents-accordion.active h4{
+        font-size: 1.25rem;
+    }
+
+    #smartEdu #accordion .contents-accordion.active > ul {
+        right: 20px;
+    }
+
+    section#smartEdu .contentsWrap:nth-of-type(3)>div{
+        padding: 50px 30px 20px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(1){
+        margin-left: 30px;
+    }
+
+    #smartEdu #accordion .contents-accordion .contents-thumbnail {
+        margin: 0 auto;
+        width: 100%;
+        max-width: 436px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) {
+        height: 700px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(2){
+        left: 35%;
+    }
+    section#withTeacher{
+        padding: 50px 0 100px 0;
+    }
+
+    #withTeacher>.contentsWrap>.contents-movingObject:nth-of-type(1){
+        top: -50px;
+        right: 50px;
+        margin-right: 0;
+    }
+
+    #withTeacher>.contentsWrap>.contents-movingObject:nth-of-type(2){
+        bottom: -75px;
+        left: 10px;
+        margin-left: 0;
+    }
+    section#spaceUpdate, section#startSpace{
+        padding: 100px 0;
+    }
+}

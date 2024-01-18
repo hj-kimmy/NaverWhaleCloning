@@ -1,0 +1,365 @@
+#login, #join{
+    padding: 30px 0 80px;
+}
+.contents-loginBoxWrap, .contents-joinBoxWrap{
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+}
+.contents-loginBoxWrap h1, .contents-joinBoxWrap h1{
+    margin: 0 auto 40px;
+    width: 80px;
+    height: 80px;
+    background: url("../../img/whale_color.svg") center no-repeat;
+    cursor: pointer;
+}
+.contents-loginBoxWrap .contents-loginBox{
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    border: 1px solid var(--lightgray);
+    padding: 20px 28px;
+}
+.contents-loginBoxWrap .contents-loginBox>p{
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.contents-loginBoxWrap .contents-loginBox>p>span{
+    display: inline-block;
+    width: 24px;
+    height: 25px;
+    margin-right: 10px;
+    background: url("../../img/m_sp_01_login_008d5216.png") -157px -190px / 300px no-repeat;
+}
+
+#login input[type="button"], #join input[type="button"]{
+    margin-top: 40px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    -webkit-border-radius: 7px;
+    -moz-border-radius: 7px;
+    border-radius: 7px;
+    border: none;
+    background-color: #05AF96;
+    color: #fff;
+    cursor: pointer;
+}
+
+#join label{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#join ul.inList li:has(input:checked){
+    border: 1px solid #3fc754;
+    background-color: rgba(63, 199, 84, 0.1);
+    color: #3fc754;
+}
+#join ul.inList li:nth-of-type(2){
+    border-width: 1px 0;
+}
+
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p{
+    margin: 0;
+    width: 100%;
+    height: 50px;
+    border: 1px solid var(--lightgray);
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:nth-of-type(1){
+    -webkit-border-radius: 7px 7px 0 0;
+    -moz-border-radius: 7px 7px 0 0;
+    border-radius: 7px 7px 0 0;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:nth-of-type(2){
+    top: -1px;
+    -webkit-border-radius: 0 0 7px 7px;
+    -moz-border-radius: 0 0 7px 7px;
+    border-radius: 0 0 7px 7px;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p span, .contents-loginBoxWrap .contents-loginBox .contents-loginCheck p:nth-of-type(1) span{
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:nth-of-type(1) span{
+    background: url("../../img/m_sp_01_login_008d5216.png") -102px -226px / 300px no-repeat;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:nth-of-type(2) span{
+    background: url("../../img/m_sp_01_login_008d5216.png") -143px -226px / 300px no-repeat;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:has(input:focus):nth-of-type(1) span{
+    background: url("../../img/m_sp_01_login_008d5216.png") -82px -226px / 300px no-repeat;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:has(input:focus):nth-of-type(2) span{
+    background: url("../../img/m_sp_01_login_008d5216.png") -123px -226px / 300px no-repeat;
+}
+
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput p:has(input:focus){
+    border: 1px solid #3fc754;
+    z-index: 1;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput input{
+    width: 100%;
+    font-size: 0.95rem;
+    cursor: pointer;
+    border: none;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginInput input:focus{
+    outline: none;
+}
+
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck{
+    display: flex;
+    justify-content: space-between;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck p{
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    cursor: pointer;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck p label{
+    cursor: pointer;
+}
+
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck p:nth-of-type(1) span{
+    margin-right: 3px;
+    background: url("../../img/m_sp_01_login_008d5216.png") -271px -96px / 300px no-repeat;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck p:has(input:checked):nth-of-type(1) span{
+    background: url("../../img/m_sp_01_login_008d5216.png") -271px -186px / 300px no-repeat;
+}
+.contents-loginBoxWrap .contents-loginBox .contents-loginCheck p input[type="checkbox"]{
+    display: none;
+}
+
+.contents-loginBoxWrap .contents-loginFindMenu ul{
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem;
+    width: 60%;
+    margin: 0 auto;
+    padding: 20px 0 40px;
+}
+.contents-loginBoxWrap .contents-loginFindMenu ul li{
+    text-align: center;
+    flex: 1 1 auto;
+    position: relative;
+}
+.contents-loginBoxWrap .contents-loginFindMenu ul li:nth-of-type(2):before{
+    content : "";
+    position: absolute;
+    top: 20%;
+    left: 0;
+    border: solid var(--lightgray);
+    border-width: 0 1px;
+    width: 100%;
+    height: 60%;
+}
+.contents-loginBoxWrap .contents-img img{
+    width: 100%;
+}
+#join fieldset{
+    border: none;
+}
+#join input, #join label, #join select, #join option, #join span{
+    font-size: 0.9rem;
+    background-color: transparent;
+}
+
+#join fieldset ul{
+    width: 100%;
+}
+#join ul:not(.inList)>li{
+    border: 1px solid var(--lightgray);
+    height: 50px;
+    position: relative;
+}
+#join ul:not(.inList)>li:first-of-type{
+    -webkit-border-radius: 15px 15px 0 0;
+    -moz-border-radius: 15px 15px 0 0;
+    border-radius: 15px 15px 0 0;
+}
+#join ul:not(.inList)>li:nth-of-type(2){
+    top: -1px;
+}
+#join ul:not(.inList)>li:nth-of-type(3){
+    top: -2px;
+}
+#join ul:not(.inList)>li:nth-of-type(4){
+    top: -3px;
+}
+#join ul:not(.inList)>li:nth-of-type(5){
+    top: -4px;
+}
+#join ul:not(.inList)>li:last-of-type{
+    -webkit-border-radius: 0 0 15px 15px;
+    -moz-border-radius: 0 0 15px 15px;
+    border-radius: 0 0 15px 15px;
+}
+#join ul:not(.inList)>li.noValid{
+    border-color: red;
+    background-color: rgba(256,0, 0, 0.15);
+    z-index: 2;
+}
+#join li.noValid input{
+    color: red;
+}
+#join li.noValid input::placeholder{
+    color: red;
+}
+
+#join ul li>div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 12px;
+}
+#join .joinIcons{
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+#join ul li:has(ul.inList){
+    padding: 6px;
+}
+
+#join ul.inList{
+    display: flex;
+    height: 100%;
+}
+
+#join ul.inList li{
+    border: 1px solid var(--lightgray);
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#join ul.inList li:first-of-type{
+     -webkit-border-radius: 8px 0 0 8px;
+     -moz-border-radius: 8px 0 0 8px;
+     border-radius: 8px 0 0 8px;
+ }
+#join ul.inList li:last-of-type{
+    -webkit-border-radius: 0 8px 8px 0;
+    -moz-border-radius: 0 8px 8px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+#join ul.inList li input[type='radio']{
+    display: none;
+}
+#join ul li>div input:not([type="radio"]), #join .selected{
+    flex: 1 1 auto;
+    border: none;
+}
+input:focus{
+    outline: none;
+}
+input::placeholder{
+    color: #d0d0d0;
+    font-size: 0.9rem;
+}
+ul:nth-of-type(1) li:nth-of-type(1) .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -342px -64px / 372px 326px no-repeat;
+}
+ul:nth-of-type(1) li:nth-of-type(1).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -96px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(1){
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px 0 / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(1) li:nth-of-type(2).noValid .joinIcons:nth-of-type(1){
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -32px / 372px 326px no-repeat;
+}
+#join fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(2){
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -256px -296px / 372px 326px no-repeat;
+    margin-right: 0;
+}
+#join fieldset:nth-of-type(1) li:nth-of-type(2) .joinIcons:nth-of-type(2).noview{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -256px -264px / 372px 326px no-repeat;
+    margin-right: 0;
+}
+fieldset:nth-of-type(1) li:nth-of-type(3) .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -96px -296px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(2) .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -192px -296px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(2).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -64px -296px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(4) .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -32px -264px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(5) .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -128px / 372px 326px no-repeat;
+}
+fieldset:nth-of-type(2) li:nth-of-type(5).noValid .joinIcons{
+    background: url("../../img/m_sp_06_realname_48b1e603.png") -128px -296px / 372px 326px no-repeat;
+}
+#join select{
+    position: absolute;
+    width: 87%;
+    right: 10px;
+    border: none;
+    font-size: 1rem;
+}
+#join select option{
+    font-size: 1rem;
+}
+
+select:focus{
+    outline: none;
+}
+
+#join div:has(select){
+    position: relative;
+}
+#join ul.validationText li{
+    border: none;
+    height: unset;
+    font-size: 0.825rem;
+    list-style: disc;
+    margin-left: 20px;
+}
+#join ul.validationText li>span{
+    font-size: 0.75rem;
+}
+.validationText{
+    height: 60px;
+    padding: 5px 0;
+}
+.validationText li{
+    color: red;
+    display: none;
+}
+#join select{
+    z-index: 2;
+    background: #fff;
+}
+
+@media screen and (max-width: 960px) {
+    .contents-joinBoxWrap{
+        max-width: unset;
+        padding: 0 20px;
+    }
+}
+

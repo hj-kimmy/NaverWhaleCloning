@@ -4,14 +4,10 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
-    int pageNum = (Integer) request.getAttribute("pageNum");
     List<BoardDTO> pressBoardlist = (List<BoardDTO>) request.getAttribute("pressBoardlist");
+    System.out.println(pressBoardlist);
     List<BoardDTO> updateBoardlist = (List<BoardDTO>) request.getAttribute("updateBoardlist");
-    int total_record = (Integer) request.getAttribute("total_record");
-    int total_page = (Integer) request.getAttribute("total_page");
-
-    String items = (String) request.getAttribute("items");
-    String text = (String) request.getAttribute("text");
+    System.out.println(updateBoardlist);
 %>
 
 <html>
@@ -63,7 +59,7 @@
                 <%
                     BoardDTO update;
                     for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = (BoardDTO) updateBoardlist.get(i);
+                        update = updateBoardlist.get(i);
                         if (update.getCategory().equals("Desktop")) {
                 %>
                 <div class="contents-card">
@@ -82,7 +78,7 @@
                         }
                     }
                     for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = (BoardDTO) updateBoardlist.get(i);
+                        update = updateBoardlist.get(i);
                         if (update.getCategory().equals("iOS")) {
 
                 %>
@@ -102,7 +98,7 @@
                         }
                     }
                     for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = (BoardDTO) updateBoardlist.get(i);
+                        update = updateBoardlist.get(i);
                         if (update.getCategory().equals("Android")) {
 
                 %>

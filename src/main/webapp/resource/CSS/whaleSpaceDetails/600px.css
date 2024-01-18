@@ -1,0 +1,51 @@
+@media screen and (max-width: 600px) {
+    #EduEnvironment .bgWrap{
+        height: 360px;
+    }
+
+    #EduEnvironment>div:last-child{
+        padding: 55px 0;
+    }
+    #EduEnvironment .contents-video{
+        width: 308px;
+        height: 177px;
+        margin-top: 40px;
+        padding: 4px;
+        -webkit-border-radius: 19px;
+        -moz-border-radius: 19px;
+        border-radius: 19px;
+    }
+    #EduEnvironment .contents-video .adVideo{
+        max-width: 300px;
+        max-height: 169px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+    }
+
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(1){
+        top: 10%;
+        left: -5%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(2){
+        bottom: -30%;
+        right: -25%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(3){
+        top: 5%;
+        right: 5%;
+    }
+    #good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        bottom: 32%;
+        right: -10%;
+    }
+    #good1>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: 40%;
+        right: 5%;
+    }
+    #good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: 40%;
+        right: -15%;
+    }
+
+}
