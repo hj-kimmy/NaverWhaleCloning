@@ -172,6 +172,12 @@
 .contents-loginBoxWrap .contents-img img{
     width: 100%;
 }
+
+#login p.errmsg{
+    font-size: 0.825rem;
+    color: red;
+}
+
 #join fieldset{
     border: none;
 }
@@ -210,7 +216,7 @@
     -moz-border-radius: 0 0 15px 15px;
     border-radius: 0 0 15px 15px;
 }
-#join ul:not(.inList)>li.noValid{
+#join ul:not(.inList)>li.noValid, #login .loginInput.noValid{
     border-color: red;
     background-color: rgba(256,0, 0, 0.15);
     z-index: 2;
@@ -355,6 +361,7 @@ select:focus{
     z-index: 2;
     background: #fff;
 }
+
 
 @media screen and (max-width: 960px) {
     .contents-joinBoxWrap{

@@ -41,7 +41,7 @@ public class MemberController extends HttpServlet {
             if (!requestLogin(request)) {
                 rd = request.getRequestDispatcher("./login.jsp?msg=1");
             } else {
-                rd = request.getRequestDispatcher("./index.jsp");
+                rd = request.getRequestDispatcher("./processLogin.jsp");
             }
             rd.forward(request, response);
         }

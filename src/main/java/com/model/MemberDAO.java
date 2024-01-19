@@ -59,7 +59,7 @@ public class MemberDAO {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
-        MemberDTO dto= null;
+        MemberDTO dto= new MemberDTO();
 
         String sql = "select * from whale_member where id = ? and password = ?";
 
@@ -77,7 +77,7 @@ public class MemberDAO {
                 dto.setPassword(rs.getString("password"));
                 dto.setEmail(rs.getString("email"));
                 dto.setName(rs.getString("name"));
-                dto.setBirth(rs.getDate("birth"));
+                dto.setBirth(rs.getString("birth"));
                 dto.setGender(rs.getString("gender"));
                 dto.setItc(rs.getString("itc"));
                 dto.setPhone(rs.getString("phone"));

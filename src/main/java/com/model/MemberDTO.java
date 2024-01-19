@@ -8,7 +8,7 @@ public class MemberDTO {
     private String password;
     private String email;
     private String name;
-    private Date birth;
+    private String birth;
     private String gender;
     private String itc;
     private String phone;
@@ -56,11 +56,11 @@ public class MemberDTO {
         this.name = name;
     }
 
-    public Date getBirth() {
+    public String getBirth() {
         return birth;
     }
 
-    public void setBirth(Date birth) {
+    public void setBirth(String birth) {
         this.birth = birth;
     }
 

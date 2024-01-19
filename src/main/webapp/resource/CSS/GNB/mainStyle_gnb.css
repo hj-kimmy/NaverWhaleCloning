@@ -154,13 +154,17 @@ li.active .check{
     justify-content: center;
 }
 
-#main-menu .subMenuBoxWrap {
+.subMenuBoxWrap {
     position: absolute;
     top: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
+p.loginMark+.subMenuBoxWrap{
+    top: 40px;
+}
+
 .subMenuBoxWrap a{
     display: flex;
     align-items: center;
@@ -220,17 +224,22 @@ li.active .check{
 }
 
 /*2depth menubox 세부*/
-#main-menu .subMenuBox li {
+.subMenuBox li {
     height: 35px;
     padding: 0 15px;
     position: relative;
     font-size: 14px;
 }
 
+#gnb-appMenu .subMenuBox li{
+    height: auto;
+}
+
 /*2depth menubox 세부:hover*/
-#main-menu .subMenuBox li:hover {
+.subMenuBox>li:hover {
     background-color: #E5E4E3;
 }
+
 
 /* 우측 추가 버튼 */
 #subBtn {
@@ -268,6 +277,9 @@ li.active .check{
     width: 100%;
     padding: 3.5px 0 3.5px 20px;
 }
+#gnb-appMenu .subMenuBox>li:hover{
+    background-color: transparent;
+}
 #gnb-appMenu .subMenuBox>li:first-child{
     margin-bottom: 8px;
 }
@@ -284,7 +296,9 @@ li.active .check{
     display: flex;
     align-items: center;
     margin-bottom: 8px;
+    padding: 0;
 }
+
 #gnb-appMenu .subMenuBox .appMenu-Apps li a{
     display: flex;
     align-items: center;

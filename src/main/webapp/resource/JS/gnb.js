@@ -51,6 +51,22 @@ $(function () {
         }
     });
 
+    let loginchk = $(".loginUserMenu");
+
+    loginchk.on({
+        "mouseenter": function () {
+            let sub = $(this).find(".subMenuBox");
+            sub.stop().fadeIn("200");
+            if($(this).width()>=sub.width()){
+                sub.width($(this).width())
+            }
+        },
+        "mouseleave": function () {
+            let sub = $(this).find(".subMenuBox");
+            sub.stop().hide();
+        }
+    });
+
     /* 앱 메뉴 버튼 클릭 */
     let appsBtn = $("#gnb-appMenu img[alt='바로가기']");
     appsBtn.click(function (){

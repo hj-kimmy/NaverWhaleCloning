@@ -51,9 +51,24 @@
                 <div class="whaleLogo whaleLogo-black"></div>
                 다운로드
             </button>
-            <button class="downloadBtn small" onclick="location.href = '<c:url value="/login.jsp?msg=0"/>'">
-                로그인
-            </button>
+            <c:choose>
+                <c:when test='<%= sessionID == null %>'>
+                    <button class="small c" onclick="location.href = '<c:url value="/login.jsp?where=whale&?msg=0"/>'">
+                        로그인
+                    </button>
+                </c:when>
+                <c:otherwise>
+                    <div class="loginUserMenu">
+                        <p class="loginMark c-whale-blue"><%= sessionID %>님 로그인</p>
+                        <div class="subMenuBoxWrap">
+                            <ul class="subMenuBox hide">
+                                <li><a href='<c:url value="/logout.jsp"/>'>로그아웃</a></li>
+                                <li><a href="details_Omnitasking.html">회원정보수정</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </c:otherwise>
+            </c:choose>
             <div id="gnb-appMenu">
                 <img src='<c:url value="/resource/img/apps.svg"/>' alt="바로가기" title="바로가기">
                 <ul class="subMenuBox hide">
@@ -129,11 +144,25 @@
                 <span class="material-symbols-outlined arrow">chevron_right</span>
             </a>
             </li>
+                <c:if test="<%= sessionID != null %>">
+                    <hr>
+                    <li class="c-whale-blue">
+                        <%= sessionID %>님 로그인</p>
+                    </li>
+                    <li>
+                        <ul>
+                            <li><a href='<c:url value="/BoardListAction.do?pageNum=1"/>'>로그아웃</a></li>
+                            <li><a href="whalehelp.html">회원정보 수정</a></li>
+                        </ul>
+                    </li>
+                </c:if>
         </ul>
         <div class="downloadBtn">
-            <button class="" onclick="location.href = '<c:url value="/login.jsp?msg=0"/>'">
-                로그인
-            </button>
+            <c:if test="<%= sessionID == null %>">
+                <button class="" onclick="location.href = '<c:url value="/login.jsp?where=whale&?msg=0"/>'">
+                    로그인
+                </button>
+            </c:if>
             <button class="" onclick="location.href = 'download.html'">
                 <span class="whaleLogo whaleLogo-color"></span>
                 다운로드

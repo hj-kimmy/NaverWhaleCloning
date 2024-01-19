@@ -42,17 +42,18 @@ $(function () {
         "click" : function getLogin() {
             if(!loginForm.id.value){
                 errmsg.append('아이디를 입력해주세요.');
+                $("#id").focus();
                 return false;
             }
             errmsg.empty();
             if(!loginForm.password.value){
-                errmsg.append('비밀번호를 입력해주세요.')
+                errmsg.append('비밀번호를 입력해주세요.');
+                $("#password").focus();
                 return false;
             }
             loginForm.submit();
         }
     })
-
 
 
 
