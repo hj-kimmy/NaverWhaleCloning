@@ -98,4 +98,39 @@ public class MemberDAO {
         }
         return dto;
     }
+
+    public void joinMember(MemberDTO dto){
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        String name = null;
+        String sql = "insert into whale_member values (mem_seqNum.nextval, ?, ?, ?, ?, ?, ?, ?, ?)";
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setString(1, dto.getId());
+            pstmt.setString(2, dto.getPassword());
+            pstmt.setString(3, dto.getEmail());
+            pstmt.setString(4, dto.getName());
+            pstmt.setString(5, dto.getBirth());
+            pstmt.setString(6, dto.getGender());
+            pstmt.setString(7, dto.getItc());
+            pstmt.setString(8, dto.getPhone());
+
+            pstmt.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println("joinMember()에러" + e);
+        } finally {
+            try {
+                if (pstmt != null)
+                    pstmt.close();
+                if (conn != null)
+                    conn.close();
+            } catch (SQLException e) {
+                // TODO Auto-generated catch block
+                e.printStackTrace();
+            }
+        }
+    }
 }

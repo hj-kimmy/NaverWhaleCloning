@@ -27,7 +27,7 @@
     <main>
         <section id="login">
             <div class="contents-loginBoxWrap">
-                <h1 onclick="location.href='index.html'">
+                <h1 onclick="location.href='<c:url value="/index.jsp"/>'">
                 </h1>
                 <div class="contents-loginBox shadow">
                     <p><span></span>ID 로그인</p>
@@ -51,7 +51,7 @@
                     <ul class="c-whale-gray">
                         <li>비밀번호 찾기</li>
                         <li>아이디 찾기</li>
-                        <li onclick="location.href='join.html'">회원가입</li>
+                        <li onclick="location.href='<c:url value="/join.jsp"/>'">회원가입</li>
                     </ul>
                 </div>
                 <div class="contents-img">

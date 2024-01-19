@@ -151,7 +151,7 @@
                     </li>
                     <li>
                         <ul>
-                            <li><a href='<c:url value="/BoardListAction.do?pageNum=1"/>'>로그아웃</a></li>
+                            <li><a href='<c:url value="/logout.jsp"/>'>로그아웃</a></li>
                             <li><a href="whalehelp.html">회원정보 수정</a></li>
                         </ul>
                     </li>
