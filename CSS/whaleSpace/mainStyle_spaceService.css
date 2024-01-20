@@ -1,0 +1,326 @@
+/*기본 Static 설정 변경*/
+main {
+    background-color: var(--lightgray2);
+}
+
+/******************************
+    - section1#infoCarousel
+*******************************/
+/*기본 section 설정*/
+section#infoCarousel {
+    padding-top: 50px;
+}
+
+#infoCarousel .contents-bgImg {
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 390px;
+    background: url("../../img/bg_services_banner.png") bottom center /cover no-repeat;
+}
+
+section#infoCarousel .contentsWrap.middle {
+    padding: 0;
+}
+
+/*캐로셀*/
+#infoCarousel #myCarousel {
+    margin: 0 auto;
+    width: 100%;
+    height: 480px;
+}
+
+#infoCarousel #myCarousel .f-carousel__viewport {
+    border-radius: 40px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    height: 450px;
+}
+
+/*캐로셀 이미지*/
+#infoCarousel .f-carousel__slide:nth-of-type(1) {
+    background: url("../../img/service_banner01_bg.png") center / cover no-repeat;
+}
+
+#infoCarousel .f-carousel__slide:nth-of-type(2) {
+    background: url("../../img/service_banner02_bg.png") center/ cover no-repeat;
+}
+
+/*캐로셀 정보*/
+#infoCarousel .f-carousel__slide .contents-info {
+    padding: 113px 126px 0;
+    width: 100%;
+    height: 100%;
+}
+
+#infoCarousel .f-carousel__slide .contents-info p {
+    width: 520px;
+}
+
+/*캐로셀 인디케이터*/
+#infoCarousel #myCarousel .f-carousel__dot {
+    transition: all 0.15s;
+}
+
+#infoCarousel #myCarousel .is-current .f-carousel__dot {
+    width: 20px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    background-color: var(--gray);
+}
+
+/******************************
+    - section2#whaleEduCerf
+*******************************/
+/*기본 section 설정*/
+section#whaleEduCerf {
+    margin-top: 20px;
+    padding: 80px 0 160px;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(-n+2) {
+    justify-content: center;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(1) {
+    margin-bottom: 60px;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(2) {
+    align-items: stretch;
+    margin-bottom: 160px;
+}
+
+#whaleEduCerf .contentsWrap .contents-box .contents-img {
+    width: 100%;
+    padding: 80px 60px 0;
+}
+
+#whaleEduCerf .contentsWrap .contents-box .contents-info {
+    padding: 0 36px;
+}
+
+/*인증 아이콘*/
+#whaleEduCerf .contentsWrap .contents-box .certifyIcon {
+    position: absolute;
+    width: 74px;
+    height: 86px;
+    top: 24px;
+    left: 24px;
+}
+
+/*인증 태그*/
+#whaleEduCerf .contentsWrap .contents-box span.tag {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+}
+
+
+/* menu tab button */
+.button {
+    display: inline-block;
+    padding: 0.5em 0.7em;
+    border: 1px solid lightgray;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.875rem;
+    margin: 6px 0;
+}
+.button:last-of-type{
+    margin-right: 10px;
+}
+
+.button:active,
+.button.is-checked {
+    background-color: #fff;
+}
+
+.button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* isotope sort list */
+#whaleEduCerf .contentsWrap:nth-of-type(3) {
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(3) > div > div {
+    margin-bottom: 12px;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(4) {
+    display: block;
+}
+
+#whaleEduCerf .contentsWrap:nth-of-type(3) > .contents-filter {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.grid {
+    position: relative;
+    left: -24px;
+    width: calc(100% + 24px);
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* sorted item */
+.element-item {
+    border-radius: 20px;
+    width: calc((100% - 96px) / 4);
+    min-height: 346px;
+    padding: 36px 10px 10px;
+    margin: 24px 0 0 24px;
+    background-color: #fff;
+    text-align: center;
+}
+
+/*아이템 내부 이미지*/
+.element-item .contents-img {
+    margin: 0 auto;
+    width: 200px;
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.element-item .contents-img img {
+    width: auto;
+    max-width: 100%;
+    height: auto;
+    max-height: 100%;
+}
+
+/*컨텐츠 내부 설명*/
+.element-item .contents-info {
+    margin-top: 40px;
+}
+
+.element-item .contents-info p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding: 0 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+/*검색탭 설정*/
+.element-item #filters, .element-item #filters button, .searchitems {
+    flex: 0 0 auto;
+}
+
+/*검색창*/
+.searchitems {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    background: #fff;
+    padding: 0.5em 0.5em;
+    border-radius: 50px;
+    width: 230px;
+    margin-bottom: 12px;
+    border: 1px solid var(--lightgray);
+}
+
+.searchitems input {
+    width: 180px;
+    border: none;
+    margin-left: 10px;
+    padding-right: 10px;
+}
+
+.searchitems:has(input:focus) {
+    border: 1px solid var(--blue);
+}
+
+.searchitems input:focus {
+    outline: none;
+}
+
+.searchitems input::placeholder {
+    color: var(--lightgray);
+}
+
+.searchitems img {
+    width: 16px;
+}
+
+.searchitems span {
+    color: var(--gray);
+    font-size: 16px;
+    cursor: pointer;
+    display: none;
+}
+
+.element-item .contents-info .number {
+    display: none;
+}
+
+#sortGroup {
+    width: 190px;
+    position: relative;
+}
+
+/*현재 정렬중 설정*/
+#nowSorts {
+    width: 190px;
+    padding: 0.55em 1em;
+    background: #fff;
+    font-size: 0.83rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+#nowSorts > span:nth-of-type(2) {
+    font-size: 1rem;
+}
+
+#sorts {
+    padding: 10px 0;
+    position: absolute;
+    right: 0;
+    z-index: 9;
+    width: 100%;
+    top: 40px;
+    background: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    display: none;
+}
+
+/*정렬목록*/
+#sorts button {
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 0.5em 1em;
+    border-radius: 0;
+    border: none;
+    text-align: left;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#sorts button > span:nth-of-type(2) {
+    display: none;
+    position: absolute;
+    font-size: 24px;
+    right: 10px;
+}
+
+#sorts button.is-checked > span:nth-of-type(2) {
+    display: inline-block;
+    color: var(--whaleSea);
+}
+
+

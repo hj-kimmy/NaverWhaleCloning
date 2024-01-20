@@ -1,4 +1,7 @@
 $(function (){
+    /***************************************************
+     * URL 복사기능
+     * *************************************************/
     const url = window.location.href;
 
     let urlInput = $(".contents-modal .contents-copyBox input:nth-of-type(1)");

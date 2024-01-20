@@ -1,49 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+
+    <title>Naver Dolphin</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+    <!---------------------
+       Plugin Stylesheet
+   ----------------------->
+    <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!-- Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!---------------------
+        Custom Stylesheet
+    ----------------------->
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
     <!-- GNB style sheet -->
     <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/mainStyle.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/960px.css">
-    <link rel="stylesheet" href="CSS/whyWhale_BrandStory/600px.css">
+    <link rel="stylesheet" href="CSS/NaverWhale/mainStyle_whyWhale.css">
+    <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_whyWhale.css">
 
-
+    <!---------------------
+        JavaScript Plugin
+     ----------------------->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
 <div id="wrap">
-    <!-- header -->
+    <!---------------------
+         Header
+     ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -53,10 +60,12 @@
                     <div id="whale"></div>
                 </a>
             </h1>
+
+            <!-- Top-MainMenu -->
             <ul id="main-menu">
-                <li class="active" id="home"><a href="index.html" class="check">홈</a>
+                <li id="home"><a href="index.html" class="check">홈</a>
                 </li>
-                <li>
+                <li class="active">
                     <div class="menu-sub-2">
                         <a href="whyWhale_BrandStory.html" class="check">Whale을 사용해야하는 이유
                             <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
@@ -84,8 +93,10 @@
                 </li>
                 <li><a href="">스토어</a></li>
                 <li><a href="whaleSpace.html">웨일 스페이스</a></li>
-                <li><a href="whaleBook_Index.html">웨일북</a></li>
+                <li><a href="whaleBook.html">웨일북</a></li>
             </ul>
+
+            <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
                     <div class="whaleLogo whaleLogo-black"></div>
@@ -94,6 +105,7 @@
                 <button class="downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
+                <!-- App Menu -->
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
                     <ul class="subMenuBox hide">
@@ -102,7 +114,7 @@
                         </li>
                         <li>
                             <ul class="appMenu-Apps">
-                                <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                                <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
                                 <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                                 <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
                                 <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
@@ -111,7 +123,7 @@
                                 <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
                                 <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
                                 <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
-                                <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                                <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
                                 <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                             </ul>
                         </li>
@@ -165,7 +177,7 @@
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
-                <li><a href="whaleBook_Index.html">웨일북
+                <li><a href="whaleBook.html">웨일북
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -181,6 +193,7 @@
             </div>
         </nav>
 
+        <!-- App Menu Mobile -->
         <div id="mobile-subMenu">
             <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
@@ -189,7 +202,7 @@
                 </div>
                 <h4>웨일 서비스</h4>
                 <ul>
-                    <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                    <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
                     <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                     <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
                     <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
@@ -198,24 +211,32 @@
                     <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
                     <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
                     <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
-                    <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                    <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
                     <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                 </ul>
             </div>
         </div>
     </header>
+
     <main>
+        <!---------------------
+           section1. 브랜드스토리
+        ----------------------->
         <section id="story">
             <div class="bgWrap">
                 <div class="contents-bgImg"></div>
             </div>
             <div>
+
+                <!-- title -->
                 <div class="titleWrap c-whale-white">
                     <h3 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story">
                         웨일이 추구하는 서비스 가치
                     </h3>
                     <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="300">사용자가 1순위인 브라우저</h1>
                 </div>
+
+                <!-- 웨일 브랜드스토리 동영상 -->
                 <div class="contentsWrap">
                     <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="600">
                         <video muted autoplay controls loop playsinline>
@@ -223,6 +244,8 @@
                         </video>
                     </div>
                 </div>
+
+                <!-- 웨일 브랜드스토리 설명 -->
                 <div class="titleWrap">
                     <p class="big c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#story" data-aos-delay="900">
                         쉽고 빠른 탐색, 모든 기기를 연결하는 동기화, <br class="br-600">위조사이트 차단까지!<br>
@@ -231,10 +254,20 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+           section2. 주요기능 탭
+        ----------------------->
         <section id="mainFeature">
+
+            <!-- title -->
             <h2 class=" contentsWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#mainFeature" >주요 기능</h2>
+
+            <!-- 주요기능 탭 리스트 -->
             <div class="contentsWrap">
                 <ul data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#mainFeature" data-aos-delay="300">
+
+                    <!-- 옴니태스킹 -->
                     <li>
                         <a href="details_Omnitasking.html">
                             <img src="img/img_card_omnitasking_820.png" alt="">
@@ -244,8 +277,10 @@
                             </div>
                         </a>
                     </li>
+
+                    <!-- 보안 -->
                     <li>
-                        <a href="details_Omnitasking.html#se">
+                        <a href="details_security.html">
                             <img src="img/img_card_security_820.png" alt="">
                             <div class="contents-card">
                                 <h4>강력한 보안</h4>
@@ -253,6 +288,8 @@
                             </div>
                         </a>
                     </li>
+
+                    <!-- 커스터마이징 -->
                     <li>
                         <a href="details_customizing.html">
                             <img src="img/img_card_customizing_820.png" alt="">
@@ -265,24 +302,38 @@
                 </ul>
             </div>
         </section>
+
+        <!---------------------
+           section3. sns 아이콘
+        ----------------------->
         <section id="snsNews">
+
+            <!-- title -->
             <div class="titleWrap">
                 <p class="big c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#snsNews">
                     네이버 웨일의 다양한 소식을 확인하세요
                 </p>
             </div>
+
+            <!-- sns Icon 뭉치 -->
             <ul data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#snsNews" data-aos-delay="300">
-                <li><a href=""><img src="img/ic_blog_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_navertv_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_instagram_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_facebook_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_youtube_36.png" alt=""></a></li>
-                <li><a href=""><img src="img/ic_twitter_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_blog_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_navertv_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_instagram_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_facebook_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_youtube_36.png" alt=""></a></li>
+                <li><a href="#"><img src="img/ic_twitter_36.png" alt=""></a></li>
             </ul>
         </section>
     </main>
+
+    <!---------------------
+        footer
+    ----------------------->
     <footer>
         <div class="footerWrap">
+
+            <!-- footer Menu -->
             <ul class="footerMenu">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
@@ -291,6 +342,8 @@
                 <li>고객센터</li>
                 <li>&copy; NAVER Corp.</li>
             </ul>
+
+            <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
                 <ul class="snsIcons">
                     <li><img src="img/blog.png" alt=""></li>
@@ -299,14 +352,22 @@
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
                 <button class="small">
-                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span class="whaleLogo whaleLogo-color"></span>
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span
+                            class="whaleLogo whaleLogo-color"></span>
                         베타 다운로드</a>
                 </button>
             </div>
         </div>
     </footer>
 </div>
+
+<!---------------------
+    Custom Script
+----------------------->
+<!-- gnb Script -->
 <script src="JS/gnb.js"></script>
-<script src="JS/mainJavaScript.js"></script>
+<!-- main Script -->
+<script src="JS/default.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,445 @@
+/******************************
+    - section1#feature
+*******************************/
+
+/*기본 section 설정*/
+#feature .contentsWrap {
+    height: 740px;
+}
+
+#feature .contentsWrap:nth-of-type(2n-1) {
+    padding-right: 0;
+}
+
+#feature .contentsWrap:nth-of-type(2n) {
+    padding-left: 0;
+    flex-direction: row-reverse;
+}
+
+/*artcle*/
+#feature .contentsWrap article.contents-info-btn {
+    width: 50%;
+}
+
+#feature .contentsWrap:nth-of-type(2n-1) article.contents-info-btn {
+    padding-right: 60px;
+}
+
+#feature .contentsWrap:nth-of-type(2n) article.contents-info-btn {
+    padding-left: 60px;
+}
+
+/* p 설정*/
+#feature .contentsWrap article.contents-info-btn p {
+    margin-top: 20px;
+}
+
+/*button 설정*/
+#feature .contentsWrap article.contents-info-btn button {
+    margin-top: 40px;
+}
+
+/*video 설정*/
+#feature .contentsWrap div.contents-video {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+}
+
+#feature .contentsWrap div.contents-video video {
+    width: 100%;
+}
+
+/******************************
+    - section2#secure
+*******************************/
+
+/*기본 section 설정*/
+section#secure {
+    background-color: #f2effd;
+    padding: 150px 0;
+    margin-top: 120px;
+}
+
+section#secure .titleWrap {
+    margin-bottom: 70px;
+}
+
+section#secure .contentsWrap {
+    align-items: start;
+}
+
+/*accordian-Carousel 설정*/
+#secure #accordion {
+    margin-right: 60px;
+    padding-bottom: 20px;
+    flex: 1 1 0;
+    max-width: 498px;
+    align-self: stretch;
+}
+
+#secure #accordion .contents-accordion {
+    padding: 25px 30px 25px 40px;
+    color: black;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    background: transparent;
+    border-radius: 0;
+    transition: color 0.7s;
+    overflow: hidden;
+}
+
+/*accordian-Carousel-active 설정*/
+#secure #accordion .contents-accordion.active {
+    padding: 40px 30px 40px 40px;
+    color: #fff;
+    border-radius: 20px;
+    position: relative;
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(1) {
+    background: rgb(125, 115, 253);
+    background: linear-gradient(120deg, rgba(125, 115, 253, 1) 0%, rgba(111, 67, 233, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(2) {
+    background: rgb(115, 131, 252);
+    background: linear-gradient(120deg, rgba(115, 131, 252, 1) 0%, rgba(57, 88, 247, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(3) {
+    background: rgb(102, 199, 157);
+    background: linear-gradient(120deg, rgba(102, 199, 157, 1) 0%, rgba(64, 163, 155, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(4) {
+    background: rgb(248, 171, 0);
+    background: linear-gradient(120deg, rgba(248, 171, 0, 1) 0%, rgba(241, 148, 0, 1) 100%);
+}
+
+#secure #accordion .contents-accordion.active p > span {
+    opacity: 0.8;
+}
+
+#secure #accordion .contents-accordion.active + .contents-accordion {
+    border-top: none;
+}
+
+#secure #accordion .contents-accordion.active > ul {
+    position: absolute;
+    right: 30px;
+    top: 40px;
+}
+
+#secure #accordion .contents-accordion.active > ul > li {
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: #fff;
+    margin-bottom: 10px;
+    opacity: 0.5;
+}
+
+#secure #accordion .contents-accordion.active:nth-of-type(1) > ul > li:nth-of-type(1), #secure #accordion .contents-accordion.active:nth-of-type(2) > ul > li:nth-of-type(2), #secure #accordion .contents-accordion.active:nth-of-type(3) > ul > li:nth-of-type(3), #secure #accordion .contents-accordion.active:nth-of-type(4) > ul > li:nth-of-type(4) {
+    opacity: 1;
+}
+
+/*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
+#secure #accordion .contents-accordion .contents-thumbnail {
+    position: relative;
+    display: none;
+}
+
+/*accordian-Carousel에 따른 gallery 변경*/
+section#secure .contents-gallery {
+    width: 800px;
+}
+
+section#secure .contents-gallery img {
+    margin-top: -1%;
+    display: none;
+}
+
+section#secure .contents-gallery img.active {
+    display: block;
+}
+
+/******************************
+    - section3#environment
+*******************************/
+
+/*기본 section 설정*/
+section#environment {
+    height: 900vh;
+}
+
+/*animation 시작 시점 지정*/
+#environment #animation-sticky-Pin {
+    position: sticky;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#environment #animation-sticky-Pin .titleWrap {
+    flex: 0 0 auto;
+    height: calc(25% + 60px);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: end;
+}
+
+#environment .contentsWrap:nth-of-type(2) {
+    margin-top: 60px;
+}
+
+/*title 바뀌는 애니메이션*/
+#environment .titles-change {
+    height: 3.125rem;
+    overflow: hidden;
+    margin-top: 15px;
+}
+
+#environment .titles-change li h1 {
+    line-height: 99%;
+}
+
+#environment .titles-change li:nth-of-type(n+2) {
+    opacity: 0;
+}
+
+#environment .paragraphs-change {
+    position: relative;
+    margin-top: 10px;
+}
+
+#environment .paragraphs-change li {
+    top: 0;
+    width: 100%;
+    position: absolute;
+}
+
+#environment .paragraphs-change li:nth-of-type(n+2) {
+    opacity: 0;
+}
+
+/*스크롤링 애니메이션 세부*/
+#environment .contents-animation {
+    width: 100%;
+    max-width: 1066px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+#environment .contents-animation .background {
+    position: relative;
+    width: 100%;
+    padding-top: 2%;
+    transform-origin: top center;
+}
+
+#environment .contents-animation img {
+    position: relative;
+}
+
+#environment .contents-animation img.pos-absolute {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#environment .contents-animation .ui {
+    position: absolute;
+    top: 17.5%;
+    left: 6.2%;
+    width: 87.80%;
+}
+
+#environment .contents-animation .theme {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 95.41%;
+}
+
+#environment .contents-animation .menuTheme {
+    position: absolute;
+    top: 12%;
+    right: 3.4%;
+    width: 30.55%;
+    transform-origin: top center;
+}
+
+#environment .contents-animation .upNav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+.contents-animation .upNav img, .menuTheme .icon2, .ui-dark, .navThemeDark {
+    opacity: 0;
+}
+
+.contents-animation .menuTheme .icon1 {
+    opacity: 0;
+    transform: scale(0.5);
+    transform-origin: center;
+}
+
+#environment .contents-animation .cursor {
+    position: absolute;
+    opacity: 0;
+    top: 35%;
+    left: 63%;
+    width: 4%;
+}
+
+#environment .contents-animation .icons {
+    width: 59%;
+    position: absolute;
+    top: 2%;
+    right: 30%;
+}
+
+#triggerEnv0 {
+    position: absolute;
+    top: 0;
+    height: 750vh;
+}
+
+/******************************
+    - section4#appService
+*******************************/
+
+/*기본 section 설정*/
+section#appService {
+    background-color: #f7f9fb;
+    padding: 150px 0;
+    z-index: 1;
+}
+
+section#appService .titleWrap {
+    margin: 60px auto 70px;
+}
+
+/*웨일앱 아이콘 이미지*/
+section#appService .contents-whaleApps {
+    width: 664px;
+    height: 130px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.contents-whaleApps li {
+    width: 100px;
+    height: 100px;
+    background-size: 70%;
+    border-radius: 40%;
+}
+
+.contents-whaleApps li:nth-of-type(2n) {
+    align-self: end;
+}
+
+.webtoon {
+    background: white url("../../img/webtoon_128x128.png") center / contain no-repeat;
+}
+
+.stock {
+    background: white url("../../img/real128.png") center / contain no-repeat;
+}
+
+.audioBook {
+    background: white url("../../img/Extendapp_audioclip.png") center / contain no-repeat;
+}
+
+.music {
+    background: white url("../../img/Extendapp_music.png") center / contain no-repeat;
+}
+
+.mail {
+    background: white url("../../img/naver_mail_128.png") center / contain no-repeat;
+}
+
+/******************************
+    - section5#adBanner Style
+*******************************/
+
+/*기본 section 설정*/
+section#adBanner {
+    height: 340px;
+    display: flex;
+    justify-content: center;
+    background-color: #040d39;
+}
+
+#adBanner > .contentsWrap:nth-of-type(1) {
+    padding-left: 50px;
+    padding-right: 0;
+    background: url("../../img/banner_beta_download_wave_1440.png") bottom center / contain no-repeat;
+    justify-content: space-between;
+}
+
+#adBanner .contents-info-btn p {
+    opacity: 0.7;
+}
+
+#adBanner .contents-info-btn button {
+    margin-top: 24px;
+}
+
+/*광고 이미지 내부 스마트폰 이미지*/
+#adBanner .cellphone {
+    flex: 0 0 auto;
+    height: 100%;
+    width: 500px;
+    display: flex;
+    justify-content: end;
+    background: url("../../img/banner_beta_download_phone_1440.png") top right /contain no-repeat;
+}
+
+/*QR코드 팝업*/
+#adBanner .contents-modal {
+    width: 100%;
+    max-width: 680px;
+    height: 400px;
+}
+
+#adBanner .contents-modal .contents-bgImg {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 220px;
+    flex: 0 0 auto;
+}
+
+#adBanner .contents-modal .contents-info {
+    padding: 30px 40px 20px;
+}
+
+#adBanner .contents-QrCode {
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
+#adBanner .contents-QrCode p {
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+#adBanner .contents-QrCode p.smallest {
+    font-weight: normal;
+    margin-top: 0;
+}
+
+#adBanner .contents-QrCode img {
+    width: 160px;
+}

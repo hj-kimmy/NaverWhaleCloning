@@ -1,52 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+
+    <title>Naver Dolphin</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+    <!---------------------
+        Plugin Stylesheet
+    ----------------------->
+    <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!-- Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!---------------------
+        Custom Stylesheet
+    ----------------------->
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
     <!-- GNB style sheet -->
     <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/960px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/whaleSpace/mainStyle.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mainStyle_spaceMain.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mediaQuery_spaceMain.css">
 
-    <link rel="stylesheet" href="CSS/whaleSpace/1280px.css">
-    <link rel="stylesheet" href="CSS/whaleSpace/960px.css">
-    <link rel="stylesheet" href="CSS/whaleSpace/600px.css">
-
-
+    <!---------------------
+        JavaScript Plugin
+    ----------------------->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body id="whaleSpace">
 <div id="wrap">
-    <!-- header -->
+    <!---------------------
+        Header
+    ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -55,15 +59,19 @@
                     <div id="whaleSpaceLogo"></div>
                 </a>
             </h1>
+
+            <!-- Top-MainMenu -->
             <ul id="main-menu">
                 <li class="active" id="home"><a href="whaleSpace.html" class="check">홈</a>
                 </li>
                 <li><a href="whaleSpaceDetails.html">웨일 스페이스 살펴보기</a></li>
                 <li><a href="whaleSpaceService.html">제휴 서비스</a></li>
-                <li><a href="whaleBook_Index.html">웨일북</a></li>
+                <li><a href="whaleBook.html">웨일북</a></li>
                 <li><a href="whaleSpaceWorkShop.html">활용 가이드</a></li>
                 <li><a href="whaleSpaceNotice.html">공지사항</a></li>
             </ul>
+
+            <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
@@ -95,7 +103,7 @@
                     <a href="whaleSpaceService.html">제휴 서비스
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a></li>
-                <li><a href="whaleBook_Index.html">웨일북
+                <li><a href="whaleBook.html">웨일북
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -116,14 +124,21 @@
     </header>
 
     <main>
+        <!---------------------
+            section1. 스페이스로 시작하기
+        ----------------------->
         <section id="StartWithSpace">
             <div class="contents-bgImg"></div>
+
+            <!-- 배경 애니메이션 이미지  -->
             <div class="contents-imgs">
                 <img src="img/objec_2.png" alt="" class="contents-movingObject">
                 <img src="img/objec_3.png" alt="" class="contents-movingObject">
                 <img src="img/objec_4.png" alt="" class="contents-movingObject">
                 <img src="img/objec_5.png" alt="" class="contents-movingObject">
             </div>
+
+            <!-- article  -->
             <div class="contentsWrap">
                 <div class="contents-info">
                     <h1 class="important big c-whale-white">
@@ -134,6 +149,8 @@
                         통합 계정과 브라우저로 수업에 필요한 도구들을 연결합니다.</p>
                 </div>
             </div>
+
+            <!-- 미니 캐로셀  -->
             <div class="contents-miniCarousel">
                 <div class="contentsWrap">
                     <div class="contents-btns">
@@ -145,22 +162,28 @@
                     <ul class="contents-info">
                         <li class="active">
                             <span class="tag">스페이스 소식</span>
-                            <p class="stick">[웨일스페이스] 스마트 에디터 도입 및 다양한 소식을 알려드립니다.</p>
+                            <p class="stick omitted">[웨일스페이스] 스마트 에디터 도입 및 다양한 소식을 알려드립니다.</p>
                         </li>
                         <li class="">
                             <span class="tag">스페이스 소식</span>
-                            <p class="stick">[웨일클래스] 학습 환경 개선 업데이트 소식을 알려드립니다.</p>
+                            <p class="stick omitted">[웨일클래스] 학습 환경 개선 업데이트 소식을 알려드립니다.</p>
                         </li>
                         <li class="">
                             <span class="tag">웨일북 소식</span>
-                            <p class="stick">[웨일 업데이트] 웨일OS v.3.23.110</p>
+                            <p class="stick omitted">[웨일 업데이트] 웨일OS v.3.23.110</p>
                         </li>
                     </ul>
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section2. 네이버 스페이스 교육환경
+        ----------------------->
         <section id="smartEdu">
             <div class="contents-bgImg"></div>
+
+            <!-- title  -->
             <div class="contentsWrap middle">
                 <div class="titleWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                      data-aos-duration="800"
@@ -170,8 +193,11 @@
                 </div>
             </div>
             <div class="contentsWrap">
+                <!-- 배경 애니메이션 이미지  -->
                 <img src="img/objec_74.png" alt="" class="contents-movingObject">
                 <img src="img/objec_73.png" alt="" class="contents-movingObject">
+
+                <!-- accordion -->
                 <div>
                     <div id="accordion" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                          data-aos-duration="800"
@@ -208,11 +234,19 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section2. 네이버 스페이스 교사 사용
+        ----------------------->
         <section id="withTeacher">
             <div class="contents-bgImg"></div>
             <div class="contentsWrap">
+
+                <!-- 배경 애니메이션 이미지  -->
                 <img src="img/objec_75.png" alt="" class="contents-movingObject">
                 <img src="img/objec_76.png" alt="" class="contents-movingObject">
+
+                <!-- 카드리스트 메뉴 -->
                 <div>
                     <div class="contentsWrap middle">
                         <div class="titleWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -249,11 +283,19 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section3. 네이버 스페이스 업데이트
+        ----------------------->
         <section id="spaceUpdate">
             <div class="contents-bgImg"></div>
             <div class="contentsWrap">
+
+                <!-- 배경 애니메이션 이미지  -->
                 <img src="img/objec_79.png" alt="" class="contents-movingObject">
                 <img src="img/objec_78.png" alt="" class="contents-movingObject">
+
+                <!-- 업데이트 콘텐츠 리스트  -->
                 <div>
                     <div class="contentsWrap middle">
                         <div class="titleWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -288,8 +330,14 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section4. 네이버 스페이스 시작메뉴
+        ----------------------->
         <section id="startSpace">
             <div class="contents-bgImg"></div>
+
+            <!--title-->
             <div class="contentsWrap middle">
                 <div class="titleWrap" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                      data-aos-duration="800"
@@ -297,6 +345,8 @@
                     <h2>웨일 스페이스를 시작해보세요!</h2>
                 </div>
             </div>
+
+            <!-- 시작메뉴 리스트  -->
             <div class="contentsWrap middle">
                 <div class="contents-box" onclick="location.href='whaleSpaceWorkShop.html'">
                     <div class="contents-info">
@@ -312,15 +362,21 @@
                 </div>
                 <div class="contents-box" onclick="location.href='index.html'">
                     <div class="contents-info">
-                        <h2 class="important c-whale-gradient">네이버 웨일 홈</h2>
+                        <h2 class="important c-whale-gradient">네이버 웨일홈</h2>
                         <p class="smallest c-whale-gray">네이버 웨일 홈 바로가기</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
+
+    <!---------------------
+        footer
+    ----------------------->
     <footer>
         <div class="footerWrap">
+
+            <!-- footer Menu -->
             <ul class="footerMenu">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
@@ -329,6 +385,8 @@
                 <li>고객센터</li>
                 <li>&copy; NAVER Corp.</li>
             </ul>
+
+            <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
                 <ul class="snsIcons">
                     <li><img src="img/blog.png" alt=""></li>
@@ -344,8 +402,15 @@
         </div>
     </footer>
 </div>
+
+<!---------------------
+    Custom Script
+----------------------->
+<!-- gnb Script -->
 <script src="JS/gnb.js"></script>
-<script src="JS/mainJavaScript.js"></script>
+<!-- default Script -->
+<script src="JS/default.js"></script>
+<!-- space Script -->
 <script src="JS/space.js"></script>
 
 </body>

@@ -1,0 +1,174 @@
+/*1280px(태블릿)*/
+@media screen and (max-width: 1280px) {
+    /******************************
+        - sections
+    *******************************/
+    /*기본 section 설정*/
+    section#checkDevice, section#wacomPen, section#whaleOS, section#smartStudy {
+        height: 840px;
+    }
+
+    section#wacomPen, section#whaleOS, section#smartStudy, section#whaleWithSchool {
+        padding-top: 60px;
+    }
+
+    /******************************
+        - section1#checkDevice
+    *******************************/
+    /*내부 레이아웃 설정*/
+    #checkDevice .contentsWrap {
+        flex-direction: column;
+        justify-content: center;
+
+    }
+
+    /*section 내부 설명*/
+    #checkDevice .contents-info-btn {
+        text-align: center;
+    }
+
+    /*section 내부 로고*/
+    #checkDevice .whaleBookLogo {
+        width: 300px;
+        padding-bottom: 15px;
+    }
+
+    /*product Img*/
+    #checkDevice .contents-img {
+        padding-top: 70px;
+    }
+
+    #checkDevice .contents-img img {
+        width: 600px;
+    }
+
+    /******************************
+        - section3#whaleOS
+    *******************************/
+    /*section 내부 로고*/
+    #whaleOS .whaleOSLogo {
+        width: 213px;
+    }
+
+    /*section 내부 설명*/
+    #whaleOS .contents-info p {
+        padding: 25px 0;
+    }
+}
+
+/*1024px(태블릿)*/
+@media screen and (max-width: 1024px) {
+    /******************************
+        - section5#whaleWithSchool
+    *******************************/
+    /*기본 section 설정*/
+    #whaleWithSchool .contentsWrap:nth-of-type(2) {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /*section 내부 설명*/
+    #whaleWithSchool .contents-info {
+        width: 80%;
+        max-width: 546px;
+        justify-content: center;
+    }
+
+    /*product Img*/
+    #whaleWithSchool .contents-img img {
+        max-width: 90%;
+    }
+}
+
+/*770px(태블릿)*/
+@media screen and (max-width: 770px) {
+    /******************************
+        - sections
+    *******************************/
+    /*기본 section 설정*/
+    section#wacomPen, section#whaleOS, section#smartStudy {
+        padding-top: 90px;
+        height: 670px;
+    }
+
+    section#whaleWithSchool {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+
+    section#checkDevice {
+        background: url("../../img/Whalebook_bg1_m_1013.jpg") top center / cover no-repeat;
+    }
+
+    /******************************
+        - section1#checkDevice
+    *******************************/
+    /*section 내부 로고*/
+    #checkDevice .whaleBookLogo {
+        width: 280px;
+        padding-bottom: 15px;
+    }
+
+    /*product Img*/
+    #checkDevice .contents-img {
+        padding-top: 120px;
+        width: 100%;
+    }
+
+    /*section 내부 설명*/
+    #checkDevice .contents-info-btn p {
+        padding-top: 12px;
+
+    }
+
+    /*product Img*/
+    #checkDevice .contents-img img {
+        width: 100%;
+    }
+
+    /******************************
+        - section2#wacomPen
+    *******************************/
+    /*section 내부 설명*/
+    #wacomPen .contents-info {
+        margin-bottom: 80px;
+    }
+
+    /*product Img*/
+    #wacomPen .contents-img img {
+        width: auto;
+        height: 100%;
+        max-height: 200px;
+    }
+
+    /******************************
+        - section3#whaleOS
+    *******************************/
+    /*section 내부 설명*/
+    #whaleOS .contents-info p {
+        padding: 10px 0 25px;
+    }
+
+    /*section 내부 로고*/
+    #whaleOS .whaleOSLogo {
+        width: 157px;
+    }
+
+    /*product Img*/
+    #whaleOS .contents-img img {
+        width: auto;
+        height: 100%;
+        max-height: 250px;
+    }
+
+    /******************************
+        - section5#smartStudy
+    *******************************/
+    /*section 내부 설명*/
+    #smartStudy .contents-info {
+        margin: 0 auto 10px;
+    }
+    #smartStudy .underline {
+        margin-bottom: 7px;
+    }
+}

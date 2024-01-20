@@ -1,0 +1,209 @@
+/******************************
+    - section1#EduEnvironment
+*******************************/
+/*기본 section 설정*/
+#EduEnvironment .bgWrap{
+    position: absolute;
+    width: 100%;
+    height: 620px;
+    overflow: hidden;
+   }
+#EduEnvironment .contents-bgImg{
+    width: 100%;
+    height: 100%;
+    background: url("../../img/bg_introduce_banner.png") center / cover no-repeat;
+}
+
+/*title*/
+#EduEnvironment .titleWrap{
+    margin-top: 35px;
+}
+
+/*article*/
+#EduEnvironment>div:last-child{
+    position: relative;
+    width: 100%;
+    padding: 117px 0 0;
+    top: 0;
+}
+
+#EduEnvironment>div:last-child>.contentsWrap{
+    justify-content: center;
+    padding: 0;
+}
+
+/*video*/
+#EduEnvironment .contents-video{
+    position: relative;
+    z-index: 3;
+    width: 934px;
+    height: 532px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    padding: 10px;
+    border-radius: 32px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.2);
+}
+#EduEnvironment .contents-video .adVideo{
+    max-width: 920px;
+    max-height: 518px;
+    -webkit-border-radius: 23px;
+    -moz-border-radius: 23px;
+    border-radius: 23px;
+}
+
+/*배경움직이는 이미지 위치 조정*/
+#EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(1){
+    top: 10%;
+    left: 15%;
+}
+#EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(2){
+    bottom: 5%;
+    right: 0;
+}
+#EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(3){
+    top: 5%;
+    right: 20%;
+}
+
+/******************************
+    - section2#good1 / -section#good2
+*******************************/
+/*기본 section 설정*/
+section.good{
+    padding-top: 40px;
+}
+section.good .contentsWrap.middle{
+    padding: 0;
+    justify-content: space-between;
+}
+section#good2{
+    background-color: rgb(247, 247, 247);
+}
+
+/*섹션 내부 장점 섹션 개별설정*/
+section.good>section{
+    padding: 80px 0;
+}
+.good>section:nth-of-type(2n) .contentsWrap.middle{
+    flex-direction: row-reverse;
+}
+.good>section:nth-of-type(3n) .contentsWrap.middle{
+    flex-direction: column;
+}
+.good>section .contentsWrap.middle .contents-info{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+.good>section:nth-of-type(3) .contentsWrap.middle .contents-info{
+    width: 100%;
+}
+
+.good>section .contentsWrap.middle .contents-img{
+    width: 50%;
+    max-width: 550px;
+    padding: 50px 40px 0 0;
+    margin-left: 40px;
+}
+
+.good>section:nth-of-type(2) .contentsWrap.middle .contents-img{
+    padding: 50px 0 0 40px;
+    margin-left: 0;
+    margin-right: 40px;
+}
+
+.good>section:nth-of-type(3) .contentsWrap.middle .contents-img{
+    width: 100%;
+    max-width: 911px;
+    margin-left: 0;
+    margin-top: 40px;
+}
+.good>section .contentsWrap.middle .contents-img img{
+    width: 100%;
+}
+.good>section>div.contents-bgImg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+/*섹션 내부 장점 섹션 개별 이미지*/
+#good1>section:nth-of-type(1)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_1.png") center / auto 100% no-repeat;
+}
+
+#good1>section:nth-of-type(2)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_2.png") center / auto 100% no-repeat;
+}
+#good1>section:nth-of-type(3)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_3.png") center / auto 100% no-repeat;
+}
+#good2>section:nth-of-type(1)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_4.png") center / auto 100% no-repeat;
+}
+#good2>section:nth-of-type(2)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_5.png") center / auto 100% no-repeat;
+}
+#good2>section:nth-of-type(3)>div.contents-bgImg{
+    background: url("../../img/bg_introduce_6.png") center / auto 100% no-repeat;
+}
+
+/*배경움직이는 이미지 위치 조정*/
+#good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    bottom: -10%;
+    left: 0;
+}
+#good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+    top: 0;
+    left: 43%;
+}
+#good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(3){
+    bottom: 0;
+    right: 37%;
+}
+#good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    bottom: 5%;
+    left: 50%;
+}
+#good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+    bottom: -30%;
+    right: -5%;
+}
+#good1>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    top: 27%;
+    left: 10%;
+}
+#good1>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+    top: 33%;
+    right: 10%;
+}
+#good2>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    top: 0;
+    left: 38%;
+}
+#good2>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+    bottom: 0;
+    left: 40%;
+}
+#good2>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    top: 0;
+    right: 22%;
+}
+#good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+    top: 20%;
+    left: 7%;
+}
+#good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+    top: 25%;
+    right: 4%;
+}
+
+

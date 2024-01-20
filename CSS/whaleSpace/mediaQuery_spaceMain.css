@@ -1,0 +1,250 @@
+/*1280px(태블릿)*/
+@media screen and (max-width: 1280px) {
+    /******************************
+        - section2#smartEdu
+    *******************************/
+    /*accordian-Carousel 설정*/
+    #smartEdu #accordion {
+        min-width: 338px;
+    }
+}
+
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - section1#StartWithSpace
+    *******************************/
+    /*기본 section 설정*/
+    section#StartWithSpace {
+        height: 650px;
+    }
+
+    #StartWithSpace .contentsWrap:nth-of-type(3) {
+        justify-content: center;
+    }
+
+    #StartWithSpace .contents-imgs {
+        padding: 0;
+    }
+
+    /*캐로셀 인디케이터*/
+    #StartWithSpace .contents-btns {
+        padding: 0 32px;
+        width: 100%;
+        margin-right: unset;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #StartWithSpace .contents-movingObject:nth-of-type(1) {
+        top: 5%;
+        left: -5%;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(2) {
+        bottom: 17%;
+        left: 15%;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(3) {
+        bottom: 5%;
+        right: -5%;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(4) {
+        top: 15%;
+        right: 5%;
+    }
+
+    /******************************
+        - section2#smartEdu
+    *******************************/
+    /*기본 section 설정*/
+    section#smartEdu {
+        padding: 110px 0 55px;
+    }
+
+    section#smartEdu .contentsWrap:nth-of-type(3) {
+        height: 850px;
+    }
+
+    section#smartEdu .contentsWrap:nth-of-type(3) > div {
+        padding: 50px 50px 20px;
+        max-width: 600px;
+    }
+
+    /*accordian-Carousel 설정*/
+    #smartEdu #accordion {
+        max-width: 100%;
+        margin-right: 0;
+    }
+
+    section#smartEdu .contents-gallery {
+        display: none;
+    }
+
+    /*accordian-Carousel-active 설정*/
+    #smartEdu #accordion .contents-accordion.active {
+        text-align: center;
+    }
+
+    #smartEdu #accordion .contents-accordion.active h4 {
+        font-size: 1.5rem;
+    }
+
+    #smartEdu #accordion .contents-accordion.active {
+        padding-bottom: 0;
+    }
+
+    #smartEdu #accordion .contents-accordion.active > ul > li {
+        width: 6px;
+        height: 6px;
+        margin-bottom: 7px;
+    }
+
+    /*960px이하 -> accordian-Carousel에 따른 gallery 변경*/
+    #smartEdu #accordion .contents-accordion .contents-thumbnail {
+        display: block;
+        margin: 0 auto;
+        width: 100%;
+        max-width: 436px;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(2) {
+        left: 40%;
+    }
+
+    /******************************
+        - section3#withTeacher / - section4#spaceUpdate / - section5#startSpace
+    *******************************/
+    /*기본 section 설정*/
+    section#withTeacher {
+        height: unset;
+        padding: 55px 0 110px 0;
+    }
+
+    section#spaceUpdate, section#startSpace {
+        padding: 110px 0;
+    }
+
+    /*레이아웃 박스 설정*/
+    #withTeacher .contentsWrap.middle:nth-of-type(2), #spaceUpdate .contentsWrap.middle:nth-of-type(2), #startSpace .contentsWrap.middle:nth-of-type(3) {
+        padding: 0;
+        flex-direction: column;
+        margin-top: 60px;
+        justify-content: space-between;
+    }
+}
+
+/*600px(스마트폰)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - section1#StartWithSpace
+    *******************************/
+    /*기본 section 설정*/
+    section#StartWithSpace {
+        height: 546px;
+    }
+
+    #StartWithSpace .contentsWrap:nth-of-type(3) {
+        width: 100%;
+    }
+
+    /*캐로셀*/
+    #StartWithSpace .contents-miniCarousel ul {
+        width: 100%;
+    }
+
+    /*캐로셀 인디케이터*/
+    #StartWithSpace .contents-btns {
+        display: none;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #StartWithSpace .contents-movingObject:nth-of-type(1) {
+        top: 10px;
+        left: -84px;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(2) {
+        bottom: 100px;
+        left: 100px;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(3) {
+        bottom: 50px;
+        right: -100px;
+    }
+
+    #StartWithSpace .contents-movingObject:nth-of-type(4) {
+        top: 100px;
+        right: 30px;
+    }
+
+    /******************************
+        - section2#smartEdu
+    *******************************/
+    /*기본 section 설정*/
+    section#smartEdu {
+        padding: 100px 0 50px;
+    }
+
+    /*레이아웃 박스 설정*/
+    section#smartEdu .contentsWrap:nth-of-type(3) {
+        height: 700px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) > div {
+        padding: 50px 30px 20px;
+    }
+
+    /*accordian-Carousel 설정*/
+    #smartEdu #accordion .contents-accordion {
+        padding: 16px 30px 16px 25px;
+    }
+
+    /*accordian-Carousel-active 설정*/
+    #smartEdu #accordion .contents-accordion.active {
+        padding: 30px 30px 0 25px;
+    }
+
+    #smartEdu #accordion .contents-accordion.active h4 {
+        font-size: 1.25rem;
+    }
+
+    #smartEdu #accordion .contents-accordion.active > ul {
+        right: 20px;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(1) {
+        margin-left: 30px;
+    }
+    section#smartEdu .contentsWrap:nth-of-type(3) .contents-movingObject:nth-of-type(2) {
+        left: 35%;
+    }
+
+    /******************************
+        - section3#withTeacher / - section4#spaceUpdate / - section5#startSpace
+    *******************************/
+    /*기본 section 설정*/
+    section#withTeacher {
+        padding: 50px 0 100px 0;
+    }
+
+    section#spaceUpdate, section#startSpace {
+        padding: 100px 0;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #withTeacher > .contentsWrap > .contents-movingObject:nth-of-type(1) {
+        top: -50px;
+        right: 50px;
+        margin-right: 0;
+    }
+
+    #withTeacher > .contentsWrap > .contents-movingObject:nth-of-type(2) {
+        bottom: -75px;
+        left: 10px;
+        margin-left: 0;
+    }
+}

@@ -1,7 +1,7 @@
-
-
 $(function () {
-
+    /***************************************************
+     * 캐로셀 및 상세 섹션 변경
+     * *************************************************/
     let gal = $(".contents-gallery li"); //이미지
     let info = $("#myCarousel .contents-info .contents-info li") // 안내문구
     let btn = $(".contents-btn li"); //인디케이터 버튼
@@ -22,7 +22,7 @@ $(function () {
         let tg = $(this);
         let i = tg.index();
 
-        if (current == i) return false;
+        if (current === i) return false;
 
         gal.css({
             "z-index": 1
@@ -41,6 +41,7 @@ $(function () {
         section.removeClass("active");
         section.eq(i).addClass("active");
 
+        /*캐로셀 변경 효과*/
         function move(i) {
             let currentImg = gal.eq(current);
             let nextImg = gal.eq(i);
@@ -95,6 +96,7 @@ $(function () {
         }
     })
 
+    /*인디케이터 버튼 클릭효과*/
     $("i, .contents-btn li").click(function () {
         btn.removeClass("active");
         btn.eq(current).addClass("active");

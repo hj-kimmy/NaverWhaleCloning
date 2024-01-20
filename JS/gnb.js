@@ -1,20 +1,10 @@
 $(function () {
+    /***************************************************
+     * GNB Script
+     * *************************************************/
     let mobileGnb = $("#mobileGnb");
     let mobileSub = $("#mobile-subMenu");
     let cover = $("header .cover");
-    //
-    //
-    // let listName = $(".menu-sub-2");
-    // let submenuBox = listName.next();
-    //
-    //
-    // let listW = listName.width();
-    // let subW = submenuBox.width();
-    //
-    // if(listW>=subW){
-    //     submenuBox.width(listW);
-    // }
-
 
     /* 끄기 버튼 외 다른 공간 클릭했을 때 창 닫힘*/
     let appBox = $("#gnb-appMenu");
@@ -56,6 +46,7 @@ $(function () {
     appsBtn.click(function (){
         $(this).next().fadeToggle();
     })
+
     /*스크롤시 gnb effect*/
     $(window).scroll(function () {
         let scroll = $(window).scrollTop();

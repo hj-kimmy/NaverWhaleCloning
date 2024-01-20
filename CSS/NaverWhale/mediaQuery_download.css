@@ -1,0 +1,55 @@
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - section1#downloadMain
+    *******************************/
+    /*기본 section 설정*/
+    #downloadMain .contentsWrap {
+        flex-direction: column;
+        height: unset;
+    }
+
+    /*artcle*/
+    #downloadMain .contentsWrap .contents-info-btn {
+        width: 100%;
+        padding: 60px 0 0 0;
+    }
+
+    #downloadMain .contentsWrap .contents-img {
+        width: 100%;
+        display: flex;
+        justify-content: end;
+        margin-top: 40px;
+    }
+
+    #downloadMain .contentsWrap img {
+        max-height: 496px;
+    }
+}
+
+/*600px(스마트폰)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - section1#downloadMain
+    *******************************/
+    /*artcle*/
+    #downloadMain .contentsWrap .contents-btns {
+        margin-top: 30px;
+    }
+
+    #downloadMain .contentsWrap .contents-img {
+        margin-top: 50px;
+    }
+
+    #downloadMain .contentsWrap img {
+        max-height: 202px;
+    }
+
+    /******************************
+        - section2#whaleDownload
+    *******************************/
+    /*기본 section 설정*/
+    section#whaleDownload {
+        padding: 60px 0 46px;
+    }
+}

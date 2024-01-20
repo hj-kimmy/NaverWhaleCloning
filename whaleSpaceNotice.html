@@ -1,45 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+
+    <title>Naver Dolphin</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+
+    <!---------------------
+        Plugin Stylesheet
+    ----------------------->
+    <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!---------------------
+        Custom Stylesheet
+    ----------------------->
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
     <!-- GNB style sheet -->
     <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/whaleSpaceNotice/mainStyle.css">
-    <link rel="stylesheet" href="CSS/whaleSpaceNotice/960px.css">
-    <link rel="stylesheet" href="CSS/whaleSpaceNotice/600px.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mainStyle_spaceNoticeNWorkShop.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mediaQuery_spaceNoticeNWorkShop.css">
 
-
+    <!---------------------
+           JavaScript Plugin
+       ----------------------->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
+
+    <!-- Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body id="notice">
 <div id="wrap">
-    <!-- header -->
+    <!---------------------
+        Header
+    ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -48,15 +61,19 @@
                     <div id="whaleSpaceLogo"></div>
                 </a>
             </h1>
+
+            <!-- Top-MainMenu -->
             <ul id="main-menu">
-                <li class="active" id="home"><a href="whaleSpace.html" class="check">홈</a>
+                <li id="home"><a href="whaleSpace.html" class="check">홈</a>
                 </li>
-                <li><a href="whaleSpaceDetails.html">웨일 스페이스 살펴보기</a></li>
-                <li><a href="whaleSpaceService.html">제휴 서비스</a></li>
-                <li><a href="whaleBook_Index.html">웨일북</a></li>
-                <li><a href="whaleSpaceWorkShop.html">활용 가이드</a></li>
-                <li><a href="whaleSpaceNotice.html">공지사항</a></li>
+                <li><a href="whaleSpaceDetails.html" class="check">웨일 스페이스 살펴보기</a></li>
+                <li><a href="whaleSpaceService.html" class="check">제휴 서비스</a></li>
+                <li><a href="whaleBook.html" class="check">웨일북</a></li>
+                <li><a href="whaleSpaceWorkShop.html" class="check">활용 가이드</a></li>
+                <li class="active"><a href="whaleSpaceNotice.html" class="check">공지사항</a></li>
             </ul>
+
+            <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
@@ -88,7 +105,7 @@
                     <a href="whaleSpaceService.html">제휴 서비스
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a></li>
-                <li><a href="whaleBook_Index.html">웨일북
+                <li><a href="whaleBook.html">웨일북
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -109,27 +126,39 @@
     </header>
 
     <main>
+        <!---------------------
+           section1. 게시판 헤더
+        ----------------------->
         <section id="guideHeader">
             <div class="contents-bgImg"></div>
             <section class="contentsWrap middle">
+
+                <!-- title -->
                     <div class="contents-info">
                         <h1>웨일 스페이스와 웨일북 소식을 알려드립니다</h1>
                             <p class="c-whale-gray">
                                 업데이트 공지 및 주요소식을 확인하세요.
                             </p>
                     </div>
-
             </section>
         </section>
+
+        <!---------------------
+           section1. 게시글 리스트
+        ----------------------->
         <section id="guideList" class="update">
             <div class="contentsWrap">
                 <div id="tabs">
+
+                    <!-- 게시글 탭 -->
                     <ul class="contents-btns ">
                         <li><a href="#tabs-1" class="c-whale-gray">전체</a></li>
                         <li><a href="#tabs-2" class="c-whale-gray">Desktop</a></li>
                         <li><a href="#tabs-3" class="c-whale-gray">iOS</a></li>
                         <li><a href="#tabs-4" class="c-whale-gray">Android</a></li>
                     </ul>
+
+                    <!-- 게시판 -->
                     <div id="tabs-1" class="contents-tabs">
                         <ul class="contents-tab-layer active">
                             <li>
@@ -347,8 +376,14 @@
             </div>
         </section>
     </main>
+
+    <!---------------------
+        footer
+    ----------------------->
     <footer>
         <div class="footerWrap">
+
+            <!-- footer Menu -->
             <ul class="footerMenu">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
@@ -357,6 +392,8 @@
                 <li>고객센터</li>
                 <li>&copy; NAVER Corp.</li>
             </ul>
+
+            <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
                 <ul class="snsIcons">
                     <li><img src="img/blog.png" alt=""></li>
@@ -372,8 +409,15 @@
         </div>
     </footer>
 </div>
+
+<!---------------------
+    Custom Script
+----------------------->
+<!-- gnb Script -->
 <script src="JS/gnb.js"></script>
-<script src="JS/mainJavaScript.js"></script>
+<!-- default Script -->
+<script src="JS/default.js"></script>
+<!-- guide Script :: 프론트로 스타일 보여주기 위한 Script로 백엔드 연동시 삭제할 것 -->
 <script src="JS/guide.js"></script>
 </body>
 </html>

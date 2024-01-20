@@ -9,8 +9,8 @@
     <!-- 파비콘 -->
     <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
     <!---------------------
-          Plugin Stylesheet
-      ----------------------->
+        Plugin Stylesheet
+    ----------------------->
     <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
@@ -28,12 +28,11 @@
     <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/NaverWhale/mainStyle_guideMain.css">
-    <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_guideMain.css">
+    <link rel="stylesheet" href="CSS/login/mainStyle_Login.css">
 
     <!---------------------
         JavaScript Plugin
-     ----------------------->
+    ----------------------->
     <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
@@ -42,15 +41,12 @@
     <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
 
-    <!-- Animate On Scroll Library -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
 </head>
 <body>
-<div id="wrap">
+<div class="wrap">
     <!---------------------
-         Header
-     ----------------------->
+        Header
+    ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -63,7 +59,7 @@
 
             <!-- Top-MainMenu -->
             <ul id="main-menu">
-                <li id="home"><a href="index.html" class="check">홈</a>
+                <li class="active" id="home"><a href="index.html" class="check">홈</a>
                 </li>
                 <li>
                     <div class="menu-sub-2">
@@ -78,7 +74,7 @@
                         </ul>
                     </div>
                 </li>
-                <li class="active">
+                <li>
                     <div class="menu-sub-2">
                         <a href="guide.html" class="check">가이드
                             <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
@@ -105,6 +101,7 @@
                 <button class="downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
+
                 <!-- App Menu -->
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
@@ -219,135 +216,126 @@
     </header>
 
     <main>
-        <!---------------------
-           section1. 가이드 페이지 메인
-        ----------------------->
-        <section id="guideMain">
-            <section class="contentsWrap h-full">
 
-                <!-- title -->
-                <article class="contents-info">
-                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-anchor="#guideMain">What's New</h1>
-                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1200" data-aos-anchor="#guideMain" data-aos-delay="150">
-                        <p class="long">
-                            네이버 웨일의 최신 업데이트와 보도 자료 소식을 빠르게 전해드립니다.
-                        </p>
-                        <p class="short">
-                            최신 업데이트와 소식을 전해 드립니다.
-                        </p>
+        <!---------------------
+            section1. 회원가입
+        ----------------------->
+        <section id="join">
+            <div class="contents-joinBoxWrap">
+                <h1 onclick="location.href='index.html'">
+                </h1>
+                <h6 class="titleWrap c-whale-gray">회원 정보 수정</h6>
+                <form action="" name="joinMemberForm">
+
+                    <!--회원 아이디 정보-->
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="text" placeholder="아이디" name="id"
+                                                                          id="id" maxlength="20" value="id1234"
+                                                                          readonly><span
+                                        class="c-whale-gray">@naver.com</span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="password" placeholder="비밀번호"
+                                                                          name="password" id="password"
+                                                                          maxlength="16"><span
+                                        class="joinIcons noview"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="password" placeholder="비밀번호 확인"
+                                                                          name="passwordChk" id="passwordChk"
+                                                                          maxlength="16"><span
+                                        class="joinIcons noview"></span>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="email"
+                                                                          placeholder="[선택] 비밀번호 분실 시 확인용 이메일"
+                                                                          name="email" id="email">
+                                </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <!--validation 경고창-->
+                    <div>
+                        <ul class="validationText">
+                            <li class="id">아이디 : <span></span></li>
+                            <li class="password">비밀번호 : <span></span></li>
+                            <li class="passwordChk">비밀번호 확인 : <span></span></li>
+                            <li class="email">이메일 : <span></span></li>
+                        </ul>
                     </div>
-                </article>
 
-                <!-- 보도자료 이미지 -->
-                <div class="contents-img">
-                    <picture>
-                        <source srcset="img/img_press_260.png" media="(max-width : 600px)">
-                        <source srcset="img/img_press_470.png" media="(max-width : 960px)">
-                        <img src="img/img_press_680.png" alt="">
-                    </picture>
-                </div>
-            </section>
-        </section>
+                    <!--회원 개인 정보-->
+                    <fieldset>
+                        <ul>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="text" placeholder="이름" name="name"
+                                                                          id="name">
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="text" placeholder="생년월일 8자리"
+                                                                          name="birth" id="birth" maxlength="10">
+                                </div>
+                            </li>
+                            <li>
+                                <ul class="inList">
+                                    <li class="inList-li">
+                                        <input type="radio" name="gender" value="male" id="male"><label
+                                            for="male">남자</label>
+                                    </li>
+                                    <li class="inList-li">
+                                        <input type="radio" name="gender" value="female" id="female"><label
+                                            for="female">여자</label>
+                                    </li>
+                                    <li class="inList-li">
+                                        <input type="radio" name="gender" value="none" id="none"><label
+                                            for="none">선택안함</label>
+                                    </li>
 
-        <!---------------------
-           section2. 업데이트 섹션
-        ----------------------->
-        <section id="update">
+                                </ul>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span>
+                                    <select name="itc" id="itc">
+                                    </select>
+                                </div>
+                            </li>
+                            <li>
+                                <div>
+                                    <span class="joinIcons"></span><input type="text" placeholder="휴대전화번호" name="phone"
+                                                                          id="phone" maxlength="16">
+                                </div>
 
-            <!-- title -->
-            <div class="contentsWrap">
-                <h2>
-                    업데이트
-                </h2>
-                <button class="small" onclick="location.href = 'update_List.html'">더 보기</button>
+                            </li>
+                        </ul>
+                    </fieldset>
+
+                    <!--validation 경고창-->
+                    <div>
+                        <ul class="validationText">
+                            <li class="name">이름 : <span></span></li>
+                            <li class="birth">생년월일 : <span></span></li>
+                            <li class="gender">성별 : <span></span></li>
+                            <li class="phone">휴대전화번호 : <span></span></li>
+                        </ul>
+                    </div>
+                    <input type="button" value="가입하기" id="submitBtn_join">
+                </form>
             </div>
 
-            <!-- 업데이트 게시글 리스트 -->
-            <div class="contentsWrap">
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Desktop</span>
-                        <img src="img/img_notice_desktop_820.png" alt="">
-                        <div>
-                            <p>
-                                v3.23.214.10 업데이트 안내
-                            </p>
-                            <span class="date">2023. 10. 31</span></div>
-                    </a>
-                </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">iOS</span>
-                        <img src="img/img_notice_ios_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.1.0 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 28</span></div>
-                    </a>
-                </div>
-                <div class="contents-card">
-                    <a href="update_post.html">
-                        <span class="tag">Android</span>
-                        <img src="img/img_notice_android_820.png" alt="">
-                        <div>
-                            <p>
-                                v.2.2.2.2 업데이트 안내
-                            </p>
-                            <span class="date">2022. 2. 22</span></div>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!---------------------
-           section3. 보도자료 섹션
-        ----------------------->
-        <section id="press">
-
-            <!-- title -->
-            <div class="contentsWrap">
-                <h2>
-                    보도자료
-                </h2>
-                <button class="small" onclick="location.href = 'press_List.html'">더 보기</button>
-            </div>
-
-            <!-- 보도자료 게시글 리스트 -->
-            <div class="contentsWrap">
-                <ul>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p class="omitted">네이버式 에듀테크, 대학가로 스며든다... '웨일 스페이스' 확장</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p class="omitted">웨일, 에듀테크 기술력으로 몽골 교육 디지털 전환 이끈다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p class="omitted">네이버클라우드-전라북도교육청 MOU 체결... 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p class="omitted">웨일 브라우저에서 환경 보호 실천해보세요! 네이버, 한국중앙자원봉사센터와 디지털 탄소 저감 캠페인 '그린웨일'진행한다</p>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="press_post.html">
-                            <span class="tag">환경조성</span><span class="date">2023.12.11</span>
-                            <p class="omitted">네이버클라우드 웨일, 미래형 교육 위한 교류의 장 'NWEC 2023' 개최... "함께 성장하는 에듀테크 생태계 조성할 것"</p>
-                        </a>
-                    </li>
-                </ul>
-            </div>
         </section>
     </main>
 
@@ -383,7 +371,6 @@
             </div>
         </div>
     </footer>
-
 </div>
 
 <!---------------------
@@ -391,7 +378,7 @@
 ----------------------->
 <!-- gnb Script -->
 <script src="JS/gnb.js"></script>
-<!-- main Script -->
-<script src="JS/default.js"></script>
+<!-- validation Script -->
+<script src="JS/validation.js"></script>
 </body>
 </html>

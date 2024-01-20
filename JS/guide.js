@@ -1,4 +1,7 @@
 $(function () {
+    /***************************************************
+     * 페이징 기능 프론트로 구현하기
+     * *************************************************/
     let current = 0; //이미지의 현재 번째
     let navBtn = $("#guideList .contents-btns .material-symbols-outlined");
     let nextBtn = $("#guideList .contents-btns .material-symbols-outlined").eq(1);
@@ -94,6 +97,7 @@ $(function () {
             })
         }
     })
+
 
     let updatePostList = $("#guideList.update .contents-tabs ul li");
     let updatePostNavList = $("#guidePost.update .contents-post-nav li");

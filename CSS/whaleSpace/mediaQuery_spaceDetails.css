@@ -1,0 +1,230 @@
+/*1280px(태블릿)*/
+@media screen and (max-width: 1280px) {
+    /******************************
+        - section1#EduEnvironment
+    *******************************/
+    /*video*/
+    #EduEnvironment .contents-video{
+        width: 766px;
+        height: 437px;
+        margin-top: 40px;
+        padding: 7px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        border-radius: 30px;
+    }
+    #EduEnvironment .contents-video .adVideo{
+        max-width: 752px;
+        max-height: 423px;
+        -webkit-border-radius: 23px;
+        -moz-border-radius: 23px;
+        border-radius: 23px;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(2){
+        bottom: 5%;
+        right: -7%;
+    }
+
+    /******************************
+        - section2#good1 / -section#good2
+    *******************************/
+    /*기본 section 설정*/
+    section.good .contentsWrap.middle{
+        padding: 0 32px;
+    }
+
+    .good>section .contentsWrap.middle .contents-img{
+        margin-left: 60px;
+    }
+
+    .good>section:nth-of-type(2n) .contentsWrap.middle .contents-img{
+        margin-left: 0;
+        margin-right: 60px;
+    }
+
+    .good>section:nth-of-type(3n) .contentsWrap.middle .contents-img{
+        margin-left: 0;
+        margin-top: 40px;
+    }
+}
+
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - section1#EduEnvironment
+    *******************************/
+    /*기본 section 설정*/
+    #EduEnvironment .bgWrap{
+        height: 500px;
+    }
+
+    /*video*/
+    #EduEnvironment .contents-video{
+        width: 537px;
+        height: 308px;
+        margin-top: 40px;
+        padding: 7px;
+        border-radius: 20px;
+    }
+    #EduEnvironment .contents-video .adVideo{
+        max-width: 523px;
+        max-height: 294px;
+        border-radius: 13px;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(1){
+        top: 20%;
+        left: 2%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(2){
+        bottom: -18%;
+        right: -12%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(3){
+        top: 5%;
+        right: 5%;
+    }
+
+    /******************************
+        - section2#good1 / -section#good2
+    *******************************/
+    /*기본 section 설정*/
+    section.good{
+        padding-top: 27px;
+    }
+
+    section.good>section{
+        padding: 55px 0;
+    }
+
+    section.good>section .contentsWrap.middle,
+    .good>section:nth-of-type(2n) .contentsWrap.middle,
+    .good>section:nth-of-type(3n) .contentsWrap.middle{
+        flex-direction: column;
+    }
+
+    /*섹션 내부 장점 섹션 개별설정*/
+    .good>section .contentsWrap.middle .contents-info{
+        width: 100%;
+    }
+
+    .good>section .contentsWrap.middle .contents-img,
+    .good>section:nth-of-type(2n) .contentsWrap.middle .contents-img,
+    .good>section:nth-of-type(3n) .contentsWrap.middle .contents-img{
+        padding: 0;
+        margin: 60px 0 0 0 ;
+        width: 100%;
+        max-width: 600px;
+    }
+
+    /*섹션 내부 장점 섹션 개별 이미지*/
+    #good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        bottom: 64%;
+        left: 1%;
+    }
+    #good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: -10%;
+        left: 80%;
+    }
+    #good1>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(3){
+        bottom: 60%;
+        right: 10%;
+    }
+
+    #good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        bottom: 10%;
+        left: 13%;
+    }
+    #good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        bottom: 50%;
+        right: -5%;
+    }
+    #good1>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        top: 50%;
+        left: 5%;
+    }
+    #good2>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        top: 10%;
+        left: 90%;
+    }
+    #good2>section:nth-of-type(1)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        bottom: 50%;
+        left: 80%;
+    }
+    #good2>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        top: 3%;
+        right: 77%;
+    }
+    #good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(1){
+        top: 50%;
+        left: 5%;
+    }
+    #good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: 30%;
+        right: -7%;
+    }
+}
+
+/*600px(태블릿)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - section1#EduEnvironment
+    *******************************/
+    /*기본 section 설정*/
+    #EduEnvironment .bgWrap{
+        height: 360px;
+    }
+
+    /*article*/
+    #EduEnvironment>div:last-child{
+        padding: 55px 0;
+    }
+
+    /*video*/
+    #EduEnvironment .contents-video{
+        width: 308px;
+        height: 177px;
+        margin-top: 40px;
+        padding: 4px;
+        border-radius: 19px;
+    }
+    #EduEnvironment .contents-video .adVideo{
+        max-width: 300px;
+        max-height: 169px;
+        border-radius: 15px;
+    }
+
+    /*배경움직이는 이미지 위치 조정*/
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(1){
+        top: 10%;
+        left: -5%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(2){
+        bottom: -30%;
+        right: -25%;
+    }
+    #EduEnvironment .contents-bgImg .contents-movingObject:nth-of-type(3){
+        top: 5%;
+        right: 5%;
+    }
+
+    /******************************
+        - section2#good1 / -section#good2
+    *******************************/
+    /*배경움직이는 이미지 위치 조정*/
+    #good1>section:nth-of-type(2)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        bottom: 32%;
+        right: -10%;
+    }
+    #good1>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: 40%;
+        right: 5%;
+    }
+    #good2>section:nth-of-type(3)>div.contentsWrap.middle .contents-movingObject:nth-of-type(2){
+        top: 40%;
+        right: -15%;
+    }
+}

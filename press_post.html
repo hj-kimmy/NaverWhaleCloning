@@ -1,46 +1,56 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+
+    <title>Naver Dolphin</title>
+
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+    <!---------------------
+          Plugin Stylesheet
+      ----------------------->
+    <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!-- Animate On Scroll Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <!---------------------
+        Custom Stylesheet
+    ----------------------->
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
     <!-- GNB style sheet -->
     <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1440px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1320px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/1280px_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/600px_gnb.css">
+    <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/guide/guide_detailPage/mainStyle.css">
-    <link rel="stylesheet" href="CSS/guide/guide_detailPage/960px.css">
-    <link rel="stylesheet" href="CSS/guide/guide_detailPage/740px.css">
-    <link rel="stylesheet" href="CSS/guide/guide_detailPage/600px.css">
+    <link rel="stylesheet" href="CSS/NaverWhale/mainStyle_guideDetail.css">
+    <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_guideDetail.css">
 
-
+    <!---------------------
+        JavaScript Plugin
+     ----------------------->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-    <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
+
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
+
+    <!-- Animate On Scroll Library -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
 <div id="wrap">
-    <!-- header -->
+    <!---------------------
+         Header
+     ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -50,8 +60,10 @@
                     <div id="whale"></div>
                 </a>
             </h1>
+
+            <!-- Top-MainMenu -->
             <ul id="main-menu">
-                <li class="active" id="home"><a href="index.html" class="check">홈</a>
+                <li id="home"><a href="index.html" class="check">홈</a>
                 </li>
                 <li>
                     <div class="menu-sub-2">
@@ -66,7 +78,7 @@
                         </ul>
                     </div>
                 </li>
-                <li>
+                <li class="active">
                     <div class="menu-sub-2">
                         <a href="guide.html" class="check">가이드
                             <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
@@ -81,8 +93,10 @@
                 </li>
                 <li><a href="">스토어</a></li>
                 <li><a href="whaleSpace.html">웨일 스페이스</a></li>
-                <li><a href="whaleBook_Index.html">웨일북</a></li>
+                <li><a href="whaleBook.html">웨일북</a></li>
             </ul>
+
+            <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
                     <div class="whaleLogo whaleLogo-black"></div>
@@ -91,6 +105,7 @@
                 <button class="downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
+                <!-- App Menu -->
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
                     <ul class="subMenuBox hide">
@@ -99,7 +114,7 @@
                         </li>
                         <li>
                             <ul class="appMenu-Apps">
-                                <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                                <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
                                 <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                                 <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
                                 <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
@@ -107,8 +122,8 @@
                                 <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
                                 <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
                                 <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                                <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
-                                <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                                <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                                <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
                                 <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                             </ul>
                         </li>
@@ -162,7 +177,7 @@
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
-                <li><a href="whaleBook_Index.html">웨일북
+                <li><a href="whaleBook.html">웨일북
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -178,6 +193,7 @@
             </div>
         </nav>
 
+        <!-- App Menu Mobile -->
         <div id="mobile-subMenu">
             <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
@@ -186,7 +202,7 @@
                 </div>
                 <h4>웨일 서비스</h4>
                 <ul>
-                    <li><a href=""><img src="img/ic_whale.png" alt="">마이 액티비티</a></li>
+                    <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
                     <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                     <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
                     <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
@@ -195,7 +211,7 @@
                     <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
                     <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
                     <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
-                    <li><a href="whaleBook_Index.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
+                    <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
                     <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                 </ul>
             </div>
@@ -203,17 +219,24 @@
     </header>
 
     <main>
+        <!---------------------
+           section1. 게시판 헤더
+        ----------------------->
         <section id="guideHeader">
-            <section class="contentsWrap trigger-fadeinOn">
+            <section class="contentsWrap">
+
+                <!-- title -->
                 <article class="contents-info">
-                    <h1 class="aniOrder1">보도자료</h1>
-                    <div class="aniOrder2 c-whale-gray">
+                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#guideHeader">보도자료</h1>
+                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#guideHeader" data-aos-delay="100">
                         <p>
                             네이버 웨일의 주요 소식을
                             <br class="br-960">빠르게 전해드립니다.
                         </p>
                     </div>
                 </article>
+
+                <!-- 업데이트 이미지 -->
                 <div class="contents-img">
                     <picture>
                         <source srcset="img/img_press_260.png" media="(max-width : 600px)">
@@ -222,42 +245,65 @@
                 </div>
             </section>
         </section>
+
+        <!---------------------
+           section1. 게시글 본문
+        ----------------------->
         <section id="guidePost" class="press">
             <div class="contentsWrap">
+
+                <!-- title -->
                 <div class="contents-post-title">
-                    <p class="small"><span><strong>네이버式 에듀테크, 대학가로 스며든다…‘웨일 스페이스’ 확장</strong></span><span class="date">2023.12.26</span></p>
+                    <p class="small"><span><strong>네이버式 에듀테크, 대학가로 스며든다…‘웨일 스페이스’ 확장</strong></span><span class="date">2023.12.26</span>
+                    </p>
                     <div>
                         <span class="material-symbols-outlined">format_size</span>
                         <span class="material-symbols-outlined">link</span>
                     </div>
                 </div>
+
+                <!-- 게시글 내용 -->
                 <div class="contents-post">
                     <p>네이버가 만든 에듀테크 플랫폼이 대학에도 스며든다.</p>
                     <br>
-                    <p>네이버클라우드는 서강대학교 로욜라국제대학·엔에스데블와 업무협약(MOU)을 체결했다고 8일 밝혔다. 협업 내용은 ‘로욜라국제대학의 교육 프로그램 및 평가 시스템 고도화를 위한 교육 플랫폼 구축’을 골자로 한다. 서강대 로욜라국제대학은 오는 2024년 신설되는 단과대학이다. 외국인 유학생·재외국민 학생들에게 한국학·국제학을 융합해 교육하기 위해 마련된다.</p>
+                    <p>네이버클라우드는 서강대학교 로욜라국제대학·엔에스데블와 업무협약(MOU)을 체결했다고 8일 밝혔다. 협업 내용은 ‘로욜라국제대학의 교육 프로그램 및 평가 시스템 고도화를 위한
+                        교육 플랫폼 구축’을 골자로 한다. 서강대 로욜라국제대학은 오는 2024년 신설되는 단과대학이다. 외국인 유학생·재외국민 학생들에게 한국학·국제학을 융합해 교육하기 위해
+                        마련된다.</p>
                     <br>
                     <p>Focus 1. 새 탭 메모</p>
                     <br>
-                    <p>네이버클라우드는 에듀테크 플랫폼 ‘웨일 스페이스’를 활용해 로욜라국제대학에 미래형 교육 환경이 조성될 수 있도록 지원한다. 웨일 계정을 보유한 이용자는 ▲학부별∙강의별로 맞춤형 브라우저 환경을 구성해 일괄 적용 ▲학생들의 학적·학습 현황 등을 통합 관리할 수 있다.</p>
+                    <p>네이버클라우드는 에듀테크 플랫폼 ‘웨일 스페이스’를 활용해 로욜라국제대학에 미래형 교육 환경이 조성될 수 있도록 지원한다. 웨일 계정을 보유한 이용자는 ▲학부별∙강의별로
+                        맞춤형 브라우저 환경을 구성해 일괄 적용 ▲학생들의 학적·학습 현황 등을 통합 관리할 수 있다.</p>
                     <br>
-                    <p> 네이버클라우드는 또 로욜라국제대학·엔에스데블과 함께 인공지능(AI)을 활용한 학습 평가 시스템을 구축하기 위해 협력하기로 했다. 팀네이버의 AI 기술력과 엔에스데블의 UBT∙AI 감독관 기술력으로 웨일 스페이스에 쌓인 데이터를 분석해 ▲문항 출제 및 평가 과정을 자동화하고 ▲학생들의 학습 수준에 따라 맞춤형 교육 프로그램 등을 마련할 계획이다. 로욜라국제대학 전용 한국어 평가 시스템을 구축, 향후 학생들이 한국어 교육 전문가로 성장할 수 있도록 지원한다.</p>
+                    <p> 네이버클라우드는 또 로욜라국제대학·엔에스데블과 함께 인공지능(AI)을 활용한 학습 평가 시스템을 구축하기 위해 협력하기로 했다. 팀네이버의 AI 기술력과 엔에스데블의
+                        UBT∙AI 감독관 기술력으로 웨일 스페이스에 쌓인 데이터를 분석해 ▲문항 출제 및 평가 과정을 자동화하고 ▲학생들의 학습 수준에 따라 맞춤형 교육 프로그램 등을 마련할
+                        계획이다. 로욜라국제대학 전용 한국어 평가 시스템을 구축, 향후 학생들이 한국어 교육 전문가로 성장할 수 있도록 지원한다.</p>
                 </div>
             </div>
+
+            <!-- 이전글/다음글 -->
             <div class="contentsWrap">
                 <ul class="contents-post-nav">
                     <li>
                         <span>이전</span><span>웨일, 에듀테크 기술력으로 몽골 교육 디지털 전환 이끈다</span><span class="date">2023.12.27</span>
                     </li>
                     <li>
-                        <span>다음</span><span>네이버클라우드-전라북도교육청 MOU 체결… 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</span><span class="date">2023.12.27</span>
+                        <span>다음</span><span>네이버클라우드-전라북도교육청 MOU 체결… 웨일 스페이스, 전북 맞춤형 에듀테크 플랫폼으로 거듭난다</span><span
+                            class="date">2023.12.27</span>
                     </li>
                 </ul>
                 <button onclick="location.href = 'press_List.html'">목록</button>
             </div>
         </section>
     </main>
+
+    <!---------------------
+        footer
+    ----------------------->
     <footer>
         <div class="footerWrap">
+
+            <!-- footer Menu -->
             <ul class="footerMenu">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
@@ -266,6 +312,8 @@
                 <li>고객센터</li>
                 <li>&copy; NAVER Corp.</li>
             </ul>
+
+            <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
                 <ul class="snsIcons">
                     <li><img src="img/blog.png" alt=""></li>
@@ -274,15 +322,24 @@
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
                 <button class="small">
-                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span class="whaleLogo whaleLogo-color"></span>
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span
+                            class="whaleLogo whaleLogo-color"></span>
                         베타 다운로드</a>
                 </button>
             </div>
         </div>
     </footer>
+
 </div>
+
+<!---------------------
+    Custom Script
+----------------------->
+<!-- gnb Script -->
 <script src="JS/gnb.js"></script>
-<script src="JS/mainJavaScript.js"></script>
+<!-- main Script -->
+<script src="JS/default.js"></script>
+<!-- guide Script :: 프론트로 스타일 보여주기 위한 Script로 백엔드 연동시 삭제할 것 -->
 <script src="JS/guide.js"></script>
 </body>
 </html>
