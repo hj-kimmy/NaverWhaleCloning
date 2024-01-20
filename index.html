@@ -3,17 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
+    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+
+    <title>Naver Dolphin</title>
+
+    <!---------------------
+        Plugin Stylesheet
+    ----------------------->
+    <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
-    <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-    />
+    <!-- Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
+    <!---------------------
+        Custom Stylesheet
+    ----------------------->
     <!-- static style sheet-->
     <link rel="stylesheet" href="CSS/StaticStyle.css">
 
@@ -34,20 +39,33 @@
     <link rel="stylesheet" href="CSS/Index/600px.css">
 
 
+    <!---------------------
+        JavaScript Plugin
+    ----------------------->
+    <!-- JQuery -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"
             integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/71b3a58e31.js" crossorigin="anonymous"></script>
+
+    <!-- GSAP Library -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- ScrollTimeline Library -->
     <script src="https://flackr.github.io/scroll-timeline/dist/scroll-timeline.js"></script>
-    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+    <!-- Animate On Scroll Library -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
 </head>
 <body>
 <div id="wrap">
-    <!-- header -->
+    <!---------------------
+        Header
+    ----------------------->
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
@@ -57,6 +75,8 @@
                     <div id="whale"></div>
                 </a>
             </h1>
+
+            <!-- Top-MainMenu -->
             <ul id="main-menu">
                 <li class="active" id="home"><a href="index.html" class="check">홈</a>
                 </li>
@@ -90,6 +110,8 @@
                 <li><a href="whaleSpace.html">웨일 스페이스</a></li>
                 <li><a href="whaleBook_Index.html">웨일북</a></li>
             </ul>
+
+            <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
                 <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
                     <div class="whaleLogo whaleLogo-black"></div>
@@ -98,6 +120,7 @@
                 <button class="downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
+                <!-- App Menu -->
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
                     <ul class="subMenuBox hide">
@@ -185,6 +208,7 @@
             </div>
         </nav>
 
+        <!-- App Menu Mobile -->
         <div id="mobile-subMenu">
             <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
@@ -210,8 +234,12 @@
     </header>
 
     <main>
-        <!-- 특장점 section -->
+        <!---------------------
+            section1. 주요기능
+        ----------------------->
         <section id="feature">
+
+            <!-- 웨일 다운로드  -->
             <section class="contentsWrap" id="feature1">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -255,6 +283,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 네이버 웨일온 -->
             <section class="contentsWrap" id="feature2">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -282,6 +312,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 사이드바 -->
             <section class="contentsWrap" id="feature3">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -308,6 +340,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 더블탭 -->
             <section class="contentsWrap" id="feature4">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -323,7 +357,6 @@
                         </p>
                         <button onclick="location.href='whalehelp.html'">자세히 보기</button>
                     </div>
-
                 </article>
                 <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                      data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature4">
@@ -335,6 +368,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 퀵서치 -->
             <section class="contentsWrap" id="feature5">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -360,6 +395,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 캡쳐 -->
             <section class="contentsWrap" id="feature6">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -374,7 +411,6 @@
                         </p>
                         <button onclick="location.href='whalehelp.html'">자세히 보기</button>
                     </div>
-
                 </article>
                 <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                      data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature6">
@@ -388,8 +424,12 @@
             </section>
         </section>
 
-        <!-- 보안장점 section -->
+        <!---------------------
+            section2. 보안장점
+        ----------------------->
         <section id="secure">
+
+            <!-- title -->
             <div class="titleWrap">
                 <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#secure">내 정보는 안전하게</h3>
@@ -400,6 +440,8 @@
                    data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#secure">네이버
                     웨일은 끊임없는 업데이트로 빈틈없는 보안 환경을 제공합니다. 안심하고 오늘의 할 일에만 집중하세요.</p>
             </div>
+
+            <!-- accordion -->
             <div class="contentsWrap">
                 <div id="accordion" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800"
                      data-aos-easing="ease-out" data-aos-delay="900" data-aos-anchor="#secure">
@@ -458,8 +500,14 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section3. 웨일 환경설정
+        ----------------------->
         <section id="environment">
+            <!-- animation 기준 pin -->
             <div id="animation-sticky-Pin">
+                <!-- title -->
                 <div class="contentsWrap titleWrap">
                     <h3 class="c-whale-blue">나에게 딱 맞는 환경</h3>
                     <ul class="titles-change">
@@ -473,6 +521,7 @@
                         <li class="paragraph-change-3"><p>인터페이스와 웹 콘텐츠에 모두 적용가능한 다크모드는 사용자 눈의 피로를 줄여줍니다.</p></li>
                     </ul>
                 </div>
+                <!-- animation -->
                 <div class="contentsWrap">
                     <div class="contents-animation">
                         <div class="background">
@@ -509,7 +558,13 @@
             </div>
             <div id="triggerEnv0"></div>
         </section>
+
+        <!---------------------
+            section4. 웨일앱 서비스
+        ----------------------->
         <section id="appService">
+
+            <!-- 웨일앱 아이콘 이미지 -->
             <ul class="contents-whaleApps" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                 data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService">
                 <li class="webtoon shadow"></li>
@@ -518,6 +573,8 @@
                 <li class="music shadow"></li>
                 <li class="mail shadow"></li>
             </ul>
+
+            <!-- title -->
             <div class="contentsWrap titleWrap">
                 <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService">브라우저를 더 유용하게</h3>
@@ -528,6 +585,8 @@
                    data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600"
                    data-aos-anchor="#appService">웨일 스토어에서 마음에 드는 확장앱을 설치하고 브라우저에 수많은 기능과 서비스를 더해보세요.</p>
             </div>
+
+            <!-- 앱 리스트_카드메뉴 -->
             <div class="contentsWrap">
                 <ul class="contents-cardList">
                     <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800"
@@ -565,7 +624,13 @@
                 </ul>
             </div>
         </section>
+
+        <!---------------------
+            section5. 웨일 광고
+        ----------------------->
         <section id="adBanner">
+
+            <!-- 광고 배너 -->
             <div class="contentsWrap c-whale-white">
                 <div class="contents-info-btn">
                     <h2 class="important" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -586,6 +651,8 @@
                 <div class="cellphone">
                 </div>
             </div>
+
+            <!-- QR코드 팝업 -->
             <div class="cover">
                 <div class="contentsWrap">
                     <div class="contents-modal">
@@ -614,8 +681,14 @@
             </div>
         </section>
     </main>
+
+    <!---------------------
+        footer
+    ----------------------->
     <footer>
         <div class="footerWrap">
+
+            <!-- footer Menu -->
             <ul class="footerMenu">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
@@ -624,6 +697,8 @@
                 <li>고객센터</li>
                 <li>&copy; NAVER Corp.</li>
             </ul>
+
+            <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
                 <ul class="snsIcons">
                     <li><img src="img/blog.png" alt=""></li>
@@ -632,14 +707,21 @@
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
                 <button class="small">
-                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span class="whaleLogo whaleLogo-color"></span>
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span
+                            class="whaleLogo whaleLogo-color"></span>
                         베타 다운로드</a>
                 </button>
             </div>
         </div>
     </footer>
 </div>
+
+<!---------------------
+    Custom Script
+----------------------->
+<!-- gnb Script -->
 <script src="JS/gnb.js"></script>
+<!-- main Script -->
 <script src="JS/mainJavaScript.js"></script>
 
 </body>

@@ -1,6 +1,7 @@
 /******************************
     - gnb Style
-*******************************/
+*******************************/h
+/* header */
 header {
     top: 0;
     width: 100%;
@@ -12,30 +13,28 @@ header {
     z-index: 999;
     transition: all 0.2s;
 }
-
 #whaleSpaceDetails header{
     background: #fff;
 }
+#whaleHelpCenter header{
+    background: var(--helpBlue);
+}
 
+/* header_scrolled */
 header.scrolled {
-    background: white;
+    background: #fff;
     -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
-
-#whaleHelpCenter header{
-    background: #3f5bf3
+#whaleSpace header #gnb a, #whaleSpace header #gnb button{
+    color: #fff;
 }
-
-#whaleSpace #gnb a, #whaleSpace #gnb button{
-    color: white;
-}
-
 #whaleSpace header.scrolled #gnb a, #whaleSpace header.scrolled #gnb button{
     color: black;
 }
 
+/* gnb_nav */
 #gnb {
     width: 100%;
     max-width: 1440px;
@@ -46,7 +45,6 @@ header.scrolled {
     padding: 21px 84px;
     position: relative;
 }
-
 #whaleHelpCenter #gnb{
     padding-top: 0;
     padding-bottom: 0;
@@ -62,29 +60,26 @@ header.scrolled {
     align-items: end;
 }
 
-
 #gnb h1.whaleBook {
     width: 180px;
 }
-
 #gnb h1 > a {
     display: flex;
     align-items: end;
 }
 
+/* Logos */
 #naver {
     background: url("../../img/NAVERLogo.svg") no-repeat;
     width: 50%;
     height: 15.5px;
     margin-right: 5px;
 }
-
 #whaleBook{
     background: url("../../img/1-service_logo.svg") no-repeat;
     width: 100%;
     height: 38px;
 }
-
 #whaleHelpCenterLogo{
     background: url("../../img/logo.svg") no-repeat;
     width: 100%;
@@ -101,18 +96,17 @@ header.scrolled {
     width: 100%;
     height: 38px;
 }
-
-header.scrolled #whaleSpaceLogo, #whaleSpaceLogo, #whaleSpace header.scrolled #whaleSpaceLogo{
-    background: url("../../img/gnb_logo_black.png") center / contain no-repeat;
-    width: 100%;
-    height: 38px;
-}
-
-
 #whale {
     background: url("../../img/whaleType.svg") no-repeat;
     width: 50%;
     height: 20px;
+}
+
+/* scrolled_logos */
+header.scrolled #whaleSpaceLogo, #whaleSpaceLogo, #whaleSpace header.scrolled #whaleSpaceLogo{
+    background: url("../../img/gnb_logo_black.png") center / contain no-repeat;
+    width: 100%;
+    height: 38px;
 }
 
 /*Main-Menu-Bar style*/
@@ -212,7 +206,7 @@ li.active .check{
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     border-radius: 10px;
-    background-color: white;
+    background-color: #fff;
     margin-top: 20px;
     -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
@@ -306,7 +300,7 @@ li.active .check{
 }
 
 #whaleHelpCenter #subBtn > #menuBtn{
-    color: white;
+    color: #fff;
 }
 
 .hide {
@@ -327,7 +321,7 @@ li.active .check{
     height: 100vh;
     justify-content: start;
     align-items: start;
-    background-color: white;
+    background-color: #fff;
     display: none;
 }
 
@@ -437,7 +431,7 @@ li.active .check{
     flex-wrap: wrap;
     position: fixed;
     z-index: 999;
-    background-color: white;
+    background-color: #fff;
     display: none;
 }
 #mobile-gnb-appMenu ul{
