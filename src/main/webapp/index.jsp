@@ -1,27 +1,35 @@
+<%@ page import="com.model.MemberDAO" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <%@ include file="cdns.jsp" %>
 
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/mainStyle.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/1440px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/1320px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/1280px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/960px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/800px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/Index/600px.css"/>'>
+    <!---------------------
+       JavaScript Plugin
+   ----------------------->
+    <!-- GSAP Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.0/ScrollTrigger.min.js"></script>
 
-    <title>Naver Dolphin</title>
+    <!---------------------
+       Custom Stylesheet
+   ----------------------->
+    <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mainStyle_index.css"/>'>
+    <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mediaQuery_index.css"/>'>
 </head>
 <body>
 <div id="wrap">
     <%@ include file="gnb.jsp" %>
     <main>
-        <!-- 특장점 section -->
+        <!---------------------
+            section1. 주요기능
+        ----------------------->
         <section id="feature">
+
+            <!-- 웨일 다운로드  -->
             <section class="contentsWrap" id="feature1">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -62,6 +70,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 네이버 웨일온 -->
             <section class="contentsWrap" id="feature2">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -89,6 +99,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 사이드바 -->
             <section class="contentsWrap" id="feature3">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -115,6 +127,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 더블탭 -->
             <section class="contentsWrap" id="feature4">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -142,6 +156,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 퀵서치 -->
             <section class="contentsWrap" id="feature5">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -167,6 +183,8 @@
                     </video>
                 </div>
             </section>
+
+            <!-- 웨일 캡쳐 -->
             <section class="contentsWrap" id="feature6">
                 <article class="contents-info-btn">
                     <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -181,7 +199,6 @@
                         </p>
                         <button onclick="location.href='whalehelp.html'">자세히 보기</button>
                     </div>
-
                 </article>
                 <div class="contents-video" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                      data-aos-duration="1200" data-aos-easing="ease-out" data-aos-anchor="#feature6">
@@ -195,8 +212,12 @@
             </section>
         </section>
 
-        <!-- 보안장점 section -->
+        <!---------------------
+            section2. 보안장점
+        ----------------------->
         <section id="secure">
+
+            <!-- title -->
             <div class="titleWrap">
                 <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#secure">내 정보는 안전하게</h3>
@@ -207,6 +228,8 @@
                    data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600" data-aos-anchor="#secure">네이버
                     웨일은 끊임없는 업데이트로 빈틈없는 보안 환경을 제공합니다. 안심하고 오늘의 할 일에만 집중하세요.</p>
             </div>
+
+            <!-- accordion -->
             <div class="contentsWrap">
                 <div id="accordion" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800"
                      data-aos-easing="ease-out" data-aos-delay="900" data-aos-anchor="#secure">
@@ -265,8 +288,16 @@
                 </div>
             </div>
         </section>
+
+        <!---------------------
+            section3. 웨일 환경설정
+        ----------------------->
         <section id="environment">
+
+            <!-- animation 기준 pin -->
             <div id="animation-sticky-Pin">
+
+                <!-- title -->
                 <div class="contentsWrap titleWrap">
                     <h3 class="c-whale-blue">나에게 딱 맞는 환경</h3>
                     <ul class="titles-change">
@@ -280,6 +311,8 @@
                         <li class="paragraph-change-3"><p>인터페이스와 웹 콘텐츠에 모두 적용가능한 다크모드는 사용자 눈의 피로를 줄여줍니다.</p></li>
                     </ul>
                 </div>
+
+                <!-- animation -->
                 <div class="contentsWrap">
                     <div class="contents-animation">
                         <div class="background">
@@ -316,7 +349,13 @@
             </div>
             <div id="triggerEnv0"></div>
         </section>
+
+        <!---------------------
+            section4. 웨일앱 서비스
+        ----------------------->
         <section id="appService">
+
+            <!-- 웨일앱 아이콘 이미지 -->
             <ul class="contents-whaleApps" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                 data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService">
                 <li class="webtoon shadow"></li>
@@ -325,6 +364,8 @@
                 <li class="music shadow"></li>
                 <li class="mail shadow"></li>
             </ul>
+
+            <!-- title -->
             <div class="contentsWrap titleWrap">
                 <h3 class="c-whale-blue" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
                     data-aos-duration="800" data-aos-easing="ease-out" data-aos-anchor="#appService">브라우저를 더 유용하게</h3>
@@ -335,6 +376,8 @@
                    data-aos-duration="800" data-aos-easing="ease-out" data-aos-delay="600"
                    data-aos-anchor="#appService">웨일 스토어에서 마음에 드는 확장앱을 설치하고 브라우저에 수많은 기능과 서비스를 더해보세요.</p>
             </div>
+
+            <!-- 앱 리스트_카드메뉴 -->
             <div class="contentsWrap">
                 <ul class="contents-cardList">
                     <li class="shadow" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800"
@@ -372,7 +415,13 @@
                 </ul>
             </div>
         </section>
+
+        <!---------------------
+            section5. 웨일 광고
+        ----------------------->
         <section id="adBanner">
+
+            <!-- 광고 배너 -->
             <div class="contentsWrap c-whale-white">
                 <div class="contents-info-btn">
                     <h2 class="important" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
@@ -393,6 +442,8 @@
                 <div class="cellphone">
                 </div>
             </div>
+
+            <!-- QR코드 팝업 -->
             <div class="cover">
                 <div class="contentsWrap">
                     <div class="contents-modal">
@@ -423,7 +474,6 @@
     </main>
     <%@ include file="footer.jsp" %>
 </div>
-<script src='<c:url value="/resource/JS/gnb.js"/>'></script>
 <script src='<c:url value="/resource/JS/mainJavaScript.js"/>'></script>
 </body>
 </html>

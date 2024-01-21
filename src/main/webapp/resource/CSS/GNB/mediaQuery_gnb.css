@@ -1,0 +1,176 @@
+/*1440px(데스크탑)*/
+@media screen and (max-width: 1440px) {
+    /******************************
+        - gnb Style
+    *******************************/
+
+    /* gnb_nav */
+    #gnb {
+        padding: 21px 36px;
+    }
+    #whaleSpace #gnb {
+        padding: 21px 84px;
+    }
+
+    /******************************
+        - footer Style
+    *******************************/
+
+    /* footer style */
+    .footerWrap {
+        padding: 21px 36px;
+    }
+}
+
+/*1320px(노트북)*/
+@media screen and (max-width: 1320px) {
+    /******************************
+        - gnb Style
+    *******************************/
+
+    /* gnb_nav */
+    #gnb, #whaleSpace #gnb {
+        padding: 21px 32px;
+        justify-content: space-between;
+    }
+
+    /*Main-Menu-Bar style*/
+    #main-menu {
+        display: none;
+    }
+
+    /* 우측 추가 버튼 */
+    #subBtn > button:not(.main-downloadBtn), #subBtn p.loginMark {
+        display: none;
+    }
+
+    /*메뉴버튼*/
+    #subBtn > #menuBtn {
+        display: block;
+        font-weight: lighter;
+        font-size: 22px;
+        position: relative;
+        bottom: 3px;
+        margin-left: 20px;
+    }
+    #whaleHelpCenter #subBtn > #menuBtn{
+        display: none;
+    }
+
+    /******************************
+        - footer Style
+    *******************************/
+
+    /* footer style */
+    .footerWrap {
+        padding: 21px 32px;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    /* snsIcon / 다운로드 버튼 메뉴 */
+    .footerMenu2 {
+        padding-top: 20px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+/*1280px(태블릿)*/
+@media screen and (max-width: 1280px) {
+    /******************************
+        - gnb Style
+    *******************************/
+
+    /* gnb_nav */
+    #gnb{
+        transition:all 0.1s;
+    }
+
+    /* 우측 추가 버튼 */
+    #subBtn{
+        justify-content: end;
+    }
+
+    /*다운로드 버튼*/
+    #subBtn > button > .whaleLogo{
+        display: none;
+    }
+}
+
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - gnb Style
+    *******************************/
+
+    /* header */
+    #whaleHelpCenter header{
+        height: 64px;
+    }
+    #whaleHelpCenter #gnb {
+        padding: 0 20px;
+    }
+    #whaleHelpCenter #gnb-appMenu{
+        display: none;
+    }
+    #whaleHelpCenter #subBtn > #menuBtn{
+        display: block;
+    }
+}
+
+/*600px(스마트폰)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - gnb Style
+    *******************************/
+
+    /* header */
+    header{
+        height: 64px;
+    }
+
+    /* gnb_nav */
+    #gnb, #whaleSpace #gnb {
+        padding: 0 20px;
+    }
+
+    /*Main logo*/
+    #gnb h1 {
+        align-items: center;
+    }
+
+    /* Logos */
+    #naver {
+        background: url("../../img/square_logo.png") center/contain no-repeat;
+        width: 25px;
+        height: 25px;
+        margin-right: 7px;
+    }
+    #whale {
+        width: 60px;
+        height: 20px;
+    }
+
+    /* 앱박스 & 다운로드 버튼 */
+    #gnb-appMenu, .main-downloadBtn{
+        display: none;
+    }
+
+    /******************************
+        - footer Style
+    *******************************/
+
+    /* footer style */
+    .footerWrap{
+        padding: 21px 20px;
+    }
+
+    /* footerMenu */
+    .footerMenu li{
+        margin-right: 12px;
+    }
+}

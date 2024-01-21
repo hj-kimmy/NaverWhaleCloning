@@ -1,0 +1,95 @@
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - section1#guideMain
+    *******************************/
+    /*기본 section 설정*/
+    section#guideMain {
+        height: 360px;
+    }
+
+    /*artcle*/
+    #guideMain .contentsWrap .contents-img {
+        height: 300px;
+        right: -32px;
+        align-self: end;
+    }
+
+    #guideMain .contents-info p {
+        width: 100%;
+    }
+
+    /******************************
+        - section2#update
+    *******************************/
+    /*기본 section 설정*/
+    #update {
+        padding: 56px 0 32px;
+    }
+
+    #update .contentsWrap {
+        flex-wrap: wrap;
+    }
+
+    /*업데이트 게시글 리스트*/
+    #update .contentsWrap .contents-card {
+        margin-bottom: 24px;
+        margin-right: unset;
+        width: 100%;
+    }
+
+    #update p, #press p {
+        font-size: 1.125rem;
+    }
+
+    /******************************
+        - section3#press
+    *******************************/
+    /*기본 section 설정*/
+    #press {
+        padding-bottom: 80px;
+    }
+}
+
+/*600px(스마트폰)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - section1#guideMain
+    *******************************/
+    /*기본 section 설정*/
+    section#guideMain {
+        height: 216px;
+    }
+
+    /*artcle*/
+    #guideMain .contentsWrap .contents-img {
+        height: 160px;
+        right: -20px;
+    }
+
+    /******************************
+        - section2#update
+    *******************************/
+    /*기본 section 설정*/
+    #update {
+        padding: 36px 0 6px;
+    }
+
+    #update p, #press p {
+        font-size: 1rem;
+    }
+
+    /******************************
+        - section3#press
+    *******************************/
+    /*기본 section 설정*/
+    #press {
+        padding-bottom: 80px;
+    }
+
+    #press .contentsWrap:last-child {
+        margin-top: 4px;
+    }
+
+
+}

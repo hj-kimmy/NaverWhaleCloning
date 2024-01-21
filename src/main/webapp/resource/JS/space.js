@@ -1,8 +1,10 @@
 $(function () {
+    /***************************************************
+     * 캐로셀 움직임
+     * *************************************************/
     let minCarousel = $(".contents-miniCarousel");
     let info = $(".contents-miniCarousel .contents-info li"); //이미지
     let btn = $(".contents-btn li"); //인디케이터 버튼
-    let infoNow = $(".contents-miniCarousel .contents-info li.active");
     let current = 0;
     let nextBtn = btn.eq(1);
     let prevBtn = btn.eq(0);
@@ -13,7 +15,7 @@ $(function () {
 
         current++;
 
-        if (current == 2) {
+        if (current === 2) {
             current = -1;
         }
     })
@@ -22,7 +24,7 @@ $(function () {
         info.eq(current - 1).addClass("active");
 
         current--;
-        if (current == -1) {
+        if (current === -1) {
             current = 2;
         }
     })
@@ -38,7 +40,7 @@ $(function () {
 
                 current++;
 
-                if (current == 2) {
+                if (current === 2) {
                     current = -1;
                 }
             }
@@ -57,7 +59,12 @@ $(function () {
     })
 
 
-    $("#accordion").accordion({
+    /***************************************************
+     * accordion menu 변경
+     * *************************************************/
+    let accordion = $("#accordion");
+
+    accordion.accordion({
         heightStyle: "content",
         animate: 200,
         header: "div>h4"
@@ -71,22 +78,22 @@ $(function () {
     function play2(current) {
         go = window.setInterval(function () {
             if (!isPaused2) {
-                $("#accordion").accordion({active: current});
+                accordion.accordion({active: current});
                 accordionContent.removeClass("active");
                 accordionGallery.removeClass("active");
                 accordionContent.eq(current).addClass("active");
                 accordionGallery.eq(current).addClass("active");
                 current++;
-                if (current == 4) current = 0;
+                if (current === 4) current = 0;
             }
         }, 3000);
     }
 
-    $("#accordion").on("mouseenter", function (e) {
+    accordion.on("mouseenter", function (e) {
         e.preventDefault();
         isPaused = true;
     })
-    $("#accordion").on("mouseleave", function (e) {
+    accordion.on("mouseleave", function (e) {
         e.preventDefault();
         isPaused = false;
     })
@@ -98,8 +105,8 @@ $(function () {
         accordionGallery.removeClass("active");
         accordionContent.eq(num).addClass("active")
         accordionGallery.eq(num).addClass("active");
-        $("#accordion").accordion({active: num});
-        if (num == 3) num = -1;
+        accordion.accordion({active: num});
+        if (num === 3) num = -1;
         play(num + 1);
     })
 })

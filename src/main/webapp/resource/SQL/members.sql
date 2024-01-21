@@ -26,7 +26,9 @@ values (mem_seqNum.nextval,
 
 select *
 from whale_member;
-drop table whale_member;
+
 commit;
 
 select count(*) from whale_member;
+
+drop table whale_member;

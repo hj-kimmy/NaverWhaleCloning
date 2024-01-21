@@ -39,16 +39,28 @@ public class MemberController extends HttpServlet {
         if (command.equals("/LoginAction.lo")) {
             RequestDispatcher rd = null;
             if (!requestLogin(request)) {
-                rd = request.getRequestDispatcher("./login.jsp?msg=1");
+                rd = request.getRequestDispatcher("./whale_member/login.jsp?msg=1");
             } else {
-                rd = request.getRequestDispatcher("./processLogin.jsp");
+                rd = request.getRequestDispatcher("./whale_member/processLogin.jsp");
             }
             rd.forward(request, response);
         } else if (command.equals("/joinMember.lo")) {
             requestJoinMember(request);
-            RequestDispatcher rd = request.getRequestDispatcher("./login.jsp?msg=0");
+            RequestDispatcher rd = request.getRequestDispatcher("./whale_member/login.jsp?msg=0");
             rd.forward(request, response);
-
+        }else if (command.equals("/memberInfo.lo")){
+            requestViewMember(request);
+            RequestDispatcher rd = request.getRequestDispatcher("./whale_member/updateMember.jsp");
+            rd.forward(request, response);
+        }
+        else if (command.equals("/updateMember.lo")){
+            requestUpdate(request);
+            RequestDispatcher rd = request.getRequestDispatcher("./whale_member/updateMember.jsp");
+            rd.forward(request, response);
+        }else if (command.equals("/deleteMember.lo")){
+            requestDelete(request);
+            RequestDispatcher rd = request.getRequestDispatcher("./whale_member/logout.jsp");
+            rd.forward(request, response);
         }
     }
 
@@ -87,5 +99,51 @@ public class MemberController extends HttpServlet {
         System.out.println(request.getParameter("phone"));
 
         dao.joinMember(dto);
+    }
+
+    public void requestViewMember(HttpServletRequest request) {
+        MemberDAO dao = MemberDAO.getInstance();
+        MemberDTO dto = new MemberDTO();
+        String id = request.getParameter("checkMemberInfoKeyNum");
+        dto = dao.getMemberbyIdInfo(id);
+
+        request.setAttribute("memberDTO", dto);
+    }
+
+    public void requestUpdate(HttpServletRequest request) {
+        MemberDAO dao = MemberDAO.getInstance();
+        MemberDTO dto = new MemberDTO();
+
+        dto.setId(request.getParameter("id"));
+        dto.setPassword(request.getParameter("password"));
+        dto.setEmail(request.getParameter("email"));
+        dto.setName(request.getParameter("name"));
+        dto.setBirth(request.getParameter("birth"));
+        dto.setGender(request.getParameter("gender"));
+        dto.setItc(request.getParameter("itc"));
+        dto.setPhone(request.getParameter("phone"));
+
+        System.out.println(request.getParameter("id"));
+        System.out.println(request.getParameter("password"));
+        System.out.println(request.getParameter("email"));
+        System.out.println(request.getParameter("name"));
+        System.out.println(request.getParameter("birth"));
+        System.out.println(request.getParameter("gender"));
+        System.out.println(request.getParameter("itc"));
+        System.out.println(request.getParameter("phone"));
+
+        dao.updateMember(dto);
+
+        String id = request.getParameter("id");
+
+        dto = dao.getMemberbyIdInfo(id);
+        request.setAttribute("memberDTO", dto);
+    }
+
+    public void requestDelete(HttpServletRequest request) {
+        MemberDAO dao = MemberDAO.getInstance();
+        String id = request.getParameter("id");
+
+        dao.deleteMember(id);
     }
 }

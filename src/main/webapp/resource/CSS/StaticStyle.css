@@ -1,3 +1,228 @@
+/******************************
+    - reset Style
+*******************************/
+:root {
+    --blue: #2187ec;
+    --gray: #777777;
+    --gray1: #ccc;
+    --gray2: #cecece;
+    --lightgray: #e5e5e5;
+    --lightgray2: #f5f7fa;
+    --navergreen: #3fc754;
+    --green: #03cf5d;
+    --helpBlue: #3f5bf3;
+    --whaleSea: #40c3a7
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*border: 1px solid blue;*/
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+    color: #000;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+}
+
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    resize: none;
+}
+
+fieldset {
+    border: none;
+}
+
+body, input, textarea, select, button, table {
+    font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+body#whaleHelpCenter, #whaleHelpCenter input, #whaleHelpCenter select, #whaleHelpCenter button, #whaleHelpCenter table {
+    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
+}
+
+input::placeholder {
+    color: var(--gray1);
+}
+
+/******************************
+    - wrap Style
+*******************************/
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+#wrap {
+    width: 100%;
+    height: 100%;
+}
+
+/******************************
+    - Main Style
+*******************************/
+main {
+    margin-top: 80px;
+}
+
+#whaleHelpCenter main, #whaleSpace main {
+    margin-top: 0;
+}
+
+/******************************
+    - h, p tag Style (theme)
+*******************************/
+h1, h2, h3, h4, h5, h6, p {
+    word-break: keep-all;
+    line-height: 150%;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+}
+
+/* h1 : pange MainSection title */
+h1 {
+    font-size: 3.125rem;
+}
+
+/* h1: 강조 title */
+h1.important {
+    font-size: 3.5em;
+}
+
+/* h1: 강조 title size UP*/
+h1.important.big {
+    font-size: 4rem;
+}
+
+/* h2 : WebPage SubSection title */
+h2 {
+    font-size: 2.5rem;
+}
+
+/* h2 : WebPage SubSection title 중 size down */
+h2.sub {
+    font-size: 2.25rem;
+}
+
+/* h2 : subSection title */
+h2.important {
+    font-size: 1.875rem;
+}
+
+/* h3 : WebPage title~sub description title */
+h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+/* h3 : WebPage title~sub description title size가 조금 작은 ver*/
+h3.small {
+    font-size: 1.4375rem;
+}
+
+/* h4 : WebPage contents title ~ mostly li contents */
+h4 {
+    font-size: 1.625rem;
+}
+
+/* h5 : box 형태 컨텐츠 title */
+h5, h5.boxtitle {
+    font-size: 1.125rem;
+}
+
+/* h6 : 로그인 메뉴 관련 제목*/
+h6{
+    font-size: 1.2rem;
+}
+
+/* P : WebPage contents paragraph-default */
+p {
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin-top: 12px;
+}
+
+/* P 기본보다 약간 작은 font */
+p.small {
+    font-size: 1rem;
+}
+
+/* 작은폰트 _ 부가 설명용 */
+p.smallest {
+    font-size: 0.875rem;
+}
+
+/*큰 폰트 - 강조용*/
+p.big {
+    font-size: 1.25rem;
+}
+
+/*p.short - 태블릿 / 스마트폰 이하 사이즈 text*/
+p.short {
+    display: none;
+}
+
+p.short_960 {
+    display: none;
+}
+
+p.stick {
+    margin-top: 0;
+    font-size: 1.125rem;
+}
+
+/*밑줄*/
+.underline {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.underline:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-bottom: 1px solid var(--gray);
+}
+
+/*줄바꿈*/
+br.br-1280 {
+    display: none;
+}
+
+br.br-770 {
+    display: none;
+}
+
+br.br-600 {
+    display: none;
+}
+
+br.br-960d {
+    display: none;
+}
+
+/******************************
+    - BootStrap_Embeded
+*******************************/
 /*bootStrap*/
 .embed-responsive {
     position: relative;
@@ -45,6 +270,7 @@
 .position-absolute {
     position: absolute !important;
 }
+
 .position-relative {
     position: relative !important;
 }
@@ -57,177 +283,10 @@
     font-weight: 700 !important;
 }
 
-.contents-movingObject{
-    animation: move 5s ease 0s infinite normal none running ;
-    position: absolute;
-    scale: 0.9;
-    z-index: 3;
-    transition: all 0.2s;
-}
-
-@keyframes move {
-    0%{
-        transform: rotate(0deg) translateY(10%);
-    }
-    50%{
-        transform: rotate(10deg) translateY(0);
-    }
-    100%{
-        transform: rotate(0deg) translateY(10%);
-    }
-}
-
-
 /******************************
-    - reset Style
+    - custom util Style
 *******************************/
-:root {
-    --blue: #2187ec;
-    --gray: #777777;
-    --lightgray: #e5e5e5;
-    --green: #03cf5d;
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /*border: 1px solid blue;*/
-}
-
-li {
-    list-style: none;
-}
-
-a {
-    display: block;
-    text-decoration: none;
-    width: 100%;
-    height: 100%;
-    color: #000;
-}
-
-body, input, textarea, select, button, table {
-    font-family: AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
-}
-body#whaleHelpCenter, #whaleHelpCenter input, #whaleHelpCenter select, #whaleHelpCenter button, #whaleHelpCenter table{
-    font-family: 'Noto Sans KR', AppleSDGothicNeo-Regular, 'Malgun Gothic', '맑은 고딕', dotum, '돋움', sans-serif;
-
-}
-
-/******************************
-    - wrap Style
-*******************************/
-html, body {
-    width: 100%;
-    height: 100%;
-}
-
-#wrap {
-    width: 100%;
-    height: 100%;
-}
-
-/******************************
-    - Main Style
-*******************************/
-main {
-    margin-top: 80px;
-}
-
-#whaleHelpCenter main, #whaleSpace main{
-    margin-top: 0;
-}
-
-
-/******************************
-    - tag Style (theme)
-*******************************/
-h1, h2, h3, h4, h5, h6, p {
-    word-break: keep-all;
-    line-height: 150%;
-}
-
-
-
-h1, h2, h3, h4, h5, h6 {
-    font-weight: 700;
-}
-
-/* h1 : pange MainSection title */
-h1 {
-    font-size: 3.125rem;
-}
-
-/* h1 : WebPage -important- MainSection title */
-h1.important {
-    font-size: 3.5em;
-}
-h1.important.big{
-    font-size: 4rem;
-}
-
-/* h2 : WebPage SubSection title */
-h2 {
-    font-size: 2.5rem;
-}
-h2.sub{
-    font-size: 2.25rem;
-}
-
-h2.important {
-    font-size: 1.875rem;
-}
-
-/* h3 : WebPage title~sub description title */
-h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-h3.small{
-    font-size: 1.4375rem;
-}
-
-/* h4 : WebPage contents title ~ mostly li contents */
-h4 {
-    font-size: 1.625rem;
-}
-
-h5, h5.boxtitle{
-    font-size: 1.125rem;
-}
-
-
-/* P : WebPage contents paragraph-default */
-p {
-    font-weight: 400;
-    font-size: 1.125rem;
-    margin-top: 12px;
-}
-p.small{
-    font-size: 1rem;
-}
-p.smallest{
-    font-size: 0.875rem;
-}
-p.big{
-    font-size: 1.25rem;
-}
-p.short{
-    display: none;
-}
-p.short_960{
-    display: none;
-}
-p.stick{
-    margin-top: 0;
-    font-size: 1.125rem;
-}
-p.loginMark{
-    margin: 0 20px 0 0;
-    font-size: 0.8rem;
-}
-
+/*기본 버튼 스타일*/
 button {
     font-size: 0.9375rem;
     padding: 12px 15px;
@@ -236,60 +295,34 @@ button {
     align-items: center;
     justify-content: center;
     border: 1px solid var(--lightgray);
-    -webkit-border-radius: 7px;
-    -moz-border-radius: 7px;
     border-radius: 7px;
     background-color: transparent;
     cursor: pointer;
 }
 
-button>a{
+button > a {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
+/*웨일 버튼_웨일그린색*/
 button.whale-Button {
     font-size: 1.025rem;
     border: none;
-    background-color: #40c3a7;
+    background-color: var(--whaleSea);
     color: white;
     font-weight: bold;
 }
-button.whale-Button>a{
+
+button.whale-Button > a {
     color: white;
 }
 
+/*사이즈 작은 버튼*/
 button.small {
     padding: 6px 15px;
     font-size: 0.8125rem;
-}
-
-button.blueButton{
-    text-align: center;
-    padding: 14px 28px 14px 20px;
-    border: none;
-    -webkit-border-radius: 50px;
-    -moz-border-radius: 50px;
-    border-radius: 50px;
-    background-color: #1f30aa;
-    color: white;
-    font-size: 1.125rem;
-}
-
-.underline{
-    position: relative;
-    margin-bottom: 20px;
-}
-
-.underline:after{
-    content : "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-bottom: 1px solid var(--gray);
 }
 
 .whaleLogo {
@@ -302,26 +335,19 @@ button.blueButton{
     margin-right: 5px;
 }
 
-.xBtn{
+/* xButton */
+.xBtn {
+    font-variation-settings: 'FILL' 0,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24;
     cursor: pointer;
+    width: 30px;
+    font-size: 30px;
+    color: var(--gray);
 }
 
-button.whale-Button.small .whaleLogo {
-    width: 24px;
-    height: 24px;
-}
-
-.whaleLogo-black{
-    background: url(../img/whale_black.svg) center / contain no-repeat;
-}
-
-.whaleLogo-white {
-    background: url(../img/whale_white.svg) center / contain no-repeat;
-}
-.whaleLogo-color{
-    background: url(../img/whale_color.svg) center / contain no-repeat;
-}
-
+/*button 호버*/
 button:hover {
     background-color: var(--lightgray);
 }
@@ -330,30 +356,48 @@ button.whale-Button:hover {
     background-color: #05AF96;
 }
 
-br.br-1280{
-    display: none;
+/*whale Logs*/
+.whaleLogo-black {
+    background: url(../img/whale_black.svg) center / contain no-repeat;
 }
 
-br.br-770 {
-    display: none;
+.whaleLogo-white {
+    background: url(../img/whale_white.svg) center / contain no-repeat;
 }
 
-br.br-600 {
-    display: none;
+.whaleLogo-color {
+    background: url(../img/whale_color.svg) center / contain no-repeat;
 }
 
-br.br-960d{
-    display: none;
+button.whale-Button.small .whaleLogo {
+    width: 24px;
+    height: 24px;
 }
 
-
-.tag{
+/*Tag 스타일*/
+.tag {
     font-size: 0.8125rem;
     font-weight: bold;
     padding: 3px 10px;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
     border-radius: 100px;
+}
+
+/*hevc_포맷 비디오*/
+.hevcVideo {
+    display: none;
+}
+
+/*에러 메세지*/
+.errmsg {
+    font-size: 0.825rem;
+    color: red;
+}
+
+/*생략*/
+.omitted {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
 }
 
 /******************************
@@ -381,7 +425,7 @@ br.br-960d{
     color: var(--gray);
 }
 
-.c-whale-gradient{
+.c-whale-gradient {
     background: linear-gradient(90deg, rgb(66, 207, 199) 25.78%, rgb(123, 91, 249) 76.75%);
     -webkit-background-clip: text;
     background-clip: text;
@@ -389,16 +433,19 @@ br.br-960d{
     -webkit-box-decoration-break: clone;
     clip-path: inset(1px);
 }
-.bg-whale-gradient1{
+
+.bg-whale-gradient1 {
     background: linear-gradient(90deg, rgb(66, 207, 199) 25.78%, rgb(123, 91, 249) 76.75%);
 }
-.bg-whale-gradient2{
+
+.bg-whale-gradient2 {
     background: linear-gradient(97.06deg, rgb(1, 217, 210) 1.54%, rgb(1, 60, 255) 100%);
 }
 
+/******************************
+    - effect Style (theme)
+*******************************/
 .shadow {
-    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
 
@@ -423,6 +470,11 @@ section {
     padding: 0 84px;
     margin: 0 auto;
 }
+
+.contentsWrap.h-full {
+    height: 100%;
+}
+
 .contentsWrap.middle {
     max-width: 1136px;
     padding: 0 5%;
@@ -438,12 +490,63 @@ section {
 }
 
 /******************************
-    - animation start point
+⭐⭐⭐custom components style
 *******************************/
-.titleAni .subtitleAni .paragraphAni .buttonAni .videoAni {
+/******************************
+    - contents-box style
+*******************************/
+/*컨텐츠 박스*/
+.contents-box {
     position: relative;
-    top: -5%;
-    opacity: 0;
+    max-width: 362px;
+    width: 100%;
+    flex: 1 1 auto;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    border-radius: 40px;
+    box-shadow: rgba(157, 182, 221, 0.2) 15px 10px 30px, rgba(157, 182, 221, 0.2) 15px 15px 24px;
+    padding-bottom: 50px;
+    margin-right: 25px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+
+.contents-box:last-of-type {
+    margin-right: 0;
+}
+
+.contents-box:hover {
+    transform: translateY(-10px);
+}
+
+/******************************
+    - contents-movingObject style
+*******************************/
+/*whaleSpace 애니메이션 오브젝트*/
+.contents-movingObject {
+    width: auto;
+    animation: move 5s ease 0s infinite normal none running;
+    position: absolute;
+    scale: 0.9;
+    z-index: 3;
+    transition: all 0.2s;
+}
+
+/*.contents-movingObject 애니메이션*/
+@keyframes move {
+    0% {
+        transform: rotate(0deg) translateY(10%);
+    }
+    50% {
+        transform: rotate(10deg) translateY(0);
+    }
+    100% {
+        transform: rotate(0deg) translateY(10%);
+    }
 }
 
 /******************************
@@ -462,11 +565,7 @@ section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    -webkit-border-radius: 40px;
-    -moz-border-radius: 20px;
     border-radius: 20px;
-    -webkit-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
     box-shadow: 0 0 14px rgba(0, 0, 0, 0.1);
 }
 
@@ -482,6 +581,7 @@ section {
     width: 84px;
     height: 84px;
 }
+
 .contents-cardList li p {
     margin-top: 6px;
 }
@@ -490,56 +590,53 @@ section {
     flex: 1 1 auto;
     margin-left: 24px;
 }
-header .cover{
-    position: fixed;
-    z-index: 99;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.7);
-    display: none;
-}
 
-.cover{
+/******************************
+    - modal style
+*******************************/
+.cover {
     position: fixed;
     z-index: 9999;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     display: none;
 }
-.cover>.contentsWrap{
+
+header .cover {
+    z-index: 99;
+}
+
+.cover > .contentsWrap {
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.contents-modal{
+.contents-modal {
     position: relative;
     z-index: 999999;
     display: flex;
     justify-content: center;
     align-items: start;
     background: #fff;
-    -webkit-border-radius: 16px ;
-    -moz-border-radius: 16px ;
-    border-radius: 16px ;
+    border-radius: 16px;
     overflow: hidden;
 }
 
-.contents-modal .xBtn{
+.contents-modal .xBtn {
     position: absolute;
     top: 10px;
     right: 10px;
-    color: var(--gray);
-    cursor: pointer;
 }
 
-section#guideList {
+/******************************
+    - 게시판 style
+*******************************/
+#guideList {
     margin: 30px 0 60px;
 }
 
@@ -549,6 +646,7 @@ section#guideList {
 
 }
 
+/*게시판 필터 버튼*/
 #guideList ul.contents-btns {
     display: flex;
     justify-content: start;
@@ -613,6 +711,7 @@ section#guideList {
     width: 100%;
 }
 
+/*게시판 페이징 버튼*/
 #guideList > .contents-btns {
     display: flex;
     justify-content: center;
@@ -674,40 +773,67 @@ section#guideList {
     font-size: 20px;
 }
 
+/*1440px(데스크탑)*/
 @media screen and (max-width: 1440px) {
+    /******************************
+        - layout Style
+    *******************************/
     .contentsWrap {
         padding: 0 36px;
     }
 }
 
+/*1320px(노트북)*/
 @media screen and (max-width: 1320px) {
+    /******************************
+        - layout Style
+    *******************************/
     .contentsWrap {
         padding: 0 32px;
     }
 }
 
+/*1280px(태블릿)*/
 @media screen and (max-width: 1280px) {
-    .contents-movingObject {
-        scale: 0.8;
-    }
+    /******************************
+        - h, p tag Style (theme)
+    *******************************/
     h1, h1.important {
         font-size: 2.875rem;
     }
-    .contentsWrap.small{
-        padding: 0 32px;
-    }
 
-    h2.earlySmall{
+    h2.earlySmall {
         font-size: 1.875rem;
     }
-    h5{
+
+    h5 {
         font-size: 1.5rem;
     }
 
-    br.br-1280{
+    br.br-1280 {
         display: block;
     }
 
+    /******************************
+        - layout Style
+    *******************************/
+    .contentsWrap.small {
+        padding: 0 32px;
+    }
+
+    /******************************
+    ⭐⭐⭐custom components style
+    *******************************/
+    /******************************
+        - contents-movingObject style
+    *******************************/
+    .contents-movingObject {
+        scale: 0.8;
+    }
+
+    /******************************
+        - cardList style
+    *******************************/
     .contents-cardList li {
         width: 100%;
         max-width: none;
@@ -723,30 +849,32 @@ section#guideList {
     }
 }
 
+/*960px(태블릿)*/
 @media screen and (max-width: 960px) {
-    .contents-movingObject {
-        scale: 0.6;
-    }
-
-    h1.important.big{
+    /******************************
+        - h, p tag Style (theme)
+    *******************************/
+    h1.important.big {
         font-size: 2.875rem;
     }
 
     h1, h1.important {
         font-size: 2.5rem;
     }
-    h1.help_title{
+
+    h1.help_title {
         font-size: 1.875rem;
     }
 
     h2 {
         font-size: 1.875rem;
     }
-    h2.sub.early{
+
+    h2.sub.early {
         font-size: 1.625rem;
     }
 
-    h3{
+    h3 {
         font-size: 1.25rem;
     }
 
@@ -754,83 +882,124 @@ section#guideList {
         font-size: 1rem;
     }
 
-    p.long_960{
+    p.long_960 {
         display: none;
     }
-    p.short_960{
+
+    p.short_960 {
         display: block;
     }
 
-    br.br-960{
+    br.br-960 {
         display: none;
     }
-    br.br-960d{
+
+    br.br-960d {
         display: block;
     }
-    .contentsWrap.small{
+
+    /******************************
+        - layout Style
+    *******************************/
+    .contentsWrap.small {
         padding: 0 20px;
     }
-    .contentsWrap.middle{
+
+    .contentsWrap.middle {
         padding: 0 32px;
     }
+
+    /******************************
+    ⭐⭐⭐custom components style
+    *******************************/
+    /******************************
+        - contents-box style
+    *******************************/
+    .contents-box {
+        margin-right: 0;
+        margin-bottom: 30px;
+    }
+
+    .contents-box:last-of-type {
+        margin-right: 0;
+        margin-bottom: 0;
+    }
+
+    /******************************
+        - contents-movingObject style
+    *******************************/
+    .contents-movingObject {
+        scale: 0.6;
+    }
 }
-@media screen and (max-width: 800px){
-    h2.important{
+
+/*800px(태블릿)*/
+@media screen and (max-width: 800px) {
+    /******************************
+        - h, p tag Style (theme)
+    *******************************/
+    h2.important {
         font-size: 1.5rem;
     }
 }
 
-@media screen and (max-width: 770px){
-    button.blueButton{
-        padding: 12px 20px 12px 12px;
-        font-size: 1rem;
-    }
-    h2.earlySmall2, h2.earlySmall{
+/*770px(스마트폰)*/
+@media screen and (max-width: 770px) {
+    /******************************
+        - h, p tag Style (theme)
+    *******************************/
+    h2.earlySmall2, h2.earlySmall {
         font-size: 1.5rem;
     }
 
-    h5{
+    h5 {
         font-size: 1rem;
     }
 
-    br.br-770{
+    br.br-770 {
         display: block;
     }
 }
+
+/*740px(스마트폰)*/
 @media screen and (max-width: 740px) {
-    #guideList p{
+    /******************************
+    ⭐⭐⭐custom components style
+    *******************************/
+    /******************************
+        - 게시판 style
+    *******************************/
+    #guideList p {
         flex-wrap: wrap;
     }
-    #guideList p span{
+
+    #guideList p span {
         display: block;
         width: 100%;
     }
-    #guideList p span:first-child{
+
+    #guideList p span:first-child {
         margin-bottom: 10px;
     }
 }
 
+/*600px(스마트폰)*/
 @media screen and (max-width: 600px) {
     /******************************
-    - Main Style
+        - Main Style
     *******************************/
-
     main {
         margin-top: 64px;
     }
-    .contents-movingObject {
-        scale: 0.4;
-    }
 
-    .contentsWrap, .contentsWrap.middle {
-        padding: 0 20px;
-    }
-
+    /******************************
+        - h, p tag Style (theme)
+    *******************************/
     h1, h1.important, h1.important.big {
         font-size: 1.875rem;
     }
 
-    h2.sub{
+    h2.sub {
         font-size: 1.625rem;
     }
 
@@ -838,32 +1007,63 @@ section#guideList {
         font-size: 1.5rem;
     }
 
-    h3{
+    h3 {
         font-size: 1rem;
     }
 
     h4 {
         font-size: 1.125rem;
     }
-    h5.boxtitle{
+
+    h5.boxtitle {
         font-size: 1.025rem;
     }
+
     p, p.small, p.big, p.smallest {
         margin-top: 6px;
         font-size: 0.875rem;
     }
-    p.stick{
+
+    p.stick {
         font-size: 1rem;
     }
 
-    p.long{
+    p.long {
         display: none;
     }
-    p.short{
+
+    p.short {
         display: block;
     }
 
+    br.br-600 {
+        display: block;
+    }
 
+    br.br-600r {
+        display: none;
+    }
+
+    /******************************
+        - layout Style
+    *******************************/
+    .contentsWrap, .contentsWrap.middle {
+        padding: 0 20px;
+    }
+
+    /******************************
+    ⭐⭐⭐custom components style
+    *******************************/
+    /******************************
+        - contents-movingObject style
+    *******************************/
+    .contents-movingObject {
+        scale: 0.4;
+    }
+
+    /******************************
+        - cardList style
+    *******************************/
     .contents-cardList li {
         padding: 20px;
     }
@@ -876,12 +1076,4 @@ section#guideList {
     .contents-cardList li div:nth-of-type(2) {
         margin-left: 12px;
     }
-
-    br.br-600 {
-        display: block;
-    }
-    br.br-600r{
-        display: none;
-    }
-
 }

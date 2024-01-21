@@ -1,0 +1,118 @@
+/*1280px(태블릿)*/
+@media screen and (max-width: 1280px) {
+    /******************************
+        - section1#infoCarousel
+    *******************************/
+    /*캐로셀*/
+    #infoCarousel #myCarousel {
+        width: 744px;
+        height: 356px;
+    }
+
+    #infoCarousel #myCarousel .f-carousel__viewport{
+        height: 316px;
+    }
+    #infoCarousel .f-carousel__slide .contents-info{
+        padding: 60px 70px 0;
+    }
+    #infoCarousel .f-carousel__slide .contents-info h1{
+        font-size: 2.4rem;
+        line-height: 120%;
+    }
+    #infoCarousel .f-carousel__slide .contents-info p{
+        width: 390px;
+        font-size: 1rem;
+    }
+
+    /* sorted item */
+    .element-item {
+        width: calc((100% - 72px)/3);
+    }
+}
+
+/*960px(태블릿)*/
+@media screen and (max-width: 960px) {
+    /******************************
+        - section1#infoCarousel
+    *******************************/
+    /*캐로셀*/
+    #infoCarousel #myCarousel {
+        width: 320px;
+        height: 340px;
+    }
+
+    #infoCarousel #myCarousel .f-carousel__viewport{
+        height: 300px;
+    }
+    #infoCarousel .f-carousel__slide .contents-info{
+        padding: 30px 22px;
+    }
+    #infoCarousel .f-carousel__slide .contents-info h1{
+        font-size: 1.425rem;
+        line-height: 120%;
+    }
+    #infoCarousel .f-carousel__slide .contents-info p{
+        width: 100%;
+        font-size: 0.925rem;
+    }
+
+    /*캐로셀 이미지*/
+    #infoCarousel .f-carousel__slide:nth-of-type(1){
+        background: url("../../img/service_mobile_banner01.png") center / cover no-repeat;
+    }
+    #infoCarousel .f-carousel__slide:nth-of-type(2){
+        background: url("../../img/service_mobile_banner02.png") center/ cover no-repeat;
+    }
+
+    /******************************
+        - section2#whaleEduCerf
+    *******************************/
+    /*기본 section 설정*/
+    section#whaleEduCerf{
+        margin-top: 20px;
+        padding: 55px 0 110px;
+    }
+    #whaleEduCerf .contentsWrap:nth-of-type(2){
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 110px;
+    }
+
+    /*컨텐츠박스 개별 스타일설정*/
+    section#whaleEduCerf .contentsWrap .contents-box{
+        max-width: 407px;
+        margin-top: 30px;
+    }
+    section#whaleEduCerf .contentsWrap .contents-box:first-of-type{
+        margin-top: 0;
+    }
+}
+
+/*850px(태블릿)*/
+@media screen and (max-width: 850px) {
+    /******************************
+        - section2#whaleEduCerf
+    *******************************/
+    /* sorted item */
+    .element-item {
+        width: calc((100% - 48px)/2);
+    }
+}
+
+/*600px(스마트폰)*/
+@media screen and (max-width: 600px) {
+    /******************************
+        - section2#whaleEduCerf
+    *******************************/
+    /*기본 section 설정*/
+    section#whaleEduCerf{
+        padding: 50px 0 100px;
+    }
+    #whaleEduCerf .contentsWrap:nth-of-type(2){
+        margin-bottom: 100px;
+    }
+    /* sorted item */
+    .element-item {
+        width: calc(100% - 24px);
+    }
+}

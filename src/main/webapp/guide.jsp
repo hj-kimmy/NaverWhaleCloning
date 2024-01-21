@@ -14,11 +14,9 @@
 <head>
     <%@ include file="cdns.jsp" %>
 
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/guide/mainStyle.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/guide/960px.css"/>'>
-    <link rel="stylesheet" href='<c:url value="/resource/CSS/guide/600px.css"/>'>
+    <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mainStyle_guideMain.css"/>'>
+    <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mediaQuery_guideMain.css"/>'>
 
-    <title>Naver Dolphin</title>
 </head>
 <body>
 <div id="wrap">

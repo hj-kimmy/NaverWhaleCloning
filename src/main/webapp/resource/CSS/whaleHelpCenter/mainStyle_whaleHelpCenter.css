@@ -1,0 +1,189 @@
+/******************************
+    - section1#helpSearch Style
+*******************************/
+/*기본 section 설정*/
+section#helpSearch {
+    height: 460px;
+    padding: 140px 0 91px;
+    background: var(--helpBlue);
+}
+
+/*검색창*/
+#helpSearch form {
+    margin: 36px auto;
+    width: 100%;
+    max-width: 800px;
+    height: 52px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    padding: 0 14px;
+    border-radius: 10px;
+}
+
+#helpSearch form img {
+    width: auto;
+}
+
+#helpSearch form input {
+    width: 100%;
+    border: none;
+    font-size: 1rem;
+    padding-left: 10px;
+}
+
+#helpSearch form input::placeholder {
+    color: var(--lightgray);
+}
+
+/*검색 필터*/
+#helpSearch .contents-tabButton {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+#helpSearch .contents-tabButton li {
+    padding: 10px 20px;
+    margin-right: 5px;
+    list-style: none;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 0.9375rem;
+    font-weight: bold;
+}
+
+/*검색필터 active*/
+#helpSearch .contents-tabButton li.active {
+    color: var(--helpBlue);
+    background: #fff;
+}
+
+#helpSearch .contents-tabButton li:last-child {
+    margin-right: 0;
+}
+
+/******************************
+    - section2#questions
+*******************************/
+/*기본 section 설정*/
+section#questions, section#tutorial {
+    padding: 150px 0;
+}
+
+/*자주묻는 질문 리스트*/
+#questions .contents-tabList {
+    margin-top: 20px;
+    width: 100%;
+}
+
+#questions .contents-tabList ul.contents-tabs {
+    display: none;
+    width: 100%;
+}
+
+/*활성화된 질문 리스트*/
+#questions .contents-tabList ul.contents-tabs.active {
+    display: block;
+}
+
+#questions .contents-tabList ul.contents-tabs li {
+    width: 100%;
+    border-bottom: 1px solid var(--lightgray);
+}
+
+#questions .contents-tabList ul.contents-tabs li a {
+    padding: 22px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#questions .contents-tabList ul.contents-tabs li a span:nth-of-type(2) {
+    color: var(--lightgray);
+}
+
+/******************************
+    - section3#tutorial
+*******************************/
+/*기본 section 설정*/
+section#tutorial {
+    background-color: #eff2fd;
+}
+
+/*컨텐츠 박스 설정*/
+#tutorial .contents-boxes {
+    flex-wrap: wrap;
+    display: none;
+}
+
+/*컨텐츠 박스 active*/
+#tutorial .contents-boxes.active {
+    display: flex;
+}
+
+#tutorial .contents-box-square {
+    width: calc((100% - 48px) / 3);
+    height: 144px;
+    background-color: #fff;
+    margin-right: 24px;
+    margin-top: 24px;
+    display: flex;
+    cursor: pointer;
+    align-items: center;
+}
+
+/*컨텐츠박스 내부 이미지*/
+.contents-box-square .contents-img {
+    width: 100%;
+    max-width: 111px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contents-box-square .contents-img img {
+    width: 41px;
+}
+
+/*컨텐츠박스 내부 설명*/
+.contents-box-square .contents-info {
+    padding-right: 38px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contents-box-square .contents-info p.small {
+    margin-top: 6px;
+}
+
+#tutorial .contents-box-square:nth-of-type(3n) {
+    margin-right: 0;
+}
+
+/******************************
+    - section4#goToHome
+*******************************/
+/*기본 section 설정*/
+section#goToHome {
+    padding: 100px 0;
+}
+
+/*이동버튼*/
+#goToHome .contents-info-btn {
+    margin: 0 auto;
+    text-align: center;
+}
+
+#goToHome .contents-info-btn button {
+    width: 280px;
+    display: inline-block;
+    margin-top: 40px;
+    font-weight: bold;
+    padding: 15px;
+    color: #fff;
+    border: none;
+    background-color: var(--helpBlue);
+}
+
+

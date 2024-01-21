@@ -1,8 +1,13 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
+<!---------------------
+footer
+----------------------->
 <footer>
   <div class="footerWrap">
+
+    <!-- footer Menu -->
     <ul class="footerMenu">
       <li>이용약관</li>
       <li><b>개인정보 처리방침</b></li>
@@ -11,6 +16,8 @@
       <li>고객센터</li>
       <li>&copy; NAVER Corp.</li>
     </ul>
+
+    <!-- snsIcon & 버튼메뉴 -->
     <div class="footerMenu2">
       <ul class="snsIcons">
         <li><img src='<c:url value="/resource/img/blog.png"/>' alt=""></li>
@@ -25,3 +32,6 @@
     </div>
   </div>
 </footer>
+
+<script src='<c:url value="/resource/JS/gnb.js"/>'></script>
+<script src='<c:url value="/resource/JS/default.js"/>'></script>

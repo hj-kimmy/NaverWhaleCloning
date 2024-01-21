@@ -1,9 +1,11 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%
-    String sessionID = (String)session.getAttribute("sessionID");
+    String sessionID = (String) session.getAttribute("sessionID");
 %>
-
+<!---------------------
+Header
+----------------------->
 <header>
     <!-- gnb_default -->
     <nav id="gnb">
@@ -13,6 +15,8 @@
                 <div id="whale"></div>
             </a>
         </h1>
+
+        <!-- Top-MainMenu -->
         <ul id="main-menu">
             <li class="active" id="home"><a href='<c:url value="/index.jsp"/>' class="check">홈</a>
             </li>
@@ -46,6 +50,8 @@
             <li><a href="whaleSpace.html">웨일 스페이스</a></li>
             <li><a href="whaleBook_Index.html">웨일북</a></li>
         </ul>
+
+        <!-- 서브메뉴 버튼 -->
         <div id="subBtn">
             <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
                 <div class="whaleLogo whaleLogo-black"></div>
@@ -53,7 +59,8 @@
             </button>
             <c:choose>
                 <c:when test='<%= sessionID == null %>'>
-                    <button class="small c" onclick="location.href = '<c:url value="/login.jsp?where=whale&?msg=0"/>'">
+                    <button class="small c"
+                            onclick="location.href = '<c:url value="/whale_member/login.jsp?where=whale&?msg=0"/>'">
                         로그인
                     </button>
                 </c:when>
@@ -62,13 +69,23 @@
                         <p class="loginMark c-whale-blue"><%= sessionID %>님 로그인</p>
                         <div class="subMenuBoxWrap">
                             <ul class="subMenuBox hide">
-                                <li><a href='<c:url value="/logout.jsp"/>'>로그아웃</a></li>
-                                <li><a href="details_Omnitasking.html">회원정보수정</a></li>
+                                <li><a href='<c:url value="/whale_member/logout.jsp"/>'>로그아웃</a></li>
+                                <li>
+                                    <a onclick="document.perInfo.submit()">
+                                        <form name="perInfo" action='<c:url value="/memberInfo.lo"/>' method="post">
+                                            <input type="hidden" value="<%=sessionID%>" name="checkMemberInfoKeyNum">
+                                            회원정보수정
+                                        </form>
+                                    </a>
+                                </li>
+
                             </ul>
                         </div>
                     </div>
                 </c:otherwise>
             </c:choose>
+
+            <!-- App Menu -->
             <div id="gnb-appMenu">
                 <img src='<c:url value="/resource/img/apps.svg"/>' alt="바로가기" title="바로가기">
                 <ul class="subMenuBox hide">
@@ -77,16 +94,26 @@
                     </li>
                     <li>
                         <ul class="appMenu-Apps">
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale.png"/>' alt="">마이 액티비티</a></li>
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_store.png"/>' alt="">웨일 스토어</a></li>
-                            <li><a href="whalehelp.html"><img src='<c:url value="/resource/img/ic_help.png"/>' alt="">웨일 헬프센터</a></li>
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_lab.png"/>' alt="">웨일 연구소</a></li>
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_dev.png"/>' alt="">웨일 개발자센터</a></li>
-                            <li><a href='<c:url value="/index.jsp"/>'><img src='<c:url value="/resource/img/ic_whaleon.png"/>' alt="">웨일온</a></li>
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whaleon_study.png"/>' alt="">웨일온 스터디</a></li>
-                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_class.png"/>' alt="">웨일 클래스</a></li>
-                            <li><a href="whaleSpace.html"><img src='<c:url value="/resource/img/ic_whalespace.png"/>' alt="">웨일 스페이스</a></li>
-                            <li><a href="whaleBook_Index.html"><img src='<c:url value="/resource/img/ic_whalebook.png"/>' alt="">웨일북</a></li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale.png"/>' alt="">마이 액티비티</a>
+                            </li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_store.png"/>' alt="">웨일
+                                스토어</a></li>
+                            <li><a href="whalehelp.html"><img src='<c:url value="/resource/img/ic_help.png"/>' alt="">웨일
+                                헬프센터</a></li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_lab.png"/>' alt="">웨일 연구소</a>
+                            </li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_dev.png"/>' alt="">웨일
+                                개발자센터</a></li>
+                            <li><a href='<c:url value="/index.jsp"/>'><img
+                                    src='<c:url value="/resource/img/ic_whaleon.png"/>' alt="">웨일온</a></li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whaleon_study.png"/>' alt="">웨일온 스터디</a>
+                            </li>
+                            <li><a href=""><img src='<c:url value="/resource/img/ic_whale_class.png"/>' alt="">웨일
+                                클래스</a></li>
+                            <li><a href="whaleSpace.html"><img src='<c:url value="/resource/img/ic_whalespace.png"/>'
+                                                               alt="">웨일 스페이스</a></li>
+                            <li><a href="whaleBook_Index.html"><img
+                                    src='<c:url value="/resource/img/ic_whalebook.png"/>' alt="">웨일북</a></li>
                             <li><a href=""><img src='<c:url value="/resource/img/ic_whale.png"/>' alt="">버그바운티</a></li>
                         </ul>
                     </li>
@@ -102,7 +129,8 @@
         <ul id="mobile-menu">
             <div class="mobile-menu-nav">
                 <span class="material-symbols-outlined mobile-menu-btn xBtn">close</span>
-                <span class="mobile-menu-btn"><img src='<c:url value="/resource/img/apps.svg"/>' alt="바로가기" title="바로가기"></span>
+                <span class="mobile-menu-btn"><img src='<c:url value="/resource/img/apps.svg"/>' alt="바로가기"
+                                                   title="바로가기"></span>
             </div>
             <li id="mobile-home">
                 <a href='<c:url value="/index.jsp"/>'>홈
@@ -144,22 +172,22 @@
                 <span class="material-symbols-outlined arrow">chevron_right</span>
             </a>
             </li>
-                <c:if test="<%= sessionID != null %>">
-                    <hr>
-                    <li class="c-whale-blue">
-                        <%= sessionID %>님 로그인</p>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><a href='<c:url value="/logout.jsp"/>'>로그아웃</a></li>
-                            <li><a href="whalehelp.html">회원정보 수정</a></li>
-                        </ul>
-                    </li>
-                </c:if>
+            <c:if test="<%= sessionID != null %>">
+                <hr>
+                <li class="c-whale-blue">
+                    <%= sessionID %>님 로그인</p>
+                </li>
+                <li>
+                    <ul>
+                        <li><a href='<c:url value="/whale_member/logout.jsp"/>'>로그아웃</a></li>
+                        <li><a onclick="document.perInfo.submit()">회원정보 수정</a></li>
+                    </ul>
+                </li>
+            </c:if>
         </ul>
         <div class="downloadBtn">
             <c:if test="<%= sessionID == null %>">
-                <button class="" onclick="location.href = '<c:url value="/login.jsp?where=whale&?msg=0"/>'">
+                <button class="" onclick="location.href = '<c:url value="/whale_member/login.jsp?where=whale&?msg=0"/>'">
                     로그인
                 </button>
             </c:if>
@@ -170,6 +198,7 @@
         </div>
     </nav>
 
+    <!-- App Menu Mobile -->
     <div id="mobile-subMenu">
         <div id="mobile-gnb-appMenu">
             <div class="mobile-menu-nav">
@@ -180,14 +209,17 @@
             <ul>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale.png"/>' alt="">마이 액티비티</a></li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale_store.png"/>' alt="">웨일 스토어</a></li>
-                <li><a href="whalehelp.html"><img src='<c:url value="/resource/img/ic_help.png"/>' alt="">웨일 헬프센터</a></li>
+                <li><a href="whalehelp.html"><img src='<c:url value="/resource/img/ic_help.png"/>' alt="">웨일 헬프센터</a>
+                </li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale_lab.png"/>' alt="">웨일 연구소</a></li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale_dev.png"/>' alt="">웨일 개발자센터</a></li>
-                <li><a href='<c:url value="/index.jsp"/>'><img src='<c:url value="/resource/img/ic_whaleon.png"/>' alt="">웨일온</a></li>
+                <li><a href='<c:url value="/index.jsp"/>'><img src='<c:url value="/resource/img/ic_whaleon.png"/>'
+                                                               alt="">웨일온</a></li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whaleon_study.png"/>' alt="">웨일온 스터디</a></li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale_class.png"/>' alt="">웨일 클래스</a></li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whalespace.png"/>' alt="">웨일 스페이스</a></li>
-                <li><a href="whaleBook_Index.html"><img src='<c:url value="/resource/img/ic_whalebook.png"/>' alt="">웨일북</a></li>
+                <li><a href="whaleBook_Index.html"><img src='<c:url value="/resource/img/ic_whalebook.png"/>' alt="">웨일북</a>
+                </li>
                 <li><a href=""><img src='<c:url value="/resource/img/ic_whale.png"/>' alt="">버그바운티</a></li>
             </ul>
         </div>
