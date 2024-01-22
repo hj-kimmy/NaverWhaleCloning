@@ -5,7 +5,7 @@
 <!doctype html>
 <html>
 <head>
-    <%@ include file="../cdns.jsp" %>
+    <%@ include file="/cdns.jsp" %>
 
     <!---------------------
          Custom Stylesheet
@@ -15,7 +15,7 @@
 </head>
 <body>
 <div id="wrap">
-    <%@ include file="../gnb.jsp" %>
+    <%@ include file="/gnb.jsp" %>
     <%
         MemberDTO dto = (MemberDTO) request.getAttribute("memberDTO");
     %>
@@ -163,7 +163,7 @@
             </div>
         </section>
     </main>
-    <%@ include file="../footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
 </div>
 <script src='<c:url value="/resource/JS/validation_update.js"/>'></script>
 </body>

@@ -5,7 +5,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <%@ include file="cdns.jsp" %>
+    <%@ include file="/cdns.jsp" %>
 
     <!---------------------
        JavaScript Plugin
@@ -22,7 +22,7 @@
 </head>
 <body>
 <div id="wrap">
-    <%@ include file="gnb.jsp" %>
+    <%@ include file="/gnb.jsp" %>
     <main>
         <!---------------------
             section1. 주요기능
@@ -472,7 +472,7 @@
             </div>
         </section>
     </main>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
 </div>
 <script src='<c:url value="/resource/JS/mainJavaScript.js"/>'></script>
 </body>

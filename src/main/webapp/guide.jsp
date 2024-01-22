@@ -12,7 +12,7 @@
 
 <html>
 <head>
-    <%@ include file="cdns.jsp" %>
+    <%@ include file="/cdns.jsp" %>
 
     <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mainStyle_guideMain.css"/>'>
     <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mediaQuery_guideMain.css"/>'>
@@ -20,7 +20,7 @@
 </head>
 <body>
 <div id="wrap">
-    <%@ include file="gnb.jsp" %>
+    <%@ include file="/gnb.jsp" %>
     <main>
         <section id="guideMain">
             <section class="contentsWrap">
@@ -51,7 +51,7 @@
                 <h2>
                     업데이트
                 </h2>
-                <button class="small" onclick="location.href = 'update_List.html'">더 보기</button>
+                <button class="small" onclick="location.href = '<c:url value="/BoardListAction.do?table=update&pageNum=1"/>'">더 보기</button>
             </div>
             <div class="contentsWrap">
                 <%
@@ -123,7 +123,7 @@
                 <h2>
                     보도자료
                 </h2>
-                <button class="small" onclick="location.href = 'press_List.html'">더 보기</button>
+                <button class="small" onclick="location.href = '/BoardListAction.do?pageNum=1'">더 보기</button>
             </div>
             <div class="contentsWrap">
                 <ul>
@@ -152,9 +152,8 @@
             </div>
         </section>
     </main>
-    <%@ include file="footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
 </div>
 <script src='<c:url value="/resource/JS/gnb.js"/>'></script>
-<script src='<c:url value="/resource/JS/mainJavaScript.js"/>'></script>
 </body>
 </html>

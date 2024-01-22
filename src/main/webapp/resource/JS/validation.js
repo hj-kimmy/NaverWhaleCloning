@@ -78,6 +78,8 @@ $(function () {
 
     let id = $("#join #id");
     let idTxt = $(".id");
+    let url = 'confirmId.jsp?id=' + joinForm.id.value;
+    idTxt.find("span").load(url + " span");
 
     id.focusout(function () {
         if (!joinForm.id.value) {
@@ -92,8 +94,7 @@ $(function () {
             $(this).parents("li").addClass("noValid");
             return false;
         }
-
-        let url = 'confirmId.jsp?id=' + joinForm.id.value;
+        url = 'confirmId.jsp?id=' + joinForm.id.value;
         idTxt.find("span").load(url + " span");
 
         $(document).mouseup(function (e) {

@@ -5,20 +5,16 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <%@ include file="../cdns.jsp" %>
+    <%@ include file="/cdns.jsp" %>
 
     <!---------------------
          Custom Stylesheet
      ----------------------->
     <link rel="stylesheet" href='<c:url value="/resource/CSS/login/mainStyle_Login.css"/>'>
-
-    <!-- 파비콘 -->
-    <link rel="shortcut icon" href='<c:url value="/resource/img/whale_color.svg"/>' type="image/x-icon">
-    <title>Naver Dolphin</title>
 </head>
 <body>
 <div id="wrap">
-    <%@ include file="../gnb.jsp" %>
+    <%@ include file="/gnb.jsp" %>
     <%
         String msg = request.getParameter("msg");
         String errorMsg = "";
@@ -74,7 +70,7 @@
         </section>
     </main>
 
-    <%@ include file="../footer.jsp" %>
+    <%@ include file="/footer.jsp" %>
 </div>
 <script src='<c:url value="/resource/JS/validation.js"/>'></script>
 </body>

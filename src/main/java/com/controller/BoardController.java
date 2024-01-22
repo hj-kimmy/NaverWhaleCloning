@@ -34,14 +34,18 @@ public class BoardController extends HttpServlet {
         response.setContentType("text/html; charset=utf-8");
         request.setCharacterEncoding("utf-8");
 
-        if(command.equals("/BoardListAction.do")) {
-            requestBoardList(request);	// 게시판 목록 가져오는 사용자 정의 함수
+        if(command.equals("/BoardListNewAction.do")) {
+            requestBoardNewList(request);	// 게시판 목록 가져오는 사용자 정의 함수
             RequestDispatcher rd = request.getRequestDispatcher("./guide.jsp");
+            rd.forward(request, response);
+        }else if(command.equals("/BoardListAction.do")){
+            requestBoardList(request);	// 게시판 목록 가져오는 사용자 정의 함수
+            RequestDispatcher rd = request.getRequestDispatcher("./Boards/boardList.jsp");
             rd.forward(request, response);
         }
     }
 
-    protected void requestBoardList(HttpServletRequest request) {
+    public void requestBoardNewList(HttpServletRequest request) {
         BoardDAO dao = BoardDAO.getInstance();
         List<BoardDTO> pressBoardlist = new ArrayList<BoardDTO>();
         List<BoardDTO> updateBoardlist = new ArrayList<BoardDTO>();
@@ -53,12 +57,12 @@ public class BoardController extends HttpServlet {
             pageNum = Integer.parseInt(request.getParameter("pageNum"));
         }
 
-        String items = request.getParameter("items");
+        String category = request.getParameter("category");
         String text = request.getParameter("text");
-        int total_record = dao.getListCount(items, text);
+        int total_record = dao.getListCount(category, text);
 
-        pressBoardlist = dao.getPressBoardList(pageNum, limit, items, text);
-        updateBoardlist = dao.getUpdateBoardList(pageNum, limit, items, text);
+        pressBoardlist = dao.getPressBoardList(pageNum, limit, category, text);
+        updateBoardlist = dao.getUpdateBoardList(pageNum, limit, category, text);
 
         request.setAttribute("pageNum", pageNum);
         request.setAttribute("total_record", total_record);
@@ -75,9 +79,48 @@ public class BoardController extends HttpServlet {
         request.setAttribute("total_page", total_page);
         request.setAttribute("pressBoardlist", pressBoardlist);
         request.setAttribute("updateBoardlist", updateBoardlist);
-        request.setAttribute("items", items);
+        request.setAttribute("category", category);
         request.setAttribute("text", text);
     }
+
+    public void requestBoardList(HttpServletRequest request) {
+        BoardDAO dao = BoardDAO.getInstance();
+        String table = request.getParameter("table");
+
+        int pageNum = 1;
+        int limit = 10;
+
+        if(request.getParameter("pageNum") != null) {
+            pageNum = Integer.parseInt(request.getParameter("pageNum"));
+        }
+        String category = request.getParameter("category");
+        String text = request.getParameter("text");
+        int total_record = dao.getListCount(category, text);
+
+        List<BoardDTO> list = new ArrayList<BoardDTO>();
+        if(table.equals("update")){
+            list = dao.getUpdateBoardList(pageNum, limit, category, text);
+        }else if (table.equals("press")){
+            list = dao.getPressBoardList(pageNum, limit, category, text);
+        }
+        request.setAttribute("boardlist", list);
+        request.setAttribute("pageNum", pageNum);
+        request.setAttribute("total_record", total_record);
+
+        System.out.println(list);
+        int total_page;
+        if(total_record % limit == 0 ) {
+            total_page = total_record/limit;
+        }else {
+            total_page = total_record/limit;
+            total_page = total_page+1;
+        }
+        request.setAttribute("table",table);
+        request.setAttribute("total_page", total_page);
+        request.setAttribute("category", category);
+        request.setAttribute("text", text);
+    }
+
     public void requestLoginName(HttpServletRequest request) {
         String id = request.getParameter("id");
         BoardDAO dao = BoardDAO.getInstance();
