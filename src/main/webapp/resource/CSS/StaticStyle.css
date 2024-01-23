@@ -658,16 +658,20 @@ header .cover {
     align-items: center;
     border: 1px solid var(--lightgray);
     height: 30px;
-    padding: 0 10px 0 20px;
+    padding: 0 5px 0 20px;
     border-radius: 60px;
 }
 
 #guideList .search form input{
     border: none;
 }
+#guideList .search form:has(input:focus) {
+    border: 1px solid var(--whaleSea);
+}
 
-#guideList .search form img{
-    width: 20px;
+#guideList .search form span.material-symbols-outlined{
+    font-size: 20px;
+    cursor: pointer;
 }
 
 /*게시판 필터 버튼*/
@@ -764,21 +768,19 @@ header .cover {
 }
 
 #guideList > .contents-btns > ul li.active {
+    position: relative;
     color: var(--green);
     font-weight: bold;
+    border: 2px solid var(--green);
+    border-radius: 50%;
 }
 
-#guideList > .contents-btns > ul li.active::before {
-    content: "";
-    position: absolute;
-    top: 1px;
-    left: 1px;
-    width: 80%;
-    height: 80%;
-    border: 2px solid var(--green);
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    border-radius: 50%;
+#guideList > .contents-btns > ul li.active:first-of-type, #guideList > .contents-btns > ul li.active:last-of-type{
+    border: none;
+}
+
+#guideList > .contents-btns > ul li.active:first-of-type .material-symbols-outlined, #guideList > .contents-btns > ul li.active:last-of-type .material-symbols-outlined {
+    color: black;
 }
 
 #guideList p span:first-child {
@@ -796,6 +798,7 @@ header .cover {
     'GRAD' 0,
     'opsz' 24;
     font-size: 20px;
+    color: var(--lightgray);
 }
 
 /*1440px(데스크탑)*/

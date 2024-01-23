@@ -1,13 +1,13 @@
 <%@ page import="com.model.BoardDTO" %>
 <%@ page import="java.util.List" %>
-<%@ page contentType="text/html;charset=UTF-8" language="java" %>
+<%@ page contentType="text/html;charset=UTF-8" language="java" isELIgnored="false" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 
 <%
-    List<BoardDTO> pressBoardlist = (List<BoardDTO>) request.getAttribute("pressBoardlist");
-    System.out.println(pressBoardlist);
-    List<BoardDTO> updateBoardlist = (List<BoardDTO>) request.getAttribute("updateBoardlist");
-    System.out.println(updateBoardlist);
+    List<BoardDTO> pressBoardList = (List<BoardDTO>) request.getAttribute("pressBoardList");
+    System.out.println(pressBoardList);
+    List<BoardDTO> updateBoardList = (List<BoardDTO>) request.getAttribute("updateBoardList");
+    System.out.println(updateBoardList);
 %>
 
 <html>
@@ -22,6 +22,9 @@
 <div id="wrap">
     <%@ include file="/gnb.jsp" %>
     <main>
+        <c:set var="desktop" value="<%=(BoardDTO)updateBoardList.get(0)%>"/>
+        <c:set var="iOS" value="<%=(BoardDTO)updateBoardList.get(1)%>"/>
+        <c:set var="android" value="<%=(BoardDTO)updateBoardList.get(2)%>"/>
         <section id="guideMain">
             <section class="contentsWrap">
                 <article class="contents-info">
@@ -51,71 +54,56 @@
                 <h2>
                     업데이트
                 </h2>
-                <button class="small" onclick="location.href = '<c:url value="/BoardListAction.do?table=update&pageNum=1"/>'">더 보기</button>
+                <button class="small"
+                        onclick="location.href = '<c:url value="/BoardListAction.do?table=update&pageNum=1"/>'">더 보기
+                </button>
             </div>
             <div class="contentsWrap">
-                <%
-                    BoardDTO update;
-                    for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = updateBoardlist.get(i);
-                        if (update.getCategory().equals("Desktop")) {
-                %>
                 <div class="contents-card">
-                    <a href="update_post.html">
+
+                    <a href='<c:if test="${desktop.getNum()!=0}"><c:url value="/BoardViewAction.do?&table=update&num=${desktop.getNum()}"/></c:if><c:if test="${desktop.getNum()==0}">#</c:if>'>
                         <span class="tag">Desktop</span>
                         <img src='<c:url value="/resource/img/img_notice_desktop_820.png"/>' alt="">
                         <div>
-                            <p>
-                                <%= update.getSubject() %>
-                            </p>
-                            <span class="date"><%=update.getRegist_day()%></span></div>
+                            <c:if test="${desktop!=null}">
+                                <p>
+                                        ${desktop.getSubject()}
+                                </p>
+                                <span class="date">${desktop.getRegist_day()}</span>
+                            </c:if>
+                        </div>
                     </a>
                 </div>
-                <%
-                            break;
-                        }
-                    }
-                    for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = updateBoardlist.get(i);
-                        if (update.getCategory().equals("iOS")) {
-
-                %>
                 <div class="contents-card">
-                    <a href="update_post.html">
+                    <a href='<c:if test="${iOS.getNum()!=0}"><c:url value="/BoardViewAction.do?&table=update&num=${iOS.getNum()}"/></c:if><c:if test="${iOS.getNum()!=0}">#</c:if>'>
                         <span class="tag">iOS</span>
                         <img src='<c:url value="/resource/img/img_notice_ios_820.png"/>' alt="">
                         <div>
-                            <p>
-                                <%= update.getSubject() %>
-                            </p>
-                            <span class="date"><%=update.getRegist_day()%></span></div>
+                            <c:if test="${iOS!=null}">
+                                <p>
+                                        ${iOS.getSubject()}
+                                </p>
+                                <span class="date">${iOS.getRegist_day()}</span>
+                            </c:if>
+                        </div>
                     </a>
                 </div>
-                <%
-                            break;
-                        }
-                    }
-                    for (int i = 0; i < updateBoardlist.size(); i++) {
-                        update = updateBoardlist.get(i);
-                        if (update.getCategory().equals("Android")) {
 
-                %>
                 <div class="contents-card">
-                    <a href="update_post.html">
+                    <a href='<c:if test="${android.getNum()!=0}"><c:url value="/BoardViewAction.do?&table=update&num=${android.getNum()}"/></c:if><c:if test="${android.getNum()==0}">#</c:if>'>
                         <span class="tag">Android</span>
                         <img src='<c:url value="/resource/img/img_notice_android_820.png"/>' alt="">
                         <div>
-                            <p>
-                                <%= update.getSubject() %>
-                            </p>
-                            <span class="date"><%=update.getRegist_day()%></span></div>
+                            <c:if test="${android!=null}">
+                                <p>
+                                        ${android.getSubject()}
+                                </p>
+                                <span class="date">${android.getRegist_day()}</span>
+                            </c:if>
+                        </div>
                     </a>
                 </div>
-                <%
-                            break;
-                        }
-                    }
-                %>
+
             </div>
         </section>
         <section id="press">
@@ -123,25 +111,28 @@
                 <h2>
                     보도자료
                 </h2>
-                <button class="small" onclick="location.href = '<c:url value="/BoardListAction.do?table=press&pageNum=1"/>'">더 보기</button>
+                <button class="small"
+                        onclick="location.href = '<c:url value="/BoardListAction.do?table=press&pageNum=1"/>'">더 보기
+                </button>
             </div>
             <div class="contentsWrap">
                 <ul>
 
                     <%
-                        for (int i = 0; i < 5; i++) {
-                            BoardDTO press = (BoardDTO) pressBoardlist.get(i);
+                        for (int i = 0; i < pressBoardList.size(); i++) {
+                            BoardDTO dto = (BoardDTO) pressBoardList.get(i);
                     %>
+                    <c:set var="num" value="<%=dto.getNum()%>"/>
                     <li>
-                        <a href="press_post.html">
+                        <a href='<c:url value="/BoardViewAction.do?&table=press&num=${num}"/>'>
                              <span class="tag">
-                                 <%= press.getCategory() %>
+                                 <%= dto.getCategory() %>
                              </span>
                             <span class="date">
-                                <%= press.getRegist_day() %>
+                                <%= dto.getRegist_day() %>
                              </span>
                             <p>
-                                <%= press.getSubject() %>
+                                <%= dto.getSubject() %>
                             </p>
                         </a>
                     </li>

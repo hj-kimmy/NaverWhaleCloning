@@ -25,6 +25,9 @@ public class BoardDAO {
         PreparedStatement pstmt = null;
         ResultSet rs = null;
         String sql = null;
+        System.out.println("category =" + category );
+        System.out.println("text =" + text );
+        System.out.println("tableName =" + tableName );
 
         int total_record = getListCount(category, text, tableName);
         int start = (page - 1) * limit;
@@ -35,15 +38,18 @@ public class BoardDAO {
         }else {
             if (category == null && (text == null || text.equals(""))) {
                 sql = "select * from whale_board where tablename = '"+ tableName +"' order by num desc";
+                System.out.println("case1");
             } else if (category == null && (text != null || !text.equals(""))) {
-                sql = "select * from whale_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
+                sql = "select * from whale_board where tablename = '"+ tableName +"' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+                System.out.println("case2");
             } else if (category != null && (text == null || text.equals(""))) {
-                sql = "select * from whale_board where category = '" + category + "' order by num desc";
+                sql = "select * from whale_board where tablename = '"+ tableName +"' and category = '" + category + "' order by num desc";
+                System.out.println("case3");
             } else {
-                sql = "select * from whale_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+                sql = "select * from whale_board where tablename = '"+ tableName +"' and category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+                System.out.println("case4");
             }
         }
-
         ArrayList<BoardDTO> list = new ArrayList<>();
 
         try {
@@ -53,18 +59,7 @@ public class BoardDAO {
 
             while (rs.absolute(index)) {
                 BoardDTO board = new BoardDTO();
-
-                board.setNum(rs.getInt("num"));
-                board.setTableName(rs.getString("tablename"));
-                board.setId(rs.getString("id"));
-                board.setName(rs.getString("name"));
-                board.setCategory(rs.getString("category"));
-                board.setSubject(rs.getString("subject"));
-                board.setContents(rs.getString("content"));
-                board.setHit(rs.getInt("hit"));
-                board.setRegist_day(rs.getDate("regist_day"));
-                board.setUpdate_day(rs.getDate("update_day"));
-                board.setIp(rs.getString("ip"));
+                board = setDto(rs);
                 list.add(board);
 
                 if (index < (start + limit) && index <= total_record)
@@ -72,13 +67,13 @@ public class BoardDAO {
                 else
                     break;
             }
-            return list;
         } catch (Exception e) {
             System.out.println("getUpdateBoardList()에러" + e);
         } finally {
-            shutDownConn(conn, pstmt, rs);
+            closeResources(conn, pstmt, rs);
         }
-        return null;
+        System.out.println(list.size());
+        return list;
     }
 
     public String getLoginNameById(String id) {
@@ -101,7 +96,7 @@ public class BoardDAO {
         } catch (Exception e) {
             System.out.println("getBoardList()에러" + e);
         } finally {
-            shutDownConn(conn, pstmt, rs);
+            closeResources(conn, pstmt, rs);
         }
         return null;
     }
@@ -122,23 +117,12 @@ public class BoardDAO {
             rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                dto = new BoardDTO();
-
-                dto.setNum(rs.getInt("num"));
-                dto.setTableName(rs.getString("tablename"));
-                dto.setId(rs.getString("id"));
-                dto.setName(rs.getString("name"));
-                dto.setSubject(rs.getString("subject"));
-                dto.setContents(rs.getString("content"));
-                dto.setRegist_day(rs.getDate("regist_day"));
-                dto.setUpdate_day(rs.getDate("update_day"));
-                dto.setHit(rs.getInt("hit"));
-                dto.setIp(rs.getString("ip"));
+                dto = setDto(rs);
             }
         } catch (Exception e) {
             System.out.println("getBoardByNum()에러" + e);
         } finally {
-            shutDownConn(conn,pstmt,rs);
+            closeResources(conn,pstmt,rs);
         }
         return dto;
     }
@@ -157,23 +141,12 @@ public class BoardDAO {
             rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                dto = new BoardDTO();
-
-                dto.setNum(rs.getInt("num"));
-                dto.setTableName(rs.getString("tablename"));
-                dto.setId(rs.getString("id"));
-                dto.setName(rs.getString("name"));
-                dto.setSubject(rs.getString("subject"));
-                dto.setContents(rs.getString("content"));
-                dto.setRegist_day(rs.getDate("regist_day"));
-                dto.setUpdate_day(rs.getDate("update_day"));
-                dto.setHit(rs.getInt("hit"));
-                dto.setIp(rs.getString("ip"));
+                dto = setDto(rs);
             }
         } catch (Exception e) {
             System.out.println("getBoardByNum()에러" + e);
         } finally {
-            shutDownConn(conn,pstmt,rs);
+            closeResources(conn,pstmt,rs);
         }
         return dto;
     }
@@ -191,23 +164,12 @@ public class BoardDAO {
             rs = pstmt.executeQuery();
 
             if(rs.next()) {
-                dto = new BoardDTO();
-
-                dto.setNum(rs.getInt("num"));
-                dto.setTableName(rs.getString("tablename"));
-                dto.setId(rs.getString("id"));
-                dto.setName(rs.getString("name"));
-                dto.setSubject(rs.getString("subject"));
-                dto.setContents(rs.getString("content"));
-                dto.setRegist_day(rs.getDate("regist_day"));
-                dto.setUpdate_day(rs.getDate("update_day"));
-                dto.setHit(rs.getInt("hit"));
-                dto.setIp(rs.getString("ip"));
+                dto = setDto(rs);
             }
         } catch (Exception e) {
             System.out.println("getBoardByNum()에러" + e);
         } finally {
-            shutDownConn(conn,pstmt,rs);
+            closeResources(conn,pstmt,rs);
         }
         return dto;
     }
@@ -242,7 +204,7 @@ public class BoardDAO {
         } catch (Exception e) {
             System.out.println("updateHit()에러" + e);
         } finally {
-            shutDownConn(conn, pstmt, rs);
+            closeResources(conn, pstmt, rs);
         }
     }
 
@@ -268,7 +230,7 @@ public class BoardDAO {
 
             System.out.println("getBoardList()에러" + e);
         } finally {
-            shutDownConn(conn, pstmt);
+            closeResources(conn, pstmt);
         }
     }
 
@@ -287,13 +249,14 @@ public class BoardDAO {
             if (category == null && (text == null || text.equals(""))) {
                 sql = "select count (*) from whale_board where tablename = '"+ tableName +"' order by num desc";
             } else if (category == null && (text != null || !text.equals(""))) {
-                sql = "select count (*) from whale_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
+                sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
             } else if (category != null && (text == null || text.equals(""))) {
-                sql = "select count (*) from whale_board where category = '" + category + "' order by num desc";
+                sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and category = '" + category + "' order by num desc";
             } else {
-                sql = "select count (*) from whale_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+                sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and  category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
             }
         }
+
 
         try {
             conn = DataBaseConnect.getConnection();
@@ -307,13 +270,63 @@ public class BoardDAO {
         } catch (Exception e) {
             System.out.println("getBoardList()에러" + e);
         } finally {
-            shutDownConn(conn, pstmt, rs);
+            closeResources(conn, pstmt, rs);
         }
         return x; // 선택된 총 게시글의 갯수를 리턴
     }
 
+    public BoardDTO getNewestBoard(String category){
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BoardDTO board = new BoardDTO();
 
-    public void shutDownConn(Connection conn, PreparedStatement pstmt, ResultSet rs) {
+        String sql = "Select * From whale_board where num = (Select max(num) From (Select * From whale_board Where category = '" + category + "'))";
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            if (rs.next()) {
+                board = setDto(rs);
+            }
+        } catch (Exception e) {
+            System.out.println("getNewestBoard1()에러" + e);
+        } finally {
+            closeResources(conn, pstmt, rs);
+        }
+        return board;
+    }
+
+    public ArrayList<BoardDTO> getNewestBoard(String table, int boardNum){
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BoardDTO board = new BoardDTO();
+
+        String sql = "Select * From whale_board Where tablename = '" + table + "' order by num desc";
+
+        ArrayList<BoardDTO> list = new ArrayList<>();
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+            int i = 0;
+
+            while (rs.next()&&i<boardNum) {
+                board = setDto(rs);
+                list.add(board);
+                i++;
+            }
+        } catch (Exception e) {
+            System.out.println("getNewestBoard2()에러" + e);
+        } finally {
+            closeResources(conn, pstmt, rs);
+        }
+        return list;
+    }
+
+
+    public void closeResources(Connection conn, PreparedStatement pstmt, ResultSet rs) {
         try {
             if (rs != null)
                 rs.close();
@@ -326,7 +339,7 @@ public class BoardDAO {
         }
     }
 
-    public void shutDownConn(Connection conn, PreparedStatement pstmt) {
+    public void closeResources(Connection conn, PreparedStatement pstmt) {
         try {
             if (pstmt != null)
                 pstmt.close();
@@ -337,6 +350,21 @@ public class BoardDAO {
         }
     }
 
+    public BoardDTO setDto(ResultSet rs) throws SQLException {
+        BoardDTO board = new BoardDTO();
+        board.setNum(rs.getInt("num"));
+        board.setTableName(rs.getString("tablename"));
+        board.setId(rs.getString("id"));
+        board.setName(rs.getString("name"));
+        board.setCategory(rs.getString("category"));
+        board.setSubject(rs.getString("subject"));
+        board.setContents(rs.getString("content"));
+        board.setHit(rs.getInt("hit"));
+        board.setRegist_day(rs.getDate("regist_day"));
+        board.setUpdate_day(rs.getDate("update_day"));
+        board.setIp(rs.getString("ip"));
+
+        return board;
+    }
+
 }
-
-

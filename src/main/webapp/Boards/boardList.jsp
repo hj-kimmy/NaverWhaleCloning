@@ -11,6 +11,30 @@
         Custom Stylesheet
     ----------------------->
     <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mainStyle_guideDetail.css"/>'>
+    <script>
+        $(function (){
+            let searchTab = $("#text");
+
+            searchTab.keyup(function (key){
+                let searchKeyword = searchTab.val();
+                if(searchKeyword===""){
+                    searchTab.next().text("search");
+                }else {
+                    searchTab.next().text("cancel");
+                }
+                if(key.keyCode===13){
+                    document.searchForm.submit();
+                }
+            })
+
+            searchTab.next().click(function (){
+                if(searchTab.next().text()==="cancel"){
+                    searchTab.val("");
+                    searchTab.next().text("search");
+                }
+            })
+        })
+    </script>
 </head>
 <body>
 <div id="wrap">
@@ -36,6 +60,7 @@
         <c:set var="pageNum" value="<%=pageNum%>"/>
         <c:set var="text" value="<%=text%>"/>
         <c:set var="category" value="<%=category%>"/>
+        <c:set var="total_page" value="<%=total_page%>"/>
 
 
         <c:if test='${table eq "update"}'>
@@ -51,7 +76,6 @@
         <section id="guideList" class="update">
             <div class="contentsWrap">
                 <div id="tabs">
-
                     <!-- 게시글 탭 / 검색창 -->
                     <div class="search">
                         <ul class="contents-btns ">
@@ -97,10 +121,10 @@
                                 <button class="small">글쓰기</button>
                             </c:if>
                         </ul>
-                        <form action="">
-                            <input type="text" placeholder="제목, 내용"><img
-                                src='<c:url value="/resource/img/search_2.svg"/>'
-                                alt="">
+                        <form name="searchForm" action='<c:url value = "./BoardListAction.do"/>' method="get">
+                            <input type="hidden" name="table" value="${table}">
+                            <input type="hidden" name="pageNum" value="1">
+                            <input type="text" placeholder="제목, 내용" name="text" value="${text}" id="text"><span class="material-symbols-outlined c-whale-gray">search</span>
                         </form>
                     </div>
 
@@ -128,36 +152,61 @@
             <!-- 페이징 버튼 -->
             <div class="contents-btns">
                 <ul>
+                    <c:if test="${pageNum==1}">
                     <li>
                         <span class="material-symbols-outlined">chevron_left</span>
                     </li>
+                    </c:if>
+                    <c:if test="${pageNum!=1}">
+                        <li class="active" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                value="./BoardListAction.do?table=${table}&text=${text}&pageNum=1"/></c:if><c:if test = "${category != null}"><c:url
+                                value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=1"/></c:if>'">
+                            <span class="material-symbols-outlined">chevron_left</span>
+                        </li>
+                    </c:if>
+
                     <c:forEach var="i" begin="1" end="<%=total_page%>">
                         <c:if test="${text!=null}">
                             <c:choose>
                                 <c:when test="${pageNum==i}">
-                                    <li class="active num" onclick="location.href='<c:url
-                                            value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${i}"/>'">${i}</li>
+                                    <li class="active num" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&text=${text}&pageNum=${i}"/></c:if><c:if test = "${category != null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${i}"/></c:if>'">${i}</li>
                                 </c:when>
                                 <c:otherwise>
-                                    <li class="num">${i}</li>
+                                    <li class="num" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&text=${text}&pageNum=${i}"/></c:if><c:if test = "${category != null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${i}"/></c:if>'">${i}</li>
                                 </c:otherwise>
                             </c:choose>
                         </c:if>
                         <c:if test="${text==null}">
                             <c:choose>
                                 <c:when test="${pageNum==i}">
-                                    <li class="active num" onclick="location.href='<c:url
-                                            value="./BoardListAction.do?table=${table}&category=${category}&pageNum=${i}"/>'">${i}</li>
+                                    <li class="active num" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&text=${text}&pageNum=${i}"/></c:if><c:if test = "${category != null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${i}"/></c:if>'">${i}</li>
                                 </c:when>
                                 <c:otherwise>
-                                    <li class="num">${i}</li>
+                                    <li class="num" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&text=${text}&pageNum=${i}"/></c:if><c:if test = "${category != null}"><c:url
+                                            value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${i}"/></c:if>'">${i}</li>
                                 </c:otherwise>
                             </c:choose>
                         </c:if>
                     </c:forEach>
-                    <li>
-                        <span class="material-symbols-outlined">chevron_right</span>
-                    </li>
+                    <c:if test="${pageNum==total_page}">
+                        <li>
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </li>
+                    </c:if>
+                    <c:if test="${pageNum!=total_page}">
+                        <li class="active" onclick="location.href='<c:if test = "${category == null}"><c:url
+                                value="./BoardListAction.do?table=${table}&text=${text}&pageNum=${total_page}"/></c:if><c:if test = "${category != null}"><c:url
+                                value="./BoardListAction.do?table=${table}&category=${category}&text=${text}&pageNum=${total_page}"/></c:if>'">
+                            <span class="material-symbols-outlined">chevron_right</span>
+                        </li>
+                    </c:if>
                 </ul>
             </div>
         </section>
