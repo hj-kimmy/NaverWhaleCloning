@@ -5,6 +5,7 @@ import java.util.Date;
 
 public class BoardDTO {
     private int num;
+    private String tableName;
     private String id;
     private String name;
     private String category;
@@ -88,6 +89,14 @@ public class BoardDTO {
     public void setUpdate_day(Date update_day) {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy. MM. dd");
         this.update_day = simpleDateFormat.format(update_day);
+    }
+
+    public String getTableName() {
+        return tableName;
+    }
+
+    public void setTableName(String tableName) {
+        this.tableName = tableName;
     }
 
     public void setHit(int hit) {

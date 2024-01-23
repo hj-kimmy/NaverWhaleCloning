@@ -20,25 +20,28 @@ public class BoardDAO {
         return instance;
     }
 
-    public ArrayList<BoardDTO> getPressBoardList(int page, int limit, String category, String text) {
+    public ArrayList<BoardDTO> getBoardList(int page, int limit, String category, String text, String tableName) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
+        String sql = null;
 
-        int total_record = getListCount(category, text);
-//		현재 페이지 넘버에서 1을 뺀 후 limt(5)를 곱한 값으로 start에 저장 => 0,5,15...
+        int total_record = getListCount(category, text, tableName);
         int start = (page - 1) * limit;
-        // rs에서 활용할 index를 정의
-        int index = start + 1; // 1, 6, 11 ...
+        int index = start + 1;
 
-        String sql;
-
-        if (category == null && text == null)
-            sql = "select * from press_board order by num desc";
-        else if (category == null) {
-            sql = "select * from press_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
-        } else {
-            sql = "select * from press_board where category = " + category + "and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+        if(tableName==null){
+            sql = "select * from whale_board order by num desc";
+        }else {
+            if (category == null && (text == null || text.equals(""))) {
+                sql = "select * from whale_board where tablename = '"+ tableName +"' order by num desc";
+            } else if (category == null && (text != null || !text.equals(""))) {
+                sql = "select * from whale_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
+            } else if (category != null && (text == null || text.equals(""))) {
+                sql = "select * from whale_board where category = '" + category + "' order by num desc";
+            } else {
+                sql = "select * from whale_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+            }
         }
 
         ArrayList<BoardDTO> list = new ArrayList<>();
@@ -52,6 +55,7 @@ public class BoardDAO {
                 BoardDTO board = new BoardDTO();
 
                 board.setNum(rs.getInt("num"));
+                board.setTableName(rs.getString("tablename"));
                 board.setId(rs.getString("id"));
                 board.setName(rs.getString("name"));
                 board.setCategory(rs.getString("category"));
@@ -68,66 +72,6 @@ public class BoardDAO {
                 else
                     break;
             }
-            return list;
-        } catch (Exception e) {
-            System.out.println("getBoardList()에러" + e);
-        } finally {
-            shutDownConn(conn, pstmt, rs);
-        }
-        return null;
-    }
-
-    public ArrayList<BoardDTO> getUpdateBoardList(int page, int limit, String category, String text) {
-        Connection conn = null;
-        PreparedStatement pstmt = null;
-        ResultSet rs = null;
-
-        int total_record = getListCount(category, text);
-//		현재 페이지 넘버에서 1을 뺀 후 limt(5)를 곱한 값으로 start에 저장 => 0,5,15...
-        int start = (page - 1) * limit;
-        // rs에서 활용할 index를 정의
-        int index = start + 1; // 1, 6, 11 ...
-
-        String sql;
-
-        if (category == null && (text == null || text.equals(""))) {
-            sql = "select * from update_board order by num desc";
-        } else if (category == null && (text != null || !text.equals(""))) {
-            sql = "select * from update_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
-        } else if (category != null && (text == null || text.equals(""))) {
-            sql = "select * from update_board where category = '" + category + "' order by num desc";
-        } else {
-            sql = "select * from update_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
-        }
-
-        ArrayList<BoardDTO> list = new ArrayList<>();
-
-        try {
-            conn = DataBaseConnect.getConnection();
-            pstmt = conn.prepareStatement(sql, ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-            rs = pstmt.executeQuery();
-
-            while (rs.absolute(index)) {
-                BoardDTO board = new BoardDTO();
-
-                board.setNum(rs.getInt("num"));
-                board.setId(rs.getString("id"));
-                board.setName(rs.getString("name"));
-                board.setCategory(rs.getString("category"));
-                board.setSubject(rs.getString("subject"));
-                board.setContents(rs.getString("content"));
-                board.setHit(rs.getInt("hit"));
-                board.setRegist_day(rs.getDate("regist_day"));
-                board.setUpdate_day(rs.getDate("update_day"));
-                board.setIp(rs.getString("ip"));
-                list.add(board);
-
-                if (index < (start + limit) && index <= total_record)
-                    index++;
-                else
-                    break;
-            }
-
             return list;
         } catch (Exception e) {
             System.out.println("getUpdateBoardList()에러" + e);
@@ -162,6 +106,146 @@ public class BoardDAO {
         return null;
     }
 
+    public BoardDTO getBoardByNum(int num) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BoardDTO dto = null;
+
+        updateHit(num);
+        String sql = "select * from whale_board where num = ?";
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setInt(1,num);
+            rs = pstmt.executeQuery();
+
+            if(rs.next()) {
+                dto = new BoardDTO();
+
+                dto.setNum(rs.getInt("num"));
+                dto.setTableName(rs.getString("tablename"));
+                dto.setId(rs.getString("id"));
+                dto.setName(rs.getString("name"));
+                dto.setSubject(rs.getString("subject"));
+                dto.setContents(rs.getString("content"));
+                dto.setRegist_day(rs.getDate("regist_day"));
+                dto.setUpdate_day(rs.getDate("update_day"));
+                dto.setHit(rs.getInt("hit"));
+                dto.setIp(rs.getString("ip"));
+            }
+        } catch (Exception e) {
+            System.out.println("getBoardByNum()에러" + e);
+        } finally {
+            shutDownConn(conn,pstmt,rs);
+        }
+        return dto;
+    }
+
+    public BoardDTO getBoardNextByNum(int num, String table) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BoardDTO dto = null;
+
+        String sql = null;
+        try {
+            sql = "Select * From whale_board where num = (Select min(num) From (Select * From whale_board Where num > "+ num +" and tablename='"+ table +"'))";
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+
+            if(rs.next()) {
+                dto = new BoardDTO();
+
+                dto.setNum(rs.getInt("num"));
+                dto.setTableName(rs.getString("tablename"));
+                dto.setId(rs.getString("id"));
+                dto.setName(rs.getString("name"));
+                dto.setSubject(rs.getString("subject"));
+                dto.setContents(rs.getString("content"));
+                dto.setRegist_day(rs.getDate("regist_day"));
+                dto.setUpdate_day(rs.getDate("update_day"));
+                dto.setHit(rs.getInt("hit"));
+                dto.setIp(rs.getString("ip"));
+            }
+        } catch (Exception e) {
+            System.out.println("getBoardByNum()에러" + e);
+        } finally {
+            shutDownConn(conn,pstmt,rs);
+        }
+        return dto;
+    }
+
+    public BoardDTO getBoardPrevByNum(int num, String table) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        BoardDTO dto = null;
+
+        String sql = "Select * From whale_board where num = (Select max(num) From (Select * From whale_board Where num < "+ num +" and tablename='"+ table +"'))";
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+            rs = pstmt.executeQuery();
+
+            if(rs.next()) {
+                dto = new BoardDTO();
+
+                dto.setNum(rs.getInt("num"));
+                dto.setTableName(rs.getString("tablename"));
+                dto.setId(rs.getString("id"));
+                dto.setName(rs.getString("name"));
+                dto.setSubject(rs.getString("subject"));
+                dto.setContents(rs.getString("content"));
+                dto.setRegist_day(rs.getDate("regist_day"));
+                dto.setUpdate_day(rs.getDate("update_day"));
+                dto.setHit(rs.getInt("hit"));
+                dto.setIp(rs.getString("ip"));
+            }
+        } catch (Exception e) {
+            System.out.println("getBoardByNum()에러" + e);
+        } finally {
+            shutDownConn(conn,pstmt,rs);
+        }
+        return dto;
+    }
+
+
+
+    public void updateHit(int num) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        String sql = null;
+
+        try {
+            sql = "select hit from whale_board where num = ?";
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setInt(1,num);
+            rs = pstmt.executeQuery();
+            int hit = 0;
+
+            if(rs.next()) {
+                hit = rs.getInt("hit")+1;
+            }
+
+            sql = "update whale_board set hit = ? where num = ?";
+
+            pstmt = conn.prepareStatement(sql);
+            pstmt.setInt(1,hit);
+            pstmt.setInt(2,num);
+            pstmt.executeUpdate();
+        } catch (Exception e) {
+            System.out.println("updateHit()에러" + e);
+        } finally {
+            shutDownConn(conn, pstmt, rs);
+        }
+    }
+
     public void insertBoard(BoardDTO board) {
         Connection conn = null;
         PreparedStatement pstmt = null;
@@ -181,33 +265,34 @@ public class BoardDAO {
             pstmt.executeUpdate();
 
         } catch (Exception e) {
+
             System.out.println("getBoardList()에러" + e);
         } finally {
             shutDownConn(conn, pstmt);
         }
     }
 
-    public int getListCount(String category, String text) {
-        // category : 컬럼명 , text : 사용자가 입락현 키워드 문자열
-
+    public int getListCount(String category, String text, String tableName) {
         Connection conn = null;
         PreparedStatement pstmt = null;
         ResultSet rs = null;
 
-        int x = 0; // 선택된 총 게시글의 갯수
+        int x = 0;
 
         String sql;
 
-        // 검색어가 없으면 리스트 모두 가져오고 검색어가 있으면 검색한 리스트 가져올 때 매개변수로 받은 category 와 text의 값이 들어갈 수
-        // 있도록 한다.
-        if (category == null && (text == null || text.equals(""))) {
-            sql = "select count (*) from update_board order by num desc";
-        } else if (category == null && (text != null || !text.equals(""))) {
-            sql = "select count (*) from update_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
-        } else if (category != null && (text == null || text.equals(""))) {
-            sql = "select count (*) from update_board where category = '" + category + "' order by num desc";
-        } else {
-            sql = "select count (*) from update_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+        if(tableName==null){
+            sql = "select count (*) from whale_board order by num desc";
+        }else {
+            if (category == null && (text == null || text.equals(""))) {
+                sql = "select count (*) from whale_board where tablename = '"+ tableName +"' order by num desc";
+            } else if (category == null && (text != null || !text.equals(""))) {
+                sql = "select count (*) from whale_board where subject like '%" + text + "%' or content like '%" + text + "%' order by num desc";
+            } else if (category != null && (text == null || text.equals(""))) {
+                sql = "select count (*) from whale_board where category = '" + category + "' order by num desc";
+            } else {
+                sql = "select count (*) from whale_board where category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
+            }
         }
 
         try {

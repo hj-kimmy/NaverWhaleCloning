@@ -123,7 +123,7 @@
                 <h2>
                     보도자료
                 </h2>
-                <button class="small" onclick="location.href = '/BoardListAction.do?pageNum=1'">더 보기</button>
+                <button class="small" onclick="location.href = '<c:url value="/BoardListAction.do?table=press&pageNum=1"/>'">더 보기</button>
             </div>
             <div class="contentsWrap">
                 <ul>
