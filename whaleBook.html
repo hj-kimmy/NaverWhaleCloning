@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Naver Dolphin</title>
+    <title>웨일북</title>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/whale_black.svg" type="image/x-icon">
     <!---------------------
         Plugin Stylesheet
     ----------------------->
@@ -143,21 +143,21 @@
             <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
                     <span class="material-symbols-outlined BackBtn">chevron_left</span>
-                    바로가기
+                    <span class="BackBtn">돌아가기</span>
                 </div>
                 <h4>웨일 서비스</h4>
-                <ul>
+                <ul class="appMenu-Apps">
                     <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
-                    <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                     <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
-                    <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
-                    <li><a href=""><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
-                    <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
-                    <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
-                    <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                    <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
+                    <li class="non-active"><a><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
+                    <li class="non-active"><a><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
+                    <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
                     <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
-                    <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                 </ul>
             </div>
         </div>
@@ -292,12 +292,12 @@
                         <h3 class="small">웨일북을 도입하고 싶으신가요?</h3>
                         <form action="">
                             <fieldset>
-                                <legend>구분</legend>
+                                <legend>구분<sup>*</sup></legend>
                                 <p class="smallest"><input type="radio" name="belong" id="school"> <label for="school">학교</label></p>
                                 <p class="smallest"><input type="radio" name="belong" id="public"> <label for="public">일반(교육청에 소속되지 않은 기관 및 업체)</label></p>
                             </fieldset>
                             <fieldset>
-                                <legend>기관명</legend>
+                                <legend>기관명<sup>*</sup></legend>
                                 <select>
                                     <option>서울특별시교육청</option>
                                     <option>부산광역시교육청</option>
@@ -321,15 +321,15 @@
                                 <p class="smallest"><input type="text" placeholder="기관명을 입력하세요"></p>
                             </fieldset>
                             <fieldset>
-                                <legend>기관 대표 메일</legend>
+                                <legend>기관 대표 메일<sup>*</sup></legend>
                                 <p class="smallest"><input type="text" placeholder="연락받으실 이메일을 입력하세요"></p>
                             </fieldset>
                             <fieldset>
-                                <legend>기관 대표 연락처</legend>
+                                <legend>기관 대표 연락처<sup>*</sup></legend>
                                 <p class="smallest"><input type="text" placeholder="연락받으실 연락처를 입력하세요(숫자만 기입)"></p>
                             </fieldset>
                             <fieldset>
-                                <legend>도입 문의</legend>
+                                <legend>도입 문의<sup>*</sup></legend>
                                 <p class="smallest"><input type="text" placeholder="제목"></p>
                                 <p class="smallest"><textarea name="" id="" cols="30" rows="3" placeholder="도입 관련하여 문의 사항을 작성해주세요."></textarea></p>
                             </fieldset>
@@ -352,7 +352,7 @@
         <div class="footerWrap">
 
             <!-- footer Menu -->
-            <ul class="footerMenu">
+            <ul class="footerMenu non-active just-gray">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
                 <li>NAVER whale 개인정보 보호를 위한 백서</li>
@@ -363,15 +363,16 @@
 
             <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
-                <ul class="snsIcons">
+                <ul class="snsIcons non-active">
                     <li><img src="img/blog.png" alt=""></li>
                     <li><img src="img/facebook.png" alt=""></li>
                     <li><img src="img/youtube.png" alt=""></li>
                     <li><img src="img/instagram.png" alt=""></li>
                 </ul>
-                <button class="small" onclick="location.href='download.html'">
-                    <span class="whaleLogo whaleLogo-black"></span>
-                    웨일 다운로드
+                <button class="small">
+                    <a href="downloadFile/naverWhale_beta.txt" download="naverWhale_beta.txt"><span
+                            class="whaleLogo whaleLogo-color"></span>
+                        베타 다운로드</a>
                 </button>
             </div>
         </div>

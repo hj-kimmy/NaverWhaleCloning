@@ -116,25 +116,25 @@ input[type="button"] {
     border: none;
 }
 
-/*로그인유지*/
+/*로그인 유지*/
 .contents-loginBoxWrap .contents-loginBox .contents-loginCheck, .contents-agreementCheck{
     display: flex;
     justify-content: space-between;
 }
 
 .contents-loginBoxWrap .contents-loginBox .contents-loginCheck p, .contents-agreementCheck p {
-    display: flex;
-    align-items: center;
     font-size: 0.875rem;
     cursor: pointer;
 }
 
 .contents-loginBoxWrap .contents-loginBox .contents-loginCheck p label, .contents-agreementCheck p label {
+    display: flex;
+    align-items: center;
     cursor: pointer;
 }
 
 .contents-loginBoxWrap .contents-loginBox .contents-loginCheck p:nth-of-type(1) span, .contents-agreementCheck p:nth-of-type(1) {
-    margin-right: 3px;
+    margin-right: 5px;
     background: url("../../img/m_sp_01_login_008d5216.png") -271px -96px / 300px no-repeat;
 }
 
@@ -329,11 +329,11 @@ fieldset:nth-of-type(2) li:nth-of-type(2).noValid .joinIcons {
     background: url("../../img/m_sp_06_realname_48b1e603.png") -64px -296px / 372px 326px no-repeat;
 }
 
-fieldset:nth-of-type(2) li:nth-of-type(4) .joinIcons {
+fieldset:nth-of-type(2) li:nth-of-type(4) .joinIcons, section#login.find div.find p:nth-of-type(1) span {
     background: url("../../img/m_sp_06_realname_48b1e603.png") -32px -264px / 372px 326px no-repeat;
 }
 
-fieldset:nth-of-type(2) li:nth-of-type(5) .joinIcons {
+fieldset:nth-of-type(2) li:nth-of-type(5) .joinIcons, section#login.find div.find p:nth-of-type(2) span {
     background: url("../../img/m_sp_06_realname_48b1e603.png") -310px -128px / 372px 326px no-repeat;
 }
 
@@ -342,11 +342,11 @@ fieldset:nth-of-type(2) li:nth-of-type(5).noValid .joinIcons {
 }
 
 /*회원가입 itc 선택*/
-#join div:has(select) {
+#join div:has(select), #login div:has(select) {
     position: relative;
 }
 
-#join select {
+#join select, #login select {
     position: absolute;
     width: 87%;
     right: 10px;
@@ -376,6 +376,12 @@ fieldset:nth-of-type(2) li:nth-of-type(5).noValid .joinIcons {
 #join .agreement p{
     margin: 0;
     font-size: 0.8rem;
+}
+
+/*회원가입 버튼*/
+#join input[type="button"]{
+    font-size: 20px;
+    background-color: var(--whaleSea);
 }
 
 /* 약관 스크롤*/

@@ -121,6 +121,17 @@ $(function () {
         location.href="press_post.html";
     })
 
+    let noticePostList = $("#guideList.notice .contents-tabs ul li");
+    let noticePostNavList = $("#guidePost.notice .contents-post-nav li");
+
+    noticePostList.click(function (){
+        location.href="whaleSpaceNotice_post.html";
+    })
+
+    noticePostNavList.click(function (){
+        location.href="whaleSpaceNotice_post.html";
+    })
+
     let textSize = $("#guidePost .contents-post-title .material-symbols-outlined:first-child");
     let post = $("#guidePost .contents-post");
 

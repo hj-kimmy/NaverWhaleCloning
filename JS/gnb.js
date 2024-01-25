@@ -63,12 +63,14 @@ $(function () {
     let mobileAppsBtn = $("#mobileGnb .mobile-menu-nav img[alt = '바로가기']");
     mobileAppsBtn.off("click").on("click", function () {
         mobileSub.show();
+        $("body").css("overflow","hidden")
     })
 
     /* 돌아가기 메뉴 클릭*/
     let BackBtn = $(".BackBtn");
     BackBtn.off("click").on("click", function () {
         mobileSub.hide();
+        $("body").css("overflow","visible")
     })
 
     /* fold menu 버튼 이벤트 */
@@ -81,14 +83,17 @@ $(function () {
     let xBtn = $("#mobileGnb .xBtn");
     xBtn.click(function () {
         xBtnClick();
+        $("body").css("overflow","visible")
     })
 
     function menuClick() {
         mobileGnb.show();
         cover.show();
+        $("body").css("overflow","hidden")
     }
     function xBtnClick() {
         mobileGnb.hide();
         cover.hide();
+        $("body").css("overflow","visible")
     }
 })

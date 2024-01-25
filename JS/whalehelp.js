@@ -6,25 +6,25 @@ $(function () {
     let tabs =$("#questions .contents-tabs");
     let boxTabs = $("#tutorial .contents-boxes");
 
-    tabBtn.click(function (){
-        tabBtn.removeClass("active");
-        tabs.removeClass("active");
-        boxTabs.removeClass("active");
-        $(this).addClass("active");
-        $("[data-helpTarget ="+$(this).data('help')+"]").addClass("active")
+    tabBtn.click(function (e){
+        moveTabs($(this));
     })
 
     let hamburgerTab = $("#whaleHelpCenter #mobileGnb .contents-tabButton li");
     let xBtn = $("#whaleHelpCenter #mobileGnb .xBtn");
 
     hamburgerTab.click(function (){
+        moveTabs($(this));
+        xBtn.trigger("click");
+    })
+
+    function moveTabs(e) {
         tabBtn.removeClass("active");
         tabs.removeClass("active");
         boxTabs.removeClass("active");
-        $(this).addClass("active");
-        $("[data-helpTarget ="+$(this).data('help')+"]").addClass("active")
-        xBtn.trigger("click");
-    })
+        $("[data-help ="+e.data('help')+"]").addClass("active");
+        $("[data-helpTarget ="+e.data('help')+"]").addClass("active")
+    }
 
     /***************************************************
      * gnb 스크롤링 이벤트 변경

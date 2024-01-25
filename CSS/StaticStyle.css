@@ -30,7 +30,7 @@ a {
     text-decoration: none;
     width: 100%;
     height: 100%;
-    color: #000;
+    color: inherit;
 }
 
 img {
@@ -146,7 +146,7 @@ h5, h5.boxtitle {
 }
 
 /* h6 : 로그인 메뉴 관련 제목*/
-h6{
+h6 {
     font-size: 1.2rem;
 }
 
@@ -635,8 +635,15 @@ header .cover {
 /******************************
     - 게시판 style
 *******************************/
+/******************************
+    - 게시판 글목록
+*******************************/
 #guideList {
     margin: 30px 0 60px;
+}
+
+#guideList .contentsWrap{
+    max-width: 1000px;
 }
 
 #guideList #tabs {
@@ -770,6 +777,134 @@ header .cover {
     'GRAD' 0,
     'opsz' 24;
     font-size: 20px;
+}
+
+/******************************
+    - 게시글 내용
+*******************************/
+
+/*기본 section 설정*/
+section#guidePost {
+    margin-bottom: 60px;
+}
+
+#guidePost div.contentsWrap {
+    max-width: 1000px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+#guidePost div.contentsWrap > div {
+    width: 100%;
+}
+
+/*게시글 제목*/
+#guidePost .contents-post-title {
+    padding: 20px 10px;
+    border-bottom: 1px solid var(--lightgray);
+    display: flex;
+    justify-content: space-between;
+    align-self: end;
+}
+
+#guidePost .contents-post-title > div {
+    display: flex;
+    align-items: end;
+}
+
+#guidePost .contents-post-title .material-symbols-outlined {
+    height: 20px;
+    width: 20px;
+    font-variation-settings: 'FILL' 0,
+    'wght' 300,
+    'GRAD' 0,
+    'opsz' 24;
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+#guidePost .contents-post-title .material-symbols-outlined:last-child {
+    display: block;
+    transform: rotateZ(-45deg);
+    margin-left: 10px;
+}
+
+#guidePost .contents-post-title p span {
+    display: block;
+    width: 100%;
+}
+
+/*게시글 본문*/
+#guidePost .contents-post {
+    margin: 70px 0;
+}
+
+/*게시글끼리 이동할 수 있는 미니 메뉴*/
+#guidePost .contents-post-nav {
+    width: 100%;
+    border-top: 1px solid var(--lightgray);
+}
+
+#guidePost .contents-post-nav li {
+    border-bottom: 1px solid var(--lightgray);
+    font-size: 14px;
+    padding: 12px 10px;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#guidePost .contents-post-nav li:hover {
+    background: #f9fafb;
+}
+
+#guidePost .contents-post-nav li span {
+    flex: 0 0 auto;
+}
+
+#guidePost .contents-post-nav li span:nth-of-type(1) {
+    margin-right: 10px;
+    font-weight: bold;
+}
+
+#guidePost .contents-post-nav li span:nth-of-type(2) {
+    width: 90%;
+    flex: 1 1 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*목록으로 이동 버튼*/
+#guidePost .contentsWrap:nth-of-type(2) button {
+    margin: 40px auto 0;
+    width: 96px;
+}
+
+
+/*비활성화 style*/
+
+.non-active {
+    color: var(--lightgray) !important;
+    cursor: not-allowed !important;
+}
+.non-active.just-gray {
+    color: var(--gray) !important;
+}
+
+
+.notHover:hover {
+    background-color: transparent !important;
+}
+
+.hidden_non-active {
+    display: none !important;
+}
+
+button.non-active, button.non-active:hover {
+    background: var(--lightgray) !important;
+    color: var(--gray2) !important;
 }
 
 /*1440px(데스크탑)*/
@@ -979,6 +1114,39 @@ header .cover {
 
     #guideList p span:first-child {
         margin-bottom: 10px;
+    }
+
+    /******************************
+        - 게시글 내용
+    *******************************/
+    /*게시글 제목*/
+    #guidePost .contents-post-title p span{
+        font-size: 1rem;
+    }
+    #guidePost .contents-post-title p span:last-child{
+        margin-top: 8px;
+    }
+    #guidePost .contents-post-title .material-symbols-outlined:first-child{
+        display: block;
+    }
+
+    /*게시글 본문*/
+    #guidePost .contents-post p{
+        font-size: 1.125rem;
+    }
+    #guidePost .contents-post.size-up p{
+        font-size: 1.25rem;
+    }
+
+    /*게시글끼리 이동할 수 있는 미니 메뉴*/
+    #guidePost .contents-post-nav li{
+        flex-wrap: wrap;
+        font-size: 1rem;
+    }
+    #guidePost .contents-post-nav li span:last-child{
+        margin-top: 8px;
+        width: 100%;
+        font-size: 1rem;
     }
 }
 

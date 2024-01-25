@@ -32,20 +32,6 @@
     <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_details.css">
 
     <!---------------------
-        Custom Stylesheet
-    ----------------------->
-    <!-- static style sheet-->
-    <link rel="stylesheet" href="CSS/StaticStyle.css">
-
-    <!-- GNB style sheet -->
-    <link rel="stylesheet" href="CSS/GNB/mainStyle_gnb.css">
-    <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
-
-    <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/NaverWhale/mainStyle_index.css">
-    <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_index.css">
-
-    <!---------------------
         JavaScript Plugin
     ----------------------->
     <!-- JQuery -->
@@ -102,7 +88,7 @@
                         </ul>
                     </div>
                 </li>
-                <li><a href="">스토어</a></li>
+                <li class="hidden_non-active"><a class="non-active">스토어</a></li>
                 <li><a href="whaleSpace.html">웨일 스페이스</a></li>
                 <li><a href="whaleBook.html">웨일북</a></li>
             </ul>
@@ -116,6 +102,7 @@
                 <button class="downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
+
                 <!-- App Menu -->
                 <div id="gnb-appMenu">
                     <img src="img/apps.svg" alt="바로가기" title="바로가기">
@@ -126,16 +113,16 @@
                         <li>
                             <ul class="appMenu-Apps">
                                 <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
-                                <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
+                                <li class="non-active"><a><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                                 <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
-                                <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
-                                <li><a href=""><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
-                                <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
-                                <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
-                                <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                                <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                                <li class="non-active"><a><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
+                                <li class="non-active"><a><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
+                                <li class="non-active"><a><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
+                                <li class="non-active"><a><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
+                                <li class="non-active"><a><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
+                                <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
                                 <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
-                                <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
+                                <li class="non-active"><a><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                             </ul>
                         </li>
                     </ul>
@@ -180,7 +167,7 @@
                     </ul>
                 </li>
                 <hr>
-                <li><a href="">스토어
+                <li class="hidden_non-active"><a>스토어
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
@@ -209,21 +196,21 @@
             <div id="mobile-gnb-appMenu">
                 <div class="mobile-menu-nav">
                     <span class="material-symbols-outlined BackBtn">chevron_left</span>
-                    바로가기
+                    <span class="BackBtn">돌아가기</span>
                 </div>
                 <h4>웨일 서비스</h4>
-                <ul>
+                <ul class="appMenu-Apps">
                     <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
-                    <li><a href=""><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
                     <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
-                    <li><a href=""><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
-                    <li><a href=""><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
-                    <li><a href="index.html"><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
-                    <li><a href=""><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
-                    <li><a href=""><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                    <li><a href=""><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
+                    <li class="non-active"><a><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
+                    <li class="non-active"><a><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
+                    <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
                     <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
-                    <li><a href=""><img src="img/ic_whale.png" alt="">버그바운티</a></li>
+                    <li class="non-active"><a><img src="img/ic_whale.png" alt="">버그바운티</a></li>
                 </ul>
             </div>
         </div>
@@ -294,7 +281,7 @@
                             <div class="contents-info">
                                 <h2>웨일온</h2>
                                 <p class="c-whale-gray">별도의 애플리케이션 설치 없이 브라우저에서 바로 사용할 수 있는 무제한 온라인 화상회의 서비스입니다.</p>
-                                <p class="c-whale-blue">웨일온, 어떻게 사용하나요?</p>
+                                <p class="c-whale-blue hidden_non-active">웨일온, 어떻게 사용하나요?</p>
                             </div>
                         </div>
                         <video src="img/detail_whaleon.mp4" autoplay muted loop playsinline></video>
@@ -309,7 +296,7 @@
                                 <p class="c-whale-gray">사이드바는 웹 서핑에 유용한 각종 도구 및 서비스를 제공합니다. 사이드바 서비스는 웹서핑을 방해하지 않고 언제든 열거나
                                     닫을 수
                                     있습니다.</p>
-                                <p class="c-whale-blue">사이드바, 어떻게 사용하나요?</p>
+                                <p class="c-whale-blue hidden_non-active">사이드바, 어떻게 사용하나요?</p>
                             </div>
                         </div>
                         <video src="img/detail_sidebar.mp4" autoplay muted loop playsinline></video>
@@ -322,7 +309,7 @@
                             <div class="contents-info">
                                 <h2>퀵서치</h2>
                                 <p class="c-whale-gray">텍스트를 드래그 후 퀵서치를 실행하면 맥락에 맞는 단어를 검색하거나 문장을 바로 번역할 수 있습니다.</p>
-                                <p class="c-whale-blue">퀵서치, 어떻게 사용하나요?</p>
+                                <p class="c-whale-blue hidden_non-active">퀵서치, 어떻게 사용하나요?</p>
                             </div>
                         </div>
                         <video src="img/detail_quicksearch.mp4" autoplay muted loop playsinline></video>
@@ -337,7 +324,7 @@
                                 <p class="c-whale-gray">듀얼 탭은 두개의 탭을 한 화면에서 보여주고, 탭을 연결하면 왼쪽에서 클릭한 링크가 오른쪽으로 열립니다. 탭에서 각종
                                     문서
                                     파일을 열어 듀얼 탭과 함게 활용해 보세요.</p>
-                                <p class="c-whale-blue">듀얼 탭의 자세한 기능이 궁금하다면?</p>
+                                <p class="c-whale-blue hidden_non-active">듀얼 탭의 자세한 기능이 궁금하다면?</p>
                             </div>
                         </div>
                         <video src="img/detail_dualtab.mp4" autoplay muted loop playsinline></video>
@@ -350,7 +337,7 @@
                             <div class="contents-info">
                                 <h2>캡처</h2>
                                 <p class="c-whale-gray">4개의 옵션으로 원하는 영역을 깔끔하게 캡처하고, 캡처한 이미지는 바로 편집할 수 있습니다.</p>
-                                <p class="c-whale-blue">캡처의 자세한 기능이 궁금하다면?</p>
+                                <p class="c-whale-blue hidden_non-active">캡처의 자세한 기능이 궁금하다면?</p>
                             </div>
                         </div>
                         <video src="img/detail_capture.mp4" autoplay muted loop playsinline></video>
@@ -396,7 +383,7 @@
                             <div class="contents-info">
                                 <h2>클린 웹</h2>
                                 <p class="c-whale-gray">네이버 웨일은 더 쾌적한 광고 환경을 제공하기 위한 기준을 세우고, 이를 기반으로 사용자를 불편하게 하거나 혼란스럽게 하는 광고를 차단합니다.</p>
-                                <p class="c-whale-blue">자세히 살펴볼까요?</p>
+                                <p class="c-whale-blue hidden_non-active">자세히 살펴볼까요?</p>
                             </div>
                         </div>
                         <video src="img/detail_cleanweb.mp4" autoplay muted loop playsinline></video>
@@ -409,7 +396,7 @@
                             <div class="contents-info">
                                 <h2>마이 액티비티</h2>
                                 <p class="c-whale-gray">프로필을 동기화하면 북마크, 비밀번호 등 사용자 데이터를 서버에 안전하게 보관하고 어느 기기에서든 동일한 환경을 사용할 수 있습니다. 동기화된 데이터는 마이 액티비티에서 관리합니다.</p>
-                                <p class="c-whale-blue">마이 액티비티 바로가기</p>
+                                <p class="c-whale-blue hidden_non-active">마이 액티비티 바로가기</p>
                             </div>
                         </div>
                         <video src="img/detail_myactivity.mp4" autoplay muted loop playsinline></video>
@@ -430,7 +417,7 @@
                             <div class="contents-info">
                                 <h2>다크 모드</h2>
                                 <p class="c-whale-gray">인터페이스 뿐아니라 웹 콘텐츠에도 다크 모드를 적용할 수 있습니다. 설정을 통해 원하는 영역만 골라서 다크 모드를 적용할 수 있고 예약 기능도 지원합니다.</p>
-                                <p class="c-whale-blue">자세히 살펴볼까요?</p>
+                                <p class="c-whale-blue hidden_non-active">자세히 살펴볼까요?</p>
                             </div>
                         </div>
                         <video src="img/detail_darkmode.mp4" autoplay muted loop playsinline></video>
@@ -443,7 +430,7 @@
                             <div class="contents-info">
                                 <h2>위젯 & 배경테마</h2>
                                 <p class="c-whale-gray">새 탭에서는 여러 위젯을 자유롭게 배치하고 다양한 테마 또는 이미지 파일을 배경으로 적용할 수 있습니다.</p>
-                                <p class="c-whale-blue">자세히 살펴볼까요?</p>
+                                <p class="c-whale-blue hidden_non-active">자세히 살펴볼까요?</p>
                             </div>
                         </div>
                         <video src="img/detail_widget.mp4" autoplay muted loop playsinline></video>
@@ -456,7 +443,7 @@
                             <div class="contents-info">
                                 <h2>인터페이스</h2>
                                 <p class="c-whale-gray">네이버 웨일 인터페이스에는 다양한 컬러의 스킨, 개성 넘치는 캐릭터를 입힐 수 있습니다. 또한 툴바 및 주소창의 각 버튼을 필요에 따라 숨길 수 있습니다.</p>
-                                <p class="c-whale-blue">자세히 살펴볼까요?</p>
+                                <p class="c-whale-blue hidden_non-active">자세히 살펴볼까요?</p>
                             </div>
                         </div>
                         <video src="img/detail_interface.mp4" autoplay muted loop playsinline></video>
@@ -473,7 +460,7 @@
         <div class="footerWrap">
 
             <!-- footer Menu -->
-            <ul class="footerMenu">
+            <ul class="footerMenu non-active just-gray">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
                 <li>NAVER whale 개인정보 보호를 위한 백서</li>
@@ -484,7 +471,7 @@
 
             <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
-                <ul class="snsIcons">
+                <ul class="snsIcons non-active">
                     <li><img src="img/blog.png" alt=""></li>
                     <li><img src="img/facebook.png" alt=""></li>
                     <li><img src="img/youtube.png" alt=""></li>

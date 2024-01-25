@@ -16,6 +16,8 @@
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
     <!-- Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- ClipboardJS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 
     <!---------------------
         Custom Stylesheet
@@ -299,14 +301,14 @@
                         <div>
                             <h4>Android</h4>
                         </div>
-                        <button class="small">다운로드</button>
+                        <button class="small non-active">다운로드</button>
                     </li>
                     <li data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="800" data-aos-easing="ease-out" data-aos-once ="true">
                         <div class="icon ios"></div>
                         <div>
                             <h4>iOS</h4>
                         </div>
-                        <button class="small">다운로드</button>
+                        <button class="small non-active">다운로드</button>
                     </li>
                 </ul>
             </div>
@@ -325,7 +327,7 @@
                         <h3 class="small">링크 공유</h3>
                         <p class="smallest c-whale-gray">다운로드 링크를 공유해보세요.</p>
                         <div class="contents-copyBox">
-                            <input type="text" id ="downloadURL"><input type="button" value = "URL 복사" data-clipboard-target="#downloadURL" id = "copyBtn">
+                            <input type="text" id ="downloadURL"><input type="button" value = "URL 복사" data-clipboard-target="#downloadURL" class="copyBtn">
                         </div>
                     </div>
                 </div>
@@ -340,7 +342,7 @@
         <div class="footerWrap">
 
             <!-- footer Menu -->
-            <ul class="footerMenu">
+            <ul class="footerMenu non-active just-gray">
                 <li>이용약관</li>
                 <li><b>개인정보 처리방침</b></li>
                 <li>NAVER whale 개인정보 보호를 위한 백서</li>
@@ -351,7 +353,7 @@
 
             <!-- snsIcon & 버튼메뉴 -->
             <div class="footerMenu2">
-                <ul class="snsIcons">
+                <ul class="snsIcons non-active">
                     <li><img src="img/blog.png" alt=""></li>
                     <li><img src="img/facebook.png" alt=""></li>
                     <li><img src="img/youtube.png" alt=""></li>

@@ -121,11 +121,6 @@
 
     }
 
-    /*product Img*/
-    #checkDevice .contents-img img {
-        width: 100%;
-    }
-
     /******************************
         - section2#wacomPen
     *******************************/
@@ -136,7 +131,6 @@
 
     /*product Img*/
     #wacomPen .contents-img img {
-        width: auto;
         height: 100%;
         max-height: 200px;
     }
@@ -156,7 +150,6 @@
 
     /*product Img*/
     #whaleOS .contents-img img {
-        width: auto;
         height: 100%;
         max-height: 250px;
     }

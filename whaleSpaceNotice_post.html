@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Naver Dolphin</title>
+    <title>웨일 스페이스</title>
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" href="img/whale_color.svg" type="image/x-icon">
+    <link rel="shortcut icon" href="img/ic_whalespace.png" type="image/x-icon">
+
     <!---------------------
-          Plugin Stylesheet
-      ----------------------->
+        Plugin Stylesheet
+    ----------------------->
     <!-- 구글 아이콘 -->
     <link rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"/>
+
     <!-- Animate On Scroll Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
@@ -28,8 +30,9 @@
     <link rel="stylesheet" href="CSS/GNB/mediaQuery_gnb.css">
 
     <!-- Main style sheet-->
-    <link rel="stylesheet" href="CSS/NaverWhale/mainStyle_guideDetail.css">
-    <link rel="stylesheet" href="CSS/NaverWhale/mediaQuery_guideDetail.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mainStyle_spaceNoticeNWorkShop.css">
+    <link rel="stylesheet" href="CSS/whaleSpace/mediaQuery_spaceNoticeNWorkShop.css">
+
 
     <!---------------------
         JavaScript Plugin
@@ -49,7 +52,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js"></script>
 
 </head>
-<body>
+<body id="notice">
 <div id="wrap">
     <!---------------------
          Header
@@ -57,82 +60,28 @@
     <header>
         <!-- gnb_default -->
         <nav id="gnb">
-            <h1 id="main-logo">
-                <a href="index.html">
-                    <div id="naver"></div>
-                    <div id="whale"></div>
+            <h1 id="main-logo" class="whaleSpace">
+                <a href="whaleSpace.html">
+                    <div id="whaleSpaceLogo"></div>
                 </a>
             </h1>
 
             <!-- Top-MainMenu -->
             <ul id="main-menu">
-                <li id="home"><a href="index.html" class="check">홈</a>
+                <li id="home"><a href="whaleSpace.html" class="check">홈</a>
                 </li>
-                <li>
-                    <div class="menu-sub-2">
-                        <a href="whyWhale_BrandStory.html" class="check">Whale을 사용해야하는 이유
-                            <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
-                        </a>
-                    </div>
-                    <div class="subMenuBoxWrap">
-                        <ul class="subMenuBox hide">
-                            <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
-                            <li><a href="details_Omnitasking.html">주요 기능</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="active">
-                    <div class="menu-sub-2">
-                        <a href="guide.html" class="check">가이드
-                            <span class="material-symbols-outlined dropdown">arrow_drop_down</span>
-                        </a>
-                    </div>
-                    <div class="subMenuBoxWrap">
-                        <ul class="subMenuBox hide">
-                            <li><a href="guide.html">What's new</a></li>
-                            <li><a href="whalehelp.html">이용 가이드</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li class="hidden_non-active"><a class="non-active">스토어</a></li>
-                <li><a href="whaleSpace.html">웨일 스페이스</a></li>
-                <li><a href="whaleBook.html">웨일북</a></li>
+                <li><a href="whaleSpaceDetails.html" class="check">웨일 스페이스 살펴보기</a></li>
+                <li><a href="whaleSpaceService.html" class="check">제휴 서비스</a></li>
+                <li><a href="whaleBook.html" class="check">웨일북</a></li>
+                <li><a href="whaleSpaceWorkShop.html" class="check">활용 가이드</a></li>
+                <li class="active"><a href="whaleSpaceNotice.html" class="check">공지사항</a></li>
             </ul>
 
             <!-- 서브메뉴 버튼 -->
             <div id="subBtn">
-                <button class="main-downloadBtn small" onclick="location.href = 'download.html'">
-                    <div class="whaleLogo whaleLogo-black"></div>
-                    다운로드
-                </button>
-                <button class="downloadBtn small" onclick="location.href = 'login.html'">
+                <button class="main-downloadBtn small" onclick="location.href = 'login.html'">
                     로그인
                 </button>
-
-                <!-- App Menu -->
-                <div id="gnb-appMenu">
-                    <img src="img/apps.svg" alt="바로가기" title="바로가기">
-                    <ul class="subMenuBox hide">
-                        <li>
-                            <strong>웨일 서비스</strong>
-                        </li>
-                        <li>
-                            <ul class="appMenu-Apps">
-                                <li><a href="index.html"><img src="img/ic_whale.png" alt="">웨일홈</a></li>
-                                <li class="non-active"><a><img src="img/ic_whale_store.png" alt="">웨일 스토어</a></li>
-                                <li><a href="whalehelp.html"><img src="img/ic_help.png" alt="">웨일 헬프센터</a></li>
-                                <li class="non-active"><a><img src="img/ic_whale_lab.png" alt="">웨일 연구소</a></li>
-                                <li class="non-active"><a><img src="img/ic_whale_dev.png" alt="">웨일 개발자센터</a></li>
-                                <li class="non-active"><a><img src="img/ic_whaleon.png" alt="">웨일온</a></li>
-                                <li class="non-active"><a><img src="img/ic_whaleon_study.png" alt="">웨일온 스터디</a></li>
-                                <li class="non-active"><a><img src="img/ic_whale_class.png" alt="">웨일 클래스</a></li>
-                                <li><a href="whaleSpace.html"><img src="img/ic_whalespace.png" alt="">웨일 스페이스</a></li>
-                                <li><a href="whaleBook.html"><img src="img/ic_whalebook.png" alt="">웨일북</a></li>
-                                <li class="non-active"><a><img src="img/ic_whale.png" alt="">버그바운티</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
                 <div id="menuBtn"><i class="fa-solid fa-bars"></i></div>
             </div>
         </nav>
@@ -146,55 +95,37 @@
                     <span class="mobile-menu-btn"><img src="img/apps.svg" alt="바로가기" title="바로가기"></span>
                 </div>
                 <li id="mobile-home">
-                    <a href="index.html">홈
+                    <a href="whaleSpace.html">홈
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a>
                 </li>
                 <li>
-                    <a href="whyWhale_BrandStory.html">Whale을 사용해야하는 이유
+                    <a href="whaleSpaceDetails.html">웨일 스페이스 살펴보기
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a>
                 </li>
+
                 <li>
-                    <ul>
-                        <li><a href="whyWhale_BrandStory.html">브랜드 스토리</a></li>
-                        <li><a href="details_Omnitasking.html">주요 기능</a></li>
-                    </ul>
-                </li>
-                <hr>
-                <li>
-                    <a href="guide.html">가이드
+                    <a href="whaleSpaceService.html">제휴 서비스
                         <span class="material-symbols-outlined arrow">chevron_right</span>
                     </a></li>
-                <li>
-                    <ul>
-                        <li><a href="guide.html">What's new</a></li>
-                        <li><a href="whalehelp.html">이용 가이드</a></li>
-                    </ul>
-                </li>
-                <hr>
-                <li class="hidden_non-active"><a>스토어
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </a>
-                </li>
-                <li><a href="whaleSpace.html">웨일 스페이스
-                    <span class="material-symbols-outlined arrow">chevron_right</span>
-                </a>
-                </li>
                 <li><a href="whaleBook.html">웨일북
                     <span class="material-symbols-outlined arrow">chevron_right</span>
                 </a>
                 </li>
+                <li><a href="whaleSpaceWorkShop.html">활용가이드
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+                <li><a href="whaleSpaceNotice.html">공지사항
+                    <span class="material-symbols-outlined arrow">chevron_right</span>
+                </a>
+                </li>
+
             </ul>
-            <div class="downloadBtn">
-                <button class="" onclick="location.href = 'login.html'">
-                    로그인
-                </button>
-                <button class="" onclick="location.href = 'download.html'">
-                    <span class="whaleLogo whaleLogo-color"></span>
-                    다운로드
-                </button>
-            </div>
+            <button class="downloadBtn" onclick="location.href = 'login.html'">
+                로그인
+            </button>
         </nav>
 
         <!-- App Menu Mobile -->
@@ -227,25 +158,15 @@
            section1. 게시판 헤더
         ----------------------->
         <section id="guideHeader">
-            <section class="contentsWrap">
+            <div class="contents-bgImg"></div>
+            <section class="contentsWrap middle">
 
                 <!-- title -->
-                <article class="contents-info">
-                    <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#guideHeader">보도자료</h1>
-                    <div class="c-whale-gray" data-aos="fade-up" data-aos-anchor-placement="top-bottom" data-aos-duration="1000" data-aos-easing="ease-out" data-aos-anchor="#guideHeader" data-aos-delay="100">
-                        <p>
-                            네이버 웨일의 주요 소식을
-                            <br class="br-960">빠르게 전해드립니다.
-                        </p>
-                    </div>
-                </article>
-
-                <!-- 업데이트 이미지 -->
-                <div class="contents-img">
-                    <picture>
-                        <source srcset="img/img_press_260.png" media="(max-width : 600px)">
-                        <img src="img/img_press_470.png" alt="">
-                    </picture>
+                <div class="contents-info">
+                    <h1>웨일 스페이스와 웨일북 소식을 알려드립니다</h1>
+                    <p class="c-whale-gray">
+                        업데이트 공지 및 주요소식을 확인하세요.
+                    </p>
                 </div>
             </section>
         </section>
@@ -253,9 +174,8 @@
         <!---------------------
            section1. 게시글 본문
         ----------------------->
-        <section id="guidePost" class="press">
+        <section id="guidePost" class="notice">
             <div class="contentsWrap">
-
                 <!-- title -->
                 <div class="contents-post-title">
                     <p class="small"><span><strong>네이버式 에듀테크, 대학가로 스며든다…‘웨일 스페이스’ 확장</strong></span><span class="date">2023.12.26</span>

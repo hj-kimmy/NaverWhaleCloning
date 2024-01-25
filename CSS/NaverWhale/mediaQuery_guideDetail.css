@@ -10,41 +10,6 @@
     }
 }
 
-/*740px(태블릿)*/
-@media screen and (max-width: 740px) {
-    /******************************
-        - section2-1#guidePost
-    *******************************/
-    /*게시글 제목*/
-    #guidePost .contents-post-title p span{
-        font-size: 1rem;
-    }
-    #guidePost .contents-post-title p span:last-child{
-        margin-top: 8px;
-    }
-    #guidePost .contents-post-title .material-symbols-outlined:first-child{
-        display: block;
-    }
-
-    /*게시글 본문*/
-    #guidePost .contents-post p{
-        font-size: 1.125rem;
-    }
-    #guidePost .contents-post.size-up p{
-        font-size: 1.25rem;
-    }
-
-    /*게시글끼리 이동할 수 있는 미니 메뉴*/
-    #guidePost .contents-post-nav li{
-        flex-wrap: wrap;
-        font-size: 1rem;
-    }
-    #guidePost .contents-post-nav li span:last-child{
-        margin-top: 8px;
-        width: 100%;
-        font-size: 1rem;
-    }
-}
 
 /*600px(스마트폰)*/
 @media screen and (max-width: 600px) {

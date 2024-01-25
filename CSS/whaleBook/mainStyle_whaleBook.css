@@ -184,6 +184,10 @@ section#whaleWithSchool {
     font-size: 0.875rem;
     padding-bottom: 10px;
 }
+/*필수 입력창*/
+.contents-modal form legend sup{
+    color: red;
+}
 
 /*구분*/
 .contents-modal form input:not([type="radio"]), .contents-modal form select, .contents-modal form textarea {
@@ -192,6 +196,7 @@ section#whaleWithSchool {
     border-radius: 10px;
     border: 1px solid var(--lightgray);
     padding: 10px;
+    resize: none;
 }
 
 .contents-modal form input:not([type="radio"]), .contents-modal form select {
