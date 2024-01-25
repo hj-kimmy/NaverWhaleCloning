@@ -87,6 +87,7 @@ section#secure .contentsWrap {
     border-radius: 0;
     transition: color 0.7s;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /*accordian-Carousel-active 설정*/
