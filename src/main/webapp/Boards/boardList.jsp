@@ -11,30 +11,6 @@
         Custom Stylesheet
     ----------------------->
     <link rel="stylesheet" href='<c:url value="/resource/CSS/NaverWhale/mainStyle_guideDetail.css"/>'>
-    <script>
-        $(function (){
-            let searchTab = $("#text");
-
-            searchTab.keyup(function (key){
-                let searchKeyword = searchTab.val();
-                if(searchKeyword===""){
-                    searchTab.next().text("search");
-                }else {
-                    searchTab.next().text("cancel");
-                }
-                if(key.keyCode===13){
-                    document.searchForm.submit();
-                }
-            })
-
-            searchTab.next().click(function (){
-                if(searchTab.next().text()==="cancel"){
-                    searchTab.val("");
-                    searchTab.next().text("search");
-                }
-            })
-        })
-    </script>
 </head>
 <body>
 <div id="wrap">
@@ -49,11 +25,6 @@
 
         String[] updateCategories = {"Desktop", "iOS", "Android"};
         String[] pressCategories = {"출시소식", "학급지원", "환경조성"};
-
-        System.out.println(category);
-        System.out.println(table);
-        System.out.println(pageNum);
-        System.out.println(total_page);
     %>
     <main>
         <c:set var="table" value="<%=table%>"/>
@@ -118,7 +89,7 @@
                             </c:if>
 
                             <c:if test='${sessionID!=null&&sessionID.equals("admin")}'>
-                                <button class="small">글쓰기</button>
+                                <button class="small" type="button" onclick='location.href="<c:url value='/BoardWriteForm.do?table=${table}&id=${sessionID}'/>"'>글쓰기</button>
                             </c:if>
                         </ul>
                         <form name="searchForm" action='<c:url value = "./BoardListAction.do"/>' method="get">
@@ -132,6 +103,7 @@
                     <div id="tabs-1" class="contents-tabs">
                         <ul class="contents-tab-layer active">
                             <%
+                                if (!boardList.isEmpty()) {
                                 for (int i = 0; i < boardList.size(); i++) {
                                     BoardDTO dto = (BoardDTO) boardList.get(i);
                             %>
@@ -143,15 +115,25 @@
                             </li>
                             <%
                                 }
+                            } else {
+                            %>
+                            <li class="empty">
+                                <p class="small">검색 결과가 없습니다.
+                                </p>
+                            </li>
+                            <%
+                                }
                             %>
                         </ul>
                     </div>
                 </div>
             </div>
 
+            <% if (!boardList.isEmpty()) {%>
             <!-- 페이징 버튼 -->
             <div class="contents-btns">
                 <ul>
+
                     <c:if test="${pageNum==1}">
                     <li>
                         <span class="material-symbols-outlined">chevron_left</span>
@@ -209,9 +191,13 @@
                     </c:if>
                 </ul>
             </div>
+            <%
+                }
+            %>
         </section>
     </main>
     <%@ include file="/footer.jsp" %>
+    <script src='<c:url value="/resource/JS/checkMenu.js"/>'></script>
 </div>
 </body>
 </html>

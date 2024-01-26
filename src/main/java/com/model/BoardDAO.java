@@ -7,6 +7,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Map;
 
 public class BoardDAO {
     private static BoardDAO instance;
@@ -91,14 +93,13 @@ public class BoardDAO {
             rs = pstmt.executeQuery();
             if (rs.next()) {
                 name = rs.getString("name");
-                return name;
             }
         } catch (Exception e) {
-            System.out.println("getBoardList()에러" + e);
+            System.out.println("getLoginNameById()에러" + e);
         } finally {
             closeResources(conn, pstmt, rs);
         }
-        return null;
+        return name;
     }
 
     public BoardDTO getBoardByNum(int num) {
@@ -213,22 +214,24 @@ public class BoardDAO {
         PreparedStatement pstmt = null;
 
         String name = null;
-        String sql = "insert into press_board values (num.nextval, ?, ?, ?, ?, ?, ?, sysdate, sysdate)";
+        String sql = "insert into whale_board values (whale_seqNum.nextval, ?, ?, ?, ?, ?, ?, ?, ?, sysdate, sysdate)";
         try {
             conn = DataBaseConnect.getConnection();
             pstmt = conn.prepareStatement(sql);
-            pstmt.setString(1, board.getId());
-            pstmt.setString(2, board.getName());
-            pstmt.setString(3, board.getSubject());
-            pstmt.setString(4, board.getContents());
-            pstmt.setInt(5, board.getHit());
-            pstmt.setString(6, board.getIp());
+            pstmt.setString(1, board.getTableName());
+            pstmt.setString(2, board.getId());
+            pstmt.setString(3, board.getName());
+            pstmt.setString(4, board.getCategory());
+            pstmt.setString(5, board.getSubject());
+            pstmt.setString(6, board.getContents());
+            pstmt.setInt(7, board.getHit());
+            pstmt.setString(8, board.getIp());
 
             pstmt.executeUpdate();
 
         } catch (Exception e) {
 
-            System.out.println("getBoardList()에러" + e);
+            System.out.println("insertBoard()에러" + e);
         } finally {
             closeResources(conn, pstmt);
         }

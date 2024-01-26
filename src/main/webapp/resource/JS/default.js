@@ -29,3 +29,12 @@ function downloadModal() {
         "opacity": 1
     }, 500)
 }
+
+let popupAni = $(".ani");
+
+popupAni.attr({
+    "data-aos": "fade-up",
+    "data-aos-anchor-placement": "center-bottom",
+    "data-aos-duration": "1000",
+    "data-aos-easing": "ease-out"
+})

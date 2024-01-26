@@ -47,7 +47,6 @@ section#guideMain {
     padding: 56px 0 96px;
 }
 #update .contentsWrap, #press .contentsWrap {
-    align-items: start;
     justify-content: space-between;
     margin-top: 24px;
 }
