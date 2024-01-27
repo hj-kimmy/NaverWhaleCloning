@@ -1,11 +1,15 @@
 package com.controller;
 
+import com.model.BoardDAO;
+import com.model.BoardDTO;
+
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.util.Date;
 
 public class BoardController extends HttpServlet {
     private static final long serialVersionUID = 1L;
@@ -19,9 +23,7 @@ public class BoardController extends HttpServlet {
             throws ServletException, IOException {
 
         String RequestURI = request.getRequestURI();
-        System.out.println("RequestURI : " + RequestURI);
         String contextPath = request.getContextPath();
-        System.out.println("contextPath : " + contextPath);
         String command = RequestURI.substring(contextPath.length());
 
         response.setContentType("text/html; charset=utf-8");
@@ -43,7 +45,8 @@ public class BoardController extends HttpServlet {
             rd = request.getRequestDispatcher("/BoardView.do");
         }else if(command.equals("/BoardView.do")) { // 글 상세 페이지 출력하기
             rd = request.getRequestDispatcher("./Boards/boardView.jsp");
-        }else if(command.equals("/BoardWriteForm.do")) {
+        }
+        else if(command.equals("/BoardWriteForm.do")) {
             req = new GetLoignMemberTable();
             req.boardWork(request);
             rd = request.getRequestDispatcher("./Boards/boardForm.jsp");
@@ -51,7 +54,20 @@ public class BoardController extends HttpServlet {
             req = new AddNewBoard();
             req.boardWork(request);
             rd = request.getRequestDispatcher("/BoardListAction.do");
+        }else if(command.equals("/BoardDeleteAction.do")) {
+            req = new DeleteBoard();
+            req.boardWork(request);
+            rd = request.getRequestDispatcher("/BoardListAction.do");
+        }else if(command.equals("/BoardUpdateForm.do")){
+            req = new GetBoardView();
+            req.boardWork(request);
+            rd = request.getRequestDispatcher("./Boards/boardForm.jsp");
+        }else if(command.equals("/BoardUpdateAction.do")) { // 본인 게시글 내용 수정하기
+            req = new UpdateBoard();
+            req.boardWork(request);
+            rd = request.getRequestDispatcher("/BoardListAction.do");
         }
         if(rd!=null) rd.forward(request, response);
     }
+
 }

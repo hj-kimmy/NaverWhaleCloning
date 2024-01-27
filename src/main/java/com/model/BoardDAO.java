@@ -38,13 +38,13 @@ public class BoardDAO {
         if(tableName==null){
             sql = "select * from whale_board order by num desc";
         }else {
-            if (category == null && (text == null || text.equals(""))) {
+            if ((category == null||category.isEmpty()) && (text == null || text.isEmpty())) {
                 sql = "select * from whale_board where tablename = '"+ tableName +"' order by num desc";
                 System.out.println("case1");
-            } else if (category == null && (text != null || !text.equals(""))) {
+            } else if ((category == null||category.isEmpty())) {
                 sql = "select * from whale_board where tablename = '"+ tableName +"' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
                 System.out.println("case2");
-            } else if (category != null && (text == null || text.equals(""))) {
+            } else if (text == null || text.isEmpty()) {
                 sql = "select * from whale_board where tablename = '"+ tableName +"' and category = '" + category + "' order by num desc";
                 System.out.println("case3");
             } else {
@@ -249,11 +249,11 @@ public class BoardDAO {
         if(tableName==null){
             sql = "select count (*) from whale_board order by num desc";
         }else {
-            if (category == null && (text == null || text.equals(""))) {
+            if ((category == null||category.isEmpty()) && (text == null || text.isEmpty())) {
                 sql = "select count (*) from whale_board where tablename = '"+ tableName +"' order by num desc";
-            } else if (category == null && (text != null || !text.equals(""))) {
+            } else if (category == null || category.isEmpty()) {
                 sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
-            } else if (category != null && (text == null || text.equals(""))) {
+            } else if (text == null || text.isEmpty()) {
                 sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and category = '" + category + "' order by num desc";
             } else {
                 sql = "select count (*) from whale_board where tablename = '"+ tableName +"' and  category = '" + category + "' and (subject like '%" + text + "%' or content like '%" + text + "%') order by num desc";
@@ -326,6 +326,51 @@ public class BoardDAO {
             closeResources(conn, pstmt, rs);
         }
         return list;
+    }
+
+    public void deleteBoard(String[] strIds) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        String sql = "delete whale_board where num = ?";
+        try {
+            for(String id : strIds){
+                int num = Integer.parseInt(id);
+                conn = DataBaseConnect.getConnection();
+                pstmt = conn.prepareStatement(sql);
+
+                pstmt.setInt(1,num);
+                pstmt.executeUpdate();
+            }
+        } catch (Exception e) {
+            System.out.println("deleteBoard()에러" + e);
+        } finally {
+            closeResources(conn,pstmt);
+        }
+    }
+
+    public void updateBoard(BoardDTO dto) {
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+
+        String sql = "update whale_board set subject = ?, content = ?, ip=?, update_day = sysdate, category = ? where num = ?";
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1,dto.getSubject());
+            pstmt.setString(2,dto.getContents());
+            pstmt.setString(3,dto.getIp());
+            pstmt.setString(4,dto.getCategory());
+            pstmt.setInt(5,dto.getNum());
+
+            pstmt.executeUpdate();
+
+        } catch (Exception e) {
+            System.out.println("updateHit()에러" + e);
+        } finally {
+            closeResources(conn,pstmt);
+        }
     }
 
 

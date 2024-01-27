@@ -12,8 +12,13 @@ public class GetBoardView implements RequestBoard{
         BoardDTO dto1 = new BoardDTO();
         BoardDTO dto2 = new BoardDTO();
         BoardDTO dto3 = new BoardDTO();
+        int num;
+        if(request.getParameter("num")==null || request.getParameter("num").isEmpty()){
+            num = Integer.parseInt(request.getParameterValues("editCheck")[0]);
+        }else {
+            num = Integer.parseInt(request.getParameter("num"));
+        }
 
-        int num = Integer.parseInt(request.getParameter("num"));
         String tablename = request.getParameter("table");
         dto1 = dao.getBoardByNum(num);
         dto2 = dao.getBoardNextByNum(num,tablename);

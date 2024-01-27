@@ -16,6 +16,10 @@
 <div id="wrap">
     <%@ include file="/gnb.jsp" %>
     <%
+        BoardDTO update = null;
+        if (request.getAttribute("now") != null) {
+            update = (BoardDTO) request.getAttribute("now");
+        }
         String name = (String) request.getAttribute("name");
         String table = (String) request.getAttribute("table");
 
@@ -24,6 +28,7 @@
         String[] arr = new String[3];
     %>
     <c:set var="table" value="<%=table%>"/>
+    <c:set var="updateDto" value="<%=update%>"/>
     <main>
         <c:if test='${table eq "update"}'>
             <%@ include file="/Boards/boardheader_update.jsp" %>
@@ -49,47 +54,76 @@
                 <p class="smallest c-whale-gray">
                     <sup>*</sup> 관리자만 작성할 수 있는 게시글입니다. 작성 전 내용을 확인해주세요.
                 </p>
-                <form action="<c:url value = "./BoardWriteAction.do"/>" name="board_update" method="post">
+                <form name="board_update" method="post" id="board_update">
+                    <c:if test="${updateDto!=null}">
+                        <input type="hidden" name="num" value="<%=update.getNum()%>">
+                    </c:if>
                     <input type="hidden" name="name" value="<%=name%>">
                     <input type="hidden" name="id" value="<%=sessionID%>">
                     <input type="hidden" name="table" value="<%=table%>">
                     <div id="menus">
                         <div id="now">
-                            <span><%=arr[0]%></span>
+                            <span>
+                                <%
+                                    String selected = null;
+                                    for (int i = 0; i < arr.length; i++) {
+                                        if (update != null && arr[i].equals(update.getCategory())) {
+                                            selected = arr[i];
+                                            break;
+                                        } else if (update == null) {
+                                            selected = arr[0];
+                                            break;
+                                        }
+                                    }
+                                %>
+                                <%=selected%>
+                            </span>
                             <span class="material-symbols-outlined">expand_more</span>
                         </div>
                         <div id="category" class="button-group">
-                                <button class="button is-checked" type="button">
-                                    <span><%=arr[0]%></span>
-                                    <span class="material-symbols-outlined">check</span>
-                                </button>
-                                <button class="button" type="button">
-                                    <span><%=arr[1]%></span>
-                                    <span class="material-symbols-outlined">check</span>
-                                </button>
-                                <button class="button" type="button">
-                                    <span><%=arr[2]%></span>
-                                    <span class="material-symbols-outlined">check</span>
-                                </button>
+                            <%
+                                for (int i = 0; i < arr.length; i++) {
+                            %>
+                            <button class="button
+                                            <%
+                                            if(arr[i].equals(selected)){
+                                            %>
+                                            is-checked
+                                            <%
+                                            }
+                                            %>
+                                            " type="button">
+                                <span><%=arr[i]%></span>
+                                <span class="material-symbols-outlined">check</span>
+                            </button>
+                            <%
+                                }
+                            %>
 
                         </div>
                     </div>
                     <input type="hidden" name="category" id="categoryValue">
 
                     <p>
-                        <input type="text" id="subject" name="subject" placeholder="제목">
+                        <input type="text" id="subject" name="subject" placeholder="제목"
+                               value="<c:if test="${updateDto!=null}">${updateDto.subject}</c:if>">
                     </p>
                     <p>
-                        <textarea name="content" id="content" rows="20"></textarea>
+                        <textarea name="content" id="content" rows="20" placeholder="공지사항을 업로드 하기 전에 내용을 확인 바랍니다."><c:if
+                                test="${updateDto!=null}">${updateDto.contents}</c:if></textarea>
                     </p>
                     <div class="contents-btns">
-                        <button class="whale-Button small" onclick="checkBoardForm()" type="button"> 등록</button>
-                        <button class="small" type="reset"> 초기화 </button>
-                        <button class="small" type="button" onclick="history.back()"> 이전 </button>
+                        <c:if test="${updateDto!=null}">
+                            <button class="whale-Button small" type="button" id="updateBtn"> 수정</button>
+                        </c:if>
+                        <c:if test="${updateDto==null}">
+                            <button class="whale-Button small" type="button" id="insertBtn"> 등록</button>
+                        </c:if>
+                        <button class="small" type="reset"> 초기화</button>
+                        <button class="small" type="button" onclick="history.back()"> 이전</button>
                     </div>
                 </form>
             </div>
-
             <p id="#test"></p>
         </section>
     </main>

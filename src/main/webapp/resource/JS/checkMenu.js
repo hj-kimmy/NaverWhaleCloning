@@ -31,20 +31,54 @@ $(document).mouseup(function (e) {
 
 let board = document.board_update;
 
-function checkBoardForm(){
-    if(!board.subject.value){
-        alert("제목을 입력해주세요.")
-        board.subject.focus();
-        return false;
-    }
-    if(!board.content.value){
-        alert("내용을 입력해주세요.")
-        board.content.focus();
-        return false;
+let text = document.getElementById("content").value;
+text = text.replaceAll("<br>", "\r\n");
+
+$(function (){
+    $("#content").val(text);
+    let boardForm = $("#board_update")
+
+    $("#insertBtn").click(function (){
+        checkBoardForm();
+    })
+
+    $("#updateBtn").click(function (){
+        checkBoardUpdateForm();
+    })
+    function checkBoardForm() {
+        if (!board.subject.value) {
+            alert("제목을 입력해주세요.")
+            board.subject.focus();
+            return false;
+        }
+        if (!board.content.value) {
+            alert("내용을 입력해주세요.")
+            board.content.focus();
+            return false;
+        }
+
+        text = $('#content');
+        text.val(text.val().replace(/(?:\r\n|\r|\n)/g, '<br>'));
+        boardForm.attr('action','./BoardWriteAction.do');
+        boardForm.submit();
     }
 
-    let text = $('textarea');
-    text.val(text.val().replace(/(?:\r\n|\r|\n)/g, '<br>'));
+    function checkBoardUpdateForm() {
+        if (!board.subject.value) {
+            alert("제목을 입력해주세요.")
+            board.subject.focus();
+            return false;
+        }
+        if (!board.content.value) {
+            alert("내용을 입력해주세요.")
+            board.content.focus();
+            return false;
+        }
 
-    board.submit();
-}
+        text = $('#content');
+        text.val(text.val().replace(/(?:\r\n|\r|\n)/g, '<br>'));
+        boardForm.attr('action','./BoardUpdateAction.do');
+        boardForm.submit();
+    }
+})
+

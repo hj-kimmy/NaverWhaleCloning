@@ -643,13 +643,13 @@ header .cover {
 #guideList #tabs {
     width: 100%;
     margin: 30px 0;
-
 }
 /*게시판 검색메뉴*/
 #guideList .search{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap-reverse;
 }
 
 #guideList .search form{
@@ -664,6 +664,7 @@ header .cover {
 
 #guideList .search form input{
     border: none;
+    flex: 1 1 auto;
 }
 #guideList .search form:has(input:focus) {
     border: 1px solid var(--whaleSea);
@@ -686,6 +687,7 @@ header .cover {
 
 #guideList ul.contents-btns li {
     margin-right: 20px;
+    flex : 0 0 auto;
 }
 
 #guideList ul.contents-btns li.active a {
@@ -719,6 +721,10 @@ header .cover {
     cursor: pointer;
 }
 
+#guideList .contents-tabs ul li.empty{
+    padding: 80px 0;
+}
+
 #guideList .contents-tabs ul li:last-child {
     border-bottom: 1px solid var(--lightgray);
 }
@@ -730,14 +736,18 @@ header .cover {
 #guideList .contents-tabs ul li:hover p {
     font-weight: bold;
 }
+#guideList .contents-tabs ul li input{
+    margin-right: 10px;
+    flex : 0 0 auto;
+}
 
-#guideList p {
+#guideList .contents-tabs ul li p {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-top: 0;
     padding: 10px 0;
-    width: 100%;
+    flex : 1 1 auto
 }
 
 /*게시판 페이징 버튼*/
@@ -799,6 +809,17 @@ header .cover {
     'opsz' 24;
     font-size: 20px;
     color: var(--lightgray);
+}
+/*관리자 메뉴*/
+#guideList div.buttons{
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 40px;
+    display: flex;
+    justify-content: end;
+}
+#guideList div.buttons button{
+    margin-left: 10px;
 }
 /******************************
     - 게시글 내용
@@ -896,9 +917,19 @@ section#guidePost {
     white-space: nowrap;
     text-overflow: ellipsis;
 }
+/*관리자 수정버튼*/
+#guidePost .contents-btns{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    margin-top: 40px;
+}
+#guidePost .contents-btns button{
+    margin-left: 10px;
+}
 
 /*목록으로 이동 버튼*/
-#guidePost .contentsWrap:nth-of-type(2) button {
+#guidePost button.toList {
     margin: 40px auto 0;
     width: 96px;
 }
@@ -1333,5 +1364,15 @@ button.non-active, button.non-active:hover {
 
     .contents-cardList li div:nth-of-type(2) {
         margin-left: 12px;
+    }
+
+    /******************************
+        - 게시판 style
+    *******************************/
+    #guideList .search form{
+        padding: 0 10px 0 20px;
+        height: 40px;
+        width: 100%;
+        margin-bottom: 12px;
     }
 }
