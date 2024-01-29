@@ -154,6 +154,7 @@ $(function () {
 
     let phone = $("#join #phone");
     let phTxt = $(".phone");
+    let now = phone.val();
 
     phone.focusout(function () {
         if (!updateForm.phone.value) {
@@ -173,8 +174,33 @@ $(function () {
         inputPhone = phoneForm(inputPhone);
         phone.val(inputPhone);
 
-        phone.parents("li").removeClass("noValid");
-        phTxt.hide();
+        if(now!==inputPhone){
+            $.ajax({
+                url : "./whale_member/phoneCheckService.lo",
+                type : "post",
+                data : {inputPhone : inputPhone},
+                dataType: 'json',
+                success :
+                    function (result){
+                        console.log("통신성공");
+                        if(result===0){
+                            phTxt.show();
+                            phTxt.find("span").text("사용할 수 없는 전화번호입니다.(중복)");
+                            phone.parents("li").addClass("noValid");
+                            return false;
+                        }else {
+                            phone.parents("li").removeClass("noValid");
+                            phTxt.hide();
+                        }
+                    },
+                error : function (){
+                    console.log("통신 실패")
+                }
+            })
+        }else {
+            phone.parents("li").removeClass("noValid");
+            phTxt.hide();
+        }
     })
 
     let genders = $(".inList label");

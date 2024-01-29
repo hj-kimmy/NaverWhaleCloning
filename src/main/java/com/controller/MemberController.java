@@ -11,6 +11,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -61,6 +62,8 @@ public class MemberController extends HttpServlet {
             requestDelete(request);
             RequestDispatcher rd = request.getRequestDispatcher("./whale_member/logout.jsp");
             rd.forward(request, response);
+        }else if(command.equals("/whale_member/phoneCheckService.lo")){
+            requestCheck(request, response);
         }
     }
 
@@ -145,5 +148,24 @@ public class MemberController extends HttpServlet {
         String id = request.getParameter("id");
 
         dao.deleteMember(id);
+    }
+
+    public void requestCheck(HttpServletRequest request, HttpServletResponse response){
+        String phone = request.getParameter("inputPhone");
+        try {
+            PrintWriter out = response.getWriter();
+            MemberDAO dao = MemberDAO.getInstance();
+
+            int phoneCheck = dao.getMemberbyPhone(phone);
+
+            if(phoneCheck==0){
+                System.out.println("이미 존재하는 아이디입니다.");
+            } else if (phoneCheck==1) {
+                System.out.println("사용 가능한 아이디입니다.");
+            }
+            out.write(phoneCheck+"");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

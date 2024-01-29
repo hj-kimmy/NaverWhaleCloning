@@ -112,8 +112,6 @@ $(function () {
 
     })
 
-
-
     let password = $("#join #password");
     let pwTxt = $(".password");
 
@@ -233,8 +231,32 @@ $(function () {
         inputPhone = phoneForm(inputPhone);
         phone.val(inputPhone);
 
-        phone.parents("li").removeClass("noValid");
-        phTxt.hide();
+        $.ajax({
+            url : "./phoneCheckService.lo",
+            type : "post",
+            data : {inputPhone : inputPhone},
+            dataType: 'json',
+            success :
+                function (result){
+                    console.log("통신성공");
+                    if(result===0){
+                        phTxt.show();
+                        phTxt.find("span").text("사용할 수 없는 전화번호입니다.(중복)");
+                        phone.parents("li").addClass("noValid");
+                        return false;
+                    }else {
+                        phone.parents("li").removeClass("noValid");
+                        phTxt.hide();
+                    }
+                },
+            error : function (){
+                console.log("통신 실패")
+            }
+        })
+
+        //
+        // phone.parents("li").removeClass("noValid");
+        // phTxt.hide();
     })
 
     // let findPhone = $("#findPhone");

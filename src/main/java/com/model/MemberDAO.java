@@ -217,6 +217,33 @@ public class MemberDAO {
         }
     }
 
+    public int getMemberbyPhone(String phone){
+        Connection conn = null;
+        PreparedStatement pstmt = null;
+        ResultSet rs = null;
+        int phoneCheck = 0;
+
+        String sql = "select * from whale_member where phone = ?";
+
+        try {
+            conn = DataBaseConnect.getConnection();
+            pstmt = conn.prepareStatement(sql);
+
+            pstmt.setString(1, phone);
+            rs = pstmt.executeQuery();
+
+            if (!(rs.next()|| phone.isEmpty())) {
+                phoneCheck = 1;
+            }
+        } catch (Exception e) {
+            System.out.println("getMemberbyIdInfo 에러");
+            System.out.println(e.getMessage());
+        } finally {
+            shutDownAll(conn, pstmt, rs);
+        }
+        return phoneCheck;
+    }
+
     public void shutDownAll(Connection conn, PreparedStatement pstmt, ResultSet rs) {
         try {
             if (rs != null)
